@@ -16,8 +16,6 @@
 		1F577BC01CD31569009B8CCE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F577BBE1CD31569009B8CCE /* LaunchScreen.storyboard */; };
 		1F577BCB1CD31569009B8CCE /* GovnoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F577BCA1CD31569009B8CCE /* GovnoTests.swift */; };
 		1F577BD61CD31569009B8CCE /* GovnoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F577BD51CD31569009B8CCE /* GovnoUITests.swift */; };
-		1F577BE41CD31B49009B8CCE /* Parrot_Massage.gif in Resources */ = {isa = PBXBuildFile; fileRef = 1F577BE31CD31B49009B8CCE /* Parrot_Massage.gif */; };
-		1F577BE61CD31BAF009B8CCE /* pesun.png in Resources */ = {isa = PBXBuildFile; fileRef = 1F577BE51CD31BAF009B8CCE /* pesun.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,8 +51,6 @@
 		1F577BD11CD31569009B8CCE /* GovnoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GovnoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1F577BD51CD31569009B8CCE /* GovnoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GovnoUITests.swift; sourceTree = "<group>"; };
 		1F577BD71CD31569009B8CCE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		1F577BE31CD31B49009B8CCE /* Parrot_Massage.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = Parrot_Massage.gif; path = ../../../../Downloads/Parrot_Massage.gif; sourceTree = "<group>"; };
-		1F577BE51CD31BAF009B8CCE /* pesun.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = pesun.png; path = "../../../../Library/Mobile Documents/com~apple~CloudDocs/pesun.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,8 +102,6 @@
 			isa = PBXGroup;
 			children = (
 				1F577BB11CD31569009B8CCE /* AppDelegate.swift */,
-				1F577BE51CD31BAF009B8CCE /* pesun.png */,
-				1F577BE31CD31B49009B8CCE /* Parrot_Massage.gif */,
 				1F577BB31CD31569009B8CCE /* GameScene.sks */,
 				1F577BB51CD31569009B8CCE /* GameScene.swift */,
 				1F577BB71CD31569009B8CCE /* GameViewController.swift */,
@@ -242,10 +236,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				1F577BB41CD31569009B8CCE /* GameScene.sks in Resources */,
-				1F577BE61CD31BAF009B8CCE /* pesun.png in Resources */,
 				1F577BC01CD31569009B8CCE /* LaunchScreen.storyboard in Resources */,
 				1F577BBD1CD31569009B8CCE /* Assets.xcassets in Resources */,
-				1F577BE41CD31B49009B8CCE /* Parrot_Massage.gif in Resources */,
 				1F577BBB1CD31569009B8CCE /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -365,7 +357,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -405,7 +397,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -502,6 +494,7 @@
 				1F577BDC1CD31569009B8CCE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1F577BDD1CD31569009B8CCE /* Build configuration list for PBXNativeTarget "GovnoTests" */ = {
 			isa = XCConfigurationList;
@@ -510,6 +503,7 @@
 				1F577BDF1CD31569009B8CCE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1F577BE01CD31569009B8CCE /* Build configuration list for PBXNativeTarget "GovnoUITests" */ = {
 			isa = XCConfigurationList;
@@ -518,6 +512,7 @@
 				1F577BE21CD31569009B8CCE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
