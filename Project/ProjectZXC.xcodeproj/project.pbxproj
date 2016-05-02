@@ -105,10 +105,9 @@
 		1F4C24681CD5E55600D3B0DB /* ProjectZXC */ = {
 			isa = PBXGroup;
 			children = (
-				32BE5B8D1CD79B8B00C7A815 /* pic */,
+				1FDFC02C1CD7A3FA00A3F56D /* Scene */,
+				32BE5B8D1CD79B8B00C7A815 /* Menu_Image */,
 				1F4C24691CD5E55600D3B0DB /* AppDelegate.swift */,
-				1F4C246B1CD5E55600D3B0DB /* GameScene.sks */,
-				1F4C246D1CD5E55600D3B0DB /* GameScene.swift */,
 				1F4C246F1CD5E55600D3B0DB /* GameViewController.swift */,
 				1F4C24711CD5E55600D3B0DB /* Main.storyboard */,
 				1F4C24741CD5E55600D3B0DB /* Assets.xcassets */,
@@ -136,13 +135,22 @@
 			path = ProjectZXCUITests;
 			sourceTree = "<group>";
 		};
-		32BE5B8D1CD79B8B00C7A815 /* pic */ = {
+		1FDFC02C1CD7A3FA00A3F56D /* Scene */ = {
+			isa = PBXGroup;
+			children = (
+				1F4C246B1CD5E55600D3B0DB /* GameScene.sks */,
+				1F4C246D1CD5E55600D3B0DB /* GameScene.swift */,
+			);
+			name = Scene;
+			sourceTree = "<group>";
+		};
+		32BE5B8D1CD79B8B00C7A815 /* Menu_Image */ = {
 			isa = PBXGroup;
 			children = (
 				32BE5B901CD79C7000C7A815 /* buttonStart.png */,
 				32BE5B8E1CD79BA100C7A815 /* backgroundMainMenu.png */,
 			);
-			name = pic;
+			name = Menu_Image;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
