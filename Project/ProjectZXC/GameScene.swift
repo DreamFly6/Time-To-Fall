@@ -11,11 +11,18 @@ import SpriteKit
 class GameScene: SKScene {
     //Функция выполняемая до открытия сцены(Наверное :) )
     override func didMoveToView(view: SKView) {
-        let woodenBox = SKSpriteNode(imageNamed:"WoodenBox")
-        let woodenBoxx = childNodeWithName("WoodenBox")
-        //woodenBox.parent
-        woodenBoxx!.xScale = 0.3
-        woodenBox.yScale = 0.3
+
+        //Определяет 1 ребенка и задает ему свойства
+        //Ребенок с именем WoodenBoB (Они стоят справа)
+        let woodenBoB = childNodeWithName("WoodenBoB")
+        woodenBoB!.xScale = 2.0
+        
+        
+        //Просто закидываем в переменную спрайт с именем
+        //Проблема в том, что без адд смысла нет это делать
+        let woodenBox = SKSpriteNode(imageNamed: "WoodenBox")
+        woodenBox.xScale = 1.2
+        woodenBox.yScale = 1.2
         woodenBox.physicsBody = SKPhysicsBody(rectangleOfSize: woodenBox.frame.size)    //Физ.форма прямоугольник
         woodenBox.physicsBody?.friction = 0.1   //Трение
         woodenBox.physicsBody?.restitution = 1.2    //Сила отскока
@@ -23,11 +30,10 @@ class GameScene: SKScene {
         woodenBox.physicsBody?.angularDamping = 0.3  //До сих пор хз что это
         woodenBox.physicsBody?.mass = 1.0   //Масса
         woodenBox.position = CGPoint(x:600,y:1700) //Позиция в поинтах
-
+        
         
         //insertChild(woodenBox, atIndex: 1)  // Видимо тоже добавление но с номером
-        //addChild(woodenBox) //Добавляем его на сцену
-        
+        addChild(woodenBox) //Добавляем его на сцену
         
         //Необходимо сделать, чтобы эти свойства применились для всех одинаковых объектов
     }
