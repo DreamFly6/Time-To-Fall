@@ -9,10 +9,29 @@
 import SpriteKit
 
 class GameScene: SKScene {
+    //Функция выполняемая до открытия сцены(Наверное :) )
     override func didMoveToView(view: SKView) {
+        let woodenBox = SKSpriteNode(imageNamed:"WoodenBox")
+        let woodenBoxx = childNodeWithName("WoodenBox")
+        //woodenBox.parent
+        woodenBoxx!.xScale = 0.3
+        woodenBox.yScale = 0.3
+        woodenBox.physicsBody = SKPhysicsBody(rectangleOfSize: woodenBox.frame.size)    //Физ.форма прямоугольник
+        woodenBox.physicsBody?.friction = 0.1   //Трение
+        woodenBox.physicsBody?.restitution = 1.2    //Сила отскока
+        woodenBox.physicsBody?.linearDamping = 0.3  //До сих пор хз что это
+        woodenBox.physicsBody?.angularDamping = 0.3  //До сих пор хз что это
+        woodenBox.physicsBody?.mass = 1.0   //Масса
+        woodenBox.position = CGPoint(x:600,y:1700) //Позиция в поинтах
 
+        
+        //insertChild(woodenBox, atIndex: 1)  // Видимо тоже добавление но с номером
+        //addChild(woodenBox) //Добавляем его на сцену
+        
+        
+        //Необходимо сделать, чтобы эти свойства применились для всех одинаковых объектов
     }
-    
+
     
     //---- SlimeBlock ----
     //Friction 0.2
@@ -20,6 +39,7 @@ class GameScene: SKScene {
     //Lin.Damp 0.3
     //Ang.Damp 0.3
     //Mass 2.0
+
     
     //---- WoodenBox ----
     //Friction 0.2
@@ -52,9 +72,9 @@ class GameScene: SKScene {
     override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
        /* Called when a touch begins */
         
+        // Так понял цикл считывающий нажатие на экран
         for touch in touches {
             let location = touch.locationInNode(self)
-            
             
             let sprite = SKSpriteNode(imageNamed:"Spaceship")
             sprite.xScale = 0.5
@@ -65,7 +85,8 @@ class GameScene: SKScene {
             
             sprite.runAction(SKAction.repeatActionForever(action))
             
-            self.addChild(sprite)
+            addChild(sprite)
+
         }
     }
    
