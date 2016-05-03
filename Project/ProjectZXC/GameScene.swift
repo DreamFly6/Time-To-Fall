@@ -35,7 +35,7 @@ class GameScene: SKScene {
         
         //Просто закидываем в переменную спрайт с именем
         //Проблема в том, что без адд смысла нет это делать
-        let woodenBox = SKSpriteNode(imageNamed: "MainCharacter")
+        let woodenBox = SKSpriteNode(imageNamed: "WoodebBox")
         woodenBox.xScale = 1.2
         woodenBox.yScale = 1.2
         woodenBox.physicsBody = SKPhysicsBody(rectangleOfSize: woodenBox.frame.size)    //Физ.форма прямоугольник
