@@ -16,6 +16,7 @@
 		1F4C24781CD5E55600D3B0DB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F4C24761CD5E55600D3B0DB /* LaunchScreen.storyboard */; };
 		1F4C24831CD5E55600D3B0DB /* ProjectZXCTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F4C24821CD5E55600D3B0DB /* ProjectZXCTests.swift */; };
 		1F4C248E1CD5E55600D3B0DB /* ProjectZXCUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F4C248D1CD5E55600D3B0DB /* ProjectZXCUITests.swift */; };
+		321ACA7D1CD8555F00BED616 /* GameScene1.sks in Resources */ = {isa = PBXBuildFile; fileRef = 321ACA7C1CD8555F00BED616 /* GameScene1.sks */; };
 		32BE5B8F1CD79BA100C7A815 /* backgroundMainMenu.png in Resources */ = {isa = PBXBuildFile; fileRef = 32BE5B8E1CD79BA100C7A815 /* backgroundMainMenu.png */; };
 		32BE5B911CD79C7000C7A815 /* buttonStart.png in Resources */ = {isa = PBXBuildFile; fileRef = 32BE5B901CD79C7000C7A815 /* buttonStart.png */; };
 /* End PBXBuildFile section */
@@ -53,6 +54,7 @@
 		1F4C24891CD5E55600D3B0DB /* ProjectZXCUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ProjectZXCUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1F4C248D1CD5E55600D3B0DB /* ProjectZXCUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectZXCUITests.swift; sourceTree = "<group>"; };
 		1F4C248F1CD5E55600D3B0DB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		321ACA7C1CD8555F00BED616 /* GameScene1.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene1.sks; sourceTree = "<group>"; };
 		32BE5B8E1CD79BA100C7A815 /* backgroundMainMenu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = backgroundMainMenu.png; path = pic/backgroundMainMenu.png; sourceTree = SOURCE_ROOT; };
 		32BE5B901CD79C7000C7A815 /* buttonStart.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = buttonStart.png; path = pic/buttonStart.png; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
@@ -139,6 +141,7 @@
 			isa = PBXGroup;
 			children = (
 				1F4C246B1CD5E55600D3B0DB /* GameScene.sks */,
+				321ACA7C1CD8555F00BED616 /* GameScene1.sks */,
 				1F4C246D1CD5E55600D3B0DB /* GameScene.swift */,
 			);
 			name = Scene;
@@ -263,6 +266,7 @@
 				32BE5B911CD79C7000C7A815 /* buttonStart.png in Resources */,
 				1F4C24781CD5E55600D3B0DB /* LaunchScreen.storyboard in Resources */,
 				1F4C24751CD5E55600D3B0DB /* Assets.xcassets in Resources */,
+				321ACA7D1CD8555F00BED616 /* GameScene1.sks in Resources */,
 				1F4C24731CD5E55600D3B0DB /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
