@@ -30,14 +30,14 @@ class GameScene: SKScene {
         //Ребенок с именем WoodenBoB (Они стоят справа)
         let woodenBoB = childNodeWithName("WoodenBoB")
         woodenBoB!.xScale = 2.0
-
+        
 
         
         //Просто закидываем в переменную спрайт с именем
         //Проблема в том, что без адд смысла нет это делать
-        let woodenBox = SKSpriteNode(imageNamed: "WoodebBox")
-        woodenBox.xScale = 1.2
-        woodenBox.yScale = 1.2
+        let woodenBox = SKSpriteNode(imageNamed: "WoodenBox")
+        woodenBox.xScale = 0.3
+        woodenBox.yScale = 0.3
         woodenBox.physicsBody = SKPhysicsBody(rectangleOfSize: woodenBox.frame.size)    //Физ.форма прямоугольник
         woodenBox.physicsBody?.friction = 0.1   //Трение
         woodenBox.physicsBody?.restitution = 1.2    //Сила отскока
@@ -47,8 +47,13 @@ class GameScene: SKScene {
         woodenBox.position = CGPoint(x:600,y:1700) //Позиция в поинтах
         
         
-        //insertChild(woodenBox, atIndex: 1)  // Видимо тоже добавление но с номером
+        for woodenBox in children {
+            print(woodenBox,"\n")
+        }
+        
         addChild(woodenBox) //Добавляем его на сцену
+        //insertChild(woodenBox, atIndex: 1)  // Видимо тоже добавление но с номером
+
         
         
         
