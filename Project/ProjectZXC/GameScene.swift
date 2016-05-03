@@ -9,6 +9,20 @@
 import SpriteKit
 
 class GameScene: SKScene {
+    
+    
+    //Функция для добавления нового спрайта в одну строку Автор:Жека
+    func addSpriteNodeBy(name: String, position: CGPoint) -> SKSpriteNode{
+        let sprite = SKSpriteNode(imageNamed: name)
+        sprite.position = position
+        sprite.yScale = 3.0
+        addChild(sprite)
+        
+        return sprite
+    }
+    
+    
+    
     //Функция выполняемая до открытия сцены(Наверное :) )
     override func didMoveToView(view: SKView) {
 
@@ -16,11 +30,12 @@ class GameScene: SKScene {
         //Ребенок с именем WoodenBoB (Они стоят справа)
         let woodenBoB = childNodeWithName("WoodenBoB")
         woodenBoB!.xScale = 2.0
-        
+
+
         
         //Просто закидываем в переменную спрайт с именем
         //Проблема в том, что без адд смысла нет это делать
-        let woodenBox = SKSpriteNode(imageNamed: "WoodenBox")
+        let woodenBox = SKSpriteNode(imageNamed: "MainCharacter")
         woodenBox.xScale = 1.2
         woodenBox.yScale = 1.2
         woodenBox.physicsBody = SKPhysicsBody(rectangleOfSize: woodenBox.frame.size)    //Физ.форма прямоугольник
@@ -35,8 +50,15 @@ class GameScene: SKScene {
         //insertChild(woodenBox, atIndex: 1)  // Видимо тоже добавление но с номером
         addChild(woodenBox) //Добавляем его на сцену
         
+        
+        
+        
+        
         //Необходимо сделать, чтобы эти свойства применились для всех одинаковых объектов
     }
+
+    
+    
 
     
     //---- SlimeBlock ----
@@ -75,8 +97,10 @@ class GameScene: SKScene {
     //Ang.Damp 0.1
     //Mass 4.0
     
+    
+    
+    //Вызывается когда просиходит нажатие
     override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
-       /* Called when a touch begins */
         
         // Так понял цикл считывающий нажатие на экран
         for touch in touches {
