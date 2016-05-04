@@ -31,8 +31,8 @@ class GameScene: SKScene {
         woodenBox!.physicsBody?.linearDamping = 1.3  //До сих пор хз что это
         woodenBox!.physicsBody?.angularDamping = 1.3  //До сих пор хз что это
         woodenBox!.physicsBody?.mass = 1.0   //Масса
-        woodenBox?.physicsBody?.allowsRotation = false
-
+        woodenBox!.physicsBody?.pinned = true
+        woodenBox!.physicsBody = SKPhysicsBody(rectangleOfSize: (woodenBox?.frame.size)!)
         
         let ground = childNodeWithName("Ground")
         ground!.physicsBody?.friction = 0.2   //Трение
@@ -61,9 +61,14 @@ class GameScene: SKScene {
     //Функция выполняемая до открытия сцены(Наверное :) )
     override func didMoveToView(view: SKView) {
         initGameObject()
+        
         let slimeBlock = childNodeWithName("SlimeBlock")
-        slimeBlock?.parent?.physicsBody?.restitution = 0.2
-        slimeBlock?.parent?.xScale = 2.0
+        slimeBlock!.physicsBody = SKPhysicsBody(rectangleOfSize: slimeBlock!.frame.size)
+        slimeBlock!.physicsBody?.friction = 0.3   //Трение
+        slimeBlock!.physicsBody?.restitution = 1.2    //Сила отскока
+        slimeBlock!.physicsBody?.linearDamping = 0.1  //До сих пор хз что это
+        slimeBlock!.physicsBody?.angularDamping = 0.1  //До сих пор хз что это
+        slimeBlock!.physicsBody?.mass = 4.0   //Масса
 
     }
     
