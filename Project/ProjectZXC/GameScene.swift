@@ -68,7 +68,7 @@ class GameScene: SKScene {
         //удаляет все действия?
         woodenBoxx?.removeAllActions()
         //woodenBoxx?.removeFromParent()
-        woodenBoxx?.physicsBody?.restitution = 0.2    //Сила отскока
+        woodenBoxx?.physicsBody?.restitution = 1.2    //Сила отскока
         
         let ground = childNodeWithName("Ground")
         ground!.physicsBody?.friction = 0.2   //Трение
