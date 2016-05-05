@@ -14,9 +14,10 @@ class GameScene: SKScene {
     //Функция для добавления нового спрайта в одну строку Автор:Жека
     func addSpriteNodeBy(name: String, position: CGPoint) -> SKSpriteNode{
         let sprite = SKSpriteNode(imageNamed: name)
+
         sprite.position = position
         sprite.yScale = 3.0
-        addChild(sprite)
+        //addChild(sprite)
         
         return sprite
     }
@@ -60,9 +61,29 @@ class GameScene: SKScene {
     
     //
     func initGameObject(){
+<<<<<<< Updated upstream
         let woodenBox = GameObject()
         let woodenBoxx = childNodeWithName("WoodenBox")
         //woodenBoxx?.physicsBody?.restitution = woodenBox.restitution
+=======
+        
+        
+        let woodenBox = childNodeWithName("WoodenBox")
+        woodenBox!.physicsBody = SKPhysicsBody(rectangleOfSize: (woodenBox?.frame.size)!)
+        
+        woodenBox!.xScale = 1.0
+        woodenBox!.yScale = 1.0
+        
+        
+        
+    
+        woodenBox!.physicsBody!.friction = 0.2   //Трение
+        woodenBox!.physicsBody!.restitution = 5    //Сила отскока
+        woodenBox!.physicsBody?.linearDamping = 0.3  //До сих пор хз что это
+        woodenBox!.physicsBody?.angularDamping = 0.3  //До сих пор хз что это
+        woodenBox!.physicsBody?.mass = 1.0   //Масса
+        //woodenBox!.physicsBody?.pinned = true //прикрепляет к месту
+>>>>>>> Stashed changes
         
         
         let ground = childNodeWithName("Ground")
@@ -96,21 +117,45 @@ class GameScene: SKScene {
         let slimeBlock = childNodeWithName("SlimeBlock")
         slimeBlock!.physicsBody = SKPhysicsBody(rectangleOfSize: slimeBlock!.frame.size)
         slimeBlock!.physicsBody?.friction = 0.3   //Трение
-        slimeBlock!.physicsBody?.restitution = 1.2    //Сила отскока
+        slimeBlock!.physicsBody?.restitution = 0.2    //Сила отскока
         slimeBlock!.physicsBody?.linearDamping = 0.1  //До сих пор хз что это
         slimeBlock!.physicsBody?.angularDamping = 0.1  //До сих пор хз что это
         slimeBlock!.physicsBody?.mass = 4.0   //Масса
 
     }
     
+    
+    //эта типа функция — удаляет блок по нажатию
+    //ЭТО НАДО ДОПИЛИТЬ
+//    override func touchesEnded(touches: NSSet, withEvent event: UIEvent) {
+//        let woodenBox = childNodeWithName("WoodenBox1")
+//
+//        let touch = touches.anyObject() as UITouch
+//        
+//        let touchLocation = touch.locationInNode(self)
+//        
+//        if([woodenBox containsPoint,: touchLocation])
+//        {
+//            //sprite contains touch
+//        }
+//    }
+    
 
     //Вызывается когда просиходит нажатие
     override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
         
+<<<<<<< Updated upstream
         // Так понял цикл считывающий нажатие на экран
         for touch in touches {
             let sprite = StarNode.star(touch.locationInNode(self))
             self.addChild(sprite)
+=======
+        //Так понял цикл считывающий нажатие на экран
+        for touch in touches {
+            let location = touch.locationInNode(self) //Позиция тача
+            let woodenBox = childNodeWithName("WoodenBox")
+            
+>>>>>>> Stashed changes
         }
     }
    
