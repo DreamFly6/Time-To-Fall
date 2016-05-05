@@ -61,29 +61,10 @@ class GameScene: SKScene {
     
     //Данила кодер
     func initGameObject(){
-<<<<<<< Updated upstream
         let woodenBox = GameObject()
         let woodenBoxx = childNodeWithName("WoodenBox")
         //woodenBoxx?.physicsBody?.restitution = woodenBox.restitution
-=======
         
-        
-        let woodenBox = childNodeWithName("WoodenBox")
-        woodenBox!.physicsBody = SKPhysicsBody(rectangleOfSize: (woodenBox?.frame.size)!)
-        
-        woodenBox!.xScale = 1.0
-        woodenBox!.yScale = 1.0
-        
-        
-        
-    
-        woodenBox!.physicsBody!.friction = 0.2   //Трение
-        woodenBox!.physicsBody!.restitution = 5    //Сила отскока
-        woodenBox!.physicsBody?.linearDamping = 0.3  //До сих пор хз что это
-        woodenBox!.physicsBody?.angularDamping = 0.3  //До сих пор хз что это
-        woodenBox!.physicsBody?.mass = 1.0   //Масса
-        //woodenBox!.physicsBody?.pinned = true //прикрепляет к месту
->>>>>>> Stashed changes
         
         
         let ground = childNodeWithName("Ground")
@@ -144,18 +125,10 @@ class GameScene: SKScene {
     //Вызывается когда просиходит нажатие
     override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
         
-<<<<<<< Updated upstream
         // Так понял цикл считывающий нажатие на экран
         for touch in touches {
             let sprite = StarNode.star(touch.locationInNode(self))
             self.addChild(sprite)
-=======
-        //Так понял цикл считывающий нажатие на экран
-        for touch in touches {
-            let location = touch.locationInNode(self) //Позиция тача
-            let woodenBox = childNodeWithName("WoodenBox")
-            
->>>>>>> Stashed changes
         }
     }
    
