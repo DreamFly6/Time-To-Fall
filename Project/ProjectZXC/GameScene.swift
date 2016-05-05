@@ -20,19 +20,23 @@ class GameScene: SKScene {
         
         return sprite
     }
+    
+    // Наш "Shape"
+    class GameObject {
+        var friction = 0
+        var restitution = 2.0
+        var linDamp = 0
+        var angDamp = 0
+        var mass = 0
+    }
+
+    
+    
     //
     func initGameObject(){
-        
-        let woodenBox = childNodeWithName("WoodenBox")
-        woodenBox!.physicsBody = SKPhysicsBody(rectangleOfSize: (woodenBox?.frame.size)!)
-        woodenBox!.xScale = 1.0
-        woodenBox!.yScale = 1.0
-        woodenBox!.physicsBody!.friction = 0.2   //Трение
-        woodenBox!.physicsBody!.restitution = 1    //Сила отскока
-        woodenBox!.physicsBody?.linearDamping = 0.3  //До сих пор хз что это
-        woodenBox!.physicsBody?.angularDamping = 0.3  //До сих пор хз что это
-        woodenBox!.physicsBody?.mass = 1.0   //Масса
-        //woodenBox!.physicsBody?.pinned = true //прикрепляет к месту
+        let woodenBox = GameObject()
+        let woodenBoxx = childNodeWithName("WoodenBox")
+        //woodenBoxx?.physicsBody?.restitution = woodenBox.restitution
         
         
         let ground = childNodeWithName("Ground")
