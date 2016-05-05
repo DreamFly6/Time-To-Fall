@@ -59,7 +59,7 @@ class GameScene: SKScene {
     
     
     
-    //
+    //Данила кодер
     func initGameObject(){
 <<<<<<< Updated upstream
         let woodenBox = GameObject()
