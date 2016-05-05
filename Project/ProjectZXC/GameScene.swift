@@ -32,6 +32,32 @@ class GameScene: SKScene {
 
     
     
+    class StarNode: SKSpriteNode {
+        class func star(location: CGPoint) -> StarNode {
+            let sprite = StarNode(imageNamed:"WoodenBox.png")
+            
+            sprite.xScale = 0.4
+            sprite.yScale = 0.4
+            sprite.position = location
+            
+            sprite.physicsBody = SKPhysicsBody(texture: SKTexture(imageNamed: "WoodenBox.png"), size: sprite.size)
+            if let physics = sprite.physicsBody {
+                physics.affectedByGravity = true
+                physics.allowsRotation = true
+                physics.dynamic = true;
+                physics.friction = 0.1
+                physics.mass = 1.0
+                physics.restitution = 1.0
+                physics.linearDamping = 0.75
+                physics.angularDamping = 0.75
+            }
+            return sprite
+        }
+    }
+    
+    
+    
+    
     //
     func initGameObject(){
         let woodenBox = GameObject()
@@ -82,9 +108,10 @@ class GameScene: SKScene {
     override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
         
         // Так понял цикл считывающий нажатие на экран
-//        for touch in touches {
-//            let location = touch.locationInNode(self) //Позиция тача
-//        }
+        for touch in touches {
+            let sprite = StarNode.star(touch.locationInNode(self))
+            self.addChild(sprite)
+        }
     }
    
     override func update(currentTime: CFTimeInterval) {
