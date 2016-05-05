@@ -61,11 +61,14 @@ class GameScene: SKScene {
     
     //Данила кодер
     func initGameObject(){
-        let woodenBox = GameObject()
+        //let woodenBox = GameObject()
         let woodenBoxx = childNodeWithName("WoodenBox")
         //woodenBoxx?.physicsBody?.restitution = woodenBox.restitution
         
-        
+        //удаляет все действия?
+        woodenBoxx?.removeAllActions()
+        //woodenBoxx?.removeFromParent()
+        woodenBoxx?.physicsBody?.restitution = 0.2    //Сила отскока
         
         let ground = childNodeWithName("Ground")
         ground!.physicsBody?.friction = 0.2   //Трение
