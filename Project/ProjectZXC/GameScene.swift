@@ -34,8 +34,8 @@ class GameScene: SKScene {
     
         woodenBox!.physicsBody!.friction = 0.2   //Трение
         woodenBox!.physicsBody!.restitution = 1    //Сила отскока
-        woodenBox!.physicsBody?.linearDamping = 1.3  //До сих пор хз что это
-        woodenBox!.physicsBody?.angularDamping = 1.3  //До сих пор хз что это
+        woodenBox!.physicsBody?.linearDamping = 0.3  //До сих пор хз что это
+        woodenBox!.physicsBody?.angularDamping = 0.3  //До сих пор хз что это
         woodenBox!.physicsBody?.mass = 1.0   //Масса
         //woodenBox!.physicsBody?.pinned = true //прикрепляет к месту
         
