@@ -25,13 +25,8 @@ class GameScene: SKScene {
         
         let woodenBox = childNodeWithName("WoodenBox")
         woodenBox!.physicsBody = SKPhysicsBody(rectangleOfSize: (woodenBox?.frame.size)!)
-        
         woodenBox!.xScale = 1.0
         woodenBox!.yScale = 1.0
-        
-        
-        
-    
         woodenBox!.physicsBody!.friction = 0.2   //Трение
         woodenBox!.physicsBody!.restitution = 1    //Сила отскока
         woodenBox!.physicsBody?.linearDamping = 0.3  //До сих пор хз что это
