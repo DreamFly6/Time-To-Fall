@@ -20,7 +20,7 @@ class GameScene: SKScene {
         
         return sprite
     }
-    
+    //
     func initGameObject(){
         
         let woodenBox = childNodeWithName("WoodenBox")
