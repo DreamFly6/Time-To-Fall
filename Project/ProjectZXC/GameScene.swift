@@ -62,12 +62,13 @@ class GameScene: SKScene {
     //Данила кодер
     func initGameObject(){
         //let woodenBox = GameObject()
-        let woodenBoxx = childNodeWithName("WoodenBox")
+        //let woodenBoxx = childNodeWithName("WoodenBox1") as! SKSpriteNode
+        let woodenBoxx = childNodeWithName("WoodenBox1")
         //woodenBoxx?.physicsBody?.restitution = woodenBox.restitution
         
         //удаляет все действия?
-        woodenBoxx?.removeAllActions()
-        //woodenBoxx?.removeFromParent()
+//        woodenBoxx?.removeAllActions()
+        woodenBoxx?.removeFromParent()
         woodenBoxx?.physicsBody?.restitution = 1.2    //Сила отскока
         
         let ground = childNodeWithName("Ground")
@@ -132,6 +133,16 @@ class GameScene: SKScene {
         for touch in touches {
             let sprite = StarNode.star(touch.locationInNode(self))
             self.addChild(sprite)
+        }
+    }
+    
+    
+    //Удаляет спрайт, когда он улетел за экран
+    //Из-за этого не падает ФПС
+    override func didSimulatePhysics() {
+        let woodenBoxx = childNodeWithName("WoodenBox1")
+        if (woodenBoxx?.position.y < 0) {
+            [woodenBoxx?.removeFromParent];
         }
     }
    
