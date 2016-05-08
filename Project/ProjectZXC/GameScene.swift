@@ -127,12 +127,53 @@ class GameScene: SKScene {
     
 
     //Вызывается когда просиходит нажатие
+    //Теперь по нажатию на ребенка происходит его удаление
+    //Еще Женя немного наговнокодил и не добавлял в старой версии программы имя новому спрайту, 
+    //поэтому не происходило удаление. Добавил ему имя и теперь все ок, но нельзя удалить предка
     override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
         
         // Так понял цикл считывающий нажатие на экран
-        for touch in touches {
-            let sprite = StarNode.star(touch.locationInNode(self))
-            self.addChild(sprite)
+//        let woodenBox = childNodeWithName("WoodenBox1")
+//        
+//        for touch in touches {
+//            if (woodenBox?.position == touch.locationInNode(self)) {
+//                [woodenBox?.removeFromParent];
+//                [woodenBox?.delete(woodenBox)];
+//                print("В таче if")
+//            }
+//            else {
+//                 print("В таче else")
+//                let sprite = StarNode.star(touch.locationInNode(self))
+//                self.addChild(sprite)
+//            }
+//            
+//        }
+        
+        for touch: AnyObject in touches {
+            
+            let touchLocation = touch.locationInNode(self)
+            let touchedNode = self.nodeAtPoint(touchLocation)
+            
+            if (touchedNode.name == "WoodenBox1") {
+                touchedNode.removeFromParent()
+                print("hit")
+            }
+            else {
+                print("В таче else")
+//                let sprite = StarNode(imageNamed:"WoodenBox.png")
+
+                let sprite = StarNode.star(touch.locationInNode(self))
+                sprite.name = "WoodenBox1"
+                print (sprite.name);
+                self.addChild(sprite)
+            }
+            
+            
+            //Если это расскоментить, то по удалениею предка удалятся все дети ¯ \ _ (ツ) _ / ¯
+//            if (touchedNode.name == "WoodenBox") {
+//                touchedNode.removeFromParent()
+//                print("hit")
+//            }
         }
     }
     
