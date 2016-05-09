@@ -48,7 +48,7 @@ class GameScene: SKScene {
                 physics.dynamic = true;
                 physics.friction = 0.1
                 physics.mass = 1.0
-                physics.restitution = 1.0
+                physics.restitution = 0.2
                 physics.linearDamping = 0.75
                 physics.angularDamping = 0.75
             }
@@ -68,8 +68,10 @@ class GameScene: SKScene {
         
         //удаляет все действия?
 //        woodenBoxx?.removeAllActions()
-        woodenBoxx?.removeFromParent()
+//        woodenBoxx?.physicsBody = SKPhysicsBody();
+//        woodenBoxx?.removeFromParent()
         woodenBoxx?.physicsBody?.restitution = 1.2    //Сила отскока
+        print(woodenBoxx?.physicsBody?.restitution)
         
         let ground = childNodeWithName("Ground")
         ground!.physicsBody?.friction = 0.2   //Трение
@@ -79,11 +81,21 @@ class GameScene: SKScene {
         ground!.physicsBody?.mass = 6.0   //Масса
       
         let stoneBlock = childNodeWithName("StoneBlock")
-        stoneBlock!.physicsBody?.friction = 0.3   //Трение
-        stoneBlock!.physicsBody?.restitution = 0.2    //Сила отскока
-        stoneBlock!.physicsBody?.linearDamping = 0.1  //До сих пор хз что это
-        stoneBlock!.physicsBody?.angularDamping = 0.1  //До сих пор хз что это
-        stoneBlock!.physicsBody?.mass = 4.0   //Масса
+        
+         //Трение
+        stoneBlock!.physicsBody?.friction = 0.3
+        
+         //Сила отскока
+        stoneBlock!.physicsBody?.restitution = 0.2
+        
+        //Используются для расчета имитации силы трения среды при линейном движении.(принимает значения в пределах 0.1 — 1.0). По умолчанию 0.1.
+        stoneBlock!.physicsBody?.linearDamping = 0.1
+        
+        //Используются для расчета имитации силы трения среды при угловом движении. (принимает значения в пределах 0.1 — 1.0). По умолчанию 0.1
+        stoneBlock!.physicsBody?.angularDamping = 0.1
+        
+        //Масса
+        stoneBlock!.physicsBody?.mass = 4.0
         
         
         //---- Main ----
@@ -92,12 +104,24 @@ class GameScene: SKScene {
         //Lin.Damp 0.2
         //Ang.Damp 0.2
         //Mass 1.0
+        print("2")
     }
     
     
     //Функция выполняемая до открытия сцены(Наверное :) )
     override func didMoveToView(view: SKView) {
-        initGameObject()
+        print("1")
+//        initGameObject()
+        print("3")
+        let woodenBoxx = childNodeWithName("WoodenBox1")
+        woodenBoxx?.removeAllActions()
+        woodenBoxx?.physicsBody?.dynamic = false
+        
+        woodenBoxx?.physicsBody?.restitution = 1.2    //Сила отскока
+        print(woodenBoxx?.physicsBody?.restitution)
+
+        
+
         
         let slimeBlock = childNodeWithName("SlimeBlock")
         slimeBlock!.physicsBody = SKPhysicsBody(rectangleOfSize: slimeBlock!.frame.size)
@@ -109,21 +133,7 @@ class GameScene: SKScene {
 
     }
     
-    
-    //эта типа функция — удаляет блок по нажатию
-    //ЭТО НАДО ДОПИЛИТЬ
-//    override func touchesEnded(touches: NSSet, withEvent event: UIEvent) {
-//        let woodenBox = childNodeWithName("WoodenBox1")
-//
-//        let touch = touches.anyObject() as UITouch
-//        
-//        let touchLocation = touch.locationInNode(self)
-//        
-//        if([woodenBox containsPoint,: touchLocation])
-//        {
-//            //sprite contains touch
-//        }
-//    }
+
     
 
     //Вызывается когда просиходит нажатие
@@ -132,36 +142,20 @@ class GameScene: SKScene {
     //поэтому не происходило удаление. Добавил ему имя и теперь все ок, но нельзя удалить предка
     override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
         
-        // Так понял цикл считывающий нажатие на экран
-//        let woodenBox = childNodeWithName("WoodenBox1")
-//        
-//        for touch in touches {
-//            if (woodenBox?.position == touch.locationInNode(self)) {
-//                [woodenBox?.removeFromParent];
-//                [woodenBox?.delete(woodenBox)];
-//                print("В таче if")
-//            }
-//            else {
-//                 print("В таче else")
-//                let sprite = StarNode.star(touch.locationInNode(self))
-//                self.addChild(sprite)
-//            }
-//            
-//        }
+
         
+        // Так понял цикл считывающий нажатие на экран
         for touch: AnyObject in touches {
             
             let touchLocation = touch.locationInNode(self)
             let touchedNode = self.nodeAtPoint(touchLocation)
             
             if (touchedNode.name == "WoodenBox1") {
-                touchedNode.removeFromParent()
+                touchedNode.removeFromParent() //удаление
                 print("hit")
             }
             else {
                 print("В таче else")
-//                let sprite = StarNode(imageNamed:"WoodenBox.png")
-
                 let sprite = StarNode.star(touch.locationInNode(self))
                 sprite.name = "WoodenBox1"
                 print (sprite.name);
@@ -169,11 +163,12 @@ class GameScene: SKScene {
             }
             
             
-            //Если это расскоментить, то по удалениею предка удалятся все дети ¯ \ _ (ツ) _ / ¯
+//            Если это расскоментить, то по удалениею предка удалятся все дети ¯ \ _ (ツ) _ / ¯
 //            if (touchedNode.name == "WoodenBox") {
 //                touchedNode.removeFromParent()
 //                print("hit")
 //            }
+            
         }
     }
     
