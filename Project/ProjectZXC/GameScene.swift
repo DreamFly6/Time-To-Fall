@@ -68,6 +68,13 @@ class GameScene: SKScene {
         main!.physicsBody?.angularDamping = 0.2
         main!.physicsBody?.mass = 2.0
         
+        let qwe = self.childNodeWithName("WoodenBox1") as? SKSpriteNode
+        qwe!.physicsBody?.friction = 0.2
+        qwe!.physicsBody?.restitution = 0.3
+        qwe!.physicsBody?.linearDamping = 0.2
+        qwe!.physicsBody?.angularDamping = 0.2
+        qwe!.physicsBody?.mass = 2.0
+        qwe?.physicsBody?.pinned = true
         
         //  Инициализация Background
         //let background = self.childNodeWithName("Background") as? SKSpriteNode
@@ -135,7 +142,7 @@ class GameScene: SKScene {
             let touchLocation = touch.locationInNode(self)
             let touchedNode = self.nodeAtPoint(touchLocation)
             
-            if (touchedNode.name == "WoodenBox1") {
+            if (touchedNode.name == "WoodenBox") {
                 touchedNode.removeFromParent() //удаление
                 print("hit")
             }
