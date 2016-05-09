@@ -17,7 +17,7 @@ class GameScene: SKScene {
 
         sprite.position = position
         sprite.yScale = 3.0
-        //addChild(sprite)
+        addChild(sprite)
         
         return sprite
     }
@@ -57,94 +57,79 @@ class GameScene: SKScene {
     }
     
     
-    
-    
-    //Данила кодер
+    //Ициализация свойств игровых объектов
     func initGameObject(){
-        //let woodenBox = GameObject()
-        //let woodenBoxx = childNodeWithName("WoodenBox1") as! SKSpriteNode
-        let woodenBoxx = childNodeWithName("WoodenBox1")
-        //woodenBoxx?.physicsBody?.restitution = woodenBox.restitution
         
-        //удаляет все действия?
-//        woodenBoxx?.removeAllActions()
-//        woodenBoxx?.physicsBody = SKPhysicsBody();
-//        woodenBoxx?.removeFromParent()
-        woodenBoxx?.physicsBody?.restitution = 1.2    //Сила отскока
-        print(woodenBoxx?.physicsBody?.restitution)
+        //  Инициализация MainCharacter
+        let main = self.childNodeWithName("MainCharacter") as? SKSpriteNode
+        main!.physicsBody?.friction = 0.2
+        main!.physicsBody?.restitution = 0.3
+        main!.physicsBody?.linearDamping = 0.2
+        main!.physicsBody?.angularDamping = 0.2
+        main!.physicsBody?.mass = 2.0
         
-        let ground = childNodeWithName("Ground")
-        ground!.physicsBody?.friction = 0.2   //Трение
-        ground!.physicsBody?.restitution = 0.2    //Сила отскока
-        ground!.physicsBody?.linearDamping = 0.1  //До сих пор хз что это
-        ground!.physicsBody?.angularDamping = 0.1  //До сих пор хз что это
-        ground!.physicsBody?.mass = 6.0   //Масса
+        
+        //  Инициализация Background
+        //let background = self.childNodeWithName("Background") as? SKSpriteNode
+        
+        
+        //  Инициализация SlimeBlock
+        for slimeBlock in self.children {
+            if slimeBlock.name == "SlimeBlock" {
+                if let slimeBlock = slimeBlock as? SKSpriteNode {
+                    slimeBlock.physicsBody?.friction = 0.2
+                    slimeBlock.physicsBody?.restitution = 1.0
+                    slimeBlock.physicsBody?.linearDamping = 0.2
+                    slimeBlock.physicsBody?.angularDamping = 0.2
+                    slimeBlock.physicsBody?.mass = 2.0
+                }
+            }
+        }
+        
+        //  Инициализация Ground
+        for ground in self.children {
+            if ground.name == "Ground" {
+                if let ground = ground as? SKSpriteNode {
+                    ground.physicsBody?.friction = 0.2
+                    ground.physicsBody?.restitution = 0.2
+                    ground.physicsBody?.linearDamping = 0.1
+                    ground.physicsBody?.angularDamping = 0.1
+                    ground.physicsBody?.mass = 6.0
+                }
+            }
+        }
+        
+        //  Инициализация WoodenBox
+        for woodenBox in self.children {
+            if woodenBox.name == "WoodenBox" {
+                if let woodenBox = woodenBox as? SKSpriteNode {
+                    woodenBox.physicsBody?.friction = 0.2
+                    woodenBox.physicsBody?.restitution = 0.3
+                    woodenBox.physicsBody?.linearDamping = 0.2
+                    woodenBox.physicsBody?.angularDamping = 0.2
+                    woodenBox.physicsBody?.mass = 1.0
+                }
+            }
+        }
+
       
-        let stoneBlock = childNodeWithName("StoneBlock")
         
-         //Трение
-        stoneBlock!.physicsBody?.friction = 0.3
-        
-         //Сила отскока
-        stoneBlock!.physicsBody?.restitution = 0.2
-        
-        //Используются для расчета имитации силы трения среды при линейном движении.(принимает значения в пределах 0.1 — 1.0). По умолчанию 0.1.
-        stoneBlock!.physicsBody?.linearDamping = 0.1
-        
-        //Используются для расчета имитации силы трения среды при угловом движении. (принимает значения в пределах 0.1 — 1.0). По умолчанию 0.1
-        stoneBlock!.physicsBody?.angularDamping = 0.1
-        
-        //Масса
-        stoneBlock!.physicsBody?.mass = 4.0
-        
-        
-        //---- Main ----
-        //Friction 0.2
-        //Restitution 0.2
-        //Lin.Damp 0.2
-        //Ang.Damp 0.2
-        //Mass 1.0
-        print("2")
     }
     
     
-    //Функция выполняемая до открытия сцены(Наверное :) )
+    //Функция выполняемая до открытия сцены
     override func didMoveToView(view: SKView) {
-        print("1")
-//        initGameObject()
-        print("3")
-        let woodenBoxx = childNodeWithName("WoodenBox1")
-        woodenBoxx?.removeAllActions()
-        woodenBoxx?.physicsBody?.dynamic = false
-        
-        woodenBoxx?.physicsBody?.restitution = 1.2    //Сила отскока
-        print(woodenBoxx?.physicsBody?.restitution)
-
-        
-
-        
-        let slimeBlock = childNodeWithName("SlimeBlock")
-        slimeBlock!.physicsBody = SKPhysicsBody(rectangleOfSize: slimeBlock!.frame.size)
-        slimeBlock!.physicsBody?.friction = 0.3   //Трение
-        slimeBlock!.physicsBody?.restitution = 0.2    //Сила отскока
-        slimeBlock!.physicsBody?.linearDamping = 0.1  //До сих пор хз что это
-        slimeBlock!.physicsBody?.angularDamping = 0.1  //До сих пор хз что это
-        slimeBlock!.physicsBody?.mass = 4.0   //Масса
-
+        initGameObject()
     }
     
 
     
 
     //Вызывается когда просиходит нажатие
-    //Теперь по нажатию на ребенка происходит его удаление
-    //Еще Женя немного наговнокодил и не добавлял в старой версии программы имя новому спрайту, 
-    //поэтому не происходило удаление. Добавил ему имя и теперь все ок, но нельзя удалить предка
     override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
         
 
-        
-        // Так понял цикл считывающий нажатие на экран
+        // Цикл считывающий нажатие на экран
         for touch: AnyObject in touches {
             
             let touchLocation = touch.locationInNode(self)
@@ -174,7 +159,6 @@ class GameScene: SKScene {
     
     
     //Удаляет спрайт, когда он улетел за экран
-    //Из-за этого не падает ФПС
     override func didSimulatePhysics() {
         let woodenBoxx = childNodeWithName("WoodenBox1")
         if (woodenBoxx?.position.y < 0) {
@@ -182,6 +166,8 @@ class GameScene: SKScene {
         }
     }
    
+    
+    //Таинственная функция. Про нее ходят легенды, но никто не знает что она делает.
     override func update(currentTime: CFTimeInterval) {
         /* Called before each frame is rendered */
     }
