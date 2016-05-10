@@ -35,13 +35,13 @@ class GameScene: SKScene {
     
     class StarNode: SKSpriteNode {
         class func star(location: CGPoint) -> StarNode {
-            let sprite = StarNode(imageNamed:"WoodenBox1.png")
+            let sprite = StarNode(imageNamed:"WoodenBox.png")
             
             sprite.xScale = 0.4
             sprite.yScale = 0.4
             sprite.position = location
             
-            sprite.physicsBody = SKPhysicsBody(texture: SKTexture(imageNamed: "WoodenBox1.png"), size: sprite.size)
+            sprite.physicsBody = SKPhysicsBody(texture: SKTexture(imageNamed: "WoodenBox.png"), size: sprite.size)
             if let physics = sprite.physicsBody {
                 physics.affectedByGravity = true
                 physics.allowsRotation = true
@@ -104,7 +104,7 @@ class GameScene: SKScene {
         main!.physicsBody?.angularDamping = 0.2
         main!.physicsBody?.mass = 2.0
         
-        let qwe = self.childNodeWithName("WoodenBox1") as? SKSpriteNode
+        let qwe = self.childNodeWithName("WoodenBox") as? SKSpriteNode
         qwe!.physicsBody?.friction = 0.2
         qwe!.physicsBody?.restitution = 0.3
         qwe!.physicsBody?.linearDamping = 0.2
@@ -178,14 +178,14 @@ class GameScene: SKScene {
             let touchLocation = touch.locationInNode(self)
             let touchedNode = self.nodeAtPoint(touchLocation)
             
-            if (touchedNode.name == "WoodenBox" || touchedNode.name == "WoodenBox1") {
+            if (touchedNode.name == "WoodenBox") {
                 touchedNode.removeFromParent() //удаление
                 print("hit")
             }
             else {
                 print("В таче else")
                 let sprite = StarNode.star(touch.locationInNode(self))
-                sprite.name = "WoodenBox1"
+                sprite.name = "WoodenBox"
                 sprite.xScale = 0.35
                 sprite.yScale = 0.35
                 print (sprite.name);
@@ -205,7 +205,7 @@ class GameScene: SKScene {
     
     //Удаляет спрайт, когда он улетел за экран
     override func didSimulatePhysics() {
-        let woodenBoxx = childNodeWithName("WoodenBox1")
+        let woodenBoxx = childNodeWithName("WoodenBox")
         if (woodenBoxx?.position.y < 0) {
             [woodenBoxx?.removeFromParent];
         }
