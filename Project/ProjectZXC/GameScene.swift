@@ -120,10 +120,10 @@ class GameScene: SKScene {
         for slimeBlock in self.children {
             if slimeBlock.name == "SlimeBlock" {
                 if let slimeBlock = slimeBlock as? SKSpriteNode {
-                    slimeBlock.physicsBody?.friction = 0.2
-                    slimeBlock.physicsBody?.restitution = 1.0
-                    slimeBlock.physicsBody?.linearDamping = 0.2
-                    slimeBlock.physicsBody?.angularDamping = 0.2
+                    slimeBlock.physicsBody?.friction = 0.1
+                    slimeBlock.physicsBody?.restitution = 1.1
+                    slimeBlock.physicsBody?.linearDamping = 0.1
+                    slimeBlock.physicsBody?.angularDamping = 0.1
                     slimeBlock.physicsBody?.mass = 2.0
                 }
             }
