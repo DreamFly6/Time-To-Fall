@@ -35,13 +35,13 @@ class GameScene: SKScene {
     
     class StarNode: SKSpriteNode {
         class func star(location: CGPoint) -> StarNode {
-            let sprite = StarNode(imageNamed:"WoodenBox.png")
+            let sprite = StarNode(imageNamed:"WoodenBox1.png")
             
             sprite.xScale = 0.4
             sprite.yScale = 0.4
             sprite.position = location
             
-            sprite.physicsBody = SKPhysicsBody(texture: SKTexture(imageNamed: "WoodenBox.png"), size: sprite.size)
+            sprite.physicsBody = SKPhysicsBody(texture: SKTexture(imageNamed: "WoodenBox1.png"), size: sprite.size)
             if let physics = sprite.physicsBody {
                 physics.affectedByGravity = true
                 physics.allowsRotation = true
@@ -178,14 +178,14 @@ class GameScene: SKScene {
             let touchLocation = touch.locationInNode(self)
             let touchedNode = self.nodeAtPoint(touchLocation)
             
-            if (touchedNode.name == "WoodenBox") {
+            if (touchedNode.name == "WoodenBox" || touchedNode.name == "WoodenBox1") {
                 touchedNode.removeFromParent() //удаление
                 print("hit")
             }
             else {
                 print("В таче else")
                 let sprite = StarNode.star(touch.locationInNode(self))
-                sprite.name = "WoodenBox"
+                sprite.name = "WoodenBox1"
                 sprite.xScale = 0.35
                 sprite.yScale = 0.35
                 print (sprite.name);
