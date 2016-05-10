@@ -185,7 +185,7 @@ class GameScene: SKScene {
             else {
                 print("В таче else")
                 let sprite = StarNode.star(touch.locationInNode(self))
-                sprite.name = "WoodenBox1"
+                sprite.name = "WoodenBox"
                 print (sprite.name);
                 self.addChild(sprite)
             }
