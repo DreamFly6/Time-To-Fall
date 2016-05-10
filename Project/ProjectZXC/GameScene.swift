@@ -186,6 +186,8 @@ class GameScene: SKScene {
                 print("В таче else")
                 let sprite = StarNode.star(touch.locationInNode(self))
                 sprite.name = "WoodenBox"
+                sprite.xScale = 0.35
+                sprite.yScale = 0.35
                 print (sprite.name);
                 self.addChild(sprite)
             }
