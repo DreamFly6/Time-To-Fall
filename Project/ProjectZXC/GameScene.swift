@@ -155,7 +155,31 @@ class GameScene: SKScene {
             }
         }
 
-      
+        //  Инициализация StoneBlock
+        for woodenBox in self.children {
+            if woodenBox.name == "StoneBlock" {
+                if let woodenBox = woodenBox as? SKSpriteNode {
+                    woodenBox.physicsBody?.friction = 0.3
+                    woodenBox.physicsBody?.restitution = 0.2
+                    woodenBox.physicsBody?.linearDamping = 0.2
+                    woodenBox.physicsBody?.angularDamping = 0.2
+                    woodenBox.physicsBody?.mass = 3.0
+                }
+            }
+        }
+        
+        //  Инициализация ActiveBlock
+        for woodenBox in self.children {
+            if woodenBox.name == "ActiveBlock" {
+                if let woodenBox = woodenBox as? SKSpriteNode {
+                    woodenBox.physicsBody?.friction = 0.3
+                    woodenBox.physicsBody?.restitution = 0.2
+                    woodenBox.physicsBody?.linearDamping = 0.2
+                    woodenBox.physicsBody?.angularDamping = 0.2
+                    woodenBox.physicsBody?.mass = 3.0
+                }
+            }
+        }
         
     }
     
@@ -191,6 +215,12 @@ class GameScene: SKScene {
                 print (sprite.name);
                 self.addChild(sprite)
             }
+            
+            //Актив блок, изменение состояний
+//            if ((touchedNode.name == "ActiveBlock") && ( Текущая текстура == Текстура такая-то)
+//                touchedNode.removeFromParent() //удаление
+//                print("hit")
+//            }
             
             
 //            Если это расскоментить, то по удалениею предка удалятся все дети ¯ \ _ (ツ) _ / ¯
