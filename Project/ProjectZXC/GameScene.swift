@@ -204,23 +204,37 @@ class GameScene: SKScene {
             
             if (touchedNode.name == "WoodenBox") {
                 touchedNode.removeFromParent() //удаление
-                print("hit")
             }
-            else {
-                print("В таче else")
-                let sprite = StarNode.star(touch.locationInNode(self))
-                sprite.name = "WoodenBox"
-                sprite.xScale = 0.35
-                sprite.yScale = 0.35
-                print (sprite.name);
-                self.addChild(sprite)
-            }
-            
-            //Актив блок, изменение состояний
-//            if ((touchedNode.name == "ActiveBlock") && ( Текущая текстура == Текстура такая-то)
-//                touchedNode.removeFromParent() //удаление
-//                print("hit")
+//            else {
+//                print("В таче else")
+//                let sprite = StarNode.star(touch.locationInNode(self))
+//                sprite.name = "WoodenBox"
+//                sprite.xScale = 0.35
+//                sprite.yScale = 0.35
+//                print (sprite.name);
+//                self.addChild(sprite)
 //            }
+            
+            if let spriteNode = touchedNode as? SKSpriteNode {
+                if spriteNode.name == "ActiveBlock"{
+                    print("Был тыкнут АктивБлок")
+                    print(spriteNode.texture)
+                    if spriteNode.texture == SKTexture(imageNamed: "ActivaBlock_On"){
+                        print("Текстура ON, делаем Off")
+                        // OFF
+                        spriteNode.texture = SKTexture(imageNamed: "ActivaBlock_Off")
+                        //spriteNode.physicsBody?.pinned = true
+                    }
+                    if spriteNode.texture == SKTexture(imageNamed: "ActivaBlock_Off"){
+                        print("Текстура Off, делаем On")
+                        //ON
+                        spriteNode.texture = SKTexture(imageNamed: "ActivaBlock_On")
+                        //spriteNode.physicsBody?.pinned = false
+                    }
+                    
+                }
+                
+            }
             
             
 //            Если это расскоментить, то по удалениею предка удалятся все дети ¯ \ _ (ツ) _ / ¯
