@@ -100,7 +100,7 @@ class GameScene: SKScene {
         main!.physicsBody?.angularDamping = 0.2
         main!.physicsBody?.mass = 2.0
         
-        let qwe = self.childNodeWithName("WoodenBox") as? SKSpriteNode
+        let qwe = self.childNodeWithName("WoodenBox1") as? SKSpriteNode
         qwe!.physicsBody?.friction = 0.2
         qwe!.physicsBody?.restitution = 0.3
         qwe!.physicsBody?.linearDamping = 0.2
@@ -147,6 +147,7 @@ class GameScene: SKScene {
                     woodenBox.physicsBody?.linearDamping = 0.2
                     woodenBox.physicsBody?.angularDamping = 0.2
                     woodenBox.physicsBody?.mass = 1.0
+                    woodenBox.physicsBody?.pinned = false
                 }
             }
         }
