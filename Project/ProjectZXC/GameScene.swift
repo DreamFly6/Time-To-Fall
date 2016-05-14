@@ -23,12 +23,8 @@ class GameScene: SKScene {
     }
     
     // Наш "Shape"
-    class GameObject {
-        var friction = 0
-        var restitution = 2.0
-        var linDamp = 0
-        var angDamp = 0
-        var mass = 0
+    class ClassActiveBox {
+        var active = false
     }
 
     
@@ -156,32 +152,38 @@ class GameScene: SKScene {
         }
 
         //  Инициализация StoneBlock
-        for woodenBox in self.children {
-            if woodenBox.name == "StoneBlock" {
-                if let woodenBox = woodenBox as? SKSpriteNode {
-                    woodenBox.physicsBody?.friction = 0.3
-                    woodenBox.physicsBody?.restitution = 0.2
-                    woodenBox.physicsBody?.linearDamping = 0.2
-                    woodenBox.physicsBody?.angularDamping = 0.2
-                    woodenBox.physicsBody?.mass = 3.0
+        for stoneBlock in self.children {
+            if stoneBlock.name == "StoneBlock" {
+                if let stoneBlock = stoneBlock as? SKSpriteNode {
+                    stoneBlock.physicsBody?.friction = 0.3
+                    stoneBlock.physicsBody?.restitution = 0.2
+                    stoneBlock.physicsBody?.linearDamping = 0.2
+                    stoneBlock.physicsBody?.angularDamping = 0.2
+                    stoneBlock.physicsBody?.mass = 3.0
                 }
             }
         }
         
         //  Инициализация ActiveBlock
-        for woodenBox in self.children {
-            if woodenBox.name == "ActiveBlock" {
-                if let woodenBox = woodenBox as? SKSpriteNode {
-                    woodenBox.physicsBody?.friction = 0.3
-                    woodenBox.physicsBody?.restitution = 0.2
-                    woodenBox.physicsBody?.linearDamping = 0.2
-                    woodenBox.physicsBody?.angularDamping = 0.2
-                    woodenBox.physicsBody?.mass = 3.0
+        for activeBlock in self.children {
+            if activeBlock.name == "ActiveBlock" {
+                if let activeBlock = activeBlock as? SKSpriteNode {
+                    activeBlock.physicsBody?.friction = 0.3
+                    activeBlock.physicsBody?.restitution = 0.2
+                    activeBlock.physicsBody?.linearDamping = 0.2
+                    activeBlock.physicsBody?.angularDamping = 0.2
+                    activeBlock.physicsBody?.mass = 3.0
+                    activeBlock.physicsBody?.pinned = true
                 }
             }
         }
         
     }
+    
+//    // Инициализация переменных
+//    func initGameVar(){
+//        var active
+//    }
     
     
     //Функция выполняемая до открытия сцены
@@ -215,22 +217,35 @@ class GameScene: SKScene {
 //                self.addChild(sprite)
 //            }
             
+            //Почему - то  это условие не работает
+            //if spriteNode.texture == SKTexture(imageNamed: "ActivaBlock_On"){
+            //Пока будет костыль
+            
+            //TODO: Переделать условия
+
+            let activeObj = ClassActiveBox()
             if let spriteNode = touchedNode as? SKSpriteNode {
                 if spriteNode.name == "ActiveBlock"{
-                    print("Был тыкнут АктивБлок")
-                    print(spriteNode.texture)
-                    if spriteNode.texture == SKTexture(imageNamed: "ActivaBlock_On"){
-                        print("Текстура ON, делаем Off")
-                        // OFF
-                        spriteNode.texture = SKTexture(imageNamed: "ActivaBlock_Off")
-                        //spriteNode.physicsBody?.pinned = true
+ //                   if spriteNode.physicsBody?.pinned == false{
+ //                       spriteNode.physicsBody?.pinned = true
+ //                       print("TRUE")
+ //                       // OFF
+ //                       spriteNode.texture = SKTexture(imageNamed: "ActivaBlock_Off")
+ //                   }
+                    if activeObj.active == false{
+                        print("1")
+                        activeObj.active = true
                     }
-                    if spriteNode.texture == SKTexture(imageNamed: "ActivaBlock_Off"){
-                        print("Текстура Off, делаем On")
-                        //ON
-                        spriteNode.texture = SKTexture(imageNamed: "ActivaBlock_On")
-                        //spriteNode.physicsBody?.pinned = false
+                    if activeObj.active == true{
+                        print("2")
+                        activeObj.active = false
                     }
+//                    if spriteNode.physicsBody?.pinned == true{
+//                        spriteNode.physicsBody?.pinned = false
+//                        print("FALSE")
+//                        //ON
+//                        spriteNode.texture = SKTexture(imageNamed: "ActivaBlock_On")
+//                    }
                     
                 }
                 
