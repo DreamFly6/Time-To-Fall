@@ -173,17 +173,16 @@ class GameScene: SKScene {
                     activeBlock.physicsBody?.linearDamping = 0.2
                     activeBlock.physicsBody?.angularDamping = 0.2
                     activeBlock.physicsBody?.mass = 3.0
+                    
+                    //Особые характеристики
                     activeBlock.physicsBody?.pinned = true
+                    activeBlock.physicsBody?.dynamic = false
                 }
             }
         }
         
     }
     
-//    // Инициализация переменных
-//    func initGameVar(){
-//        var active
-//    }
     
     
     //Функция выполняемая до открытия сцены
@@ -221,34 +220,38 @@ class GameScene: SKScene {
             //if spriteNode.texture == SKTexture(imageNamed: "ActivaBlock_On"){
             //Пока будет костыль
             
-            //TODO: Переделать условия
-
-            let activeObj = ClassActiveBox()
+            
+            //TODO: Переделать условие на человеческое(Мб и такое норм)
             if let spriteNode = touchedNode as? SKSpriteNode {
                 if spriteNode.name == "ActiveBlock"{
- //                   if spriteNode.physicsBody?.pinned == false{
- //                       spriteNode.physicsBody?.pinned = true
- //                       print("TRUE")
- //                       // OFF
- //                       spriteNode.texture = SKTexture(imageNamed: "ActivaBlock_Off")
- //                   }
-                    if activeObj.active == false{
-                        print("1")
-                        activeObj.active = true
+                    if spriteNode.physicsBody?.pinned == false{
+                        spriteNode.physicsBody?.pinned = true
+                        spriteNode.physicsBody?.dynamic = false
+                        print("TRUE")
+                        // OFF
+                        spriteNode.texture = SKTexture(imageNamed: "ActivaBlock_Off")
                     }
-                    if activeObj.active == true{
-                        print("2")
-                        activeObj.active = false
+                    else{
+                        spriteNode.physicsBody?.pinned = false
+                        spriteNode.physicsBody?.dynamic = true
+                        print("FALSE")
+                        //ON
+                        spriteNode.texture = SKTexture(imageNamed: "ActivaBlock_On")
                     }
-//                    if spriteNode.physicsBody?.pinned == true{
-//                        spriteNode.physicsBody?.pinned = false
-//                        print("FALSE")
-//                        //ON
-//                        spriteNode.texture = SKTexture(imageNamed: "ActivaBlock_On")
-//                    }
-                    
                 }
-                
+            }
+            
+            //TODO: Переделать условие на человеческое(Мб и такое норм)
+            if let spriteNode = touchedNode as? SKSpriteNode {
+                if spriteNode.name == "StoneBlock"{
+                    if spriteNode.physicsBody?.mass == 3.0 {
+                        spriteNode.texture = SKTexture(imageNamed: "BrokenStoneBlock")
+                        spriteNode.physicsBody?.mass = 2.9
+                    }
+                    else{
+                        spriteNode.removeFromParent()
+                    }
+                }
             }
             
             
