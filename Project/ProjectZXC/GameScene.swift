@@ -22,35 +22,30 @@ class GameScene: SKScene {
         return sprite
     }
     
-    // Наш "Shape"
-    class ClassActiveBox {
-        var active = false
-    }
-
+//    Добавление блока
     
-    
-    class StarNode: SKSpriteNode {
-        class func star(location: CGPoint) -> StarNode {
-            let sprite = StarNode(imageNamed:"WoodenBox.png")
-            
-            sprite.xScale = 0.4
-            sprite.yScale = 0.4
-            sprite.position = location
-            
-            sprite.physicsBody = SKPhysicsBody(texture: SKTexture(imageNamed: "WoodenBox.png"), size: sprite.size)
-            if let physics = sprite.physicsBody {
-                physics.affectedByGravity = true
-                physics.allowsRotation = true
-                physics.dynamic = true;
-                physics.friction = 0.1
-                physics.mass = 1.0
-                physics.restitution = 0.2
-                physics.linearDamping = 0.75
-                physics.angularDamping = 0.75
-            }
-            return sprite
-        }
-    }
+//    class StarNode: SKSpriteNode {
+//        class func star(location: CGPoint) -> StarNode {
+//            let sprite = StarNode(imageNamed:"WoodenBox.png")
+//
+//            sprite.xScale = 0.4
+//            sprite.yScale = 0.4
+//            sprite.position = location
+//
+//            sprite.physicsBody = SKPhysicsBody(texture: SKTexture(imageNamed: "WoodenBox.png"), size: sprite.size)
+//            if let physics = sprite.physicsBody {
+//               physics.affectedByGravity = true
+//                physics.allowsRotation = true
+//                physics.dynamic = true;
+//                physics.friction = 0.1
+//                physics.mass = 1.0
+//                physics.restitution = 0.2
+//                physics.linearDamping = 0.75
+//                physics.angularDamping = 0.75
+//            }
+//            return sprite
+//        }
+//   }
     
     
     //TODO блоки    (Извиняюсь за ошибки)
@@ -163,6 +158,20 @@ class GameScene: SKScene {
                 }
             }
         }
+        
+        
+        //  Инициализация WoodenPlank
+        for woodenPlank in self.children {
+            if woodenPlank.name == "WoodenPlank" {
+                if let woodenPlank = woodenPlank as? SKSpriteNode {
+                    woodenPlank.physicsBody?.friction = 0.2
+                    woodenPlank.physicsBody?.restitution = 0.3
+                    woodenPlank.physicsBody?.linearDamping = 0.2
+                    woodenPlank.physicsBody?.angularDamping = 0.2
+                    woodenPlank.physicsBody?.mass = 1.5
+                }
+            }
+        }
 
         //  Инициализация StoneBlock
         for stoneBlock in self.children {
@@ -216,7 +225,7 @@ class GameScene: SKScene {
             let touchLocation = touch.locationInNode(self)
             let touchedNode = self.nodeAtPoint(touchLocation)
             
-            if (touchedNode.name == "WoodenBox") {
+            if (touchedNode.name == "WoodenBox" || touchedNode.name == "WoodenPlank") {
                 touchedNode.removeFromParent() //удаление
             }
 //            else {
