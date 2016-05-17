@@ -300,9 +300,21 @@ class GameScene: SKScene {
         //Зачем — просто. 
         //ЗЫ. Потерпел фиаско
 //        if (main?.position.y < 0) {
-//            initGameObject()
+//            print("- - - Game Ended - - -")
+//            let menuScene = GameScene(size: self.size)
+//            let transition = SKTransition.flipVerticalWithDuration(1.0)
+//            menuScene.scaleMode = SKSceneScaleMode.AspectFill
+//            self.scene!.view?.presentScene(menuScene, transition: transition)
 //        }
     }
+    
+//    private func gameOver(didWin: Bool) {
+//        print("- - - Game Ended - - -")
+//        let menuScene = GameScene(size: self.size)
+//        let transition = SKTransition.flipVerticalWithDuration(1.0)
+//        menuScene.scaleMode = SKSceneScaleMode.AspectFill
+//        self.scene!.view?.presentScene(menuScene, transition: transition)
+//    }
    
     
     //Таинственная функция. Про нее ходят легенды, но никто не знает что она делает.
