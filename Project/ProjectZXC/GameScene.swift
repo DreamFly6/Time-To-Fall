@@ -290,9 +290,18 @@ class GameScene: SKScene {
     //Удаляет спрайт, когда он улетел за экран
     override func didSimulatePhysics() {
         let woodenBoxx = childNodeWithName("WoodenBox")
+//        let main = self.childNodeWithName("MainCharacter") as? SKSpriteNode
+
         if (woodenBoxx?.position.y < 0) {
             [woodenBoxx?.removeFromParent];
+            
         }
+        //Хотел сделать так: после того как ГГ улетел за экран — обновлять всю сцену. 
+        //Зачем — просто. 
+        //ЗЫ. Потерпел фиаско
+//        if (main?.position.y < 0) {
+//            initGameObject()
+//        }
     }
    
     
