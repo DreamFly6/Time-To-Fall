@@ -1,10 +1,4 @@
-//
-//  GameScene.swift
-//  ProjectZXC
-//
-//  Created by Женя on 01.05.16.
-//  Copyright (c) 2016 Женя. All rights reserved.
-//
+// Ver 0.0000000001
 
 import SpriteKit
 
@@ -100,20 +94,20 @@ class GameScene: SKScene {
     func initGameObject(){
         
         //  Инициализация MainCharacter
-        let main = self.childNodeWithName("MainCharacter") as? SKSpriteNode
-        main!.physicsBody?.friction = 0.2
-        main!.physicsBody?.restitution = 0.3
-        main!.physicsBody?.linearDamping = 0.2
-        main!.physicsBody?.angularDamping = 0.2
-        main!.physicsBody?.mass = 2.0
-        
-        let qwe = self.childNodeWithName("WoodenBox1") as? SKSpriteNode
-        qwe!.physicsBody?.friction = 0.2
-        qwe!.physicsBody?.restitution = 0.3
-        qwe!.physicsBody?.linearDamping = 0.2
-        qwe!.physicsBody?.angularDamping = 0.2
-        qwe!.physicsBody?.mass = 2.0
-        qwe?.physicsBody?.pinned = true
+//        let main = self.childNodeWithName("MainCharacter") as? SKSpriteNode
+//        main!.physicsBody?.friction = 0.2
+//        main!.physicsBody?.restitution = 0.3
+//        main!.physicsBody?.linearDamping = 0.2
+//        main!.physicsBody?.angularDamping = 0.2
+//        main!.physicsBody?.mass = 2.0
+//
+//        let qwe = self.childNodeWithName("WoodenBox1") as? SKSpriteNode
+//        qwe!.physicsBody?.friction = 0.2
+//        qwe!.physicsBody?.restitution = 0.3
+//        qwe!.physicsBody?.linearDamping = 0.2
+//        qwe!.physicsBody?.angularDamping = 0.2
+//        qwe!.physicsBody?.mass = 2.0
+//        qwe?.physicsBody?.pinned = true
         
         //  Инициализация Background
         //let background = self.childNodeWithName("Background") as? SKSpriteNode
@@ -300,6 +294,10 @@ class GameScene: SKScene {
 //        Зачем — просто. 
 //        ЗЫ. Потерпел фиаско
         if (main?.position.y < 0) {
+            let gameScene = GameScene(size: self.size)
+            let transition = SKTransition.doorsCloseHorizontalWithDuration(0.5)
+            gameScene.scaleMode = SKSceneScaleMode.AspectFill
+            self.scene!.view?.presentScene(gameScene, transition: transition)
 //            print("- - - Game Ended - - -")
 //            print("main", main?.name)
 //            let menuScene = GameScene(size: self.size)
@@ -308,6 +306,7 @@ class GameScene: SKScene {
 //            self.scene!.view?.presentScene(menuScene, transition: transition)
         }
     }
+    
     
 //    private func gameOver(didWin: Bool) {
 //        print("- - - Game Ended - - -")
