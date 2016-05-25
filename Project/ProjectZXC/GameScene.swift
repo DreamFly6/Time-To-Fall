@@ -2,6 +2,8 @@
 
 import SpriteKit
 
+
+
 class GameScene: SKScene {
     
     
@@ -277,6 +279,20 @@ class GameScene: SKScene {
 //                print("hit")
 //            }
             
+            
+            let touch = touches 
+            let location = touch.first!.locationInNode(self)
+            let node = self.nodeAtPoint(location)
+            
+            if (node.name == "MySweetButton") {
+                
+                print("нажали на кнопку")
+                let gameScene = GameScene(size: self.size)
+                let transition = SKTransition.doorsCloseHorizontalWithDuration(0.5)
+                gameScene.scaleMode = SKSceneScaleMode.AspectFill
+                self.scene!.view?.presentScene(gameScene, transition: transition)
+            }
+            
         }
     }
     
@@ -294,10 +310,34 @@ class GameScene: SKScene {
 //        Зачем — просто. 
 //        ЗЫ. Потерпел фиаско
         if (main?.position.y < 0) {
-            let gameScene = GameScene(size: self.size)
-            let transition = SKTransition.doorsCloseHorizontalWithDuration(0.5)
-            gameScene.scaleMode = SKSceneScaleMode.AspectFill
-            self.scene!.view?.presentScene(gameScene, transition: transition)
+            
+//            
+//            let gameScene = GameScene(size: self.size)
+//            let transition = SKTransition.doorsCloseHorizontalWithDuration(0.5)
+//            gameScene.scaleMode = SKSceneScaleMode.AspectFill
+//            self.scene!.view?.presentScene(gameScene, transition: transition)
+            
+            
+            let button = SKSpriteNode(imageNamed: "MySweetButton.png")
+            button.position = CGPointMake(CGRectGetMidX(self.frame), CGRectGetMidY(self.frame))
+            button.name = "MySweetButton"
+            
+            self.addChild(button)
+            
+            
+            
+//            let secondScene = SecondScene(size: self.size)
+//            let transition = SKTransition.flipVerticalWithDuration(1.0)
+//            secondScene.scaleMode = SKSceneScaleMode.AspectFill
+//            self.scene!.view?.presentScene(secondScene, transition: transition)
+            
+            
+//            let gameScene:GameScene = GameScene(size: self.view!.bounds.size)
+//            let transition = SKTransition.fadeWithDuration(1.0)
+//            gameScene.scaleMode = SKSceneScaleMode.Fill
+//            self.view!.presentScene(gameScene, transition: transition)
+            
+            
 //            print("- - - Game Ended - - -")
 //            print("main", main?.name)
 //            let menuScene = GameScene(size: self.size)
