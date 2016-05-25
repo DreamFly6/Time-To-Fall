@@ -287,10 +287,10 @@ class GameScene: SKScene {
             if (node.name == "MySweetButton") {
                 
                 print("нажали на кнопку")
-                let gameScene = GameScene(size: self.size)
+                let SecondScene = GameScene(fileNamed:"SecondScene")
                 let transition = SKTransition.doorsCloseHorizontalWithDuration(0.5)
-                gameScene.scaleMode = SKSceneScaleMode.AspectFill
-                self.scene!.view?.presentScene(gameScene, transition: transition)
+                SecondScene!.scaleMode = SKSceneScaleMode.AspectFill
+                self.scene!.view?.presentScene(SecondScene!, transition: transition)
             }
             
         }
