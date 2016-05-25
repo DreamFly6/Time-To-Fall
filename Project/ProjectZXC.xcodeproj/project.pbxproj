@@ -20,6 +20,7 @@
 		1FE0F4001CE6F5B9007E1B98 /* TestScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 1FE0F3FF1CE6F5B9007E1B98 /* TestScene.sks */; };
 		32BE5B8F1CD79BA100C7A815 /* backgroundMainMenu.png in Resources */ = {isa = PBXBuildFile; fileRef = 32BE5B8E1CD79BA100C7A815 /* backgroundMainMenu.png */; };
 		32BE5B911CD79C7000C7A815 /* buttonStart.png in Resources */ = {isa = PBXBuildFile; fileRef = 32BE5B901CD79C7000C7A815 /* buttonStart.png */; };
+		32E0A4251CF5A9CB00D575A7 /* MyLaunchScreen.png in Resources */ = {isa = PBXBuildFile; fileRef = 32E0A4241CF5A9CB00D575A7 /* MyLaunchScreen.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +60,7 @@
 		1FE0F3FF1CE6F5B9007E1B98 /* TestScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = TestScene.sks; sourceTree = "<group>"; };
 		32BE5B8E1CD79BA100C7A815 /* backgroundMainMenu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = backgroundMainMenu.png; path = pic/backgroundMainMenu.png; sourceTree = SOURCE_ROOT; };
 		32BE5B901CD79C7000C7A815 /* buttonStart.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = buttonStart.png; path = pic/buttonStart.png; sourceTree = SOURCE_ROOT; };
+		32E0A4241CF5A9CB00D575A7 /* MyLaunchScreen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = MyLaunchScreen.png; path = pic/MyLaunchScreen.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +91,7 @@
 		1F4C245D1CD5E55600D3B0DB = {
 			isa = PBXGroup;
 			children = (
+				32E0A4241CF5A9CB00D575A7 /* MyLaunchScreen.png */,
 				1F4C24681CD5E55600D3B0DB /* ProjectZXC */,
 				1F4C24811CD5E55600D3B0DB /* ProjectZXCTests */,
 				1F4C248C1CD5E55600D3B0DB /* ProjectZXCUITests */,
@@ -266,6 +269,7 @@
 			files = (
 				1F4C246C1CD5E55600D3B0DB /* 1.sks in Resources */,
 				1F6C00A61CE34FCF00A7C8E6 /* 2.sks in Resources */,
+				32E0A4251CF5A9CB00D575A7 /* MyLaunchScreen.png in Resources */,
 				1FE0F4001CE6F5B9007E1B98 /* TestScene.sks in Resources */,
 				32BE5B8F1CD79BA100C7A815 /* backgroundMainMenu.png in Resources */,
 				32BE5B911CD79C7000C7A815 /* buttonStart.png in Resources */,
