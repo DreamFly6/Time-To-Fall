@@ -326,6 +326,9 @@ class GameScene: SKScene {
             
             
             
+            
+            //http://www.ioscreator.com/tutorials/scenes-tutorial-spritekit-swift
+            //ТУТ есть полезная информация
 //            let secondScene = SecondScene(size: self.size)
 //            let transition = SKTransition.flipVerticalWithDuration(1.0)
 //            secondScene.scaleMode = SKSceneScaleMode.AspectFill
