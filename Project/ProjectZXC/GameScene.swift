@@ -119,8 +119,8 @@ class GameScene: SKScene {
         let menuBoard = SKSpriteNode(imageNamed: "MenuBoard.png")
         menuBoard.position = CGPointMake(CGRectGetMidX(self.frame), CGRectGetMidY(self.frame))
         menuBoard.name = "menuBoard"
-        menuBoard.xScale = 1.3
-        menuBoard.yScale = 1.3
+        menuBoard.xScale = 1.4
+        menuBoard.yScale = 1.4
         menuBoard.zPosition = 1
         self.addChild(menuBoard)
     }
