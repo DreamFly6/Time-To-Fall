@@ -17,12 +17,15 @@
 		1F4C24831CD5E55600D3B0DB /* ProjectZXCTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F4C24821CD5E55600D3B0DB /* ProjectZXCTests.swift */; };
 		1F4C248E1CD5E55600D3B0DB /* ProjectZXCUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F4C248D1CD5E55600D3B0DB /* ProjectZXCUITests.swift */; };
 		1F6C00A61CE34FCF00A7C8E6 /* 2.sks in Resources */ = {isa = PBXBuildFile; fileRef = 1F6C00A51CE34FCF00A7C8E6 /* 2.sks */; };
+		1F8FA95F1CF745B500DB5FAF /* MenuBoard.png in Resources */ = {isa = PBXBuildFile; fileRef = 1F8FA95B1CF745B500DB5FAF /* MenuBoard.png */; };
+		1F8FA9601CF745B500DB5FAF /* Button3.png in Resources */ = {isa = PBXBuildFile; fileRef = 1F8FA95C1CF745B500DB5FAF /* Button3.png */; };
+		1F8FA9611CF745B500DB5FAF /* Button1.png in Resources */ = {isa = PBXBuildFile; fileRef = 1F8FA95D1CF745B500DB5FAF /* Button1.png */; };
+		1F8FA9621CF745B500DB5FAF /* Button2.png in Resources */ = {isa = PBXBuildFile; fileRef = 1F8FA95E1CF745B500DB5FAF /* Button2.png */; };
 		1FE0F4001CE6F5B9007E1B98 /* TestScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 1FE0F3FF1CE6F5B9007E1B98 /* TestScene.sks */; };
 		324CD9CC1CF5B22F00C8AB47 /* SecondScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 324CD9CB1CF5B22F00C8AB47 /* SecondScene.swift */; };
 		32BE5B8F1CD79BA100C7A815 /* backgroundMainMenu.png in Resources */ = {isa = PBXBuildFile; fileRef = 32BE5B8E1CD79BA100C7A815 /* backgroundMainMenu.png */; };
 		32BE5B911CD79C7000C7A815 /* buttonStart.png in Resources */ = {isa = PBXBuildFile; fileRef = 32BE5B901CD79C7000C7A815 /* buttonStart.png */; };
 		32E0A4251CF5A9CB00D575A7 /* MyLaunchScreen.png in Resources */ = {isa = PBXBuildFile; fileRef = 32E0A4241CF5A9CB00D575A7 /* MyLaunchScreen.png */; };
-		32E0A4271CF5B07400D575A7 /* MySweetButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 32E0A4261CF5B07400D575A7 /* MySweetButton.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,12 +62,15 @@
 		1F4C248D1CD5E55600D3B0DB /* ProjectZXCUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectZXCUITests.swift; sourceTree = "<group>"; };
 		1F4C248F1CD5E55600D3B0DB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1F6C00A51CE34FCF00A7C8E6 /* 2.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = 2.sks; sourceTree = "<group>"; };
+		1F8FA95B1CF745B500DB5FAF /* MenuBoard.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = MenuBoard.png; path = ../../../../Desktop/MenuBoard.png; sourceTree = "<group>"; };
+		1F8FA95C1CF745B500DB5FAF /* Button3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Button3.png; path = ../../../../Desktop/Button3.png; sourceTree = "<group>"; };
+		1F8FA95D1CF745B500DB5FAF /* Button1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Button1.png; path = ../../../../Desktop/Button1.png; sourceTree = "<group>"; };
+		1F8FA95E1CF745B500DB5FAF /* Button2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Button2.png; path = ../../../../Desktop/Button2.png; sourceTree = "<group>"; };
 		1FE0F3FF1CE6F5B9007E1B98 /* TestScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = TestScene.sks; sourceTree = "<group>"; };
 		324CD9CB1CF5B22F00C8AB47 /* SecondScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SecondScene.swift; path = ../SecondScene.swift; sourceTree = "<group>"; };
 		32BE5B8E1CD79BA100C7A815 /* backgroundMainMenu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = backgroundMainMenu.png; path = pic/backgroundMainMenu.png; sourceTree = SOURCE_ROOT; };
 		32BE5B901CD79C7000C7A815 /* buttonStart.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = buttonStart.png; path = pic/buttonStart.png; sourceTree = SOURCE_ROOT; };
 		32E0A4241CF5A9CB00D575A7 /* MyLaunchScreen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = MyLaunchScreen.png; path = ../pic/MyLaunchScreen.png; sourceTree = "<group>"; };
-		32E0A4261CF5B07400D575A7 /* MySweetButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MySweetButton.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -160,7 +166,10 @@
 		32BE5B8D1CD79B8B00C7A815 /* Menu_Image */ = {
 			isa = PBXGroup;
 			children = (
-				32E0A4261CF5B07400D575A7 /* MySweetButton.png */,
+				1F8FA95B1CF745B500DB5FAF /* MenuBoard.png */,
+				1F8FA95C1CF745B500DB5FAF /* Button3.png */,
+				1F8FA95D1CF745B500DB5FAF /* Button1.png */,
+				1F8FA95E1CF745B500DB5FAF /* Button2.png */,
 				32BE5B901CD79C7000C7A815 /* buttonStart.png */,
 				32E0A4241CF5A9CB00D575A7 /* MyLaunchScreen.png */,
 				32BE5B8E1CD79BA100C7A815 /* backgroundMainMenu.png */,
@@ -274,14 +283,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				1F4C246C1CD5E55600D3B0DB /* SecondScene.sks in Resources */,
+				1F8FA9601CF745B500DB5FAF /* Button3.png in Resources */,
 				1F6C00A61CE34FCF00A7C8E6 /* 2.sks in Resources */,
 				32E0A4251CF5A9CB00D575A7 /* MyLaunchScreen.png in Resources */,
 				1FE0F4001CE6F5B9007E1B98 /* TestScene.sks in Resources */,
-				32E0A4271CF5B07400D575A7 /* MySweetButton.png in Resources */,
+				1F8FA95F1CF745B500DB5FAF /* MenuBoard.png in Resources */,
 				32BE5B8F1CD79BA100C7A815 /* backgroundMainMenu.png in Resources */,
+				1F8FA9621CF745B500DB5FAF /* Button2.png in Resources */,
 				32BE5B911CD79C7000C7A815 /* buttonStart.png in Resources */,
 				1F4C24781CD5E55600D3B0DB /* LaunchScreen.storyboard in Resources */,
 				1F4C24751CD5E55600D3B0DB /* Assets.xcassets in Resources */,
+				1F8FA9611CF745B500DB5FAF /* Button1.png in Resources */,
 				1F4C24731CD5E55600D3B0DB /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

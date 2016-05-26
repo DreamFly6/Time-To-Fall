@@ -10,7 +10,7 @@ class GameScene: SKScene {
     //Функция для добавления нового спрайта в одну строку Автор:Жека
     func addSpriteNodeBy(name: String, position: CGPoint) -> SKSpriteNode{
         let sprite = SKSpriteNode(imageNamed: name)
-
+        
         sprite.position = position
         sprite.yScale = 3.0
         addChild(sprite)
@@ -18,30 +18,30 @@ class GameScene: SKScene {
         return sprite
     }
     
-//    Добавление блока
+    //    Добавление блока
     
-//    class StarNode: SKSpriteNode {
-//        class func star(location: CGPoint) -> StarNode {
-//            let sprite = StarNode(imageNamed:"WoodenBox.png")
-//
-//            sprite.xScale = 0.4
-//            sprite.yScale = 0.4
-//            sprite.position = location
-//
-//            sprite.physicsBody = SKPhysicsBody(texture: SKTexture(imageNamed: "WoodenBox.png"), size: sprite.size)
-//            if let physics = sprite.physicsBody {
-//               physics.affectedByGravity = true
-//                physics.allowsRotation = true
-//                physics.dynamic = true;
-//                physics.friction = 0.1
-//                physics.mass = 1.0
-//                physics.restitution = 0.2
-//                physics.linearDamping = 0.75
-//                physics.angularDamping = 0.75
-//            }
-//            return sprite
-//        }
-//   }
+    //    class StarNode: SKSpriteNode {
+    //        class func star(location: CGPoint) -> StarNode {
+    //            let sprite = StarNode(imageNamed:"WoodenBox.png")
+    //
+    //            sprite.xScale = 0.4
+    //            sprite.yScale = 0.4
+    //            sprite.position = location
+    //
+    //            sprite.physicsBody = SKPhysicsBody(texture: SKTexture(imageNamed: "WoodenBox.png"), size: sprite.size)
+    //            if let physics = sprite.physicsBody {
+    //               physics.affectedByGravity = true
+    //                physics.allowsRotation = true
+    //                physics.dynamic = true;
+    //                physics.friction = 0.1
+    //                physics.mass = 1.0
+    //                physics.restitution = 0.2
+    //                physics.linearDamping = 0.75
+    //                physics.angularDamping = 0.75
+    //            }
+    //            return sprite
+    //        }
+    //   }
     
     
     //TODO блоки    (Извиняюсь за ошибки)
@@ -88,28 +88,61 @@ class GameScene: SKScene {
     //  -   Допилить спрайты для объектов
     //  -   Допилить спрайты для фонов
     //  -   Допилить маску коллизии для ГГ
-    //  -   
+    //  -
     
-    
+    //При вызове этой функции, показывается меню.
+    func showButtons(){
+        let button1 = SKSpriteNode(imageNamed: "Button1.png")
+        button1.position = CGPointMake(CGRectGetMidX(self.frame)/2, CGRectGetMidY(self.frame))
+        button1.name = "retry"
+        button1.xScale = 0.5
+        button1.yScale = 0.5
+        button1.zPosition = 2
+        self.addChild(button1)
+        
+        let button2 = SKSpriteNode(imageNamed: "Button2.png")
+        button2.position = CGPointMake(CGRectGetMidX(self.frame), CGRectGetMidY(self.frame))
+        button2.name = "button2"
+        button2.xScale = 0.5
+        button2.yScale = 0.5
+        button2.zPosition = 2
+        self.addChild(button2)
+        
+        let button3 = SKSpriteNode(imageNamed: "Button3.png")
+        button3.position = CGPointMake(CGRectGetMidX(self.frame)+(CGRectGetMidX(self.frame)/2), CGRectGetMidY(self.frame))
+        button3.name = "button3"
+        button3.xScale = 0.5
+        button3.yScale = 0.5
+        button3.zPosition = 2
+        self.addChild(button3)
+        
+        let menuBoard = SKSpriteNode(imageNamed: "MenuBoard.png")
+        menuBoard.position = CGPointMake(CGRectGetMidX(self.frame), CGRectGetMidY(self.frame))
+        menuBoard.name = "menuBoard"
+        menuBoard.xScale = 1.3
+        menuBoard.yScale = 1.3
+        menuBoard.zPosition = 1
+        self.addChild(menuBoard)
+    }
     
     //Ициализация свойств игровых объектов
     func initGameObject(){
         
         //  Инициализация MainCharacter
-//        let main = self.childNodeWithName("MainCharacter") as? SKSpriteNode
-//        main!.physicsBody?.friction = 0.2
-//        main!.physicsBody?.restitution = 0.3
-//        main!.physicsBody?.linearDamping = 0.2
-//        main!.physicsBody?.angularDamping = 0.2
-//        main!.physicsBody?.mass = 2.0
-//
-//        let qwe = self.childNodeWithName("WoodenBox1") as? SKSpriteNode
-//        qwe!.physicsBody?.friction = 0.2
-//        qwe!.physicsBody?.restitution = 0.3
-//        qwe!.physicsBody?.linearDamping = 0.2
-//        qwe!.physicsBody?.angularDamping = 0.2
-//        qwe!.physicsBody?.mass = 2.0
-//        qwe?.physicsBody?.pinned = true
+        //        let main = self.childNodeWithName("MainCharacter") as? SKSpriteNode
+        //        main!.physicsBody?.friction = 0.2
+        //        main!.physicsBody?.restitution = 0.3
+        //        main!.physicsBody?.linearDamping = 0.2
+        //        main!.physicsBody?.angularDamping = 0.2
+        //        main!.physicsBody?.mass = 2.0
+        //
+        //        let qwe = self.childNodeWithName("WoodenBox1") as? SKSpriteNode
+        //        qwe!.physicsBody?.friction = 0.2
+        //        qwe!.physicsBody?.restitution = 0.3
+        //        qwe!.physicsBody?.linearDamping = 0.2
+        //        qwe!.physicsBody?.angularDamping = 0.2
+        //        qwe!.physicsBody?.mass = 2.0
+        //        qwe?.physicsBody?.pinned = true
         
         //  Инициализация Background
         //let background = self.childNodeWithName("Background") as? SKSpriteNode
@@ -168,7 +201,7 @@ class GameScene: SKScene {
                 }
             }
         }
-
+        
         //  Инициализация StoneBlock
         for stoneBlock in self.children {
             if stoneBlock.name == "StoneBlock" {
@@ -208,13 +241,13 @@ class GameScene: SKScene {
         initGameObject()
     }
     
-
     
-
+    
+    
     //Вызывается когда просиходит нажатие
     override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
         
-
+        
         // Цикл считывающий нажатие на экран
         for touch: AnyObject in touches {
             
@@ -224,15 +257,15 @@ class GameScene: SKScene {
             if (touchedNode.name == "WoodenBox" || touchedNode.name == "WoodenPlank") {
                 touchedNode.removeFromParent() //удаление
             }
-//            else {
-//                print("В таче else")
-//                let sprite = StarNode.star(touch.locationInNode(self))
-//                sprite.name = "WoodenBox"
-//                sprite.xScale = 0.35
-//                sprite.yScale = 0.35
-//                print (sprite.name);
-//                self.addChild(sprite)
-//            }
+            //            else {
+            //                print("В таче else")
+            //                let sprite = StarNode.star(touch.locationInNode(self))
+            //                sprite.name = "WoodenBox"
+            //                sprite.xScale = 0.35
+            //                sprite.yScale = 0.35
+            //                print (sprite.name);
+            //                self.addChild(sprite)
+            //            }
             
             //Почему - то  это условие не работает
             //if spriteNode.texture == SKTexture(imageNamed: "ActivaBlock_On"){
@@ -273,18 +306,18 @@ class GameScene: SKScene {
             }
             
             
-//            Если это расскоментить, то по удалениею предка удалятся все дети ¯ \ _ (ツ) _ / ¯
-//            if (touchedNode.name == "WoodenBox") {
-//                touchedNode.removeFromParent()
-//                print("hit")
-//            }
+            //            Если это расскоментить, то по удалениею предка удалятся все дети ¯ \ _ (ツ) _ / ¯
+            //            if (touchedNode.name == "WoodenBox") {
+            //                touchedNode.removeFromParent()
+            //                print("hit")
+            //            }
             
             
-            let touch = touches 
+            let touch = touches
             let location = touch.first!.locationInNode(self)
             let node = self.nodeAtPoint(location)
             
-            if (node.name == "MySweetButton") {
+            if (node.name == "retry") {
                 
                 print("нажали на кнопку")
                 let SecondScene = GameScene(fileNamed:"SecondScene")
@@ -301,64 +334,52 @@ class GameScene: SKScene {
     override func didSimulatePhysics() {
         let woodenBoxx = childNodeWithName("WoodenBox")
         let main = self.childNodeWithName("MainCharacter") as? SKSpriteNode
-
+        
         if (woodenBoxx?.position.y < 0) {
             [woodenBoxx?.removeFromParent];
             
         }
-//        Хотел сделать так: после того как ГГ улетел за экран — обновлять всю сцену. 
-//        Зачем — просто. 
-//        ЗЫ. Потерпел фиаско
+        //        Хотел сделать так: после того как ГГ улетел за экран — обновлять всю сцену.
+        //        Зачем — просто.
+        //        ЗЫ. Потерпел фиаско
         if (main?.position.y < 0) {
-            
-//            
-//            let gameScene = GameScene(size: self.size)
-//            let transition = SKTransition.doorsCloseHorizontalWithDuration(0.5)
-//            gameScene.scaleMode = SKSceneScaleMode.AspectFill
-//            self.scene!.view?.presentScene(gameScene, transition: transition)
-            
-            
-            let button = SKSpriteNode(imageNamed: "MySweetButton.png")
-            button.position = CGPointMake(CGRectGetMidX(self.frame), CGRectGetMidY(self.frame))
-            button.name = "MySweetButton"
-            
-            self.addChild(button)
-            
-            
-            
-            
+            showButtons()
+            //
+            //            let gameScene = GameScene(size: self.size)
+            //            let transition = SKTransition.doorsCloseHorizontalWithDuration(0.5)
+            //            gameScene.scaleMode = SKSceneScaleMode.AspectFill
+            //            self.scene!.view?.presentScene(gameScene, transition: transition)
             //http://www.ioscreator.com/tutorials/scenes-tutorial-spritekit-swift
             //ТУТ есть полезная информация
-//            let secondScene = SecondScene(size: self.size)
-//            let transition = SKTransition.flipVerticalWithDuration(1.0)
-//            secondScene.scaleMode = SKSceneScaleMode.AspectFill
-//            self.scene!.view?.presentScene(secondScene, transition: transition)
+            //            let secondScene = SecondScene(size: self.size)
+            //            let transition = SKTransition.flipVerticalWithDuration(1.0)
+            //            secondScene.scaleMode = SKSceneScaleMode.AspectFill
+            //            self.scene!.view?.presentScene(secondScene, transition: transition)
+            
+            //            let gameScene:GameScene = GameScene(size: self.view!.bounds.size)
+            //            let transition = SKTransition.fadeWithDuration(1.0)
+            //            gameScene.scaleMode = SKSceneScaleMode.Fill
+            //            self.view!.presentScene(gameScene, transition: transition)
             
             
-//            let gameScene:GameScene = GameScene(size: self.view!.bounds.size)
-//            let transition = SKTransition.fadeWithDuration(1.0)
-//            gameScene.scaleMode = SKSceneScaleMode.Fill
-//            self.view!.presentScene(gameScene, transition: transition)
-            
-            
-//            print("- - - Game Ended - - -")
-//            print("main", main?.name)
-//            let menuScene = GameScene(size: self.size)
-//            let transition = SKTransition.flipVerticalWithDuration(1.0)
-//            menuScene.scaleMode = SKSceneScaleMode.AspectFill
-//            self.scene!.view?.presentScene(menuScene, transition: transition)
+            //            print("- - - Game Ended - - -")
+            //            print("main", main?.name)
+            //            let menuScene = GameScene(size: self.size)
+            //            let transition = SKTransition.flipVerticalWithDuration(1.0)
+            //            menuScene.scaleMode = SKSceneScaleMode.AspectFill
+            //            self.scene!.view?.presentScene(menuScene, transition: transition)
         }
     }
     
     
-//    private func gameOver(didWin: Bool) {
-//        print("- - - Game Ended - - -")
-//        let menuScene = GameScene(size: self.size)
-//        let transition = SKTransition.flipVerticalWithDuration(1.0)
-//        menuScene.scaleMode = SKSceneScaleMode.AspectFill
-//        self.scene!.view?.presentScene(menuScene, transition: transition)
-//    }
-   
+    //    private func gameOver(didWin: Bool) {
+    //        print("- - - Game Ended - - -")
+    //        let menuScene = GameScene(size: self.size)
+    //        let transition = SKTransition.flipVerticalWithDuration(1.0)
+    //        menuScene.scaleMode = SKSceneScaleMode.AspectFill
+    //        self.scene!.view?.presentScene(menuScene, transition: transition)
+    //    }
+    
     
     //Таинственная функция. Про нее ходят легенды, но никто не знает что она делает.
     override func update(currentTime: CFTimeInterval) {
