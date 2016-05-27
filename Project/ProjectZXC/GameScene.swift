@@ -319,7 +319,17 @@ class GameScene: SKScene {
             
             if (node.name == "retry") {
                 
-                print("нажали на кнопку")
+                
+                
+                print("нажали на кнопку button2")
+                let GameScene1 = GameScene(fileNamed:"TestScene")
+                let transition = SKTransition.doorsCloseHorizontalWithDuration(0.5)
+                GameScene1!.scaleMode = SKSceneScaleMode.AspectFill
+                self.scene!.view?.presentScene(GameScene1!, transition: transition)
+            }
+            if (node.name == "button2") {
+                
+                print("нажали на кнопку button2")
                 let SecondScene = GameScene(fileNamed:"SecondScene")
                 let transition = SKTransition.doorsCloseHorizontalWithDuration(0.5)
                 SecondScene!.scaleMode = SKSceneScaleMode.AspectFill
