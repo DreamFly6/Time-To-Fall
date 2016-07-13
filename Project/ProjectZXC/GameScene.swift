@@ -4,7 +4,7 @@ import SpriteKit
 
 
 
-class GameScene: SKScene {
+class GameScene: SKScene, SKPhysicsContactDelegate {
     
     
     //Функция для добавления нового спрайта в одну строку Автор:Жека
@@ -353,20 +353,24 @@ class GameScene: SKScene {
         }
     }
     
-    
-    func didBeginContact(contact: SKPhysicsContact) {
-        var firstBody: SKPhysicsBody
-        var secondBody: SKPhysicsBody
-        if contact.bodyA.categoryBitMask < contact.bodyB.categoryBitMask
-        {
-            firstBody = contact.bodyA
-            secondBody = contact.bodyB
-        }
-        else {
-            firstBody = contact.bodyB
-            secondBody = contact.bodyA
-        }
-    }
+//    TODO: Разобраться условием соприкасновения объектов
+//    func didBeginContact(contact: SKPhysicsContact) {
+//        print("333333")
+//
+//        var firstBody: SKPhysicsBody
+//        var secondBody: SKPhysicsBody
+//        if contact.bodyA.collisionBitMask < contact.bodyB.collisionBitMask
+//        {
+//            firstBody = contact.
+//            secondBody = contact.bodyB
+//            print("111111")
+//        }
+//        else {
+//            firstBody = contact.bodyB
+//            secondBody = contact.bodyA
+//            print("22222222")
+//        }
+//    }
     
     //Удаляет спрайт, когда он улетел за экран
     override func didSimulatePhysics() {
