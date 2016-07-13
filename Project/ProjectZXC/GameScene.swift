@@ -146,6 +146,21 @@ class GameScene: SKScene {
         
         //  Инициализация Background
         //let background = self.childNodeWithName("Background") as? SKSpriteNode
+
+        //  Инициализация SpearBlock
+        for spearBlock in self.children {
+            if spearBlock.name == "SpearBlock" {
+                if let spearBlock = spearBlock as? SKSpriteNode {
+                    spearBlock.physicsBody?.friction = 0.1
+                    spearBlock.physicsBody?.restitution = 0.1
+                    spearBlock.physicsBody?.linearDamping = 0.1
+                    spearBlock.physicsBody?.angularDamping = 0.1
+                    spearBlock.physicsBody?.mass = 2.0
+                    spearBlock.physicsBody?.pinned = true
+                    spearBlock.physicsBody?.allowsRotation = false
+                }
+            }
+        }
         
         
         //  Инициализация SlimeBlock
@@ -313,14 +328,13 @@ class GameScene: SKScene {
             //            }
             
             
+            
+            
             let touch = touches
             let location = touch.first!.locationInNode(self)
             let node = self.nodeAtPoint(location)
             
             if (node.name == "retry") {
-                
-                
-                
                 print("нажали на кнопку button2")
                 let GameScene1 = GameScene(fileNamed:"TestScene")
                 let transition = SKTransition.doorsCloseHorizontalWithDuration(0.5)
@@ -339,6 +353,20 @@ class GameScene: SKScene {
         }
     }
     
+    
+    func didBeginContact(contact: SKPhysicsContact) {
+        var firstBody: SKPhysicsBody
+        var secondBody: SKPhysicsBody
+        if contact.bodyA.categoryBitMask < contact.bodyB.categoryBitMask
+        {
+            firstBody = contact.bodyA
+            secondBody = contact.bodyB
+        }
+        else {
+            firstBody = contact.bodyB
+            secondBody = contact.bodyA
+        }
+    }
     
     //Удаляет спрайт, когда он улетел за экран
     override func didSimulatePhysics() {
