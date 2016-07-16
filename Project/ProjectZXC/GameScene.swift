@@ -147,6 +147,26 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         //  Инициализация Background
         //let background = self.childNodeWithName("Background") as? SKSpriteNode
 
+
+        
+        //  Инициализация WallBlockOpen
+        for wallBlock in self.children {
+            if wallBlock.name == "WallBlock" {
+                if let wallBlock = wallBlock as? SKSpriteNode {
+                    wallBlock.physicsBody = SKPhysicsBody(rectangleOfSize: CGSize(width: 200,height: 200))
+                    wallBlock.physicsBody?.friction = 0.1
+                    wallBlock.physicsBody?.restitution = 0.1
+                    wallBlock.physicsBody?.linearDamping = 0.1
+                    wallBlock.physicsBody?.angularDamping = 0.1
+                    wallBlock.physicsBody?.mass = 3.0
+                    wallBlock.physicsBody?.pinned = true
+                    wallBlock.physicsBody?.allowsRotation = false
+                }
+            }
+        }
+        
+        
+        
         //  Инициализация SpearBlock
         for spearBlock in self.children {
             if spearBlock.name == "SpearBlock" {
@@ -286,6 +306,33 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             //if spriteNode.texture == SKTexture(imageNamed: "ActivaBlock_On"){
             //Пока будет костыль
             
+            //TODO: Переделать условие на человеческое(Мб и такое норм)
+
+            
+            if let spriteNode = touchedNode as? SKSpriteNode {
+                if spriteNode.name == "WallBlock"{
+                    if spriteNode.physicsBody?.allowsRotation == true {
+
+                        spriteNode.physicsBody?.allowsRotation = false
+                        spriteNode.texture = SKTexture(imageNamed: "WallBlockOpen")
+
+                        spriteNode.physicsBody?.pinned = true
+
+                        
+                    }
+                    else {
+
+                        spriteNode.physicsBody?.allowsRotation = true
+                        spriteNode.texture = SKTexture(imageNamed: "WallBlockClose")
+
+                        spriteNode.physicsBody?.pinned = true
+
+                    }
+                }
+            }
+            
+            
+            
             
             //TODO: Переделать условие на человеческое(Мб и такое норм)
             if let spriteNode = touchedNode as? SKSpriteNode {
@@ -293,39 +340,32 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                     if spriteNode.physicsBody?.pinned == false{
                         spriteNode.physicsBody?.pinned = true
                         spriteNode.physicsBody?.dynamic = false
-                        print("TRUE")
+                        print("ActiveBlock_TRUE")
                         // OFF
                         spriteNode.texture = SKTexture(imageNamed: "ActivaBlock_Off")
                     }
                     else{
                         spriteNode.physicsBody?.pinned = false
                         spriteNode.physicsBody?.dynamic = true
-                        print("FALSE")
+                        print("ActiveBlock_FALSE")
                         //ON
                         spriteNode.texture = SKTexture(imageNamed: "ActivaBlock_On")
                     }
                 }
             }
             
-            //TODO: Переделать условие на человеческое(Мб и такое норм)
+
             if let spriteNode = touchedNode as? SKSpriteNode {
                 if spriteNode.name == "StoneBlock"{
                     if spriteNode.physicsBody?.mass == 3.0 {
                         spriteNode.texture = SKTexture(imageNamed: "BrokenStoneBlock")
-                        spriteNode.physicsBody?.mass = 2.9
+                        spriteNode.physicsBody?.mass = 2.0
                     }
                     else{
                         spriteNode.removeFromParent()
                     }
                 }
             }
-            
-            
-            //            Если это расскоментить, то по удалениею предка удалятся все дети ¯ \ _ (ツ) _ / ¯
-            //            if (touchedNode.name == "WoodenBox") {
-            //                touchedNode.removeFromParent()
-            //                print("hit")
-            //            }
             
             
             
