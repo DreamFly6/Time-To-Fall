@@ -6,16 +6,7 @@ import SpriteKit
 
 class GameScene: SKScene, SKPhysicsContactDelegate {
     
-    //Функция для добавления нового спрайта в одну строку Автор:Жека
-    func addSpriteNodeBy(name: String, position: CGPoint) -> SKSpriteNode{
-        let sprite = SKSpriteNode(imageNamed: name)
-        
-        sprite.position = position
-        sprite.yScale = 3.0
-        addChild(sprite)
-        
-        return sprite
-    }
+
     
     //    Добавление блока
     
@@ -151,7 +142,6 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         for main in self.children {
             if main.name == "MainCharacter" {
                 if let main = main as? SKSpriteNode {
-                    main.physicsBody?.categoryBitMask
                     main.physicsBody?.friction = 0.2
                     main.physicsBody?.restitution = 0.3
                     main.physicsBody?.linearDamping = 0.2
@@ -166,7 +156,6 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         for wallBlock in self.children {
             if wallBlock.name == "WallBlock" {
                 if let wallBlock = wallBlock as? SKSpriteNode {
-                    wallBlock.physicsBody = SKPhysicsBody(rectangleOfSize: CGSize(width: 200,height: 200))
                     wallBlock.physicsBody?.friction = 0.1
                     wallBlock.physicsBody?.restitution = 0.1
                     wallBlock.physicsBody?.linearDamping = 0.1
@@ -184,7 +173,6 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         for spearBlock in self.children {
             if spearBlock.name == "SpearBlock" {
                 if let spearBlock = spearBlock as? SKSpriteNode {
-                    spearBlock.physicsBody?.categoryBitMask
                     spearBlock.physicsBody?.friction = 0.1
                     spearBlock.physicsBody?.restitution = 0.1
                     spearBlock.physicsBody?.linearDamping = 0.1
@@ -409,28 +397,9 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     }
     
 //    TODO: Разобраться условием соприкасновения объектов
+    
     func didBeginContact(contact: SKPhysicsContact) {
-        // 1. Create local variables for two physics bodies
-        var firstBody: SKPhysicsBody
-        var secondBody: SKPhysicsBody
-        
-        // 2. Assign the two physics bodies so that the one with the lower category is always stored in firstBody
-        if contact.bodyA.categoryBitMask < contact.bodyB.categoryBitMask {
-            firstBody = contact.bodyA
-            secondBody = contact.bodyB
-        } else {
-            firstBody = contact.bodyB
-            secondBody = contact.bodyA
-        }
-        
-        // 3. react to the contact between the two nodes
-        if firstBody.categoryBitMask == initGameObject().spearBlock?.physicsBody?.categoryBitMask && secondBody.categoryBitMask == initGameObject().physicsBody?.categoryBitMask {
-            // Player & Zombie
-            print("qqq")
-        }
-        else{
-            print("eee")
-        }
+        print("Как ты работаешь?")
     }
 
     
