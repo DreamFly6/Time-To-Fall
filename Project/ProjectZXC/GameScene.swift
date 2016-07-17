@@ -6,7 +6,6 @@ import SpriteKit
 
 class GameScene: SKScene, SKPhysicsContactDelegate {
     
-    
     //Функция для добавления нового спрайта в одну строку Автор:Жека
     func addSpriteNodeBy(name: String, position: CGPoint) -> SKSpriteNode{
         let sprite = SKSpriteNode(imageNamed: name)
@@ -124,7 +123,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         menuBoard.zPosition = 1
         self.addChild(menuBoard)
     }
-    
+
     //Ициализация свойств игровых объектов
     func initGameObject(){
         
@@ -147,6 +146,20 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         //  Инициализация Background
         //let background = self.childNodeWithName("Background") as? SKSpriteNode
 
+          //Инициализация MainCharacter
+
+        for main in self.children {
+            if main.name == "MainCharacter" {
+                if let main = main as? SKSpriteNode {
+                    main.physicsBody?.categoryBitMask
+                    main.physicsBody?.friction = 0.2
+                    main.physicsBody?.restitution = 0.3
+                    main.physicsBody?.linearDamping = 0.2
+                    main.physicsBody?.angularDamping = 0.2
+                    main.physicsBody?.mass = 2.0
+                }
+            }
+        }
 
         
         //  Инициализация WallBlockOpen
@@ -171,6 +184,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         for spearBlock in self.children {
             if spearBlock.name == "SpearBlock" {
                 if let spearBlock = spearBlock as? SKSpriteNode {
+                    spearBlock.physicsBody?.categoryBitMask
                     spearBlock.physicsBody?.friction = 0.1
                     spearBlock.physicsBody?.restitution = 0.1
                     spearBlock.physicsBody?.linearDamping = 0.1
@@ -274,6 +288,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     //Функция выполняемая до открытия сцены
     override func didMoveToView(view: SKView) {
         initGameObject()
+
+
     }
     
     
@@ -312,20 +328,19 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             if let spriteNode = touchedNode as? SKSpriteNode {
                 if spriteNode.name == "WallBlock"{
                     if spriteNode.physicsBody?.allowsRotation == true {
-
+                        
+                        spriteNode.physicsBody?.pinned = true
                         spriteNode.physicsBody?.allowsRotation = false
                         spriteNode.texture = SKTexture(imageNamed: "WallBlockOpen")
 
-                        spriteNode.physicsBody?.pinned = true
 
                         
                     }
                     else {
-
+                        
+                        spriteNode.physicsBody?.pinned = true
                         spriteNode.physicsBody?.allowsRotation = true
                         spriteNode.texture = SKTexture(imageNamed: "WallBlockClose")
-
-                        spriteNode.physicsBody?.pinned = true
 
                     }
                 }
@@ -394,23 +409,30 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     }
     
 //    TODO: Разобраться условием соприкасновения объектов
-//    func didBeginContact(contact: SKPhysicsContact) {
-//        print("333333")
-//
-//        var firstBody: SKPhysicsBody
-//        var secondBody: SKPhysicsBody
-//        if contact.bodyA.collisionBitMask < contact.bodyB.collisionBitMask
-//        {
-//            firstBody = contact.
-//            secondBody = contact.bodyB
-//            print("111111")
-//        }
-//        else {
-//            firstBody = contact.bodyB
-//            secondBody = contact.bodyA
-//            print("22222222")
-//        }
-//    }
+    func didBeginContact(contact: SKPhysicsContact) {
+        // 1. Create local variables for two physics bodies
+        var firstBody: SKPhysicsBody
+        var secondBody: SKPhysicsBody
+        
+        // 2. Assign the two physics bodies so that the one with the lower category is always stored in firstBody
+        if contact.bodyA.categoryBitMask < contact.bodyB.categoryBitMask {
+            firstBody = contact.bodyA
+            secondBody = contact.bodyB
+        } else {
+            firstBody = contact.bodyB
+            secondBody = contact.bodyA
+        }
+        
+        // 3. react to the contact between the two nodes
+        if firstBody.categoryBitMask == initGameObject().spearBlock?.physicsBody?.categoryBitMask && secondBody.categoryBitMask == initGameObject().physicsBody?.categoryBitMask {
+            // Player & Zombie
+            print("qqq")
+        }
+        else{
+            print("eee")
+        }
+    }
+
     
     //Удаляет спрайт, когда он улетел за экран
     override func didSimulatePhysics() {
