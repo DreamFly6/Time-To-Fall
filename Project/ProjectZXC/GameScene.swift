@@ -293,7 +293,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             let touchLocation = touch.locationInNode(self)
             let touchedNode = self.nodeAtPoint(touchLocation)
             
-            if (touchedNode.name == "WoodenBox" || touchedNode.name == "WoodenPlank") {
+            if (touchedNode.name == "WoodenBox" || touchedNode.name == "WoodenPlank" || touchedNode.name == "SlimeBlock") {
                 touchedNode.removeFromParent() //удаление
             }
             //            else {
