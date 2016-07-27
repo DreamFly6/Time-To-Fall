@@ -402,6 +402,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         print("Как ты работаешь?")
     }
 
+    var показывалиМеню = false
     
     //Удаляет спрайт, когда он улетел за экран
     override func didSimulatePhysics() {
@@ -412,35 +413,12 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             [woodenBoxx?.removeFromParent];
             
         }
-        //        Хотел сделать так: после того как ГГ улетел за экран — обновлять всю сцену.
-        //        Зачем — просто.
-        //        ЗЫ. Потерпел фиаско
-        if (main?.position.y < 0) {
+       
+        //если ГГ улетел за сцену, показываем меню
+        //меню (кнопки накладывались на кнопки) раньше создавалось постоянно, а теперь только один раз
+        if ( (main?.position.y < 0) && (показывалиМеню == false)) {
             showButtons()
-            //
-            //            let gameScene = GameScene(size: self.size)
-            //            let transition = SKTransition.doorsCloseHorizontalWithDuration(0.5)
-            //            gameScene.scaleMode = SKSceneScaleMode.AspectFill
-            //            self.scene!.view?.presentScene(gameScene, transition: transition)
-            //http://www.ioscreator.com/tutorials/scenes-tutorial-spritekit-swift
-            //ТУТ есть полезная информация
-            //            let secondScene = SecondScene(size: self.size)
-            //            let transition = SKTransition.flipVerticalWithDuration(1.0)
-            //            secondScene.scaleMode = SKSceneScaleMode.AspectFill
-            //            self.scene!.view?.presentScene(secondScene, transition: transition)
-            
-            //            let gameScene:GameScene = GameScene(size: self.view!.bounds.size)
-            //            let transition = SKTransition.fadeWithDuration(1.0)
-            //            gameScene.scaleMode = SKSceneScaleMode.Fill
-            //            self.view!.presentScene(gameScene, transition: transition)
-            
-            
-            //            print("- - - Game Ended - - -")
-            //            print("main", main?.name)
-            //            let menuScene = GameScene(size: self.size)
-            //            let transition = SKTransition.flipVerticalWithDuration(1.0)
-            //            menuScene.scaleMode = SKSceneScaleMode.AspectFill
-            //            self.scene!.view?.presentScene(menuScene, transition: transition)
+            показывалиМеню = true //если показывали меню, то true
         }
     }
     
