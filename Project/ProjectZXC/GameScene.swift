@@ -379,7 +379,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             
             if (node.name == "retry") {
                 print("нажали на кнопку button2")
-                let GameScene1 = GameScene(fileNamed:"TestScene")
+                let GameScene1 = GameScene(fileNamed:"Level_1")
                 let transition = SKTransition.doorsCloseHorizontalWithDuration(0.5)
                 GameScene1!.scaleMode = SKSceneScaleMode.AspectFill
                 self.scene!.view?.presentScene(GameScene1!, transition: transition)

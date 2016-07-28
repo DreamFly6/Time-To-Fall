@@ -18,6 +18,8 @@
 		1F4C248E1CD5E55600D3B0DB /* ProjectZXCUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F4C248D1CD5E55600D3B0DB /* ProjectZXCUITests.swift */; };
 		1F6C00A61CE34FCF00A7C8E6 /* Level_2.sks in Resources */ = {isa = PBXBuildFile; fileRef = 1F6C00A51CE34FCF00A7C8E6 /* Level_2.sks */; };
 		1FE0F4001CE6F5B9007E1B98 /* Test_Level.sks in Resources */ = {isa = PBXBuildFile; fileRef = 1FE0F3FF1CE6F5B9007E1B98 /* Test_Level.sks */; };
+		3262F1381D49B3F50056D72B /* buttonLevel.png in Resources */ = {isa = PBXBuildFile; fileRef = 3262F1371D49B3F50056D72B /* buttonLevel.png */; };
+		3262F13C1D49B7E90056D72B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3262F13B1D49B7E90056D72B /* ViewController.swift */; };
 		32BE5B8F1CD79BA100C7A815 /* backgroundMainMenu.png in Resources */ = {isa = PBXBuildFile; fileRef = 32BE5B8E1CD79BA100C7A815 /* backgroundMainMenu.png */; };
 		32BE5B911CD79C7000C7A815 /* buttonStart.png in Resources */ = {isa = PBXBuildFile; fileRef = 32BE5B901CD79C7000C7A815 /* buttonStart.png */; };
 		32E0A4251CF5A9CB00D575A7 /* MyLaunchScreen.png in Resources */ = {isa = PBXBuildFile; fileRef = 32E0A4241CF5A9CB00D575A7 /* MyLaunchScreen.png */; };
@@ -61,6 +63,8 @@
 		1F4C248F1CD5E55600D3B0DB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1F6C00A51CE34FCF00A7C8E6 /* Level_2.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Level_2.sks; sourceTree = "<group>"; };
 		1FE0F3FF1CE6F5B9007E1B98 /* Test_Level.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Test_Level.sks; sourceTree = "<group>"; };
+		3262F1371D49B3F50056D72B /* buttonLevel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = buttonLevel.png; sourceTree = "<group>"; };
+		3262F13B1D49B7E90056D72B /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		32BE5B8E1CD79BA100C7A815 /* backgroundMainMenu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = backgroundMainMenu.png; path = pic/backgroundMainMenu.png; sourceTree = SOURCE_ROOT; };
 		32BE5B901CD79C7000C7A815 /* buttonStart.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = buttonStart.png; path = pic/buttonStart.png; sourceTree = SOURCE_ROOT; };
 		32E0A4241CF5A9CB00D575A7 /* MyLaunchScreen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = MyLaunchScreen.png; path = ../pic/MyLaunchScreen.png; sourceTree = "<group>"; };
@@ -122,6 +126,7 @@
 				1F4C24691CD5E55600D3B0DB /* AppDelegate.swift */,
 				1F4C246F1CD5E55600D3B0DB /* GameViewController.swift */,
 				1F4C24711CD5E55600D3B0DB /* Main.storyboard */,
+				3262F13B1D49B7E90056D72B /* ViewController.swift */,
 				1F4C24741CD5E55600D3B0DB /* Assets.xcassets */,
 				1F4C24761CD5E55600D3B0DB /* LaunchScreen.storyboard */,
 				1F4C24791CD5E55600D3B0DB /* Info.plist */,
@@ -172,6 +177,7 @@
 		32BE5B8D1CD79B8B00C7A815 /* Menu_Image */ = {
 			isa = PBXGroup;
 			children = (
+				3262F1371D49B3F50056D72B /* buttonLevel.png */,
 				32BE5B901CD79C7000C7A815 /* buttonStart.png */,
 				32E0A4241CF5A9CB00D575A7 /* MyLaunchScreen.png */,
 				32BE5B8E1CD79BA100C7A815 /* backgroundMainMenu.png */,
@@ -295,6 +301,7 @@
 				1F4C24751CD5E55600D3B0DB /* Assets.xcassets in Resources */,
 				32F5A42D1D3CA49100631FE0 /* Level_5.sks in Resources */,
 				1F4C24731CD5E55600D3B0DB /* Main.storyboard in Resources */,
+				3262F1381D49B3F50056D72B /* buttonLevel.png in Resources */,
 				32F5A4291D3CA45B00631FE0 /* Level_3.sks in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -322,6 +329,7 @@
 			files = (
 				1F4C246E1CD5E55600D3B0DB /* GameScene.swift in Sources */,
 				1F4C24701CD5E55600D3B0DB /* GameViewController.swift in Sources */,
+				3262F13C1D49B7E90056D72B /* ViewController.swift in Sources */,
 				1F4C246A1CD5E55600D3B0DB /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

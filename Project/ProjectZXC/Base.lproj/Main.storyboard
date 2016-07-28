@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="jC2-zd-pnK">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="jC2-zd-pnK">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -19,25 +19,33 @@
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="backgroundMainMenu.png" translatesAutoresizingMaskIntoConstraints="NO" id="S7g-TY-KDb">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="741"/>
-                                <animations/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fJo-bh-ZtI">
-                                <rect key="frame" x="36" y="260" width="302" height="77"/>
-                                <animations/>
+                                <rect key="frame" x="36" y="156" width="302" height="77"/>
                                 <state key="normal" image="buttonStart.png"/>
                                 <connections>
                                     <segue destination="BV1-FR-VrT" kind="show" id="gPj-Sq-4ug"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ICs-io-Qq7">
+                                <rect key="frame" x="36" y="295" width="302" height="77"/>
+                                <state key="normal" image="buttonLevel.png"/>
+                                <connections>
+                                    <segue destination="0GH-4K-RCN" kind="show" id="v27-Sy-AfY"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0jI-kG-TZA">
+                                <rect key="frame" x="209" y="434" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                            </button>
                         </subviews>
-                        <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BUQ-6n-5Pg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-573.5" y="-112.5"/>
+            <point key="canvasLocation" x="-567.5" y="-268.5"/>
         </scene>
         <!--Game View Controller-->
         <scene sceneID="tXr-a1-R10">
@@ -50,18 +58,74 @@
                     <view key="view" multipleTouchEnabled="YES" contentMode="scaleToFill" id="3se-qz-xqx" customClass="SKView">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <animations/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SZV-WD-TEh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-21.5" y="-112.5"/>
+            <point key="canvasLocation" x="-31.5" y="-554.5"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="yb2-0K-mvR">
+            <objects>
+                <viewController id="0GH-4K-RCN" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="k9I-F9-ta6"/>
+                        <viewControllerLayoutGuide type="bottom" id="ohi-cH-fBE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="2Y5-Mj-niP">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uBM-I7-dpf">
+                                <rect key="frame" x="20" y="28" width="119" height="30"/>
+                                <state key="normal" title="Уровень 1"/>
+                                <connections>
+                                    <segue destination="BV1-FR-VrT" kind="show" id="gem-Vg-m13"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" restorationIdentifier="kek" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L2O-BP-qV9">
+                                <rect key="frame" x="236" y="28" width="119" height="30"/>
+                                <state key="normal" title="Уровень 3"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B1A-3V-0Bb">
+                                <rect key="frame" x="20" y="66" width="119" height="30"/>
+                                <state key="normal" title="Уровень 4"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RSi-pw-2B2">
+                                <rect key="frame" x="128" y="66" width="119" height="30"/>
+                                <state key="normal" title="Уровень 5"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9JV-Jh-pzs">
+                                <rect key="frame" x="236" y="66" width="119" height="30"/>
+                                <state key="normal" title="Уровень 6"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c9l-7y-lsT">
+                                <rect key="frame" x="128" y="28" width="119" height="30"/>
+                                <state key="normal" title="Уровень 2"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="V8z-Pi-Scv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="R04-ht-YCh">
+                    <rect key="frame" x="0.0" y="0.0" width="302" height="77"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <state key="normal" image="buttonStart.png"/>
+                </button>
+            </objects>
+            <point key="canvasLocation" x="-49.5" y="237.5"/>
         </scene>
     </scenes>
     <resources>
         <image name="backgroundMainMenu.png" width="1080" height="1920"/>
+        <image name="buttonLevel.png" width="302" height="77"/>
         <image name="buttonStart.png" width="302" height="77"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="gem-Vg-m13"/>
+    </inferredMetricsTieBreakers>
 </document>
