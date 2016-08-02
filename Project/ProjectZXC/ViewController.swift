@@ -28,14 +28,14 @@ class ViewController: UIViewController {
     
     @IBAction func buttonLevel2(sender: AnyObject) {
         
-        let skView = SKView(frame: self.view.frame)
-        self.view.addSubview(skView)
-        let scene = GameScene(fileNamed:"Level_2")
-        skView.showsFPS = true
-        skView.showsNodeCount = true
-        skView.ignoresSiblingOrder = true
-        scene!.scaleMode = .AspectFill
-        skView.presentScene(scene)
+        let skView1 = SKView(frame: self.view.frame)
+        self.view.addSubview(skView1)
+        let scene1 = GameScene(fileNamed:"Level_2")
+        skView1.showsFPS = true
+        skView1.showsNodeCount = true
+        skView1.ignoresSiblingOrder = true
+        scene1!.scaleMode = .AspectFill
+        skView1.presentScene(scene1)
     }
 
 }
