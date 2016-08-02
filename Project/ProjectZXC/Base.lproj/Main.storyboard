@@ -31,7 +31,7 @@
                                 <rect key="frame" x="36" y="295" width="302" height="77"/>
                                 <state key="normal" image="buttonLevel.png"/>
                                 <connections>
-                                    <segue destination="XOX-qA-88h" kind="show" id="2nG-IH-2Ju"/>
+                                    <segue destination="tZT-fh-9NA" kind="show" id="oyJ-ly-WWr"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -42,6 +42,37 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BUQ-6n-5Pg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-555.5" y="-304.5"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="59C-w9-YyG">
+            <objects>
+                <viewController id="tZT-fh-9NA" customClass="ViewController" customModule="ProjectZXC" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="nfd-dL-lq1"/>
+                        <viewControllerLayoutGuide type="bottom" id="DsP-zo-ytl"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="hKU-Ph-MK0">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vvy-EN-Svd">
+                                <rect key="frame" x="59" y="79" width="47" height="30"/>
+                                <state key="normal" title="Level 1"/>
+                                <connections>
+                                    <action selector="buttonLevel:" destination="tZT-fh-9NA" eventType="touchUpInside" id="2pz-hL-ZwX"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="buttonLevel" destination="Vvy-EN-Svd" id="WUY-dc-g2k"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fSZ-S0-9nV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-31.5" y="180.5"/>
         </scene>
         <!--Game View Controller-->
         <scene sceneID="tXr-a1-R10">
@@ -61,39 +92,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SZV-WD-TEh" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-31.5" y="-554.5"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="Z5o-e7-R9x">
-            <objects>
-                <viewController id="XOX-qA-88h" customClass="ViewController" customModule="ProjectZXC" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="6EO-s3-dh5"/>
-                        <viewControllerLayoutGuide type="bottom" id="yRd-kQ-BQf"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="5v1-lF-L16">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kp0-uh-wK9">
-                                <rect key="frame" x="20" y="28" width="46" height="30"/>
-                                <state key="normal" title="Button"/>
-                                <connections>
-                                    <action selector="buttonTouch1:" destination="XOX-qA-88h" eventType="touchUpInside" id="nPC-eo-zUN"/>
-                                    <action selector="buttonTouch:" destination="XOX-qA-88h" eventType="touchUpInside" id="mOA-bF-xko"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
-                    <connections>
-                        <outlet property="buttonLevel" destination="Kp0-uh-wK9" id="F26-g0-R2m"/>
-                        <outlet property="buttonLevel1" destination="Kp0-uh-wK9" id="O4a-Jf-GKM"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="QFg-rV-qEM" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-16.5" y="263.5"/>
         </scene>
     </scenes>
     <resources>

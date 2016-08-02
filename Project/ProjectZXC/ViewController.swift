@@ -11,17 +11,24 @@ import SpriteKit
 
 class ViewController: UIViewController {
     
-    @IBAction func buttonTouch1(sender: AnyObject) {
+    @IBOutlet weak var buttonLevel: UIButton!
+   
+    @IBAction func buttonLevel(sender: AnyObject) {
         
-        var newGameScene: GameScene = GameScene(size: self.size)
-        
-        let transition = SKTransition.revealWithDirection(.Down, duration: 1.0)
-        
-        let nextScene = GameScene(size: scene!.size)
-        nextScene.scaleMode = .AspectFill
-        
-        scene?.view?.presentScene(nextScene, transition: transition)
-    
+            let SecondScene = GameScene(fileNamed:"Level_1")
+            // Configure the view.
+            let skView = self.view as! SKView
+            skView.showsFPS = true
+            skView.showsNodeCount = true
+            
+            /* Sprite Kit applies additional optimizations to improve rendering performance */
+            skView.ignoresSiblingOrder = true
+            
+            /* Set the scale mode to scale to fit the window */
+            SecondScene!.scaleMode = .AspectFill
+            
+            skView.presentScene(SecondScene)
+            skView.showsPhysics = true
     }
     
     
