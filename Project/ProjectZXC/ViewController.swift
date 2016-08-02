@@ -7,17 +7,21 @@
 //
 
 import UIKit
-import GameController
 import SpriteKit
 
 class ViewController: UIViewController {
     
     @IBAction func buttonTouch1(sender: AnyObject) {
-        print("нажали на кнопку button2")
-        let SecondScene = GameScene(fileNamed:"Level1")
-        let transition = SKTransition.doorsCloseHorizontalWithDuration(0.5)
-        SecondScene!.scaleMode = SKSceneScaleMode.AspectFill
-        self.scene!.view?.presentScene(SecondScene!, transition: transition)
+        
+        var newGameScene: GameScene = GameScene(size: self.size)
+        
+        let transition = SKTransition.revealWithDirection(.Down, duration: 1.0)
+        
+        let nextScene = GameScene(size: scene!.size)
+        nextScene.scaleMode = .AspectFill
+        
+        scene?.view?.presentScene(nextScene, transition: transition)
+    
     }
     
     
