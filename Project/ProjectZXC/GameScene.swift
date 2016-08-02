@@ -138,7 +138,13 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         //let background = self.childNodeWithName("Background") as? SKSpriteNode
 
           //Инициализация MainCharacter
-
+        
+        
+        
+        
+        
+        
+        
         for main in self.children {
             if main.name == "MainCharacter" {
                 if let main = main as? SKSpriteNode {
@@ -295,6 +301,15 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             
             if (touchedNode.name == "WoodenBox" || touchedNode.name == "WoodenPlank" || touchedNode.name == "SlimeBlock") {
                 touchedNode.removeFromParent() //удаление
+            }
+            
+            if ( touchedNode.name == "stop" || self.scene!.paused == false) {
+                print("нажали на кнопку СТОП (false)")
+                self.scene!.paused = true;
+            }
+            else {
+                print("нажали на кнопку СТОП (true)")
+                self.scene!.paused = false;
             }
             //            else {
             //                print("В таче else")

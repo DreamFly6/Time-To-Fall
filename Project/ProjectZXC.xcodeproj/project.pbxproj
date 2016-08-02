@@ -18,6 +18,7 @@
 		1F4C248E1CD5E55600D3B0DB /* ProjectZXCUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F4C248D1CD5E55600D3B0DB /* ProjectZXCUITests.swift */; };
 		1F6C00A61CE34FCF00A7C8E6 /* Level_2.sks in Resources */ = {isa = PBXBuildFile; fileRef = 1F6C00A51CE34FCF00A7C8E6 /* Level_2.sks */; };
 		1FE0F4001CE6F5B9007E1B98 /* Test_Level.sks in Resources */ = {isa = PBXBuildFile; fileRef = 1FE0F3FF1CE6F5B9007E1B98 /* Test_Level.sks */; };
+		32257FF11D50AF6F0071BB06 /* stop.png in Resources */ = {isa = PBXBuildFile; fileRef = 32257FF01D50AF6F0071BB06 /* stop.png */; };
 		3262F1381D49B3F50056D72B /* buttonLevel.png in Resources */ = {isa = PBXBuildFile; fileRef = 3262F1371D49B3F50056D72B /* buttonLevel.png */; };
 		3262F13C1D49B7E90056D72B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3262F13B1D49B7E90056D72B /* ViewController.swift */; };
 		32BE5B8F1CD79BA100C7A815 /* backgroundMainMenu.png in Resources */ = {isa = PBXBuildFile; fileRef = 32BE5B8E1CD79BA100C7A815 /* backgroundMainMenu.png */; };
@@ -63,6 +64,7 @@
 		1F4C248F1CD5E55600D3B0DB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1F6C00A51CE34FCF00A7C8E6 /* Level_2.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Level_2.sks; sourceTree = "<group>"; };
 		1FE0F3FF1CE6F5B9007E1B98 /* Test_Level.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Test_Level.sks; sourceTree = "<group>"; };
+		32257FF01D50AF6F0071BB06 /* stop.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = stop.png; sourceTree = "<group>"; };
 		3262F1371D49B3F50056D72B /* buttonLevel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = buttonLevel.png; sourceTree = "<group>"; };
 		3262F13B1D49B7E90056D72B /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		32BE5B8E1CD79BA100C7A815 /* backgroundMainMenu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = backgroundMainMenu.png; path = pic/backgroundMainMenu.png; sourceTree = SOURCE_ROOT; };
@@ -178,6 +180,7 @@
 			isa = PBXGroup;
 			children = (
 				3262F1371D49B3F50056D72B /* buttonLevel.png */,
+				32257FF01D50AF6F0071BB06 /* stop.png */,
 				32BE5B901CD79C7000C7A815 /* buttonStart.png */,
 				32E0A4241CF5A9CB00D575A7 /* MyLaunchScreen.png */,
 				32BE5B8E1CD79BA100C7A815 /* backgroundMainMenu.png */,
@@ -296,6 +299,7 @@
 				32F5A42B1D3CA47E00631FE0 /* Level_4.sks in Resources */,
 				1F4C246C1CD5E55600D3B0DB /* Level_1.sks in Resources */,
 				1F6C00A61CE34FCF00A7C8E6 /* Level_2.sks in Resources */,
+				32257FF11D50AF6F0071BB06 /* stop.png in Resources */,
 				32E0A4251CF5A9CB00D575A7 /* MyLaunchScreen.png in Resources */,
 				1FE0F4001CE6F5B9007E1B98 /* Test_Level.sks in Resources */,
 				32BE5B8F1CD79BA100C7A815 /* backgroundMainMenu.png in Resources */,
