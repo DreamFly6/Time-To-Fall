@@ -62,12 +62,21 @@
                                     <action selector="buttonLevel:" destination="tZT-fh-9NA" eventType="touchUpInside" id="2pz-hL-ZwX"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fJ1-0z-PQo">
+                                <rect key="frame" x="114" y="79" width="49" height="30"/>
+                                <state key="normal" title="Level 2"/>
+                                <connections>
+                                    <action selector="buttonLevel2:" destination="tZT-fh-9NA" eventType="touchUpInside" id="krd-Uj-d1e"/>
+                                    <action selector="buttonLevel:" destination="tZT-fh-9NA" eventType="touchUpInside" id="OVP-3A-QnK"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="buttonLevel" destination="Vvy-EN-Svd" id="WUY-dc-g2k"/>
+                        <outlet property="buttonLevel2" destination="fJ1-0z-PQo" id="DcK-2f-uVA"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fSZ-S0-9nV" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -82,7 +91,7 @@
                         <viewControllerLayoutGuide type="top" id="8aa-yV-Osq"/>
                         <viewControllerLayoutGuide type="bottom" id="qHh-Mt-9TT"/>
                     </layoutGuides>
-                    <view key="view" multipleTouchEnabled="YES" contentMode="scaleToFill" id="3se-qz-xqx" customClass="SKView">
+                    <view key="view" multipleTouchEnabled="YES" contentMode="scaleToFill" id="3se-qz-xqx" customClass="SCView">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>

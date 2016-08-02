@@ -14,23 +14,28 @@ class ViewController: UIViewController {
     @IBOutlet weak var buttonLevel: UIButton!
    
     @IBAction func buttonLevel(sender: AnyObject) {
-        
-            let SecondScene = GameScene(fileNamed:"Level_1")
-            // Configure the view.
-            let skView = self.view as! SKView
-            skView.showsFPS = true
-            skView.showsNodeCount = true
-            
-            /* Sprite Kit applies additional optimizations to improve rendering performance */
-            skView.ignoresSiblingOrder = true
-            
-            /* Set the scale mode to scale to fit the window */
-            SecondScene!.scaleMode = .AspectFill
-            
-            skView.presentScene(SecondScene)
-            skView.showsPhysics = true
+        let skView = SKView(frame: self.view.frame)
+        self.view.addSubview(skView)
+        let scene = GameScene(fileNamed:"Level_1")
+        skView.showsFPS = true
+        skView.showsNodeCount = true
+        skView.ignoresSiblingOrder = true
+        scene!.scaleMode = .AspectFill
+        skView.presentScene(scene)
     }
     
+    @IBOutlet weak var buttonLevel2: UIButton!
     
+    @IBAction func buttonLevel2(sender: AnyObject) {
+        
+        let skView = SKView(frame: self.view.frame)
+        self.view.addSubview(skView)
+        let scene = GameScene(fileNamed:"Level_2")
+        skView.showsFPS = true
+        skView.showsNodeCount = true
+        skView.ignoresSiblingOrder = true
+        scene!.scaleMode = .AspectFill
+        skView.presentScene(scene)
+    }
 
 }

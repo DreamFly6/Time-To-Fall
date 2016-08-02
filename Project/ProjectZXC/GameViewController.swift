@@ -15,19 +15,14 @@ class GameViewController: UIViewController {
         super.viewDidLoad()
         //ПРОСТ
         if let scene = GameScene(fileNamed:"Level_1") {
-            // Configure the view.
-            let skView = self.view as! SKView
+            
+            let skView = SKView(frame: self.view.frame)
+            self.view.addSubview(skView)
             skView.showsFPS = true
             skView.showsNodeCount = true
-            
-            /* Sprite Kit applies additional optimizations to improve rendering performance */
             skView.ignoresSiblingOrder = true
-            
-            /* Set the scale mode to scale to fit the window */
             scene.scaleMode = .AspectFill
-            
             skView.presentScene(scene)
-            //skView.showsPhysics = true
             
         }
         
