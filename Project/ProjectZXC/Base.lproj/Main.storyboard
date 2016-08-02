@@ -31,12 +31,8 @@
                                 <rect key="frame" x="36" y="295" width="302" height="77"/>
                                 <state key="normal" image="buttonLevel.png"/>
                                 <connections>
-                                    <segue destination="0GH-4K-RCN" kind="show" id="v27-Sy-AfY"/>
+                                    <segue destination="XOX-qA-88h" kind="show" id="2nG-IH-2Ju"/>
                                 </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0jI-kG-TZA">
-                                <rect key="frame" x="209" y="434" width="46" height="30"/>
-                                <state key="normal" title="Button"/>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -45,7 +41,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BUQ-6n-5Pg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-567.5" y="-268.5"/>
+            <point key="canvasLocation" x="-555.5" y="-304.5"/>
         </scene>
         <!--Game View Controller-->
         <scene sceneID="tXr-a1-R10">
@@ -67,57 +63,29 @@
             <point key="canvasLocation" x="-31.5" y="-554.5"/>
         </scene>
         <!--View Controller-->
-        <scene sceneID="yb2-0K-mvR">
+        <scene sceneID="Z5o-e7-R9x">
             <objects>
-                <viewController id="0GH-4K-RCN" sceneMemberID="viewController">
+                <viewController id="XOX-qA-88h" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="k9I-F9-ta6"/>
-                        <viewControllerLayoutGuide type="bottom" id="ohi-cH-fBE"/>
+                        <viewControllerLayoutGuide type="top" id="6EO-s3-dh5"/>
+                        <viewControllerLayoutGuide type="bottom" id="yRd-kQ-BQf"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="2Y5-Mj-niP">
+                    <view key="view" contentMode="scaleToFill" id="5v1-lF-L16">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uBM-I7-dpf">
-                                <rect key="frame" x="20" y="28" width="119" height="30"/>
-                                <state key="normal" title="Уровень 1"/>
-                                <connections>
-                                    <segue destination="BV1-FR-VrT" kind="show" id="gem-Vg-m13"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" restorationIdentifier="kek" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L2O-BP-qV9">
-                                <rect key="frame" x="236" y="28" width="119" height="30"/>
-                                <state key="normal" title="Уровень 3"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B1A-3V-0Bb">
-                                <rect key="frame" x="20" y="66" width="119" height="30"/>
-                                <state key="normal" title="Уровень 4"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RSi-pw-2B2">
-                                <rect key="frame" x="128" y="66" width="119" height="30"/>
-                                <state key="normal" title="Уровень 5"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9JV-Jh-pzs">
-                                <rect key="frame" x="236" y="66" width="119" height="30"/>
-                                <state key="normal" title="Уровень 6"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c9l-7y-lsT">
-                                <rect key="frame" x="128" y="28" width="119" height="30"/>
-                                <state key="normal" title="Уровень 2"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kp0-uh-wK9">
+                                <rect key="frame" x="20" y="28" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="V8z-Pi-Scv" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="R04-ht-YCh">
-                    <rect key="frame" x="0.0" y="0.0" width="302" height="77"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <state key="normal" image="buttonStart.png"/>
-                </button>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QFg-rV-qEM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-49.5" y="237.5"/>
+            <point key="canvasLocation" x="-9.5" y="165.5"/>
         </scene>
     </scenes>
     <resources>
@@ -125,7 +93,4 @@
         <image name="buttonLevel.png" width="302" height="77"/>
         <image name="buttonStart.png" width="302" height="77"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="gem-Vg-m13"/>
-    </inferredMetricsTieBreakers>
 </document>
