@@ -65,7 +65,7 @@
         <!--View Controller-->
         <scene sceneID="Z5o-e7-R9x">
             <objects>
-                <viewController id="XOX-qA-88h" sceneMemberID="viewController">
+                <viewController id="XOX-qA-88h" customClass="ViewController" customModule="ProjectZXC" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="6EO-s3-dh5"/>
                         <viewControllerLayoutGuide type="bottom" id="yRd-kQ-BQf"/>
@@ -77,15 +77,23 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kp0-uh-wK9">
                                 <rect key="frame" x="20" y="28" width="46" height="30"/>
                                 <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="buttonTouch1:" destination="XOX-qA-88h" eventType="touchUpInside" id="nPC-eo-zUN"/>
+                                    <action selector="buttonTouch:" destination="XOX-qA-88h" eventType="touchUpInside" id="mOA-bF-xko"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="buttonLevel" destination="Kp0-uh-wK9" id="F26-g0-R2m"/>
+                        <outlet property="buttonLevel1" destination="Kp0-uh-wK9" id="O4a-Jf-GKM"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QFg-rV-qEM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-9.5" y="165.5"/>
+            <point key="canvasLocation" x="-16.5" y="263.5"/>
         </scene>
     </scenes>
     <resources>
