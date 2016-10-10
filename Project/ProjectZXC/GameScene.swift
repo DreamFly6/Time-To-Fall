@@ -1,6 +1,17 @@
 // Ver 0.0000000001
 
 import SpriteKit
+fileprivate func < <T : Comparable>(lhs: T?, rhs: T?) -> Bool {
+  switch (lhs, rhs) {
+  case let (l?, r?):
+    return l < r
+  case (nil, _?):
+    return true
+  default:
+    return false
+  }
+}
+
 
 
 
@@ -83,7 +94,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     //При вызове этой функции, показывается меню.
     func showButtons(){
         let button1 = SKSpriteNode(imageNamed: "Button1.png")
-        button1.position = CGPointMake(CGRectGetMidX(self.frame)/2, CGRectGetMidY(self.frame))
+        button1.position = CGPoint(x: self.frame.midX/2, y: self.frame.midY)
         button1.name = "retry"
         button1.xScale = 0.5
         button1.yScale = 0.5
@@ -91,7 +102,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         self.addChild(button1)
         
         let button2 = SKSpriteNode(imageNamed: "Button2.png")
-        button2.position = CGPointMake(CGRectGetMidX(self.frame), CGRectGetMidY(self.frame))
+        button2.position = CGPoint(x: self.frame.midX, y: self.frame.midY)
         button2.name = "button2"
         button2.xScale = 0.5
         button2.yScale = 0.5
@@ -99,7 +110,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         self.addChild(button2)
         
         let button3 = SKSpriteNode(imageNamed: "Button3.png")
-        button3.position = CGPointMake(CGRectGetMidX(self.frame)+(CGRectGetMidX(self.frame)/2), CGRectGetMidY(self.frame))
+        button3.position = CGPoint(x: self.frame.midX+(self.frame.midX/2), y: self.frame.midY)
         button3.name = "button3"
         button3.xScale = 0.5
         button3.yScale = 0.5
@@ -107,7 +118,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         self.addChild(button3)
         
         let menuBoard = SKSpriteNode(imageNamed: "MenuBoard.png")
-        menuBoard.position = CGPointMake(CGRectGetMidX(self.frame), CGRectGetMidY(self.frame))
+        menuBoard.position = CGPoint(x: self.frame.midX, y: self.frame.midY)
         menuBoard.name = "menuBoard"
         menuBoard.xScale = 1.4
         menuBoard.yScale = 1.4
@@ -270,7 +281,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                     
                     //Особые характеристики
                     activeBlock.physicsBody?.pinned = true
-                    activeBlock.physicsBody?.dynamic = false
+                    activeBlock.physicsBody?.isDynamic = false
                 }
             }
         }
@@ -280,7 +291,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     
     
     //Функция выполняемая до открытия сцены
-    override func didMoveToView(view: SKView) {
+    override func didMove(to view: SKView) {
         initGameObject()
 
 
@@ -290,27 +301,27 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     
     
     //Вызывается когда просиходит нажатие
-    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         
         
         // Цикл считывающий нажатие на экран
         for touch: AnyObject in touches {
             
-            let touchLocation = touch.locationInNode(self)
-            let touchedNode = self.nodeAtPoint(touchLocation)
+            let touchLocation = touch.location(in: self)
+            let touchedNode = self.atPoint(touchLocation)
             
             if (touchedNode.name == "WoodenBox" || touchedNode.name == "WoodenPlank" || touchedNode.name == "SlimeBlock") {
                 touchedNode.removeFromParent() //удаление
             }
-            
-            if ( touchedNode.name == "stop" || self.scene!.paused == false) {
-                print("нажали на кнопку СТОП (false)")
-                self.scene!.paused = true;
-            }
-            else {
-                print("нажали на кнопку СТОП (true)")
-                self.scene!.paused = false;
-            }
+    
+//            if ( touchedNode.name == "stop" || self.scene!.isPaused == false) {
+//                print("нажали на кнопку СТОП (false)")
+//                self.scene!.isPaused = true;
+//            }
+//            else {
+//                print("нажали на кнопку СТОП (true)")
+//                self.scene!.isPaused = false;
+//            }
             //            else {
             //                print("В таче else")
             //                let sprite = StarNode.star(touch.locationInNode(self))
@@ -326,8 +337,6 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             //Пока будет костыль
             
             //TODO: Переделать условие на человеческое(Мб и такое норм)
-
-            
             if let spriteNode = touchedNode as? SKSpriteNode {
                 if spriteNode.name == "WallBlock"{
                     if spriteNode.physicsBody?.allowsRotation == true {
@@ -357,14 +366,14 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                 if spriteNode.name == "ActiveBlock"{
                     if spriteNode.physicsBody?.pinned == false{
                         spriteNode.physicsBody?.pinned = true
-                        spriteNode.physicsBody?.dynamic = false
+                        spriteNode.physicsBody?.isDynamic = false
                         print("ActiveBlock_TRUE")
                         // OFF
                         spriteNode.texture = SKTexture(imageNamed: "ActivaBlock_Off")
                     }
                     else{
                         spriteNode.physicsBody?.pinned = false
-                        spriteNode.physicsBody?.dynamic = true
+                        spriteNode.physicsBody?.isDynamic = true
                         print("ActiveBlock_FALSE")
                         //ON
                         spriteNode.texture = SKTexture(imageNamed: "ActivaBlock_On")
@@ -389,22 +398,22 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             
             
             let touch = touches
-            let location = touch.first!.locationInNode(self)
-            let node = self.nodeAtPoint(location)
+            let location = touch.first!.location(in: self)
+            let node = self.atPoint(location)
             
             if (node.name == "retry") {
                 print("нажали на кнопку button2")
                 let GameScene1 = GameScene(fileNamed:"Level_1")
-                let transition = SKTransition.doorsCloseHorizontalWithDuration(0.5)
-                GameScene1!.scaleMode = SKSceneScaleMode.AspectFill
+                let transition = SKTransition.doorsCloseHorizontal(withDuration: 0.5)
+                GameScene1!.scaleMode = SKSceneScaleMode.aspectFill
                 self.scene!.view?.presentScene(GameScene1!, transition: transition)
             }
             if (node.name == "button2") {
                 
                 print("нажали на кнопку button2")
                 let SecondScene = GameScene(fileNamed:"SecondScene")
-                let transition = SKTransition.doorsCloseHorizontalWithDuration(0.5)
-                SecondScene!.scaleMode = SKSceneScaleMode.AspectFill
+                let transition = SKTransition.doorsCloseHorizontal(withDuration: 0.5)
+                SecondScene!.scaleMode = SKSceneScaleMode.aspectFill
                 self.scene!.view?.presentScene(SecondScene!, transition: transition)
             }
             
@@ -413,27 +422,27 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     
 //    TODO: Разобраться условием соприкасновения объектов
     
-    func didBeginContact(contact: SKPhysicsContact) {
+    func didBegin(_ contact: SKPhysicsContact) {
         print("Как ты работаешь?")
     }
 
-    var показывалиМеню = false
+    var showMenu = false
     
     //Удаляет спрайт, когда он улетел за экран
     override func didSimulatePhysics() {
-        let woodenBoxx = childNodeWithName("WoodenBox")
-        let main = self.childNodeWithName("MainCharacter") as? SKSpriteNode
-        
-        if (woodenBoxx?.position.y < 0) {
-            [woodenBoxx?.removeFromParent];
-            
-        }
+        //let woodenBoxx = SKNode();
+        let main = self.childNode(withName: "MainCharacter") as? SKSpriteNode
+//
+//        if (woodenBoxx.position.y < 0) {
+//            [woodenBoxx.removeFromParent];
+//
+//        }
        
         //если ГГ улетел за сцену, показываем меню
         //меню (кнопки накладывались на кнопки) раньше создавалось постоянно, а теперь только один раз
-        if ( (main?.position.y < 0) && (показывалиМеню == false)) {
+        if ( (main?.position.y < 0) && (showMenu == false)) {
             showButtons()
-            показывалиМеню = true //если показывали меню, то true
+            showMenu = true //если показывали меню, то true
         }
     }
     
@@ -448,7 +457,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     
     
     //Таинственная функция. Про нее ходят легенды, но никто не знает что она делает.
-    override func update(currentTime: CFTimeInterval) {
+    override func update(_ currentTime: TimeInterval) {
         /* Called before each frame is rendered */
     }
 }

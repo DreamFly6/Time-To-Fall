@@ -13,20 +13,20 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var buttonLevel: UIButton!
    
-    @IBAction func buttonLevel(sender: AnyObject) {
+    @IBAction func buttonLevel(_ sender: AnyObject) {
         let skView = SKView(frame: self.view.frame)
         self.view.addSubview(skView)
-        let scene = GameScene(fileNamed:"Level_1")
+        let scene = GameScene(fileNamed:"Test_Level")
         skView.showsFPS = true
         skView.showsNodeCount = true
         skView.ignoresSiblingOrder = true
-        scene!.scaleMode = .AspectFill
+        scene!.scaleMode = .aspectFill
         skView.presentScene(scene)
     }
     
     @IBOutlet weak var buttonLevel2: UIButton!
     
-    @IBAction func buttonLevel2(sender: AnyObject) {
+    @IBAction func buttonLevel2(_ sender: AnyObject) {
         
         let skView1 = SKView(frame: self.view.frame)
         self.view.addSubview(skView1)
@@ -34,7 +34,7 @@ class ViewController: UIViewController {
         skView1.showsFPS = true
         skView1.showsNodeCount = true
         skView1.ignoresSiblingOrder = true
-        scene1!.scaleMode = .AspectFill
+        scene1!.scaleMode = .aspectFill
         skView1.presentScene(scene1)
     }
 
