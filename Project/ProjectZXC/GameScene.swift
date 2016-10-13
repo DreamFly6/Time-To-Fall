@@ -19,8 +19,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     
     
     
-    //При вызове этой функции, показывается меню.
-    func showButtons(){
+    //При вызове этой функции, показывается меню проигрыша.
+    func showLMenu(){
         let button1 = SKSpriteNode(imageNamed: "Button1.png")
         button1.position = CGPoint(x: self.frame.midX/2, y: self.frame.midY)
         button1.name = "retry"
@@ -45,6 +45,19 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         button3.zPosition = 2
         self.addChild(button3)
         
+        let menuBoard = SKSpriteNode(imageNamed: "MenuBoard.png")
+        menuBoard.position = CGPoint(x: self.frame.midX, y: self.frame.midY)
+        menuBoard.name = "menuBoard"
+        menuBoard.xScale = 1.4
+        menuBoard.yScale = 1.4
+        menuBoard.zPosition = 1
+        self.addChild(menuBoard)
+    }
+    
+    
+    
+    //При вызове этой функции, показывается меню выигрыша.
+    func showWMenu(){
         let menuBoard = SKSpriteNode(imageNamed: "MenuBoard.png")
         menuBoard.position = CGPoint(x: self.frame.midX, y: self.frame.midY)
         menuBoard.name = "menuBoard"
@@ -262,11 +275,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             //                self.addChild(sprite)
             //            }
             
-            //Почему - то  это условие не работает
-            //if spriteNode.texture == SKTexture(imageNamed: "ActivaBlock_On"){
-            //Пока будет костыль
+
             
-            //TODO: Переделать условие на человеческое(Мб и такое норм)
             if let spriteNode = touchedNode as? SKSpriteNode {
                 if spriteNode.name == "WallBlock"{
                     if spriteNode.physicsBody?.allowsRotation == true {
@@ -332,7 +342,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             let node = self.atPoint(location)
             
             if (node.name == "retry") {
-                showMenu = false
+                showLoseMenu = false
                 print("restart")
                 let gameScene = GameScene(size: self.size)
                 let transition = SKTransition.doorsCloseHorizontal(withDuration: 0.5)
@@ -340,33 +350,38 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                 self.scene!.view?.presentScene(gameScene, transition: transition)
                 print("complete Reload")
             }
-            
-//            if (node.name == "button2") {
-//                
-//                print("нажали на кнопку button2")
-//                
-//            }
+
             
         }
     }
+    public var onGroundTime = 0;
+    public var onGround = false
     
     func didBegin(_ contact: SKPhysicsContact) {
-        
-        
+
         var firstBody: SKPhysicsBody?
         var secondBody: SKPhysicsBody?
         firstBody = contact.bodyA
         secondBody = contact.bodyB
         
         if firstBody!.categoryBitMask == 2 || secondBody!.categoryBitMask == 2 {
-            print("на земле")
-        } else {
-            print("еще не на земле")
+            onGround = true
+            print("true")
         }
+        else {
+            onGround = false
+            print("false")
+        }
+        
+        //Если свинья на земле и время которое она пролежала на земле равно 100, то победа
+        if onGround == true && onGroundTime == 100 {
+            print("========ПОБЕДКА========")
+        }
+        
         
     }
 
-    var showMenu = false
+    var showLoseMenu = false
     
     //Удаляет спрайт, когда он улетел за экран
     override func didSimulatePhysics() {
@@ -380,26 +395,22 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         }
        
         //если ГГ улетел за сцену, показываем меню
-        //меню (кнопки накладывались на кнопки) раньше создавалось постоянно, а теперь только один раз
-        if ( (main?.position.y < 0) && (showMenu == false)) {
-            showButtons()
-            showMenu = true //если показывали меню, то true
+        if ((main?.position.y < 0) && (showLoseMenu == false)) {
+            showLMenu()
+            showLoseMenu = true //если показывали меню, то true
+            onGround = false //Свинья не на земле(за экраном она не может определить это)
         }
     }
     
-    
-    //    private func gameOver(didWin: Bool) {
-    //        print("- - - Game Ended - - -")
-    //        let menuScene = GameScene(size: self.size)
-    //        let transition = SKTransition.flipVerticalWithDuration(1.0)
-    //        menuScene.scaleMode = SKSceneScaleMode.AspectFill
-    //        self.scene!.view?.presentScene(menuScene, transition: transition)
-    //    }
-    
-    
-    //Таинственная функция. Про нее ходят легенды, но никто не знает что она делает.
-    override func update(_ currentTime: TimeInterval) {
-        /* Called before each frame is rendered */
+    override func update(_ currentTime: TimeInterval) {  /* Called before each frame is rendered */
+        if onGround == false {
+            onGroundTime = 0
+        }
+        else{
+            onGroundTime+=1
+        }
+        print(onGroundTime)
+
     }
     
 }

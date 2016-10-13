@@ -14,7 +14,7 @@ class ViewController: UIViewController {
     //Сделал очень просто
     //По тайтлу кнопки определяем на какой уровень нужен переход и переходим туда
     @IBAction func buttonLevel1(_ sender: AnyObject) {
-        var scene1 = GameScene(fileNamed:"Level_1")
+        var scene1 = GameScene(fileNamed:"Test_Level")
         let buttonTitle : String = sender.currentTitle!!
         
         switch buttonTitle {
