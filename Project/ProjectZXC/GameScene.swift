@@ -340,8 +340,17 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             let touch = touches
             let location = touch.first!.location(in: self)
             let node = self.atPoint(location)
-            
+            let qwe = "Test_Level"
             if (node.name == "retry") {
+                /* Сделал чтобы тестировать уровень*/
+                let SecondScene = GameScene(fileNamed: qwe)
+                let transition = SKTransition.doorsCloseHorizontal(withDuration: 0.5)
+                SecondScene!.scaleMode = SKSceneScaleMode.aspectFill
+                self.scene!.view?.presentScene(SecondScene!, transition: transition)
+                
+                /* Данила, твое добро с рестартом ниже */
+                
+                /*
                 showLoseMenu = false
                 print("restart")
                 let gameScene = GameScene(size: self.size)
@@ -349,6 +358,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                 gameScene.scaleMode = SKSceneScaleMode.aspectFill
                 self.scene!.view?.presentScene(gameScene, transition: transition)
                 print("complete Reload")
+                 */
             }
 
             
@@ -372,16 +382,9 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             onGround = false
             print("false")
         }
-        
-        //Если свинья на земле и время которое она пролежала на земле равно 100, то победа
-        if onGround == true && onGroundTime == 100 {
-            print("========ПОБЕДКА========")
-        }
-        
-        
     }
 
-    var showLoseMenu = false
+    var showMenu = false
     
     //Удаляет спрайт, когда он улетел за экран
     override func didSimulatePhysics() {
@@ -394,23 +397,41 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             lol?.removeFromParent()
         }
        
-        //если ГГ улетел за сцену, показываем меню
-        if ((main?.position.y < 0) && (showLoseMenu == false)) {
-            showLMenu()
-            showLoseMenu = true //если показывали меню, то true
-            onGround = false //Свинья не на земле(за экраном она не может определить это)
-        }
-    }
-    
-    override func update(_ currentTime: TimeInterval) {  /* Called before each frame is rendered */
+
+        
+        
+        
         if onGround == false {
             onGroundTime = 0
         }
         else{
             onGroundTime+=1
+            
+            //Если свинья на земле и время которое она пролежала на земле равно 100, то победа
+            if onGroundTime > 100 && showMenu == false {
+                print("========ПОБЕДКА========")
+                showMenu = true //если показывали меню, то true
+                showWMenu()
+            }
+            
         }
         print(onGroundTime)
+        
+        //если ГГ улетел за сцену, показываем меню
+        if ((main?.position.y < 0) && (showMenu == false)) {
+            showLMenu()
+            showMenu = true //если показывали меню, то true
+            onGround = false //Свинья не на земле(за экраном она не может определить это)
+        }
+        
+        
+    }
+    
+    override func update(_ currentTime: TimeInterval) {  /* Called before each frame is rendered */
 
     }
+    
+    
+
     
 }
