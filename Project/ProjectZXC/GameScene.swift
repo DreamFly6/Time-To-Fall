@@ -1,4 +1,4 @@
-// Ver 0.0000000001
+// Ver 0.0000000002
 
 import SpriteKit
 fileprivate func < <T : Comparable>(lhs: T?, rhs: T?) -> Bool {
@@ -70,29 +70,6 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     //Ициализация свойств игровых объектов
     func initGameObject(){
         
-        //  Инициализация MainCharacter
-        //        let main = self.childNodeWithName("MainCharacter") as? SKSpriteNode
-        //        main!.physicsBody?.friction = 0.2
-        //        main!.physicsBody?.restitution = 0.3
-        //        main!.physicsBody?.linearDamping = 0.2
-        //        main!.physicsBody?.angularDamping = 0.2
-        //        main!.physicsBody?.mass = 2.0
-        //
-        //        let qwe = self.childNodeWithName("WoodenBox1") as? SKSpriteNode
-        //        qwe!.physicsBody?.friction = 0.2
-        //        qwe!.physicsBody?.restitution = 0.3
-        //        qwe!.physicsBody?.linearDamping = 0.2
-        //        qwe!.physicsBody?.angularDamping = 0.2
-        //        qwe!.physicsBody?.mass = 2.0
-        //        qwe?.physicsBody?.pinned = true
-        
-        //  Инициализация Background
-        //let background = self.childNodeWithName("Background") as? SKSpriteNode
-
-          //Инициализация MainCharacter
-        
-        
-        
         for main in self.children {
             if main.name == "MainCharacter" {
                 if let main = main as? SKSpriteNode {
@@ -101,13 +78,29 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                     main.physicsBody?.linearDamping = 0.2
                     main.physicsBody?.angularDamping = 0.2
                     main.physicsBody?.mass = 2.0
-                    main.physicsBody?.categoryBitMask = 1;
-                    main.physicsBody?.contactTestBitMask = 2;
-                    main.physicsBody?.collisionBitMask =  2;
+                    main.physicsBody?.categoryBitMask = 1
+                    main.physicsBody?.contactTestBitMask = 2
+                    main.physicsBody?.collisionBitMask =  2
                 }
             }
         }
 
+        
+        //  Инициализация Ground
+        for ground in self.children {
+            if ground.name == "Ground" {
+                if let ground = ground as? SKSpriteNode {
+                    ground.physicsBody?.friction = 0.2
+                    ground.physicsBody?.restitution = 0.2
+                    ground.physicsBody?.linearDamping = 0.1
+                    ground.physicsBody?.angularDamping = 0.1
+                    ground.physicsBody?.mass = 6.0
+                    ground.physicsBody?.categoryBitMask = 2;
+                    ground.physicsBody?.contactTestBitMask = 1;
+                    ground.physicsBody?.collisionBitMask =  1;
+                }
+            }
+        }
         
         //  Инициализация WallBlockOpen
         for wallBlock in self.children {
@@ -154,22 +147,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                 }
             }
         }
-        
-        //  Инициализация Ground
-        for ground in self.children {
-            if ground.name == "Ground" {
-                if let ground = ground as? SKSpriteNode {
-                    ground.physicsBody?.friction = 0.2
-                    ground.physicsBody?.restitution = 0.2
-                    ground.physicsBody?.linearDamping = 0.1
-                    ground.physicsBody?.angularDamping = 0.1
-                    ground.physicsBody?.mass = 6.0
-                    ground.physicsBody?.categoryBitMask = 2;
-                    ground.physicsBody?.contactTestBitMask = 1;
-                    ground.physicsBody?.collisionBitMask =  1;
-                }
-            }
-        }
+
         
         //  Инициализация WoodenBox
         for woodenBox in self.children {
@@ -280,20 +258,14 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             if let spriteNode = touchedNode as? SKSpriteNode {
                 if spriteNode.name == "WallBlock"{
                     if spriteNode.physicsBody?.allowsRotation == true {
-                        
                         spriteNode.physicsBody?.pinned = true
                         spriteNode.physicsBody?.allowsRotation = false
                         spriteNode.texture = SKTexture(imageNamed: "WallBlockOpen")
-
-
-                        
                     }
                     else {
-                        
                         spriteNode.physicsBody?.pinned = true
                         spriteNode.physicsBody?.allowsRotation = true
                         spriteNode.texture = SKTexture(imageNamed: "WallBlockClose")
-
                     }
                 }
             }
@@ -416,7 +388,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         print(onGroundTime)
         
         //если ГГ улетел за сцену, показываем меню
-        if ((main?.position.y < 0) && (showMenu == false)) {
+        if main?.position.y < 0 && showMenu == false {
             showLMenu() //Показать меню проигрыша
             showMenu = true //если показывали меню, то true
             onGround = false //Свинья не на земле(за экраном она не может определить это)
