@@ -24,6 +24,10 @@ class ViewController: UIViewController {
             scene1 = GameScene(fileNamed:"Level_2")
         case "Level 3":
             scene1 = GameScene(fileNamed:"Level_3")
+        case "Level 4":
+            scene1 = GameScene(fileNamed:"Level_4")
+        case "Level 5":
+            scene1 = GameScene(fileNamed:"Level_5")
         default: break
         }
         
