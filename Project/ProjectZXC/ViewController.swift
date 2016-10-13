@@ -11,31 +11,33 @@ import SpriteKit
 
 class ViewController: UIViewController {
     
-    @IBOutlet weak var buttonLevel: UIButton!
-   
-    @IBAction func buttonLevel(_ sender: AnyObject) {
-        let skView = SKView(frame: self.view.frame)
-        self.view.addSubview(skView)
-        let scene = GameScene(fileNamed:"Test_Level")
-        skView.showsFPS = true
-        skView.showsNodeCount = true
-        skView.ignoresSiblingOrder = true
-        scene!.scaleMode = .aspectFill
-        skView.presentScene(scene)
-    }
-    
-    @IBOutlet weak var buttonLevel2: UIButton!
-    
-    @IBAction func buttonLevel2(_ sender: AnyObject) {
+    //Сделал очень просто
+    //По тайтлу кнопки определяем на какой уровень нужен переход и переходим туда
+    @IBAction func buttonLevel1(_ sender: AnyObject) {
+        var scene1 = GameScene(fileNamed:"Level_1")
+        let buttonTitle : String = sender.currentTitle!!
+        
+        switch buttonTitle {
+        case "Level 1":
+            scene1 = GameScene(fileNamed:"Level_1")
+        case "Level 2":
+            scene1 = GameScene(fileNamed:"Level_2")
+        case "Level 3":
+            scene1 = GameScene(fileNamed:"Level_3")
+        default: break
+        }
         
         let skView1 = SKView(frame: self.view.frame)
         self.view.addSubview(skView1)
-        let scene1 = GameScene(fileNamed:"Level_2")
         skView1.showsFPS = true
         skView1.showsNodeCount = true
         skView1.ignoresSiblingOrder = true
         scene1!.scaleMode = .aspectFill
         skView1.presentScene(scene1)
+
     }
+    
+    
+    
 
 }
