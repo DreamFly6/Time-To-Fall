@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ProjectZXC/GameScene.swift"
-            timestampString = "498027438.973472"
+            timestampString = "498035859.891834"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "276"
-            endingLineNumber = "276"
+            startingLineNumber = "207"
+            endingLineNumber = "207"
             landmarkName = "initGameObject()"
             landmarkType = "7">
          </BreakpointContent>

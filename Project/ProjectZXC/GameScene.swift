@@ -16,7 +16,9 @@ fileprivate func < <T : Comparable>(lhs: T?, rhs: T?) -> Bool {
 
 
 class GameScene: SKScene, SKPhysicsContactDelegate {
-        
+    
+    
+    
     //При вызове этой функции, показывается меню.
     func showButtons(){
         let button1 = SKSpriteNode(imageNamed: "Button1.png")
@@ -78,10 +80,6 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         
         
         
-        
-        
-        
-        
         for main in self.children {
             if main.name == "MainCharacter" {
                 if let main = main as? SKSpriteNode {
@@ -90,6 +88,9 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                     main.physicsBody?.linearDamping = 0.2
                     main.physicsBody?.angularDamping = 0.2
                     main.physicsBody?.mass = 2.0
+                    main.physicsBody?.categoryBitMask = 1;
+                    main.physicsBody?.contactTestBitMask = 2;
+                    main.physicsBody?.collisionBitMask =  2;
                 }
             }
         }
@@ -150,6 +151,9 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                     ground.physicsBody?.linearDamping = 0.1
                     ground.physicsBody?.angularDamping = 0.1
                     ground.physicsBody?.mass = 6.0
+                    ground.physicsBody?.categoryBitMask = 2;
+                    ground.physicsBody?.contactTestBitMask = 1;
+                    ground.physicsBody?.collisionBitMask =  1;
                 }
             }
         }
@@ -195,6 +199,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             }
         }
         
+        
         //  Инициализация ActiveBlock
         for activeBlock in self.children {
             if activeBlock.name == "ActiveBlock" {
@@ -219,7 +224,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     //Функция выполняемая до открытия сцены
     override func didMove(to view: SKView) {
         initGameObject()
-        
+        self.physicsWorld.contactDelegate = self
     }
     
     
@@ -345,10 +350,20 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         }
     }
     
-//    TODO: Разобраться условием соприкасновения объектов
-    
     func didBegin(_ contact: SKPhysicsContact) {
-        print("Как ты работаешь?")
+        
+        
+        var firstBody: SKPhysicsBody?
+        var secondBody: SKPhysicsBody?
+        firstBody = contact.bodyA
+        secondBody = contact.bodyB
+        
+        if firstBody!.categoryBitMask == 2 || secondBody!.categoryBitMask == 2 {
+            print("на земле")
+        } else {
+            print("еще не на земле")
+        }
+        
     }
 
     var showMenu = false
@@ -357,11 +372,12 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     override func didSimulatePhysics() {
         //let woodenBoxx = SKNode();
         let main = self.childNode(withName: "MainCharacter") as? SKSpriteNode
-//
-//        if (woodenBoxx.position.y < 0) {
-//            [woodenBoxx.removeFromParent];
-//
-//        }
+        let lol = self.childNode(withName: "WoodenBox") as? SKSpriteNode
+        
+        
+        if (lol?.position.y < 0) {
+            lol?.removeFromParent()
+        }
        
         //если ГГ улетел за сцену, показываем меню
         //меню (кнопки накладывались на кнопки) раньше создавалось постоянно, а теперь только один раз
@@ -385,4 +401,5 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     override func update(_ currentTime: TimeInterval) {
         /* Called before each frame is rendered */
     }
+    
 }
