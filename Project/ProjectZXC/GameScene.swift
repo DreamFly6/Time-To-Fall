@@ -368,7 +368,6 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     public var onGround = false
     
     func didBegin(_ contact: SKPhysicsContact) {
-
         var firstBody: SKPhysicsBody?
         var secondBody: SKPhysicsBody?
         firstBody = contact.bodyA
@@ -399,8 +398,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
        
 
         
-        
-        
+    
+        /* Меню в конце сцены */
         if onGround == false {
             onGroundTime = 0
         }
@@ -409,9 +408,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             
             //Если свинья на земле и время которое она пролежала на земле равно 100, то победа
             if onGroundTime > 100 && showMenu == false {
-                print("========ПОБЕДКА========")
                 showMenu = true //если показывали меню, то true
-                showWMenu()
+                showWMenu() //Показать меню выигрыша
             }
             
         }
@@ -419,7 +417,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         
         //если ГГ улетел за сцену, показываем меню
         if ((main?.position.y < 0) && (showMenu == false)) {
-            showLMenu()
+            showLMenu() //Показать меню проигрыша
             showMenu = true //если показывали меню, то true
             onGround = false //Свинья не на земле(за экраном она не может определить это)
         }
