@@ -293,8 +293,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     //Функция выполняемая до открытия сцены
     override func didMove(to view: SKView) {
         initGameObject()
-
-
+        
     }
     
     
@@ -402,20 +401,20 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             let node = self.atPoint(location)
             
             if (node.name == "retry") {
-                print("нажали на кнопку button2")
-                let GameScene1 = GameScene(fileNamed:"Level_1")
+                showMenu = false
+                print("restart")
+                let gameScene = GameScene(size: self.size)
                 let transition = SKTransition.doorsCloseHorizontal(withDuration: 0.5)
-                GameScene1!.scaleMode = SKSceneScaleMode.aspectFill
-                self.scene!.view?.presentScene(GameScene1!, transition: transition)
+                gameScene.scaleMode = SKSceneScaleMode.aspectFill
+                self.scene!.view?.presentScene(gameScene, transition: transition)
+                print("complete Reload")
             }
-            if (node.name == "button2") {
-                
-                print("нажали на кнопку button2")
-                let SecondScene = GameScene(fileNamed:"SecondScene")
-                let transition = SKTransition.doorsCloseHorizontal(withDuration: 0.5)
-                SecondScene!.scaleMode = SKSceneScaleMode.aspectFill
-                self.scene!.view?.presentScene(SecondScene!, transition: transition)
-            }
+             
+//            if (node.name == "button2") {
+//                
+//                print("нажали на кнопку button2")
+//                
+//            }
             
         }
     }
