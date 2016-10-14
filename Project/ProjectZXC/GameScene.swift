@@ -52,6 +52,9 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         menuBoard.yScale = 1.4
         menuBoard.zPosition = 1
         self.addChild(menuBoard)
+        
+        print("Выводим имя текущей сцены3: ", GameScene().name)
+        print("Выводим имя текущей сцены3 self: ", self.name)
     }
     
     
@@ -214,6 +217,9 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     
     //Функция выполняемая до открытия сцены
     override func didMove(to view: SKView) {
+        print("Выводим имя текущей сценыdidmove: ", GameScene().scene?.name)
+        print("Выводим имя текущей сценыdidmove self: ",GameScene().scene)
+        print("Выводим имя текущей сценыdidmove self111111 : ",GameScene().scene.self)
         initGameObject()
         self.physicsWorld.contactDelegate = self
     }
@@ -287,6 +293,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                         spriteNode.physicsBody?.pinned = false
                         spriteNode.physicsBody?.isDynamic = true
                         print("ActiveBlock_FALSE")
+                        print("Выводим имя текущей сцены1: ", GameScene().name)
                         //ON
                         spriteNode.texture = SKTexture(imageNamed: "ActivaBlock_On")
                     }
@@ -313,6 +320,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             let location = touch.first!.location(in: self)
             let node = self.atPoint(location)
             let qwe = "Test_Level"
+            print("Выводим имя текущей сцены: ", GameScene().name)
             if (node.name == "retry") {
                 /* Сделал чтобы тестировать уровень*/
                 let SecondScene = GameScene(fileNamed: qwe)
@@ -345,7 +353,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         firstBody = contact.bodyA
         secondBody = contact.bodyB
         
-        if firstBody!.categoryBitMask == 2 || secondBody!.categoryBitMask == 2 {
+        if firstBody!.categoryBitMask == 1 && secondBody!.categoryBitMask == 2 {
             onGround = true
             print("true")
         }
@@ -386,9 +394,10 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             
         }
         print(onGroundTime)
-        
+
         //если ГГ улетел за сцену, показываем меню
         if main?.position.y < 0 && showMenu == false {
+            print("Выводим имя текущей сцены2: ", GameScene().name)
             showLMenu() //Показать меню проигрыша
             showMenu = true //если показывали меню, то true
             onGround = false //Свинья не на земле(за экраном она не может определить это)
