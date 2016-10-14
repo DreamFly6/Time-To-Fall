@@ -17,8 +17,6 @@ fileprivate func < <T : Comparable>(lhs: T?, rhs: T?) -> Bool {
 
 class GameScene: SKScene, SKPhysicsContactDelegate {
     
-    
-    
     //При вызове этой функции, показывается меню проигрыша.
     func showLMenu(){
         let button1 = SKSpriteNode(imageNamed: "Button1.png")
@@ -52,9 +50,6 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         menuBoard.yScale = 1.4
         menuBoard.zPosition = 1
         self.addChild(menuBoard)
-        
-        print("Выводим имя текущей сцены3: ", GameScene().name)
-        print("Выводим имя текущей сцены3 self: ", self.name)
     }
     
     
@@ -217,9 +212,6 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     
     //Функция выполняемая до открытия сцены
     override func didMove(to view: SKView) {
-        print("Выводим имя текущей сценыdidmove: ", GameScene().scene?.name)
-        print("Выводим имя текущей сценыdidmove self: ",GameScene().scene)
-        print("Выводим имя текущей сценыdidmove self111111 : ",GameScene().scene.self)
         initGameObject()
         self.physicsWorld.contactDelegate = self
     }
@@ -233,6 +225,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         
         // Цикл считывающий нажатие на экран
         for touch: AnyObject in touches {
+            
+            
             
             let touchLocation = touch.location(in: self)
             let touchedNode = self.atPoint(touchLocation)
@@ -293,7 +287,6 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                         spriteNode.physicsBody?.pinned = false
                         spriteNode.physicsBody?.isDynamic = true
                         print("ActiveBlock_FALSE")
-                        print("Выводим имя текущей сцены1: ", GameScene().name)
                         //ON
                         spriteNode.texture = SKTexture(imageNamed: "ActivaBlock_On")
                     }
@@ -319,17 +312,15 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             let touch = touches
             let location = touch.first!.location(in: self)
             let node = self.atPoint(location)
-            let qwe = "Test_Level"
-            print("Выводим имя текущей сцены: ", GameScene().name)
             if (node.name == "retry") {
                 /* Сделал чтобы тестировать уровень*/
-                let SecondScene = GameScene(fileNamed: qwe)
+                let SecondScene = GameScene(fileNamed: thisScene)
                 let transition = SKTransition.doorsCloseHorizontal(withDuration: 0.5)
                 SecondScene!.scaleMode = SKSceneScaleMode.aspectFill
                 self.scene!.view?.presentScene(SecondScene!, transition: transition)
                 
                 /* Данила, твое добро с рестартом ниже */
-                
+
                 /*
                 showLoseMenu = false
                 print("restart")
@@ -355,11 +346,11 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         
         if firstBody!.categoryBitMask == 1 && secondBody!.categoryBitMask == 2 {
             onGround = true
-            print("true")
+            //print("true")
         }
         else {
             onGround = false
-            print("false")
+            //print("false")
         }
     }
 
@@ -368,24 +359,23 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     //Удаляет спрайт, когда он улетел за экран
     override func didSimulatePhysics() {
         //let woodenBoxx = SKNode();
-        let main = self.childNode(withName: "MainCharacter") as? SKSpriteNode
-        let lol = self.childNode(withName: "WoodenBox") as? SKSpriteNode
+        let mainChrctr = self.childNode(withName: "MainCharacter") as? SKSpriteNode
+        let wdnBx = self.childNode(withName: "WoodenBox") as? SKSpriteNode
         
         
-        if (lol?.position.y < 0) {
-            lol?.removeFromParent()
+        if (wdnBx?.position.y < 0) {
+            wdnBx?.removeFromParent()
+            mainChrctr?.removeFromParent()
         }
-       
 
         
-    
         /* Меню в конце сцены */
         if onGround == false {
             onGroundTime = 0
         }
         else{
             onGroundTime+=1
-            
+            print(onGroundTime)
             //Если свинья на земле и время которое она пролежала на земле равно 100, то победа
             if onGroundTime > 100 && showMenu == false {
                 showMenu = true //если показывали меню, то true
@@ -393,11 +383,10 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             }
             
         }
-        print(onGroundTime)
+
 
         //если ГГ улетел за сцену, показываем меню
-        if main?.position.y < 0 && showMenu == false {
-            print("Выводим имя текущей сцены2: ", GameScene().name)
+        if mainChrctr?.position.y < 0 && showMenu == false {
             showLMenu() //Показать меню проигрыша
             showMenu = true //если показывали меню, то true
             onGround = false //Свинья не на земле(за экраном она не может определить это)

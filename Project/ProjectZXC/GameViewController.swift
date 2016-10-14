@@ -15,13 +15,14 @@ class GameViewController: UIViewController {
         super.viewDidLoad()
         //ПРОСТ
         if let scene = GameScene(fileNamed:"Test_Level") {
-            
+
             let skView = SKView(frame: self.view.frame)
             self.view.addSubview(skView)
             skView.showsFPS = true
             skView.showsNodeCount = true
             skView.ignoresSiblingOrder = true
             scene.scaleMode = .aspectFill
+
             skView.presentScene(scene)
             
         }
