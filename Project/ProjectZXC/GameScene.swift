@@ -346,11 +346,11 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         
         if firstBody!.categoryBitMask == 1 && secondBody!.categoryBitMask == 2 {
             onGround = true
-            //print("true")
+            print("true")
         }
         else {
             onGround = false
-            //print("false")
+            print("false")
         }
     }
 
@@ -365,7 +365,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         
         if (wdnBx?.position.y < 0) {
             wdnBx?.removeFromParent()
-            mainChrctr?.removeFromParent()
+            //mainChrctr?.removeFromParent()
         }
 
         
