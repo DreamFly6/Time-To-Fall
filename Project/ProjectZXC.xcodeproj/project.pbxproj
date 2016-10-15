@@ -17,6 +17,7 @@
 		1F4C24831CD5E55600D3B0DB /* ProjectZXCTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F4C24821CD5E55600D3B0DB /* ProjectZXCTests.swift */; };
 		1F4C248E1CD5E55600D3B0DB /* ProjectZXCUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F4C248D1CD5E55600D3B0DB /* ProjectZXCUITests.swift */; };
 		1F6C00A61CE34FCF00A7C8E6 /* Level 2.sks in Resources */ = {isa = PBXBuildFile; fileRef = 1F6C00A51CE34FCF00A7C8E6 /* Level 2.sks */; };
+		1FA0E0CE1DB23707004EED92 /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FA0E0CD1DB23707004EED92 /* File.swift */; };
 		1FE0F4001CE6F5B9007E1B98 /* Test_Level.sks in Resources */ = {isa = PBXBuildFile; fileRef = 1FE0F3FF1CE6F5B9007E1B98 /* Test_Level.sks */; };
 		32257FF11D50AF6F0071BB06 /* stop.png in Resources */ = {isa = PBXBuildFile; fileRef = 32257FF01D50AF6F0071BB06 /* stop.png */; };
 		3262F1381D49B3F50056D72B /* buttonLevel.png in Resources */ = {isa = PBXBuildFile; fileRef = 3262F1371D49B3F50056D72B /* buttonLevel.png */; };
@@ -63,6 +64,7 @@
 		1F4C248D1CD5E55600D3B0DB /* ProjectZXCUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectZXCUITests.swift; sourceTree = "<group>"; };
 		1F4C248F1CD5E55600D3B0DB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1F6C00A51CE34FCF00A7C8E6 /* Level 2.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = "Level 2.sks"; sourceTree = "<group>"; };
+		1FA0E0CD1DB23707004EED92 /* File.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
 		1FE0F3FF1CE6F5B9007E1B98 /* Test_Level.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Test_Level.sks; sourceTree = "<group>"; };
 		32257FF01D50AF6F0071BB06 /* stop.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = stop.png; sourceTree = "<group>"; };
 		3262F1371D49B3F50056D72B /* buttonLevel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = buttonLevel.png; sourceTree = "<group>"; };
@@ -171,6 +173,7 @@
 			children = (
 				1FA08D661D3E1A2D00A4BA06 /* Levels */,
 				1FE0F3FF1CE6F5B9007E1B98 /* Test_Level.sks */,
+				1FA0E0CD1DB23707004EED92 /* File.swift */,
 				1F4C246D1CD5E55600D3B0DB /* GameScene.swift */,
 			);
 			name = Scene;
@@ -337,6 +340,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1FA0E0CE1DB23707004EED92 /* File.swift in Sources */,
 				1F4C246E1CD5E55600D3B0DB /* GameScene.swift in Sources */,
 				1F4C24701CD5E55600D3B0DB /* GameViewController.swift in Sources */,
 				3262F13C1D49B7E90056D72B /* ViewController.swift in Sources */,

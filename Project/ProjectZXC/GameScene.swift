@@ -67,10 +67,12 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
 
     //Ициализация свойств игровых объектов
     func initGameObject(){
-        
+        //let qwe = You()
+        //print("Транспорт: \(qwe.description)")
         for main in self.children {
             if main.name == "MainCharacter" {
                 if let main = main as? SKSpriteNode {
+
                     main.physicsBody?.friction = 0.2
                     main.physicsBody?.restitution = 0.3
                     main.physicsBody?.linearDamping = 0.2
