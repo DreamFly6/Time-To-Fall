@@ -1,4 +1,4 @@
-// Ver 0.0000000002
+// Ver 0.0000000010
 
 import SpriteKit
 fileprivate func < <T : Comparable>(lhs: T?, rhs: T?) -> Bool {
@@ -56,6 +56,30 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     
     //При вызове этой функции, показывается меню выигрыша.
     func showWMenu(){
+        let button1 = SKSpriteNode(imageNamed: "Button1.png")
+        button1.position = CGPoint(x: self.frame.midX/2, y: self.frame.midY)
+        button1.name = "retry"
+        button1.xScale = 0.5
+        button1.yScale = 0.5
+        button1.zPosition = 2
+        self.addChild(button1)
+        
+        let button2 = SKSpriteNode(imageNamed: "nextButton.png")
+        button2.position = CGPoint(x: self.frame.midX, y: self.frame.midY)
+        button2.name = "next"
+        button2.xScale = 0.5
+        button2.yScale = 0.5
+        button2.zPosition = 2
+        self.addChild(button2)
+        
+        let button3 = SKSpriteNode(imageNamed: "prevButton.png")
+        button3.position = CGPoint(x: self.frame.midX+(self.frame.midX/2), y: self.frame.midY)
+        button3.name = "prev"
+        button3.xScale = 0.5
+        button3.yScale = 0.5
+        button3.zPosition = 2
+        self.addChild(button3)
+        
         let menuBoard = SKSpriteNode(imageNamed: "MenuBoard.png")
         menuBoard.position = CGPoint(x: self.frame.midX, y: self.frame.midY)
         menuBoard.name = "menuBoard"
@@ -90,6 +114,9 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         for ground in self.children {
             if ground.name == "Ground" {
                 if let ground = ground as? SKSpriteNode {
+                    ground.physicsBody = SKPhysicsBody(rectangleOf: CGSize(width: ground.size.width, height: ground.size.height))
+                    ground.physicsBody?.pinned = true
+                    ground.physicsBody?.allowsRotation = false
                     ground.physicsBody?.friction = 0.2
                     ground.physicsBody?.restitution = 0.2
                     ground.physicsBody?.linearDamping = 0.1
@@ -256,6 +283,11 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             //            }
             
 
+            if touchedNode.name == "stop" {
+                showMenu = true
+                showWMenu()
+
+            }
             
             if let spriteNode = touchedNode as? SKSpriteNode {
                 if spriteNode.name == "WallBlock"{
@@ -314,25 +346,30 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             let touch = touches
             let location = touch.first!.location(in: self)
             let node = self.atPoint(location)
-            if (node.name == "retry") {
-                /* Сделал чтобы тестировать уровень*/
-                let SecondScene = GameScene(fileNamed: thisScene)
+            
+            if node.name == "retry"{
+                let currentScene = GameScene(fileNamed: "Level "+String(thisScene))
                 let transition = SKTransition.doorsCloseHorizontal(withDuration: 0.5)
-                SecondScene!.scaleMode = SKSceneScaleMode.aspectFill
-                self.scene!.view?.presentScene(SecondScene!, transition: transition)
-                
-                /* Данила, твое добро с рестартом ниже */
-
-                /*
-                showLoseMenu = false
-                print("restart")
-                let gameScene = GameScene(size: self.size)
-                let transition = SKTransition.doorsCloseHorizontal(withDuration: 0.5)
-                gameScene.scaleMode = SKSceneScaleMode.aspectFill
-                self.scene!.view?.presentScene(gameScene, transition: transition)
-                print("complete Reload")
-                 */
+                currentScene!.scaleMode = SKSceneScaleMode.aspectFill
+                self.scene!.view?.presentScene(currentScene!, transition: transition)
             }
+            
+            if node.name == "next"{
+                thisScene+=1
+                let currentScene = GameScene(fileNamed: "Level "+String(thisScene))
+                let transition = SKTransition.doorway(withDuration: 0.5)
+                currentScene!.scaleMode = SKSceneScaleMode.aspectFill
+                self.scene!.view?.presentScene(currentScene!, transition: transition)
+            }
+            
+            if node.name == "prev"{
+                thisScene-=1
+                let currentScene = GameScene(fileNamed: "Level "+String(thisScene))
+                let transition = SKTransition.doorway(withDuration: 0.5)
+                currentScene!.scaleMode = SKSceneScaleMode.aspectFill
+                self.scene!.view?.presentScene(currentScene!, transition: transition)
+            }
+
 
             
         }
@@ -348,11 +385,11 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         
         if firstBody!.categoryBitMask == 1 && secondBody!.categoryBitMask == 2 {
             onGround = true
-            print("true")
+            print("On Ground(true)")
         }
         else {
             onGround = false
-            print("false")
+            print("On Ground(false)")
         }
     }
 
@@ -360,14 +397,12 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     
     //Удаляет спрайт, когда он улетел за экран
     override func didSimulatePhysics() {
-        //let woodenBoxx = SKNode();
         let mainChrctr = self.childNode(withName: "MainCharacter") as? SKSpriteNode
         let wdnBx = self.childNode(withName: "WoodenBox") as? SKSpriteNode
         
         
         if (wdnBx?.position.y < 0) {
             wdnBx?.removeFromParent()
-            //mainChrctr?.removeFromParent()
         }
 
         
@@ -376,8 +411,21 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             onGroundTime = 0
         }
         else{
-            onGroundTime+=1
-            print(onGroundTime)
+            if showMenu == false {
+                //Время которое персонаж лежит на земле
+                onGroundTime+=1
+                print(onGroundTime)
+                //Прогресс бар
+                for progressBar in self.children {
+                    if progressBar.name == "ProgressBar" {
+                        if let progressBar = progressBar as? SKSpriteNode {
+                            progressBar.size.width = CGFloat(onGroundTime) * 39
+                        }
+                    }
+                }
+            
+            }
+
             //Если свинья на земле и время которое она пролежала на земле равно 100, то победа
             if onGroundTime > 100 && showMenu == false {
                 showMenu = true //если показывали меню, то true

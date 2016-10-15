@@ -18,6 +18,7 @@
 		1F4C248E1CD5E55600D3B0DB /* ProjectZXCUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F4C248D1CD5E55600D3B0DB /* ProjectZXCUITests.swift */; };
 		1F6C00A61CE34FCF00A7C8E6 /* Level 2.sks in Resources */ = {isa = PBXBuildFile; fileRef = 1F6C00A51CE34FCF00A7C8E6 /* Level 2.sks */; };
 		1FA0E0CE1DB23707004EED92 /* Oop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FA0E0CD1DB23707004EED92 /* Oop.swift */; };
+		1FA0E0D01DB24324004EED92 /* Level 6.sks in Resources */ = {isa = PBXBuildFile; fileRef = 1FA0E0CF1DB24324004EED92 /* Level 6.sks */; };
 		1FE0F4001CE6F5B9007E1B98 /* Test_Level.sks in Resources */ = {isa = PBXBuildFile; fileRef = 1FE0F3FF1CE6F5B9007E1B98 /* Test_Level.sks */; };
 		32257FF11D50AF6F0071BB06 /* stop.png in Resources */ = {isa = PBXBuildFile; fileRef = 32257FF01D50AF6F0071BB06 /* stop.png */; };
 		3262F1381D49B3F50056D72B /* buttonLevel.png in Resources */ = {isa = PBXBuildFile; fileRef = 3262F1371D49B3F50056D72B /* buttonLevel.png */; };
@@ -65,6 +66,7 @@
 		1F4C248F1CD5E55600D3B0DB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1F6C00A51CE34FCF00A7C8E6 /* Level 2.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = "Level 2.sks"; sourceTree = "<group>"; };
 		1FA0E0CD1DB23707004EED92 /* Oop.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Oop.swift; sourceTree = "<group>"; };
+		1FA0E0CF1DB24324004EED92 /* Level 6.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = "Level 6.sks"; sourceTree = "<group>"; };
 		1FE0F3FF1CE6F5B9007E1B98 /* Test_Level.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Test_Level.sks; sourceTree = "<group>"; };
 		32257FF01D50AF6F0071BB06 /* stop.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = stop.png; sourceTree = "<group>"; };
 		3262F1371D49B3F50056D72B /* buttonLevel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = buttonLevel.png; sourceTree = "<group>"; };
@@ -164,6 +166,7 @@
 				32F5A4281D3CA45B00631FE0 /* Level 3.sks */,
 				32F5A42A1D3CA47E00631FE0 /* Level 4.sks */,
 				32F5A42C1D3CA49100631FE0 /* Level 5.sks */,
+				1FA0E0CF1DB24324004EED92 /* Level 6.sks */,
 			);
 			name = Levels;
 			sourceTree = "<group>";
@@ -312,6 +315,7 @@
 				32BE5B911CD79C7000C7A815 /* buttonStart.png in Resources */,
 				1F4C24781CD5E55600D3B0DB /* LaunchScreen.storyboard in Resources */,
 				1F4C24751CD5E55600D3B0DB /* Assets.xcassets in Resources */,
+				1FA0E0D01DB24324004EED92 /* Level 6.sks in Resources */,
 				32F5A42D1D3CA49100631FE0 /* Level 5.sks in Resources */,
 				1F4C24731CD5E55600D3B0DB /* Main.storyboard in Resources */,
 				3262F1381D49B3F50056D72B /* buttonLevel.png in Resources */,
