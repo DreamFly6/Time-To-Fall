@@ -255,6 +255,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         // Цикл считывающий нажатие на экран
         for touch: AnyObject in touches {
             
+            print(thisScene," <-- Текущая ",topScene, "<-- Топовая")
             
             
             let touchLocation = touch.location(in: self)
@@ -402,6 +403,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         let mainChrctr = self.childNode(withName: "MainCharacter") as? SKSpriteNode
         let wdnBx = self.childNode(withName: "WoodenBox") as? SKSpriteNode
         
+
         
         if (wdnBx?.position.y < 0) {
             wdnBx?.removeFromParent()
@@ -448,7 +450,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     }
     
     override func update(_ currentTime: TimeInterval) {  /* Called before each frame is rendered */
-        print(thisScene," <-- Текущая ",topScene, "<-- Топовая")
+
     }
     
     

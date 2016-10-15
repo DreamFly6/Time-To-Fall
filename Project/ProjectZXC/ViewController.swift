@@ -18,12 +18,14 @@ class ViewController: UIViewController {
         let buttonTitle : String = sender.currentTitle!!
         var sceneView = GameScene(fileNamed:"Test_Level")
         thisScene = Int(buttonTitle)!
+        
         var ert = 0
         while ert < 10{
             ert+=1
             //if sender.currentTitle == String(ert){
                 if let disableMyButton = sender as? UIButton{
                     print(disableMyButton.currentTitle," <------------------ Кнопка")
+                    disableMyButton.setTitle("Жопа", for: .normal)
                 }
             //}
         }
@@ -33,7 +35,7 @@ class ViewController: UIViewController {
 
 
 
-        sceneView = GameScene(fileNamed: "Level "+buttonTitle)
+        //sceneView = GameScene(fileNamed: "Level "+buttonTitle)
         let skView = SKView(frame: self.view.frame)
         self.view.addSubview(skView)
         skView.showsFPS = true
