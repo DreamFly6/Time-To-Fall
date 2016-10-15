@@ -369,7 +369,9 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                 currentScene!.scaleMode = SKSceneScaleMode.aspectFill
                 self.scene!.view?.presentScene(currentScene!, transition: transition)
             }
-
+            if thisScene >= topScene {
+                topScene = thisScene
+            }
 
             
         }
@@ -446,7 +448,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     }
     
     override func update(_ currentTime: TimeInterval) {  /* Called before each frame is rendered */
-
+        print(thisScene," <-- Текущая ",topScene, "<-- Топовая")
     }
     
     
