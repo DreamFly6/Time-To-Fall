@@ -284,11 +284,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             //            }
             
 
-            if touchedNode.name == "stop" {
-                showMenu = true
-                showWMenu()
 
-            }
             
             if let spriteNode = touchedNode as? SKSpriteNode {
                 if spriteNode.name == "WallBlock"{
@@ -370,6 +366,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                 currentScene!.scaleMode = SKSceneScaleMode.aspectFill
                 self.scene!.view?.presentScene(currentScene!, transition: transition)
             }
+            
+            //Определение макс уровня, до которого дошел игрок
             if thisScene >= topScene {
                 topScene = thisScene
             }

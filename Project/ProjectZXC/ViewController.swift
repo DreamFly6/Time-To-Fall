@@ -13,29 +13,26 @@ public var thisScene = 0
 public var topScene = 0
 class ViewController: UIViewController {
 
-    //По тайтлу кнопки определяем на какой уровень нужен переход и переходим туда
-    @IBAction func buttonLevel1(_ sender: AnyObject) {
-        let buttonTitle : String = sender.currentTitle!!
-        var sceneView = GameScene(fileNamed:"Test_Level")
-        thisScene = Int(buttonTitle)!
-        
-        var ert = 0
+    
+    override func viewDidLoad() {
+    var ert = 0
         while ert < 10{
             ert+=1
-            //if sender.currentTitle == String(ert){
-                if let disableMyButton = sender as? UIButton{
-                    print(disableMyButton.currentTitle," <------------------ Кнопка")
-                    disableMyButton.setTitle("Жопа", for: .normal)
-                }
-            //}
+
         }
 
+    }
+    
 
-
-
-
-
-        //sceneView = GameScene(fileNamed: "Level "+buttonTitle)
+    @IBOutlet var theButton: UIButton?
+    
+    //По тайтлу кнопки определяем на какой уровень нужен переход и переходим туда
+    @IBAction func buttonLevel1(_ sender: AnyObject) {
+        
+        let buttonTitle : String = sender.currentTitle!!
+        var sceneView = GameScene(fileNamed:"Level 1")
+        thisScene = Int(buttonTitle)!
+        sceneView = GameScene(fileNamed: "Level "+buttonTitle)
         let skView = SKView(frame: self.view.frame)
         self.view.addSubview(skView)
         skView.showsFPS = true
