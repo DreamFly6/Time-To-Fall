@@ -9,22 +9,20 @@
 import UIKit
 import SpriteKit
 
-public var thisScene = 0
-public var topScene = 0
+public var thisScene = 1
+public var topScene = 1
 class ViewController: UIViewController {
 
-    
+    /*
     override func viewDidLoad() {
     var ert = 0
         while ert < 10{
             ert+=1
-
+            
         }
-
     }
     
-
-    @IBOutlet var theButton: UIButton?
+    */
     
     //По тайтлу кнопки определяем на какой уровень нужен переход и переходим туда
     @IBAction func buttonLevel1(_ sender: AnyObject) {

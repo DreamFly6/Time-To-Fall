@@ -1,4 +1,4 @@
-// Ver 0.0000000010
+// Ver 0.0000000011
 
 import SpriteKit
 fileprivate func < <T : Comparable>(lhs: T?, rhs: T?) -> Bool {
@@ -129,6 +129,25 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             }
         }
         
+        //  Инициализация SpearBlock
+        for spearBlock in self.children {
+            if spearBlock.name == "SpearBlock" {
+                if let spearBlock = spearBlock as? SKSpriteNode {
+                    spearBlock.physicsBody?.friction = 0.1
+                    spearBlock.physicsBody?.restitution = 0.1
+                    spearBlock.physicsBody?.linearDamping = 0.1
+                    spearBlock.physicsBody?.angularDamping = 0.1
+                    spearBlock.physicsBody?.mass = 2.0
+                    spearBlock.physicsBody?.pinned = true
+                    spearBlock.physicsBody?.allowsRotation = false
+                    spearBlock.physicsBody?.categoryBitMask = 3;
+                    spearBlock.physicsBody?.contactTestBitMask = 1;
+                    spearBlock.physicsBody?.collisionBitMask =  1;
+                }
+            }
+        }
+        
+        
         //  Инициализация WallBlockOpen
         for wallBlock in self.children {
             if wallBlock.name == "WallBlock" {
@@ -145,21 +164,6 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         }
         
         
-        
-        //  Инициализация SpearBlock
-        for spearBlock in self.children {
-            if spearBlock.name == "SpearBlock" {
-                if let spearBlock = spearBlock as? SKSpriteNode {
-                    spearBlock.physicsBody?.friction = 0.1
-                    spearBlock.physicsBody?.restitution = 0.1
-                    spearBlock.physicsBody?.linearDamping = 0.1
-                    spearBlock.physicsBody?.angularDamping = 0.1
-                    spearBlock.physicsBody?.mass = 2.0
-                    spearBlock.physicsBody?.pinned = true
-                    spearBlock.physicsBody?.allowsRotation = false
-                }
-            }
-        }
         
         
         //  Инициализация SlimeBlock
@@ -263,6 +267,11 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             
             if (touchedNode.name == "WoodenBox" || touchedNode.name == "WoodenPlank" || touchedNode.name == "SlimeBlock") {
                 touchedNode.removeFromParent() //удаление
+            }
+            
+            if touchedNode.name == "stop" {
+                showMenu = true
+                showWMenu()
             }
     
 //            if ( touchedNode.name == "stop" || self.scene!.isPaused == false) {
@@ -377,7 +386,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     }
     public var onGroundTime = 0;
     public var onGround = false
-    
+    public var spearKill = false
     func didBegin(_ contact: SKPhysicsContact) {
         var firstBody: SKPhysicsBody?
         var secondBody: SKPhysicsBody?
@@ -390,8 +399,27 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         }
         else {
             onGround = false
-            print("On Ground(false)")
+            //print("On Ground(false)")
         }
+        
+        if firstBody!.categoryBitMask == 1 && secondBody!.categoryBitMask == 3 && showMenu == false {
+            print("Пауза пошла")
+            self.scene!.isPaused = true;
+            print("Слип пошел")
+            print("Менюха пошла")
+            //Прогресс бар
+            for progressBar in self.children {
+                if progressBar.name == "ProgressBar" {
+                    if let progressBar = progressBar as? SKSpriteNode {
+                        progressBar.size.width = 4000
+                        progressBar.color = UIColor.red
+                    }
+                }
+            }
+            showMenu = true
+            showLMenu()
+        }
+
     }
 
     var showMenu = false
