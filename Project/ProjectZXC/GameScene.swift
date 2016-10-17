@@ -376,11 +376,13 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                 self.scene!.view?.presentScene(currentScene!, transition: transition)
             }
             
-//            if node.name == "menu"{
-//                let storyboard = UIStoryboard(name: "Main", bundle: nil)
-//                let vc = storyboard.instantiateViewController(withIdentifier: "FirstView") as! ViewController
+            if node.name == "menu"{
+//                let viewController:UIViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "ViewController") as UIViewController
+//                
+//                //inputViewController?(viewController, animated: false, completion: nil)
+//
 //                ViewController(nibName: "Main", bundle: nil)
-//            }
+            }
             
             
             
