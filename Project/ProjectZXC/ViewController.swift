@@ -21,8 +21,8 @@ class ViewController: UIViewController {
             
         }
     }
-    
     */
+    
     
     //По тайтлу кнопки определяем на какой уровень нужен переход и переходим туда
     @IBAction func buttonLevel1(_ sender: AnyObject) {
@@ -30,7 +30,9 @@ class ViewController: UIViewController {
         let buttonTitle : String = sender.currentTitle!!
         var sceneView = GameScene(fileNamed:"Level 1")
         thisScene = Int(buttonTitle)!
+        print(sender.currentTitle, "Жопа")
         sceneView = GameScene(fileNamed: "Level "+buttonTitle)
+        
         let skView = SKView(frame: self.view.frame)
         self.view.addSubview(skView)
         skView.showsFPS = true
