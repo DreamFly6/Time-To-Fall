@@ -24,7 +24,6 @@
 		32257FF11D50AF6F0071BB06 /* stop.png in Resources */ = {isa = PBXBuildFile; fileRef = 32257FF01D50AF6F0071BB06 /* stop.png */; };
 		3262F1381D49B3F50056D72B /* buttonLevel.png in Resources */ = {isa = PBXBuildFile; fileRef = 3262F1371D49B3F50056D72B /* buttonLevel.png */; };
 		3262F13C1D49B7E90056D72B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3262F13B1D49B7E90056D72B /* ViewController.swift */; };
-		32B94BB91DB4820B00AFAEC2 /* Level 6.sks in Resources */ = {isa = PBXBuildFile; fileRef = 32B94BB81DB4820B00AFAEC2 /* Level 6.sks */; };
 		32BE5B8F1CD79BA100C7A815 /* backgroundMainMenu.png in Resources */ = {isa = PBXBuildFile; fileRef = 32BE5B8E1CD79BA100C7A815 /* backgroundMainMenu.png */; };
 		32BE5B911CD79C7000C7A815 /* buttonStart.png in Resources */ = {isa = PBXBuildFile; fileRef = 32BE5B901CD79C7000C7A815 /* buttonStart.png */; };
 		32E0A4251CF5A9CB00D575A7 /* MyLaunchScreen.png in Resources */ = {isa = PBXBuildFile; fileRef = 32E0A4241CF5A9CB00D575A7 /* MyLaunchScreen.png */; };
@@ -74,7 +73,6 @@
 		32257FF01D50AF6F0071BB06 /* stop.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = stop.png; sourceTree = "<group>"; };
 		3262F1371D49B3F50056D72B /* buttonLevel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = buttonLevel.png; sourceTree = "<group>"; };
 		3262F13B1D49B7E90056D72B /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		32B94BB81DB4820B00AFAEC2 /* Level 6.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = "Level 6.sks"; sourceTree = "<group>"; };
 		32BE5B8E1CD79BA100C7A815 /* backgroundMainMenu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = backgroundMainMenu.png; path = pic/backgroundMainMenu.png; sourceTree = SOURCE_ROOT; };
 		32BE5B901CD79C7000C7A815 /* buttonStart.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = buttonStart.png; path = pic/buttonStart.png; sourceTree = SOURCE_ROOT; };
 		32E0A4241CF5A9CB00D575A7 /* MyLaunchScreen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = MyLaunchScreen.png; path = ../pic/MyLaunchScreen.png; sourceTree = "<group>"; };
@@ -170,11 +168,7 @@
 				32F5A4281D3CA45B00631FE0 /* Level 3.sks */,
 				32F5A42A1D3CA47E00631FE0 /* Level 4.sks */,
 				32F5A42C1D3CA49100631FE0 /* Level 5.sks */,
-<<<<<<< Updated upstream
 				1FF6BA471DB47E8A0058BEC2 /* Level 6.sks */,
-=======
-				32B94BB81DB4820B00AFAEC2 /* Level 6.sks */,
->>>>>>> Stashed changes
 			);
 			name = Levels;
 			sourceTree = "<group>";
@@ -322,11 +316,7 @@
 				1FE0F4001CE6F5B9007E1B98 /* Test_Level.sks in Resources */,
 				32BE5B8F1CD79BA100C7A815 /* backgroundMainMenu.png in Resources */,
 				32BE5B911CD79C7000C7A815 /* buttonStart.png in Resources */,
-<<<<<<< Updated upstream
 				1FF6BA481DB47E8A0058BEC2 /* Level 6.sks in Resources */,
-=======
-				32B94BB91DB4820B00AFAEC2 /* Level 6.sks in Resources */,
->>>>>>> Stashed changes
 				1F4C24781CD5E55600D3B0DB /* LaunchScreen.storyboard in Resources */,
 				1F4C24751CD5E55600D3B0DB /* Assets.xcassets in Resources */,
 				32F5A42D1D3CA49100631FE0 /* Level 5.sks in Resources */,
@@ -517,7 +507,7 @@
 				INFOPLIST_FILE = ProjectZXC/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = lolka1;
+				PRODUCT_BUNDLE_IDENTIFIER = lolka2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SWIFT_VERSION = 3.0;
@@ -534,7 +524,7 @@
 				INFOPLIST_FILE = ProjectZXC/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = lolka1;
+				PRODUCT_BUNDLE_IDENTIFIER = lolka2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SWIFT_VERSION = 3.0;
