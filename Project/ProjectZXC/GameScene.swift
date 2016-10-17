@@ -29,7 +29,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         
         let button2 = SKSpriteNode(imageNamed: "Button2.png")
         button2.position = CGPoint(x: self.frame.midX, y: self.frame.midY)
-        button2.name = "button2"
+        button2.name = "menu"
         button2.xScale = 0.5
         button2.yScale = 0.5
         button2.zPosition = 2
@@ -375,6 +375,14 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                 currentScene!.scaleMode = SKSceneScaleMode.aspectFill
                 self.scene!.view?.presentScene(currentScene!, transition: transition)
             }
+            
+//            if node.name == "menu"{
+//                let storyboard = UIStoryboard(name: "Main", bundle: nil)
+//                let vc = storyboard.instantiateViewController(withIdentifier: "FirstView") as! ViewController
+//                ViewController(nibName: "Main", bundle: nil)
+//            }
+            
+            
             
             //Определение макс уровня, до которого дошел игрок
             if thisScene >= topScene {

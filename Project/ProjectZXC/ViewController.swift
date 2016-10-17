@@ -10,10 +10,10 @@ import UIKit
 import SpriteKit
 
 public var thisScene = 1
-public var topScene = 5
+public var topScene = 1
 class ViewController: UIViewController {
 
-    //это объявление нужно, чтобы сделать их кликабельными/не  кликабельными
+    //это объявление нужно, чтобы сделать их кликабельными/не кликабельными
     @IBOutlet var buttonEnable: [UIButton]!
     
     override func viewDidLoad() {
@@ -32,7 +32,7 @@ class ViewController: UIViewController {
         let buttonTitle : String = sender.currentTitle!!
         var sceneView = GameScene(fileNamed:"Level 1")
         thisScene = Int(buttonTitle)!
-        print(sender.currentTitle, "Жопа")
+        print(sender.currentTitle, " <---- Эта сцена")
         sceneView = GameScene(fileNamed: "Level "+buttonTitle)
         
         let skView = SKView(frame: self.view.frame)
