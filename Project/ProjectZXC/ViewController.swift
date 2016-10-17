@@ -10,15 +10,11 @@ import UIKit
 import SpriteKit
 
 public var thisScene = 1
-public var topScene = 3
+public var topScene = 5
 class ViewController: UIViewController {
-
 
     //это объявление нужно, чтобы сделать их кликабельными/не  кликабельными
     @IBOutlet var buttonEnable: [UIButton]!
-
-
-
     
     override func viewDidLoad() {
         
@@ -30,16 +26,8 @@ class ViewController: UIViewController {
         
     }
     
-    
-    //ЖЕНЯ СУПЕР СУКА
-    
-    
-    
-    
-    
     //По тайтлу кнопки определяем на какой уровень нужен переход и переходим туда
     @IBAction func buttonLevel1(_ sender: AnyObject) {
-        
         
         let buttonTitle : String = sender.currentTitle!!
         var sceneView = GameScene(fileNamed:"Level 1")

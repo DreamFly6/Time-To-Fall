@@ -24,7 +24,7 @@
                                 <gestureRecognizers/>
                             </imageView>
                             <button opaque="NO" contentMode="right" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ICs-io-Qq7">
-                                <frame key="frameInset" minX="23.20%" minY="54.20%" width="53.20%" height="29.98%"/>
+                                <frame key="frameInset" minX="23.20%" minY="54.20%" width="53.20%" height="29.91%"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="28"/>
                                 <size key="titleShadowOffset" width="2" height="2"/>
@@ -36,7 +36,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fJo-bh-ZtI">
-                                <frame key="frameInset" minX="23.20%" minY="16.87%" width="53.20%" height="29.98%"/>
+                                <frame key="frameInset" minX="23.20%" minY="16.87%" width="53.20%" height="29.91%"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="28"/>
                                 <size key="titleShadowOffset" width="2" height="2"/>
@@ -69,7 +69,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="backgroundMainMenu.png" translatesAutoresizingMaskIntoConstraints="NO" id="mjE-vE-aRh">
-                                <frame key="frameInset" minX="-8.80%" minY="-8.77%" width="110.40%" height="111.09%"/>
+                                <frame key="frameInset" minX="-8.80%" minY="-8.77%" width="110.40%" height="111.02%"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QCZ-W5-2xa">
@@ -150,6 +150,45 @@
                                     <action selector="buttonLevel1:" destination="tZT-fh-9NA" eventType="touchUpInside" id="T1c-Di-ofC"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oN8-ki-erw">
+                                <frame key="frameInset" minX="29.20%" minY="33.96%" width="18.40%" height="10.72%"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.25876882950000002" green="0.27759480339999998" blue="0.38945926050000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="AvenirNextCondensed-Regular" family="Avenir Next Condensed" pointSize="30"/>
+                                <size key="titleShadowOffset" width="1" height="1"/>
+                                <state key="normal" title="10" backgroundImage="StoneBlock">
+                                    <color key="titleShadowColor" name="knobColor" catalog="System" colorSpace="catalog"/>
+                                </state>
+                                <connections>
+                                    <action selector="buttonLevel1:" destination="tZT-fh-9NA" eventType="touchUpInside" id="9rQ-Ks-Z9W"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="30a-N5-w7l">
+                                <frame key="frameInset" minX="51.20%" minY="33.96%" width="18.40%" height="10.72%"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.25876882950000002" green="0.27759480339999998" blue="0.38945926050000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="AvenirNextCondensed-Regular" family="Avenir Next Condensed" pointSize="30"/>
+                                <size key="titleShadowOffset" width="1" height="1"/>
+                                <state key="normal" title="11" backgroundImage="StoneBlock">
+                                    <color key="titleShadowColor" name="knobColor" catalog="System" colorSpace="catalog"/>
+                                </state>
+                                <connections>
+                                    <action selector="buttonLevel1:" destination="tZT-fh-9NA" eventType="touchUpInside" id="fv7-Ie-0cj"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zLp-Dw-h4N">
+                                <frame key="frameInset" minX="73.87%" minY="33.96%" width="18.40%" height="10.72%"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.25876882950000002" green="0.27759480339999998" blue="0.38945926050000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="AvenirNextCondensed-Regular" family="Avenir Next Condensed" pointSize="30"/>
+                                <size key="titleShadowOffset" width="1" height="1"/>
+                                <state key="normal" title="12" backgroundImage="StoneBlock">
+                                    <color key="titleShadowColor" name="knobColor" catalog="System" colorSpace="catalog"/>
+                                </state>
+                                <connections>
+                                    <action selector="buttonLevel1:" destination="tZT-fh-9NA" eventType="touchUpInside" id="ORs-3Y-pWG"/>
+                                </connections>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N3L-yD-7YR">
                                 <frame key="frameInset" minX="51.20%" minY="22.04%" width="18.40%" height="10.72%"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
@@ -169,23 +208,42 @@
                                 <color key="backgroundColor" red="0.25876882950000002" green="0.27759480339999998" blue="0.38945926050000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="AvenirNextCondensed-Regular" family="Avenir Next Condensed" pointSize="30"/>
                                 <size key="titleShadowOffset" width="1" height="1"/>
-                                <state key="normal" title="8" backgroundImage="StoneBlock"/>
+                                <state key="normal" title="8" backgroundImage="StoneBlock">
+                                    <color key="titleShadowColor" name="knobColor" catalog="System" colorSpace="catalog"/>
+                                </state>
                                 <connections>
                                     <action selector="buttonLevel1:" destination="tZT-fh-9NA" eventType="touchUpInside" id="ovk-TA-4Zc"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wYF-rK-Izs">
+                                <frame key="frameInset" minX="7.20%" minY="33.96%" width="18.40%" height="10.72%"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.25876882950000002" green="0.27759480339999998" blue="0.38945926050000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="AvenirNextCondensed-Regular" family="Avenir Next Condensed" pointSize="30"/>
+                                <size key="titleShadowOffset" width="1" height="1"/>
+                                <state key="normal" title="9" backgroundImage="StoneBlock">
+                                    <color key="titleShadowColor" name="knobColor" catalog="System" colorSpace="catalog"/>
+                                </state>
+                                <connections>
+                                    <action selector="buttonLevel1:" destination="tZT-fh-9NA" eventType="touchUpInside" id="5gu-vC-9gx"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
                     <connections>
-                        <outletCollection property="buttonEnable" destination="QCZ-W5-2xa" id="QfL-eV-359"/>
-                        <outletCollection property="buttonEnable" destination="8sZ-O8-jgY" id="iFQ-od-wkB"/>
-                        <outletCollection property="buttonEnable" destination="uBR-lg-hF7" id="6eR-Vh-UXI"/>
-                        <outletCollection property="buttonEnable" destination="lj7-QD-CSB" id="lIS-ld-pvC"/>
-                        <outletCollection property="buttonEnable" destination="csR-SN-fwL" id="FaU-ok-lDb"/>
-                        <outletCollection property="buttonEnable" destination="6fV-zs-Pbc" id="gNt-cO-ttc"/>
-                        <outletCollection property="buttonEnable" destination="N3L-yD-7YR" id="hcK-M5-lmw"/>
-                        <outletCollection property="buttonEnable" destination="Dyg-yB-FUj" id="obK-Tu-vl0"/>
+                        <outletCollection property="buttonEnable" destination="QCZ-W5-2xa" collectionClass="NSMutableArray" id="Bb6-Lm-ezi"/>
+                        <outletCollection property="buttonEnable" destination="8sZ-O8-jgY" collectionClass="NSMutableArray" id="IuX-Lv-tux"/>
+                        <outletCollection property="buttonEnable" destination="uBR-lg-hF7" collectionClass="NSMutableArray" id="4en-QF-y4H"/>
+                        <outletCollection property="buttonEnable" destination="lj7-QD-CSB" collectionClass="NSMutableArray" id="QhA-eC-6i0"/>
+                        <outletCollection property="buttonEnable" destination="csR-SN-fwL" collectionClass="NSMutableArray" id="bH8-jN-a1Q"/>
+                        <outletCollection property="buttonEnable" destination="6fV-zs-Pbc" collectionClass="NSMutableArray" id="umK-S5-eGE"/>
+                        <outletCollection property="buttonEnable" destination="N3L-yD-7YR" collectionClass="NSMutableArray" id="pJ2-iR-i0k"/>
+                        <outletCollection property="buttonEnable" destination="Dyg-yB-FUj" collectionClass="NSMutableArray" id="JMz-2W-czD"/>
+                        <outletCollection property="buttonEnable" destination="wYF-rK-Izs" collectionClass="NSMutableArray" id="1Br-fR-9yE"/>
+                        <outletCollection property="buttonEnable" destination="oN8-ki-erw" collectionClass="NSMutableArray" id="GXL-P5-TTx"/>
+                        <outletCollection property="buttonEnable" destination="30a-N5-w7l" collectionClass="NSMutableArray" id="MZ5-ty-vc8"/>
+                        <outletCollection property="buttonEnable" destination="zLp-Dw-h4N" collectionClass="NSMutableArray" id="kY9-rS-rlL"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fSZ-S0-9nV" userLabel="First Responder" sceneMemberID="firstResponder"/>
