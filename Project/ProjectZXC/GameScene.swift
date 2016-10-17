@@ -227,9 +227,9 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             if activeBlock.name == "ActiveBlock" {
                 if let activeBlock = activeBlock as? SKSpriteNode {
                     activeBlock.physicsBody?.friction = 0.3
-                    activeBlock.physicsBody?.restitution = 0.3
-                    activeBlock.physicsBody?.linearDamping = 0.4
-                    activeBlock.physicsBody?.angularDamping = 0.4
+                    activeBlock.physicsBody?.restitution = 0.2
+                    activeBlock.physicsBody?.linearDamping = 0.2
+                    activeBlock.physicsBody?.angularDamping = 0.2
                     activeBlock.physicsBody?.mass = 3.0
                     
                     //Особые характеристики

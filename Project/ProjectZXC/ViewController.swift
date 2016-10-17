@@ -10,32 +10,38 @@ import UIKit
 import SpriteKit
 
 public var thisScene = 1
-public var topScene = 1
+public var topScene = 3
 class ViewController: UIViewController {
 
+
+    //это объявление нужно, чтобы сделать их кликабельными/не  кликабельными
+    @IBOutlet var buttonEnable: [UIButton]!
+
+
+
     
-//    override func viewDidLoad() {
-//    var ert = 0
-//        while ert < 10{
-//            ert+=1
-//            
-//        }
-//    }
+    override func viewDidLoad() {
+        
+        //все кнопки перехода уровня до топ сцены делаем кликабельными
+        for _ in 1...topScene {
+            let button = buttonEnable.removeFirst()
+            button.isEnabled = true
+        }
+        
+    }
+    
+    
+    //ЖЕНЯ СУПЕР СУКА
+    
+    
+    
     
     
     //По тайтлу кнопки определяем на какой уровень нужен переход и переходим туда
     @IBAction func buttonLevel1(_ sender: AnyObject) {
+        
+        
         let buttonTitle : String = sender.currentTitle!!
-        var ert = 0
-        
-        while ert < 3{
-            ert+=1
-            if (buttonTitle = "Level " + ert) {
-                sender.setOn(true, animated: true)
-            }
-        }
-        
-        
         var sceneView = GameScene(fileNamed:"Level 1")
         thisScene = Int(buttonTitle)!
         print(sender.currentTitle, "Жопа")
