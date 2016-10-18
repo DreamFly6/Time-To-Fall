@@ -19,6 +19,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     
     //При вызове этой функции, показывается меню проигрыша.
     func showLMenu(){
+        thisScene-=1
         let button1 = SKSpriteNode(imageNamed: "Button1.png")
         button1.position = CGPoint(x: self.frame.midX/2, y: self.frame.midY)
         button1.name = "retry"
@@ -56,6 +57,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     
     //При вызове этой функции, показывается меню выигрыша.
     func showWMenu(){
+        thisScene+=1
         let button1 = SKSpriteNode(imageNamed: "Button1.png")
         button1.position = CGPoint(x: self.frame.midX/2, y: self.frame.midY)
         button1.name = "retry"
@@ -361,7 +363,6 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             }
             
             if node.name == "next"{
-                thisScene+=1
                 let currentScene = GameScene(fileNamed: "Level "+String(thisScene))
                 let transition = SKTransition.doorway(withDuration: 0.5)
                 currentScene!.scaleMode = SKSceneScaleMode.aspectFill
@@ -369,7 +370,6 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             }
             
             if node.name == "prev"{
-                thisScene-=1
                 let currentScene = GameScene(fileNamed: "Level "+String(thisScene))
                 let transition = SKTransition.doorway(withDuration: 0.5)
                 currentScene!.scaleMode = SKSceneScaleMode.aspectFill
@@ -377,13 +377,20 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             }
             
 //            if node.name == "menu"{
-//                let modalViewController = ModalViewController()
-//                modalViewController.modalPresentationStyle = .OverCurrentContext
-//                presentViewController(modalViewController, animated: true, completion: nil)
+////                let modalViewController = ModalViewController()
+////                modalViewController.modalPresentationStyle = .OverCurrentContext
+////                presentViewController(modalViewController, animated: true, completion: nil)
+//                
+////                let storyboard = UIStoryboard(name: "Main", bundle: nil)
+////                let controller = storyboard.instantiateViewController(withIdentifier: "ViewController")
+////                self.present(controller, animated: true, completion: nil)
+//                let storyboard = UIStoryboard(name: "Main", bundle: nil)
+//                let vc = storyboard.instantiateViewController(withIdentifier: "ViewController")
+//                // Alternative way to present the new view controller
+//                self.inputViewController(vc, sender: nil)
 //            }
             
             
-            self.view.
             //Определение макс уровня, до которого дошел игрок
             if thisScene >= topScene {
                 topScene = thisScene
@@ -401,6 +408,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         firstBody = contact.bodyA
         secondBody = contact.bodyB
         
+        
+        //Столкновение ГГ с Землей
         if firstBody!.categoryBitMask == 1 && secondBody!.categoryBitMask == 2 {
             onGround = true
             print("On Ground(true)")
@@ -410,12 +419,10 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             //print("On Ground(false)")
         }
         
+        //Столкновение ГГ с Шипами
         if firstBody!.categoryBitMask == 1 && secondBody!.categoryBitMask == 3 && showMenu == false {
-            print("Пауза пошла")
             self.scene!.isPaused = true;
-            print("Слип пошел")
-            print("Менюха пошла")
-            //Прогресс бар
+            //Прогресс бар становится красным
             for progressBar in self.children {
                 if progressBar.name == "ProgressBar" {
                     if let progressBar = progressBar as? SKSpriteNode {

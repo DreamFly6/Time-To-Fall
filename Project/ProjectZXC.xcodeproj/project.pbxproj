@@ -142,11 +142,6 @@
 			isa = PBXGroup;
 			children = (
 				1FDFC02C1CD7A3FA00A3F56D /* Scene */,
-				32BE5B8D1CD79B8B00C7A815 /* Menu_Image */,
-				1F4C24691CD5E55600D3B0DB /* AppDelegate.swift */,
-				1F4C246F1CD5E55600D3B0DB /* GameViewController.swift */,
-				1F4C24711CD5E55600D3B0DB /* Main.storyboard */,
-				3262F13B1D49B7E90056D72B /* ViewController.swift */,
 				1F4C24741CD5E55600D3B0DB /* Assets.xcassets */,
 				1F4C24761CD5E55600D3B0DB /* LaunchScreen.storyboard */,
 				1F4C24791CD5E55600D3B0DB /* Info.plist */,
@@ -198,7 +193,12 @@
 				1FE0F3FF1CE6F5B9007E1B98 /* Test_Level.sks */,
 				1FA0E0CD1DB23707004EED92 /* Oop.swift */,
 				1FA7BB021DB3627F00569FB6 /* Menu.sks */,
+				1F4C24691CD5E55600D3B0DB /* AppDelegate.swift */,
+				1F4C246F1CD5E55600D3B0DB /* GameViewController.swift */,
+				1F4C24711CD5E55600D3B0DB /* Main.storyboard */,
+				3262F13B1D49B7E90056D72B /* ViewController.swift */,
 				1F4C246D1CD5E55600D3B0DB /* GameScene.swift */,
+				32BE5B8D1CD79B8B00C7A815 /* Menu_Image */,
 			);
 			name = Scene;
 			sourceTree = "<group>";
