@@ -376,16 +376,14 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                 self.scene!.view?.presentScene(currentScene!, transition: transition)
             }
             
-            if node.name == "menu"{
-//                let viewController:UIViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "ViewController") as UIViewController
-//                
-//                //inputViewController?(viewController, animated: false, completion: nil)
-//
-//                ViewController(nibName: "Main", bundle: nil)
-            }
+//            if node.name == "menu"{
+//                let modalViewController = ModalViewController()
+//                modalViewController.modalPresentationStyle = .OverCurrentContext
+//                presentViewController(modalViewController, animated: true, completion: nil)
+//            }
             
             
-            
+            self.view.
             //Определение макс уровня, до которого дошел игрок
             if thisScene >= topScene {
                 topScene = thisScene
