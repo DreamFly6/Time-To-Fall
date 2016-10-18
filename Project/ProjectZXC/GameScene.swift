@@ -19,7 +19,6 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     
     //При вызове этой функции, показывается меню проигрыша.
     func showLMenu(){
-        thisScene-=1
         let button1 = SKSpriteNode(imageNamed: "Button1.png")
         button1.position = CGPoint(x: self.frame.midX/2, y: self.frame.midY)
         button1.name = "retry"
@@ -57,7 +56,10 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     
     //При вызове этой функции, показывается меню выигрыша.
     func showWMenu(){
-        thisScene+=1
+        if thisScene == topScene {
+            topScene+=1
+        }
+
         let button1 = SKSpriteNode(imageNamed: "Button1.png")
         button1.position = CGPoint(x: self.frame.midX/2, y: self.frame.midY)
         button1.name = "retry"
@@ -363,6 +365,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             }
             
             if node.name == "next"{
+                thisScene+=1
                 let currentScene = GameScene(fileNamed: "Level "+String(thisScene))
                 let transition = SKTransition.doorway(withDuration: 0.5)
                 currentScene!.scaleMode = SKSceneScaleMode.aspectFill
@@ -370,11 +373,16 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             }
             
             if node.name == "prev"{
+                thisScene-=1
                 let currentScene = GameScene(fileNamed: "Level "+String(thisScene))
                 let transition = SKTransition.doorway(withDuration: 0.5)
                 currentScene!.scaleMode = SKSceneScaleMode.aspectFill
                 self.scene!.view?.presentScene(currentScene!, transition: transition)
             }
+            
+            
+            
+            // Я КНОПКА, ДОПИЛИ МЕНЯ
             
 //            if node.name == "menu"{
 ////                let modalViewController = ModalViewController()
