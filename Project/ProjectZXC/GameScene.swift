@@ -16,7 +16,6 @@ fileprivate func < <T : Comparable>(lhs: T?, rhs: T?) -> Bool {
 
 
 class GameScene: SKScene, SKPhysicsContactDelegate {
-    
     //При вызове этой функции, показывается меню проигрыша.
     func showLMenu(){
         let button1 = SKSpriteNode(imageNamed: "Button1.png")
@@ -52,7 +51,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         self.addChild(menuBoard)
     }
     
-    
+
     
     //При вызове этой функции, показывается меню выигрыша.
     func showWMenu(){
@@ -384,19 +383,10 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             
             // Я КНОПКА, ДОПИЛИ МЕНЯ
             
-//            if node.name == "menu"{
-////                let modalViewController = ModalViewController()
-////                modalViewController.modalPresentationStyle = .OverCurrentContext
-////                presentViewController(modalViewController, animated: true, completion: nil)
-//                
-////                let storyboard = UIStoryboard(name: "Main", bundle: nil)
-////                let controller = storyboard.instantiateViewController(withIdentifier: "ViewController")
-////                self.present(controller, animated: true, completion: nil)
-//                let storyboard = UIStoryboard(name: "Main", bundle: nil)
-//                let vc = storyboard.instantiateViewController(withIdentifier: "ViewController")
-//                // Alternative way to present the new view controller
-//                self.inputViewController(vc, sender: nil)
-//            }
+            if node.name == "menu"{
+
+                
+            }
             
             
             //Определение макс уровня, до которого дошел игрок
