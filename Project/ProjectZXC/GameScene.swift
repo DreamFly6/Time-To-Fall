@@ -447,13 +447,13 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
 
     var showMenu = false
     
-    //Удаляет спрайт, когда он улетел за экран
+
     override func didSimulatePhysics() {
+
+        //Удаляет спрайт, когда он улетел за экран       
         let mainChrctr = self.childNode(withName: "MainCharacter") as? SKSpriteNode
         let wdnBx = self.childNode(withName: "WoodenBox") as? SKSpriteNode
-        
 
-        
         if (wdnBx?.position.y < 0) {
             wdnBx?.removeFromParent()
         }
@@ -490,8 +490,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
 
         //если ГГ улетел за сцену, показываем меню
         if mainChrctr?.position.y < 0 && showMenu == false {
-            showLMenu() //Показать меню проигрыша
             showMenu = true //если показывали меню, то true
+            showLMenu() //Показать меню проигрыша
             onGround = false //Свинья не на земле(за экраном она не может определить это)
         }
         

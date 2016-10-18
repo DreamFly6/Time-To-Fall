@@ -10,7 +10,7 @@ import UIKit
 import SpriteKit
 
 public var thisScene = 1
-public var topScene = 5
+public var topScene = 1
 class ViewController: UIViewController {
 
     //это объявление нужно, чтобы сделать их кликабельными/не кликабельными
@@ -19,7 +19,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         
         for case let button as UIButton in self.view.subviews {
-            if Int(button.currentTitle!)! <= topScene {
+            if (button.accessibilityLabel == "menuSelecter") && (Int(button.currentTitle!)! <= topScene)  {
                   button.isEnabled = true
             }
         }
