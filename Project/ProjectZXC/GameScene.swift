@@ -12,10 +12,35 @@ fileprivate func < <T : Comparable>(lhs: T?, rhs: T?) -> Bool {
   }
 }
 
+protocol GameSceneDelegate {
+    
+    func launchViewController(scene: SKScene)
+    
+}
+
+
 
 
 
 class GameScene: SKScene, SKPhysicsContactDelegate {
+    
+
+    func launchViewController(scene: SKScene) {
+        
+        
+    }
+    
+//    func viewDidLoad() {
+//        NotificationCenter.default.addObserver(self, selector: #selector(goToDifferentView), name: "segue" as NSNotification.Name, object: nil)
+//    }
+
+    
+//    func goToDifferentView() {
+//        
+//        self.performSegue(withIdentifier: "jenychmo", sender: self)
+//        
+//    }
+
     //При вызове этой функции, показывается меню проигрыша.
     func showLMenu(){
         let button1 = SKSpriteNode(imageNamed: "Button1.png")
@@ -384,7 +409,25 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             // Я КНОПКА, ДОПИЛИ МЕНЯ
             
             if node.name == "menu"{
-
+//
+//                var mainStoryboard = UIStoryboard(name: "Main", bundle: nil)
+//                var vc = mainStoryboard.instantiateViewController(withIdentifier: "ViewControllerLolka")
+//                // presentViewController(vc, animated: true, completion: nil)
+//                var currentViewController:UIViewController? = UIApplication.shared.keyWindow!.rootViewController!
+//                let workoutView = mainStoryboard.instantiateViewController(withIdentifier: "ViewContorllerLolka")
+//                let workoutView1 = mainStoryboard.instantiateViewController(withIdentifier: "ViewContorllerLolka")
+                //performSegueWithIdentifier("jenychmo", sender: self)
+//                let lolka : NSNotification.Name = NSNotification.Name(rawValue: "segueTest")
+//                print("lolka" + String(describing: lolka))
+//                NotificationCenter.default.post(name: lolka as NSNotification.Name, object: nil)
+//                
+//                self.inputViewController?.performSegue(withIdentifier: "segueTest", sender: vc)
+                
+//                print(vc.shouldPerformSegue(withIdentifier: "jenychmo", sender: nil))
+//                vc.performSegue(withIdentifier: "jenychmo", sender: nil)
+//                self.view!.window!.rootViewController!.performSegue(withIdentifier: "segueTest", sender: self)
+//               
+//                NotificationCenter.default.post(name: NSNotification.Name(rawValue: "segueTest"), object: nil)
                 
             }
             

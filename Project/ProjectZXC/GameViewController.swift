@@ -15,7 +15,11 @@ class GameViewController: UIViewController {
 
 
 
+    var collisionDelegate: GameSceneDelegate?
     
+    func Collision(Circle: SKSpriteNode, Triangle: SKSpriteNode) {
+        self.collisionDelegate?.launchViewController(scene: GameScene(fileNamed:"Test_Level")!)
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,10 +32,16 @@ class GameViewController: UIViewController {
             skView.showsNodeCount = true
             skView.ignoresSiblingOrder = true
             scene.scaleMode = .aspectFill
-
+            
+            //let lolka : NSNotification.Name = NSNotification.Name(rawValue: "segueTest")
+//            NotificationCenter.default.addObserver(self, selector: Selector(("quitToLevel:")), name: NSNotification.Name(rawValue: "segueTest"), object: nil)
             skView.presentScene(scene)
             
         }
+    }
+    
+    func quitToLevel(notification: NSNotification) {
+        self.navigationController!.popViewController(animated: true)
     }
 
     override var shouldAutorotate : Bool {
