@@ -12,42 +12,43 @@ import SpriteKit
 class GameViewController: UIViewController {
 
     
-
-
-
-    var collisionDelegate: GameSceneDelegate?
-    
-    func Collision(Circle: SKSpriteNode, Triangle: SKSpriteNode) {
-        self.collisionDelegate?.launchViewController(scene: GameScene(fileNamed:"Test_Level")!)
-    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         //ПРОСТ
         if let scene = GameScene(fileNamed:"Test_Level") {
-
             let skView = SKView(frame: self.view.frame)
             self.view.addSubview(skView)
+            scene.viewController = self
             skView.showsFPS = true
             skView.showsNodeCount = true
             skView.ignoresSiblingOrder = true
             scene.scaleMode = .aspectFill
             
-            //let lolka : NSNotification.Name = NSNotification.Name(rawValue: "segueTest")
-//            NotificationCenter.default.addObserver(self, selector: Selector(("quitToLevel:")), name: NSNotification.Name(rawValue: "segueTest"), object: nil)
             skView.presentScene(scene)
             
         }
+        
+        //Я ПЫТАЛСЯ ТУТ НАЗНАЧАТЬ ВСЕМ СЦЕНАМ ВОТ ТАК:
+//        
+//        if let scene = GameScene(fileNamed:"Level 1") {
+//            let skView = SKView(frame: self.view.frame)
+//            self.view.addSubview(skView)
+//            scene.viewController = self
+//            skView.showsFPS = true
+//            skView.showsNodeCount = true
+//            skView.ignoresSiblingOrder = true
+//            scene.scaleMode = .aspectFill
+//            
+//            skView.presentScene(scene)
+//            
+//        }
+        
+        //НО ЭТО НЕ РАБОТАЕТ
+        //ТЫ ЖЕ МАСтер сцен, разберись, а
     }
     
-    func quitToLevel(notification: NSNotification) {
-        self.navigationController!.popViewController(animated: true)
-    }
-
-    override var shouldAutorotate : Bool {
-        return true
-    }
-
+   
     override var supportedInterfaceOrientations : UIInterfaceOrientationMask {
         if UIDevice.current.userInterfaceIdiom == .phone {
             return .allButUpsideDown
@@ -64,4 +65,6 @@ class GameViewController: UIViewController {
     override var prefersStatusBarHidden : Bool {
         return true
     }
+    
+    
 }

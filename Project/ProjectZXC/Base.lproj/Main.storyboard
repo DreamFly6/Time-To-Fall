@@ -60,7 +60,7 @@
         <!--View Controller-->
         <scene sceneID="59C-w9-YyG">
             <objects>
-                <viewController id="tZT-fh-9NA" customClass="ViewController" customModule="ProjectZXC" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="tZT-fh-9NA" customClass="ViewController" customModule="ProjectZXC" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="nfd-dL-lq1"/>
                         <viewControllerLayoutGuide type="bottom" id="DsP-zo-ytl"/>
@@ -261,7 +261,7 @@
         <!--Game View Controller-->
         <scene sceneID="tXr-a1-R10">
             <objects>
-                <viewController id="BV1-FR-VrT" customClass="GameViewController" customModule="ProjectZXC" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="GameLolka" id="BV1-FR-VrT" customClass="GameViewController" customModule="ProjectZXC" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="8aa-yV-Osq"/>
                         <viewControllerLayoutGuide type="bottom" id="qHh-Mt-9TT"/>
@@ -271,6 +271,9 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
+                    <connections>
+                        <segue destination="jC2-zd-pnK" kind="show" identifier="testSegue" id="a4Q-VT-Twg"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SZV-WD-TEh" sceneMemberID="firstResponder"/>
             </objects>
@@ -283,5 +286,8 @@
         <image name="WoodenBox" width="600" height="600"/>
         <image name="backgroundMainMenu.png" width="1080" height="1920"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="a4Q-VT-Twg"/>
+    </inferredMetricsTieBreakers>
     <color key="tintColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
 </document>

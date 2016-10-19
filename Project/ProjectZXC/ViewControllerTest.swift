@@ -16,20 +16,15 @@ class ViewController: UIViewController {
     //это объявление нужно, чтобы сделать их кликабельными/не кликабельными
 
     
-    func goToDifferentView() {
-        
-        self.performSegue(withIdentifier: "segueTest", sender: self)
-        
-    }
+   
     
     override func viewDidLoad() {
-        
-        let lolka : NSNotification.Name = NSNotification.Name(rawValue: "segueTest")
-        NotificationCenter.default.addObserver(self, selector: #selector(goToDifferentView), name: lolka as NSNotification.Name, object: nil)
+       
         
         for case let button as UIButton in self.view.subviews {
             if (button.accessibilityLabel == "menuSelecter") && (Int(button.currentTitle!)! <= topScene)  {
                   button.isEnabled = true
+
             }
         }
         
@@ -45,6 +40,12 @@ class ViewController: UIViewController {
         
         let skView = SKView(frame: self.view.frame)
         self.view.addSubview(skView)
+        
+        //ПОКА ПИСАЛ ВСЕ КОММЕНТАРИИ, ЗАБЫЛ, ЧТО НЕ ДОБАВИЛ СТРОЧКУ НИЖЕ ЗДЕСЬ
+        //НО ЕЕ ДОБАВЛЕНИЕ НЕ ПОМОГЛО
+        //sceneView?.viewController = self
+        
+        
         skView.showsFPS = true
         skView.showsNodeCount = true
         skView.ignoresSiblingOrder = true

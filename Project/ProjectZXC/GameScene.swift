@@ -12,11 +12,9 @@ fileprivate func < <T : Comparable>(lhs: T?, rhs: T?) -> Bool {
   }
 }
 
-protocol GameSceneDelegate {
+
     
-    func launchViewController(scene: SKScene)
-    
-}
+
 
 
 
@@ -24,22 +22,17 @@ protocol GameSceneDelegate {
 
 class GameScene: SKScene, SKPhysicsContactDelegate {
     
-
-    func launchViewController(scene: SKScene) {
-        
-        
-    }
     
-//    func viewDidLoad() {
-//        NotificationCenter.default.addObserver(self, selector: #selector(goToDifferentView), name: "segue" as NSNotification.Name, object: nil)
-//    }
+    
+    //И ЗАКОМЕНТЬ ЭТО ПОЖАЛУЙСТА
+        var viewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "GameLolka") as UIViewController
+    
+    //РАСКОМЕНТЬ ЭТО ПОЖАЛУЙСТА
+    //И ТОГДА БУДЕТ РАБОТАТЬ ТОЛЬКО ТЕСТ_СЦЕНА. А ОСТАЛЬНЫЕ БУДУТ НИЛ (ВЬЮ КОНТРОЛЛЕР)
+//    var viewController: UIViewController?
 
     
-//    func goToDifferentView() {
-//        
-//        self.performSegue(withIdentifier: "jenychmo", sender: self)
-//        
-//    }
+
 
     //При вызове этой функции, показывается меню проигрыша.
     func showLMenu(){
@@ -406,29 +399,29 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             
             
             
-            // Я КНОПКА, ДОПИЛИ МЕНЯ
             
             if node.name == "menu"{
-//
-//                var mainStoryboard = UIStoryboard(name: "Main", bundle: nil)
-//                var vc = mainStoryboard.instantiateViewController(withIdentifier: "ViewControllerLolka")
-//                // presentViewController(vc, animated: true, completion: nil)
-//                var currentViewController:UIViewController? = UIApplication.shared.keyWindow!.rootViewController!
-//                let workoutView = mainStoryboard.instantiateViewController(withIdentifier: "ViewContorllerLolka")
-//                let workoutView1 = mainStoryboard.instantiateViewController(withIdentifier: "ViewContorllerLolka")
-                //performSegueWithIdentifier("jenychmo", sender: self)
-//                let lolka : NSNotification.Name = NSNotification.Name(rawValue: "segueTest")
-//                print("lolka" + String(describing: lolka))
-//                NotificationCenter.default.post(name: lolka as NSNotification.Name, object: nil)
-//                
-//                self.inputViewController?.performSegue(withIdentifier: "segueTest", sender: vc)
                 
-//                print(vc.shouldPerformSegue(withIdentifier: "jenychmo", sender: nil))
-//                vc.performSegue(withIdentifier: "jenychmo", sender: nil)
-//                self.view!.window!.rootViewController!.performSegue(withIdentifier: "segueTest", sender: self)
-//               
-//                NotificationCenter.default.post(name: NSNotification.Name(rawValue: "segueTest"), object: nil)
+                //СЕЙЧАС РАБОТАЕТ ТОЛЬКО ТЕСТОВАЯ СЦЕНА
                 
+                //ЕСЛИ УДАЛИТЬ В ИСХОДНОМ КОДЕ МАИН СТОРИБОРд ЭТО:
+//                //<view key="view" multipleTouchEnabled="YES" contentMode="scaleToFill" id="3se-qz-xqx" customClass="SCView""UnrecognizedClassName">
+//                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+//                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+//                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+//                </view>
+                
+                //ТО ОШИБКА "ProjectZXC[32493:2260288] Unknown class SCView in Interface Builder file."
+                //В САМОМ НАЧАЛЕ УЙДЕТ. НО НИЧЕГО РАБОТАТЬ ОТ ЭТОГО НЕ СТАНЕТ
+                
+                var vc: UIViewController = UIViewController()
+                vc = self.view!.window!.rootViewController!
+                
+                print(self.viewController)
+                
+                self.viewController.performSegue(withIdentifier: "testSegue", sender: vc)
+                
+            
             }
             
             
