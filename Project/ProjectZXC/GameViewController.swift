@@ -10,8 +10,8 @@ import UIKit
 import SpriteKit
 
 class GameViewController: UIViewController {
-
     
+    var viewController: UIViewController?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,11 +20,19 @@ class GameViewController: UIViewController {
             let skView = SKView(frame: self.view.frame)
             self.view.addSubview(skView)
             scene.viewController = self
+            print("то, что нужно: !!!!!!!!!!!!! " + String(describing: self))
+            print("!")
+            print("!")
+            print("!")
+            print("!")
+            print("!")
+            
+            print("!")
             skView.showsFPS = true
             skView.showsNodeCount = true
             skView.ignoresSiblingOrder = true
             scene.scaleMode = .aspectFill
-            
+//            viewController = self
             skView.presentScene(scene)
             
         }

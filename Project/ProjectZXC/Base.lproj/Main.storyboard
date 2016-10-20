@@ -60,7 +60,7 @@
         <!--View Controller-->
         <scene sceneID="59C-w9-YyG">
             <objects>
-                <viewController id="tZT-fh-9NA" customClass="ViewController" customModule="ProjectZXC" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="menulol" id="tZT-fh-9NA" customClass="ViewController" customModule="ProjectZXC" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="nfd-dL-lq1"/>
                         <viewControllerLayoutGuide type="bottom" id="DsP-zo-ytl"/>
@@ -261,7 +261,7 @@
         <!--Game View Controller-->
         <scene sceneID="tXr-a1-R10">
             <objects>
-                <viewController storyboardIdentifier="GameLolka" id="BV1-FR-VrT" customClass="GameViewController" customModule="ProjectZXC" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="GameViewController" id="BV1-FR-VrT" customClass="GameViewController" customModule="ProjectZXC" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="8aa-yV-Osq"/>
                         <viewControllerLayoutGuide type="bottom" id="qHh-Mt-9TT"/>
@@ -287,7 +287,7 @@
         <image name="backgroundMainMenu.png" width="1080" height="1920"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="a4Q-VT-Twg"/>
+        <segue reference="ocA-lF-4Eb"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
 </document>

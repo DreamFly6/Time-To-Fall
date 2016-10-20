@@ -25,14 +25,16 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     
     
     //И ЗАКОМЕНТЬ ЭТО ПОЖАЛУЙСТА
-        var viewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "GameLolka") as UIViewController
+//        var viewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "GameViewController") as UIViewController
     
     //РАСКОМЕНТЬ ЭТО ПОЖАЛУЙСТА
     //И ТОГДА БУДЕТ РАБОТАТЬ ТОЛЬКО ТЕСТ_СЦЕНА. А ОСТАЛЬНЫЕ БУДУТ НИЛ (ВЬЮ КОНТРОЛЛЕР)
-//    var viewController: UIViewController?
+    var viewController: UIViewController?
 
     
-
+    func initVC(){
+        viewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "GameViewController") as UIViewController
+    }
 
     //При вызове этой функции, показывается меню проигрыша.
     func showLMenu(){
@@ -266,6 +268,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     
     //Функция выполняемая до открытия сцены
     override func didMove(to view: SKView) {
+        initVC()
         initGameObject()
         self.physicsWorld.contactDelegate = self
     }
@@ -280,7 +283,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         // Цикл считывающий нажатие на экран
         for touch: AnyObject in touches {
             
-            print(thisScene," <-- Текущая ",topScene, "<-- Топовая")
+            //print(thisScene," <-- Текущая ",topScene, "<-- Топовая")
             
             
             let touchLocation = touch.location(in: self)
@@ -413,14 +416,28 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                 
                 //ТО ОШИБКА "ProjectZXC[32493:2260288] Unknown class SCView in Interface Builder file."
                 //В САМОМ НАЧАЛЕ УЙДЕТ. НО НИЧЕГО РАБОТАТЬ ОТ ЭТОГО НЕ СТАНЕТ
+//                
+//                var vc: UIViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "GameLolka") as UIViewController
+//                
+                print(self.viewController)
+//
                 
-                var vc: UIViewController = UIViewController()
-                vc = self.view!.window!.rootViewController!
+                   // let lol = self.viewController
+//                self.viewController?.performSegue(withIdentifier: "testSegue", sender: vc)
+                
+                
+                //let vc = GameViewController() //change this to your class name
                 
                 print(self.viewController)
+                //self.viewController.performSegue(withIdentifier: "testSegue", sender: nil)
                 
-                self.viewController.performSegue(withIdentifier: "testSegue", sender: vc)
+//                kek.viewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "GameViewController") as UIViewController
                 
+                let mainStoryboard = UIStoryboard(name: "Main", bundle: nil)
+                let vc = mainStoryboard.instantiateViewController(withIdentifier: "ViewControllerLolka")
+                
+                
+                self.viewController?.present(vc, animated: true, completion: nil)
             
             }
             
@@ -446,7 +463,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         //Столкновение ГГ с Землей
         if firstBody!.categoryBitMask == 1 && secondBody!.categoryBitMask == 2 {
             onGround = true
-            print("On Ground(true)")
+            //print("On Ground(true)")
         }
         else {
             onGround = false

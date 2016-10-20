@@ -43,9 +43,7 @@ class ViewController: UIViewController {
         
         //ПОКА ПИСАЛ ВСЕ КОММЕНТАРИИ, ЗАБЫЛ, ЧТО НЕ ДОБАВИЛ СТРОЧКУ НИЖЕ ЗДЕСЬ
         //НО ЕЕ ДОБАВЛЕНИЕ НЕ ПОМОГЛО
-        //sceneView?.viewController = self
-        
-        
+        sceneView?.viewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "GameViewController") as UIViewController
         skView.showsFPS = true
         skView.showsNodeCount = true
         skView.ignoresSiblingOrder = true
