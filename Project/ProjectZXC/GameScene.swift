@@ -25,11 +25,11 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     
     
     //И ЗАКОМЕНТЬ ЭТО ПОЖАЛУЙСТА
-//     var viewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "GameViewController") as UIViewController
+     var viewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "GameViewController") as UIViewController
     
     //РАСКОМЕНТЬ ЭТО ПОЖАЛУЙСТА
     //И ТОГДА БУДЕТ РАБОТАТЬ ТОЛЬКО ТЕСТ_СЦЕНА. А ОСТАЛЬНЫЕ БУДУТ НИЛ (ВЬЮ КОНТРОЛЛЕР)
-    var viewController: UIViewController?
+//    var viewController: UIViewController?
 //    var obj = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "nav") as! UINavigationController
 //    var appDelegate = UIApplication.shared.delegate as! AppDelegate
 //    var keklol = UIApplication.shared.delegate!.window!?.rootViewController!
@@ -464,21 +464,57 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                 
                 
 //                let secondViewController = mainStoryboard.instantiateViewController(withIdentifier: "ViewControllerLolka")
-//                self.navigationController?.pushViewController(secondViewController, animated: true)
-                
-                //appDelegate.window?.rootViewController?.present(self.obj, animated: false, completion: nil)
+////                                self.navigationController?.pushViewController(secondViewController, animated: true)
+//                
+//                
                 var obj = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "nav") as! UINavigationController
-                var appDelegate = UIApplication.shared.delegate as! AppDelegate
+//                var appDelegate = UIApplication.shared.delegate as! AppDelegate
+//                
+//                obj.modalPresentationStyle = .formSheet
+//                obj.modalTransitionStyle = .coverVertical
+//                
+//                appDelegate.window?.rootViewController?.present(obj, animated: false, completion: nil)
                 
-                obj.modalPresentationStyle = .formSheet
-                obj.modalTransitionStyle = .coverVertical
+//                print(String(describing: obj))
+//                obj.popToRootViewController(animated: false)
                 
-                appDelegate = UIApplication.shared.delegate as! AppDelegate
-                appDelegate.window?.rootViewController?.present(obj, animated: false, completion: nil)
+               // var navigationController = self.navigation!
+                //obj.popToRootViewController(animated: false)
+//                obj.popToRootViewController(animated: false)
+//                obj.popToViewController(viewController, animated: true)
+//                obj.pushViewController(viewController, animated: true)
+                
+//                var navigationArray = [Any](arrayLiteral: obj.viewControllers)
+//                // [navigationArray removeAllObjects];    // This is just for remove all view controller from navigation stack.
+//                navigationArray.removeAll()
+//                // You can pass your index here
+//                obj.viewControllers = navigationArray as! [UIViewController]
+//                //navigationArray.release()
+
+                //obj.viewControllers[0].
+                //print(String(describing: obj.viewControllers[0]))
+                //obj.popToViewController(obj.viewControllers[0], animated: true)
+//                obj.pushViewController(viewController, animated: true)
+
+                
+//                appDelegate = UIApplication.shared.delegate as! AppDelegate
+//                appDelegate.window?.rootViewController?.present(obj, animated: false, completion: nil)
 
                 //keklol?.present(self.obj, animated: false, completion: nil)
 //                print("kek")
-//               obj.pushViewController(secondViewController, animated: true)
+//               obj.pushViewController(viewController, animated: true)
+                
+//                let VC1 = mainStoryboard.instantiateViewController(withIdentifier: "ViewControllerLolka")
+//                obj.pushViewController(VC1, animated: true)
+//                self.viewController.present(obj, animated:true, completion: nil)
+                
+               // obj.popViewController(animated: true)
+                print("после удаления " + String(describing: obj.viewControllers))
+                //obj.pushViewController(viewController, animated: true)
+                obj.popToRootViewController(animated: true)
+                
+                print("после добавления " + String(describing: obj.viewControllers))
+                
             }
             
             
