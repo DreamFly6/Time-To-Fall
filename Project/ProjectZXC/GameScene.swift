@@ -25,16 +25,26 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     
     
     //И ЗАКОМЕНТЬ ЭТО ПОЖАЛУЙСТА
-//        var viewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "GameViewController") as UIViewController
+//     var viewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "GameViewController") as UIViewController
     
     //РАСКОМЕНТЬ ЭТО ПОЖАЛУЙСТА
     //И ТОГДА БУДЕТ РАБОТАТЬ ТОЛЬКО ТЕСТ_СЦЕНА. А ОСТАЛЬНЫЕ БУДУТ НИЛ (ВЬЮ КОНТРОЛЛЕР)
     var viewController: UIViewController?
+//    var obj = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "nav") as! UINavigationController
+//    var appDelegate = UIApplication.shared.delegate as! AppDelegate
+//    var keklol = UIApplication.shared.delegate!.window!?.rootViewController!
+
 
     
-    func initVC(){
-        viewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "GameViewController") as UIViewController
-    }
+//    func initVC(){
+////        viewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "GameViewController") as UIViewController
+//        obj = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "nav") as! UINavigationController
+//        obj.modalPresentationStyle = .formSheet
+//        obj.modalTransitionStyle = .coverVertical
+//        
+//        appDelegate = UIApplication.shared.delegate as! AppDelegate
+//    }
+    
 
     //При вызове этой функции, показывается меню проигрыша.
     func showLMenu(){
@@ -268,7 +278,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     
     //Функция выполняемая до открытия сцены
     override func didMove(to view: SKView) {
-        initVC()
+        //initVC()
         initGameObject()
         self.physicsWorld.contactDelegate = self
     }
@@ -385,8 +395,10 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             }
             
             if node.name == "next"{
+//                let mainStoryboard = UIStoryboard(name: "Main", bundle: nil)
                 thisScene+=1
                 let currentScene = GameScene(fileNamed: "Level "+String(thisScene))
+//                currentScene?.viewController = mainStoryboard.instantiateViewController(withIdentifier: "ViewControllerLolka")
                 let transition = SKTransition.doorway(withDuration: 0.5)
                 currentScene!.scaleMode = SKSceneScaleMode.aspectFill
                 self.scene!.view?.presentScene(currentScene!, transition: transition)
@@ -414,12 +426,19 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
 //                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
 //                </view>
                 
+                
+//                <view key="view" multipleTouchEnabled="YES" contentMode="scaleToFill" id="3se-qz-xqx" customClass="SCView">
+//                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+//                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+//                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+//                </view>
+                
                 //ТО ОШИБКА "ProjectZXC[32493:2260288] Unknown class SCView in Interface Builder file."
                 //В САМОМ НАЧАЛЕ УЙДЕТ. НО НИЧЕГО РАБОТАТЬ ОТ ЭТОГО НЕ СТАНЕТ
 //                
 //                var vc: UIViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "GameLolka") as UIViewController
 //                
-                print(self.viewController)
+                
 //
                 
                    // let lol = self.viewController
@@ -428,17 +447,38 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                 
                 //let vc = GameViewController() //change this to your class name
                 
-                print(self.viewController)
+//                print(self.viewController)
                 //self.viewController.performSegue(withIdentifier: "testSegue", sender: nil)
                 
 //                kek.viewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "GameViewController") as UIViewController
                 
-                let mainStoryboard = UIStoryboard(name: "Main", bundle: nil)
+               let mainStoryboard = UIStoryboard(name: "Main", bundle: nil)
                 let vc = mainStoryboard.instantiateViewController(withIdentifier: "ViewControllerLolka")
+                var currentViewController = self.view?.window!.rootViewController!
+//                self.viewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "GameViewController") as UIViewController
+//                currentViewController?.present(self.viewController!, animated: true, completion: { _ in })
+//                print("ViewController перед переходом " + String(describing: self.viewController))
+////                self.viewController?.present(vc, animated: true, completion: nil)
+//                
+//                self.viewController?.performSegue(withIdentifier: "lolkek", sender: vc)
                 
                 
-                self.viewController?.present(vc, animated: true, completion: nil)
-            
+//                let secondViewController = mainStoryboard.instantiateViewController(withIdentifier: "ViewControllerLolka")
+//                self.navigationController?.pushViewController(secondViewController, animated: true)
+                
+                //appDelegate.window?.rootViewController?.present(self.obj, animated: false, completion: nil)
+                var obj = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "nav") as! UINavigationController
+                var appDelegate = UIApplication.shared.delegate as! AppDelegate
+                
+                obj.modalPresentationStyle = .formSheet
+                obj.modalTransitionStyle = .coverVertical
+                
+                appDelegate = UIApplication.shared.delegate as! AppDelegate
+                appDelegate.window?.rootViewController?.present(obj, animated: false, completion: nil)
+
+                //keklol?.present(self.obj, animated: false, completion: nil)
+//                print("kek")
+//               obj.pushViewController(secondViewController, animated: true)
             }
             
             

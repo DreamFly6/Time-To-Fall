@@ -10,7 +10,7 @@ import UIKit
 import SpriteKit
 
 public var thisScene = 1
-public var topScene = 1
+public var topScene = 5
 class ViewController: UIViewController {
 
     //это объявление нужно, чтобы сделать их кликабельными/не кликабельными
@@ -19,7 +19,8 @@ class ViewController: UIViewController {
    
     
     override func viewDidLoad() {
-       
+        
+        self.navigationController?.isNavigationBarHidden = true
         
         for case let button as UIButton in self.view.subviews {
             if (button.accessibilityLabel == "menuSelecter") && (Int(button.currentTitle!)! <= topScene)  {
@@ -33,9 +34,11 @@ class ViewController: UIViewController {
     //По тайтлу кнопки определяем на какой уровень нужен переход и переходим туда
     @IBAction func buttonLevel1(_ sender: AnyObject) {
         let buttonTitle : String = sender.currentTitle!!
-        var sceneView = GameScene(fileNamed:"Level 1")
+        var sceneView = GameScene(fileNamed:"Test_Level")
         thisScene = Int(buttonTitle)!
         print(sender.currentTitle, " <---- Эта сцена")
+//        sceneView?.viewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "GameViewController") as UIViewController
+        print("ViewController при нажатии на кнопку " + String(describing: sceneView?.viewController))
         sceneView = GameScene(fileNamed: "Level "+buttonTitle)
         
         let skView = SKView(frame: self.view.frame)
@@ -43,7 +46,7 @@ class ViewController: UIViewController {
         
         //ПОКА ПИСАЛ ВСЕ КОММЕНТАРИИ, ЗАБЫЛ, ЧТО НЕ ДОБАВИЛ СТРОЧКУ НИЖЕ ЗДЕСЬ
         //НО ЕЕ ДОБАВЛЕНИЕ НЕ ПОМОГЛО
-        sceneView?.viewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "GameViewController") as UIViewController
+//        sceneView?.viewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "GameViewController") as UIViewController
         skView.showsFPS = true
         skView.showsNodeCount = true
         skView.ignoresSiblingOrder = true

@@ -9,54 +9,31 @@
 import UIKit
 import SpriteKit
 
+
 class GameViewController: UIViewController {
     
     var viewController: UIViewController?
     
     override func viewDidLoad() {
+        
+        
+        self.navigationController?.isNavigationBarHidden = true
         super.viewDidLoad()
         //ПРОСТ
-        if let scene = GameScene(fileNamed:"Test_Level") {
-            let skView = SKView(frame: self.view.frame)
-            self.view.addSubview(skView)
-            scene.viewController = self
-            print("то, что нужно: !!!!!!!!!!!!! " + String(describing: self))
-            print("!")
-            print("!")
-            print("!")
-            print("!")
-            print("!")
-            
-            print("!")
-            skView.showsFPS = true
-            skView.showsNodeCount = true
-            skView.ignoresSiblingOrder = true
-            scene.scaleMode = .aspectFill
-//            viewController = self
-            skView.presentScene(scene)
-            
-        }
-        
-        //Я ПЫТАЛСЯ ТУТ НАЗНАЧАТЬ ВСЕМ СЦЕНАМ ВОТ ТАК:
-//        
-//        if let scene = GameScene(fileNamed:"Level 1") {
+//        if let scene = GameScene(fileNamed:"Test_Level") {
 //            let skView = SKView(frame: self.view.frame)
 //            self.view.addSubview(skView)
 //            scene.viewController = self
+//            print("ViewController в viewDidLoad " + String(describing: self) )
 //            skView.showsFPS = true
 //            skView.showsNodeCount = true
 //            skView.ignoresSiblingOrder = true
 //            scene.scaleMode = .aspectFill
-//            
+//            viewController = self
 //            skView.presentScene(scene)
 //            
 //        }
-        
-        //НО ЭТО НЕ РАБОТАЕТ
-        //ТЫ ЖЕ МАСтер сцен, разберись, а
     }
-    
-   
     override var supportedInterfaceOrientations : UIInterfaceOrientationMask {
         if UIDevice.current.userInterfaceIdiom == .phone {
             return .allButUpsideDown

@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="jC2-zd-pnK">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="r3b-k3-WIs">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Game View Controller-->
         <scene sceneID="24o-iX-FfV">
             <objects>
-                <viewController storyboardIdentifier="ViewControllerLolka" id="jC2-zd-pnK" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ViewControllerLolka" id="jC2-zd-pnK" customClass="GameViewController" customModule="ProjectZXC" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ncJ-a9-J0q"/>
                         <viewControllerLayoutGuide type="bottom" id="FAn-Ps-E5p"/>
@@ -44,9 +44,6 @@
                                     <color key="titleColor" name="alternateSelectedControlColor" catalog="System" colorSpace="catalog"/>
                                     <color key="titleShadowColor" name="controlDarkShadowColor" catalog="System" colorSpace="catalog"/>
                                 </state>
-                                <connections>
-                                    <segue destination="BV1-FR-VrT" kind="show" id="gPj-Sq-4ug"/>
-                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -55,7 +52,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BUQ-6n-5Pg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-556" y="-305.39730134932535"/>
+            <point key="canvasLocation" x="1322.4000000000001" y="-305.39730134932535"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="59C-w9-YyG">
@@ -246,9 +243,6 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                 <state key="normal" title="Menu" backgroundImage="MenuBoard"/>
-                                <connections>
-                                    <segue destination="jC2-zd-pnK" kind="show" id="ocA-lF-4Eb"/>
-                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -256,15 +250,15 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fSZ-S0-9nV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="222" y="-1068"/>
+            <point key="canvasLocation" x="270" y="-1039"/>
         </scene>
         <!--Game View Controller-->
         <scene sceneID="tXr-a1-R10">
             <objects>
                 <viewController storyboardIdentifier="GameViewController" id="BV1-FR-VrT" customClass="GameViewController" customModule="ProjectZXC" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="8aa-yV-Osq"/>
-                        <viewControllerLayoutGuide type="bottom" id="qHh-Mt-9TT"/>
+                        <viewControllerLayoutGuide type="top" id="VXw-31-SNR"/>
+                        <viewControllerLayoutGuide type="bottom" id="7Aw-m2-aWh"/>
                     </layoutGuides>
                     <view key="view" multipleTouchEnabled="YES" contentMode="scaleToFill" id="3se-qz-xqx" customClass="SCView">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
@@ -272,12 +266,30 @@
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
                     <connections>
-                        <segue destination="jC2-zd-pnK" kind="show" identifier="testSegue" id="a4Q-VT-Twg"/>
+                        <segue destination="tZT-fh-9NA" kind="show" identifier="lolkek" id="3Kz-kR-P9o"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SZV-WD-TEh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="270" y="-282"/>
+            <point key="canvasLocation" x="2252" y="-339.58020989505252"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="El3-53-yAV">
+            <objects>
+                <navigationController restorationIdentifier="nav" storyboardIdentifier="nav" automaticallyAdjustsScrollViewInsets="NO" id="r3b-k3-WIs" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="qwb-PJ-jCb">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="jC2-zd-pnK" kind="relationship" relationship="rootViewController" id="Y9W-F2-SIx"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="k33-zX-pu8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="383.19999999999999" y="-305.39730134932535"/>
         </scene>
     </scenes>
     <resources>
@@ -287,7 +299,7 @@
         <image name="backgroundMainMenu.png" width="1080" height="1920"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="ocA-lF-4Eb"/>
+        <segue reference="3Kz-kR-P9o"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
 </document>
