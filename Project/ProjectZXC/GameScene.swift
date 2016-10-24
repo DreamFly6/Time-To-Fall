@@ -558,6 +558,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                     }
                 }
             }
+            sleep(UInt32(0.5))
             showMenu = true
             showLMenu()
         }
