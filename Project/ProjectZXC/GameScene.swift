@@ -48,12 +48,20 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
 
     //При вызове этой функции, показывается меню проигрыша.
     func showLMenu(){
+        let menuBoard = SKSpriteNode(imageNamed: "MenuBoard.png")
+        menuBoard.position = CGPoint(x: self.frame.midX, y: self.frame.midY)
+        menuBoard.name = "menuBoard"
+        menuBoard.xScale = 1.4
+        menuBoard.yScale = 1.4
+        menuBoard.zPosition = 998
+        self.addChild(menuBoard)
+        
         let button1 = SKSpriteNode(imageNamed: "Button1.png")
         button1.position = CGPoint(x: self.frame.midX/2, y: self.frame.midY)
         button1.name = "retry"
         button1.xScale = 0.5
         button1.yScale = 0.5
-        button1.zPosition = 2
+        button1.zPosition = 999
         self.addChild(button1)
         
         let button2 = SKSpriteNode(imageNamed: "Button2.png")
@@ -61,7 +69,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         button2.name = "menu"
         button2.xScale = 0.5
         button2.yScale = 0.5
-        button2.zPosition = 2
+        button2.zPosition = 999
         self.addChild(button2)
         
         let button3 = SKSpriteNode(imageNamed: "Button3.png")
@@ -69,16 +77,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         button3.name = "button3"
         button3.xScale = 0.5
         button3.yScale = 0.5
-        button3.zPosition = 2
+        button3.zPosition = 999
         self.addChild(button3)
-        
-        let menuBoard = SKSpriteNode(imageNamed: "MenuBoard.png")
-        menuBoard.position = CGPoint(x: self.frame.midX, y: self.frame.midY)
-        menuBoard.name = "menuBoard"
-        menuBoard.xScale = 1.4
-        menuBoard.yScale = 1.4
-        menuBoard.zPosition = 1
-        self.addChild(menuBoard)
     }
     
 
@@ -88,13 +88,20 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         if thisScene == topScene {
             topScene+=1
         }
-
+        let menuBoard = SKSpriteNode(imageNamed: "MenuBoard.png")
+        menuBoard.position = CGPoint(x: self.frame.midX, y: self.frame.midY)
+        menuBoard.name = "menuBoard"
+        menuBoard.xScale = 1.4
+        menuBoard.yScale = 1.4
+        menuBoard.zPosition = 998
+        self.addChild(menuBoard)
+        
         let button1 = SKSpriteNode(imageNamed: "Button1.png")
         button1.position = CGPoint(x: self.frame.midX/2, y: self.frame.midY)
         button1.name = "retry"
         button1.xScale = 0.5
         button1.yScale = 0.5
-        button1.zPosition = 2
+        button1.zPosition = 999
         self.addChild(button1)
         
         let button2 = SKSpriteNode(imageNamed: "nextButton.png")
@@ -102,7 +109,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         button2.name = "next"
         button2.xScale = 0.5
         button2.yScale = 0.5
-        button2.zPosition = 2
+        button2.zPosition = 999
         self.addChild(button2)
         
         let button3 = SKSpriteNode(imageNamed: "prevButton.png")
@@ -110,16 +117,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         button3.name = "prev"
         button3.xScale = 0.5
         button3.yScale = 0.5
-        button3.zPosition = 2
+        button3.zPosition = 999
         self.addChild(button3)
-        
-        let menuBoard = SKSpriteNode(imageNamed: "MenuBoard.png")
-        menuBoard.position = CGPoint(x: self.frame.midX, y: self.frame.midY)
-        menuBoard.name = "menuBoard"
-        menuBoard.xScale = 1.4
-        menuBoard.yScale = 1.4
-        menuBoard.zPosition = 1
-        self.addChild(menuBoard)
     }
 
     //Ициализация свойств игровых объектов

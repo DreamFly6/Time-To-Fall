@@ -20,8 +20,6 @@
 		1F4C24831CD5E55600D3B0DB /* ProjectZXCTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F4C24821CD5E55600D3B0DB /* ProjectZXCTests.swift */; };
 		1F4C248E1CD5E55600D3B0DB /* ProjectZXCUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F4C248D1CD5E55600D3B0DB /* ProjectZXCUITests.swift */; };
 		1F6C00A61CE34FCF00A7C8E6 /* Level 2.sks in Resources */ = {isa = PBXBuildFile; fileRef = 1F6C00A51CE34FCF00A7C8E6 /* Level 2.sks */; };
-		1FA0E0CE1DB23707004EED92 /* Oop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FA0E0CD1DB23707004EED92 /* Oop.swift */; };
-		1FA7BB031DB3627F00569FB6 /* Menu.sks in Resources */ = {isa = PBXBuildFile; fileRef = 1FA7BB021DB3627F00569FB6 /* Menu.sks */; };
 		1FE0F4001CE6F5B9007E1B98 /* Test_Level.sks in Resources */ = {isa = PBXBuildFile; fileRef = 1FE0F3FF1CE6F5B9007E1B98 /* Test_Level.sks */; };
 		1FF6BA481DB47E8A0058BEC2 /* Level 6.sks in Resources */ = {isa = PBXBuildFile; fileRef = 1FF6BA471DB47E8A0058BEC2 /* Level 6.sks */; };
 		32257FF11D50AF6F0071BB06 /* stop.png in Resources */ = {isa = PBXBuildFile; fileRef = 32257FF01D50AF6F0071BB06 /* stop.png */; };
@@ -30,7 +28,6 @@
 		32BE5B8F1CD79BA100C7A815 /* backgroundMainMenu.png in Resources */ = {isa = PBXBuildFile; fileRef = 32BE5B8E1CD79BA100C7A815 /* backgroundMainMenu.png */; };
 		32BE5B911CD79C7000C7A815 /* buttonStart.png in Resources */ = {isa = PBXBuildFile; fileRef = 32BE5B901CD79C7000C7A815 /* buttonStart.png */; };
 		32C496E81DB7CBD900DFDAF9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F4C24711CD5E55600D3B0DB /* Main.storyboard */; };
-		32C496E91DB7CF0000DFDAF9 /* Oop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FA0E0CD1DB23707004EED92 /* Oop.swift */; };
 		32C496EA1DB7CF0000DFDAF9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F4C24691CD5E55600D3B0DB /* AppDelegate.swift */; };
 		32C496EB1DB7CF0000DFDAF9 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F4C246F1CD5E55600D3B0DB /* GameViewController.swift */; };
 		32C496EC1DB7CF0000DFDAF9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3262F13B1D49B7E90056D72B /* ViewController.swift */; };
@@ -83,8 +80,6 @@
 		1F4C248D1CD5E55600D3B0DB /* ProjectZXCUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectZXCUITests.swift; sourceTree = "<group>"; };
 		1F4C248F1CD5E55600D3B0DB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1F6C00A51CE34FCF00A7C8E6 /* Level 2.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = "Level 2.sks"; sourceTree = "<group>"; };
-		1FA0E0CD1DB23707004EED92 /* Oop.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Oop.swift; sourceTree = "<group>"; };
-		1FA7BB021DB3627F00569FB6 /* Menu.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Menu.sks; sourceTree = "<group>"; };
 		1FE0F3FF1CE6F5B9007E1B98 /* Test_Level.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Test_Level.sks; sourceTree = "<group>"; };
 		1FF6BA471DB47E8A0058BEC2 /* Level 6.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = "Level 6.sks"; sourceTree = "<group>"; };
 		32257FF01D50AF6F0071BB06 /* stop.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = stop.png; sourceTree = "<group>"; };
@@ -196,8 +191,6 @@
 			children = (
 				1FA08D661D3E1A2D00A4BA06 /* Levels */,
 				1FE0F3FF1CE6F5B9007E1B98 /* Test_Level.sks */,
-				1FA0E0CD1DB23707004EED92 /* Oop.swift */,
-				1FA7BB021DB3627F00569FB6 /* Menu.sks */,
 				1F4C24691CD5E55600D3B0DB /* AppDelegate.swift */,
 				1F4C246F1CD5E55600D3B0DB /* GameViewController.swift */,
 				1F4C24711CD5E55600D3B0DB /* Main.storyboard */,
@@ -349,7 +342,6 @@
 				1F4C24781CD5E55600D3B0DB /* LaunchScreen.storyboard in Resources */,
 				1F4C24751CD5E55600D3B0DB /* Assets.xcassets in Resources */,
 				32F5A42D1D3CA49100631FE0 /* Level 5.sks in Resources */,
-				1FA7BB031DB3627F00569FB6 /* Menu.sks in Resources */,
 				1F1E11E31DB4DDB40006631B /* Level 12.sks in Resources */,
 				3262F1381D49B3F50056D72B /* buttonLevel.png in Resources */,
 				32F5A4291D3CA45B00631FE0 /* Level 3.sks in Resources */,
@@ -379,7 +371,6 @@
 			files = (
 				32C496EE1DB7CF4100DFDAF9 /* GameViewController.swift in Sources */,
 				32C496EF1DB7CF4100DFDAF9 /* GameScene.swift in Sources */,
-				1FA0E0CE1DB23707004EED92 /* Oop.swift in Sources */,
 				3262F13C1D49B7E90056D72B /* ViewController.swift in Sources */,
 				1F4C246A1CD5E55600D3B0DB /* AppDelegate.swift in Sources */,
 			);
@@ -397,7 +388,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				32C496E91DB7CF0000DFDAF9 /* Oop.swift in Sources */,
 				32C496EA1DB7CF0000DFDAF9 /* AppDelegate.swift in Sources */,
 				32C496EB1DB7CF0000DFDAF9 /* GameViewController.swift in Sources */,
 				32C496EC1DB7CF0000DFDAF9 /* ViewController.swift in Sources */,
