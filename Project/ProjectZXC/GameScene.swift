@@ -1,4 +1,4 @@
-// Ver 0.0000000012
+// Ver 0.0000000013
 
 import SpriteKit
 fileprivate func < <T : Comparable>(lhs: T?, rhs: T?) -> Bool {
@@ -314,7 +314,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             let touchLocation = touch.location(in: self)
             let touchedNode = self.atPoint(touchLocation)
             
-            if (touchedNode.name == "WoodenBox"
+            if  (
+                touchedNode.name == "WoodenBox"
                 || touchedNode.name == "WoodenPlank"
                 || touchedNode.name == "SlimeBlock"
                 || touchedNode.name == "GlassBlock"
