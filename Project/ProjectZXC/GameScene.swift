@@ -226,6 +226,21 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             }
         }
         
+        //  Инициализация GlassBlock
+        for glassBlock in self.children {
+            if glassBlock.name == "GlassBlock" {
+                if let glassBlock = glassBlock as? SKSpriteNode {
+                    glassBlock.physicsBody?.friction = 0.2
+                    glassBlock.physicsBody?.restitution = 0.3
+                    glassBlock.physicsBody?.linearDamping = 0.2
+                    glassBlock.physicsBody?.angularDamping = 0.2
+                    glassBlock.physicsBody?.mass = 1.0
+                    glassBlock.physicsBody?.pinned = true
+                    glassBlock.physicsBody?.isDynamic = false
+                }
+            }
+        }
+        
         
         //  Инициализация WoodenPlank
         for woodenPlank in self.children {
@@ -279,6 +294,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     override func didMove(to view: SKView) {
         //initVC()
         initGameObject()
+
         self.physicsWorld.contactDelegate = self
     }
     
@@ -298,7 +314,12 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             let touchLocation = touch.location(in: self)
             let touchedNode = self.atPoint(touchLocation)
             
-            if (touchedNode.name == "WoodenBox" || touchedNode.name == "WoodenPlank" || touchedNode.name == "SlimeBlock") {
+            if (touchedNode.name == "WoodenBox"
+                || touchedNode.name == "WoodenPlank"
+                || touchedNode.name == "SlimeBlock"
+                || touchedNode.name == "GlassBlock"
+                )
+            {
                 touchedNode.removeFromParent() //удаление
             }
             
