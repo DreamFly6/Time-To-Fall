@@ -32,7 +32,7 @@
                                     <color key="titleShadowColor" name="controlDarkShadowColor" catalog="System" colorSpace="catalog"/>
                                 </state>
                                 <connections>
-                                    <segue destination="tZT-fh-9NA" kind="show" id="KtN-gS-hqg"/>
+                                    <segue destination="Zdr-oO-o6b" kind="show" id="VOA-lr-Xpa"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fJo-bh-ZtI">
@@ -44,6 +44,9 @@
                                     <color key="titleColor" name="alternateSelectedControlColor" catalog="System" colorSpace="catalog"/>
                                     <color key="titleShadowColor" name="controlDarkShadowColor" catalog="System" colorSpace="catalog"/>
                                 </state>
+                                <connections>
+                                    <segue destination="Zdr-oO-o6b" kind="modal" id="QkE-Zh-8FD"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -52,7 +55,124 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BUQ-6n-5Pg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1354" y="-346"/>
+            <point key="canvasLocation" x="-721" y="-1039"/>
+        </scene>
+        <!--Table View Controller-->
+        <scene sceneID="FUD-Yx-c7q">
+            <objects>
+                <tableViewController id="Zdr-oO-o6b" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" indicatorStyle="black" dataMode="static" style="plain" separatorStyle="default" rowHeight="138" sectionHeaderHeight="28" sectionFooterHeight="28" id="KKl-Zy-tvc">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="separatorColor" red="0.25876882950000002" green="0.27759480339999998" blue="0.38945926050000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="sectionIndexBackgroundColor" name="knobColor" catalog="System" colorSpace="catalog"/>
+                        <sections>
+                            <tableViewSection id="2pJ-8s-udJ">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" semanticContentAttribute="playback" selectionStyle="gray" indentationLevel="9" indentationWidth="20" rowHeight="375" id="iZj-bd-cUd">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="375"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="iZj-bd-cUd" id="6eO-kv-9gN">
+                                            <frame key="frameInset" width="375" height="374"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Oxa-Ww-Fsq">
+                                                    <frame key="frameInset" minX="2.13%" minY="1.74%" width="95.73%" height="96.52%"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="45"/>
+                                                    <color key="tintColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                                    <state key="normal" title="Stage 1" backgroundImage="WoodenBox"/>
+                                                    <connections>
+                                                        <segue destination="tZT-fh-9NA" kind="show" id="BMl-Bn-Sl2"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                            <color key="backgroundColor" red="0.25876882950000002" green="0.27759480339999998" blue="0.38945926050000002" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="tintColor" name="alternateSelectedControlColor" catalog="System" colorSpace="catalog"/>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" red="1" green="0.030793504433243246" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" semanticContentAttribute="playback" selectionStyle="gray" indentationLevel="9" indentationWidth="20" rowHeight="375" id="xwT-bX-8bH">
+                                        <rect key="frame" x="0.0" y="375" width="375" height="375"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="xwT-bX-8bH" id="IZw-tZ-0xV">
+                                            <frame key="frameInset" width="375" height="374"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ru4-fa-81v">
+                                                    <frame key="frameInset" minX="2.13%" minY="1.74%" width="95.73%" height="96.52%"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="45"/>
+                                                    <color key="tintColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                                    <state key="normal" title="Stage 2" backgroundImage="StoneBlock"/>
+                                                </button>
+                                            </subviews>
+                                            <color key="backgroundColor" red="0.25876882950000002" green="0.27759480339999998" blue="0.38945926050000002" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="tintColor" name="alternateSelectedControlColor" catalog="System" colorSpace="catalog"/>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" red="1" green="0.03079350443" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" semanticContentAttribute="playback" selectionStyle="gray" indentationLevel="9" indentationWidth="20" rowHeight="375" id="dYE-9k-OMh">
+                                        <rect key="frame" x="0.0" y="750" width="375" height="375"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="dYE-9k-OMh" id="F0C-UX-DfA">
+                                            <frame key="frameInset" width="375" height="374"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="biX-Dz-dJL">
+                                                    <frame key="frameInset" minX="2.13%" minY="1.74%" width="95.73%" height="96.52%"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="45"/>
+                                                    <color key="tintColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                                    <state key="normal" title="Stage 3" backgroundImage="GlassBlock"/>
+                                                </button>
+                                            </subviews>
+                                            <color key="backgroundColor" red="0.25876882950000002" green="0.27759480339999998" blue="0.38945926050000002" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="tintColor" name="alternateSelectedControlColor" catalog="System" colorSpace="catalog"/>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" red="1" green="0.03079350443" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" semanticContentAttribute="playback" selectionStyle="gray" indentationLevel="9" indentationWidth="20" rowHeight="375" id="tBe-33-BWh">
+                                        <rect key="frame" x="0.0" y="1125" width="375" height="375"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="tBe-33-BWh" id="36L-NK-Wao">
+                                            <frame key="frameInset" width="375" height="374"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Un-hB-sBK">
+                                                    <frame key="frameInset" minX="2.13%" minY="1.74%" width="95.73%" height="96.52%"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="45"/>
+                                                    <color key="tintColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                                    <state key="normal" title="Stage 4" backgroundImage="ActivaBlock_On"/>
+                                                </button>
+                                            </subviews>
+                                            <color key="backgroundColor" red="0.25876882950000002" green="0.27759480339999998" blue="0.38945926050000002" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="tintColor" name="alternateSelectedControlColor" catalog="System" colorSpace="catalog"/>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" red="1" green="0.03079350443" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="Zdr-oO-o6b" id="Ndw-Hl-02l"/>
+                            <outlet property="delegate" destination="Zdr-oO-o6b" id="Uz6-GW-VuM"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Vtz-MX-nla" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="512.79999999999995" y="-1042.128935532234"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="59C-w9-YyG">
@@ -67,7 +187,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="backgroundMainMenu.png" translatesAutoresizingMaskIntoConstraints="NO" id="mjE-vE-aRh">
-                                <frame key="frameInset" minX="-8.80%" minY="-8.92%" width="110.40%" height="111.09%"/>
+                                <frame key="frameInset" minX="-8.80%" minY="-8.92%" width="110.40%" height="111.02%"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QCZ-W5-2xa">
@@ -183,7 +303,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wYF-rK-Izs">
-                                <frame key="frameInset" minX="7.20%" minY="33.96%" width="18.40%" height="10.64%"/>
+                                <frame key="frameInset" minX="7.20%" minY="33.96%" width="18.40%" height="10.57%"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.25876882950000002" green="0.27759480339999998" blue="0.38945926050000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <accessibility key="accessibilityConfiguration" label="menuSelecter"/>
@@ -197,7 +317,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oN8-ki-erw">
-                                <frame key="frameInset" minX="29.07%" minY="33.81%" width="18.40%" height="10.64%"/>
+                                <frame key="frameInset" minX="29.07%" minY="33.81%" width="18.40%" height="10.57%"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.25876882950000002" green="0.27759480339999998" blue="0.38945926050000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <accessibility key="accessibilityConfiguration" label="menuSelecter"/>
@@ -211,7 +331,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="30a-N5-w7l">
-                                <frame key="frameInset" minX="51.20%" minY="33.81%" width="18.40%" height="10.64%"/>
+                                <frame key="frameInset" minX="51.20%" minY="33.81%" width="18.40%" height="10.57%"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.25876882950000002" green="0.27759480339999998" blue="0.38945926050000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <accessibility key="accessibilityConfiguration" label="menuSelecter"/>
@@ -225,7 +345,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zLp-Dw-h4N">
-                                <frame key="frameInset" minX="73.87%" minY="33.81%" width="18.40%" height="10.64%"/>
+                                <frame key="frameInset" minX="73.87%" minY="33.81%" width="18.40%" height="10.57%"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.25876882950000002" green="0.27759480339999998" blue="0.38945926050000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <accessibility key="accessibilityConfiguration" label="menuSelecter"/>
@@ -243,6 +363,9 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                 <state key="normal" title="Menu" backgroundImage="MenuBoard"/>
+                                <connections>
+                                    <segue destination="Zdr-oO-o6b" kind="show" id="niA-ea-5fX"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -250,7 +373,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fSZ-S0-9nV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="270" y="-1039"/>
+            <point key="canvasLocation" x="2182" y="-955"/>
         </scene>
         <!--Game View Controller-->
         <scene sceneID="tXr-a1-R10">
@@ -289,17 +412,111 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="k33-zX-pu8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="161" y="-347"/>
+            <point key="canvasLocation" x="-1775" y="-1039"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="K1L-7A-dnF">
+            <objects>
+                <viewController storyboardIdentifier="menulol2" id="yLZ-da-FN1" customClass="ViewController" customModule="ProjectZXC" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="IrR-LX-ILK"/>
+                        <viewControllerLayoutGuide type="bottom" id="ftc-Vw-fRp"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="hQd-wk-UwW">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView alpha="0.45000000000000001" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="backgroundMainMenu.png" translatesAutoresizingMaskIntoConstraints="NO" id="9Dx-L4-G9L">
+                                <frame key="frameInset" minX="-8.80%" minY="-8.92%" width="110.40%" height="111.02%"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.73451685909999997" green="0.11321576680000001" blue="0.32098096609999999" alpha="1" colorSpace="deviceRGB"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TW4-ZQ-s7z">
+                                <frame key="frameInset" minX="7.20%" minY="9.75%" width="18.40%" height="10.79%"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.25876882950000002" green="0.27759480339999998" blue="0.38945926050000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <accessibility key="accessibilityConfiguration" label="menuSelecter"/>
+                                <fontDescription key="fontDescription" name="AvenirNextCondensed-Regular" family="Avenir Next Condensed" pointSize="30"/>
+                                <size key="titleShadowOffset" width="1" height="1"/>
+                                <state key="normal" title="17" backgroundImage="StoneBlock">
+                                    <color key="titleShadowColor" name="knobColor" catalog="System" colorSpace="catalog"/>
+                                </state>
+                                <connections>
+                                    <action selector="buttonLevel1:" destination="yLZ-da-FN1" eventType="touchUpInside" id="XQp-8m-fCC"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VyU-DY-4Gx">
+                                <frame key="frameInset" minX="29.20%" minY="9.75%" width="18.40%" height="10.79%"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.25876882950000002" green="0.27759480339999998" blue="0.38945926050000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <accessibility key="accessibilityConfiguration" label="menuSelecter"/>
+                                <fontDescription key="fontDescription" name="AvenirNextCondensed-Regular" family="Avenir Next Condensed" pointSize="30"/>
+                                <size key="titleShadowOffset" width="1" height="1"/>
+                                <state key="normal" title="18" backgroundImage="StoneBlock">
+                                    <color key="titleShadowColor" name="knobColor" catalog="System" colorSpace="catalog"/>
+                                </state>
+                                <connections>
+                                    <action selector="buttonLevel1:" destination="yLZ-da-FN1" eventType="touchUpInside" id="IVJ-r5-igE"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2f5-0p-nAa">
+                                <frame key="frameInset" minX="51.20%" minY="9.75%" width="18.40%" height="10.79%"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.25876882950000002" green="0.27759480339999998" blue="0.38945926050000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <accessibility key="accessibilityConfiguration" label="menuSelecter"/>
+                                <fontDescription key="fontDescription" name="AvenirNextCondensed-Regular" family="Avenir Next Condensed" pointSize="30"/>
+                                <size key="titleShadowOffset" width="1" height="1"/>
+                                <state key="normal" title="19" backgroundImage="StoneBlock">
+                                    <color key="titleShadowColor" name="knobColor" catalog="System" colorSpace="catalog"/>
+                                </state>
+                                <connections>
+                                    <action selector="buttonLevel1:" destination="yLZ-da-FN1" eventType="touchUpInside" id="S2h-eP-Eck"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Oo-BT-dvH">
+                                <frame key="frameInset" minX="73.87%" minY="9.75%" width="18.40%" height="10.79%"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.25876882950000002" green="0.27759480339999998" blue="0.38945926050000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <accessibility key="accessibilityConfiguration" label="menuSelecter"/>
+                                <fontDescription key="fontDescription" name="AvenirNextCondensed-Regular" family="Avenir Next Condensed" pointSize="30"/>
+                                <size key="titleShadowOffset" width="1" height="1"/>
+                                <state key="normal" title="20" backgroundImage="StoneBlock">
+                                    <color key="titleShadowColor" name="knobColor" catalog="System" colorSpace="catalog"/>
+                                </state>
+                                <connections>
+                                    <action selector="buttonLevel1:" destination="yLZ-da-FN1" eventType="touchUpInside" id="Mti-de-Gpp"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AhY-E1-O6x">
+                                <frame key="frameInset" minX="7.20%" minY="85.16%" width="18.67%" height="10.50%"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <state key="normal" title="Menu" backgroundImage="MenuBoard"/>
+                                <connections>
+                                    <segue destination="Zdr-oO-o6b" kind="show" id="jbh-tk-fxD"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="tintColor" name="keyboardFocusIndicatorColor" catalog="System" colorSpace="catalog"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="coi-yn-EUx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1316" y="-1880"/>
         </scene>
     </scenes>
     <resources>
+        <image name="ActivaBlock_On" width="600" height="600"/>
+        <image name="GlassBlock" width="600" height="600"/>
         <image name="MenuBoard" width="720" height="480"/>
         <image name="StoneBlock" width="600" height="600"/>
         <image name="WoodenBox" width="600" height="600"/>
         <image name="backgroundMainMenu.png" width="1080" height="1920"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="3Kz-kR-P9o"/>
+        <segue reference="niA-ea-5fX"/>
+        <segue reference="BMl-Bn-Sl2"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
 </document>
