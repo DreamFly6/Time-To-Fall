@@ -267,10 +267,6 @@
 				1F1E11DE1DB4DC430006631B /* Level 10.sks */,
 				1F1E11E01DB4DCBB0006631B /* Level 11.sks */,
 				1F1E11E21DB4DDB40006631B /* Level 12.sks */,
-				1F7047BE1DC3558300C35C12 /* Level 13.sks */,
-				1F7047C01DC355AC00C35C12 /* Level 14.sks */,
-				1F7047C21DC355B700C35C12 /* Level 15.sks */,
-				1F7047C41DC355C800C35C12 /* Level 16.sks */,
 			);
 			name = "1(Box/Plank/Slime)";
 			sourceTree = "<group>";
@@ -278,6 +274,10 @@
 		1FB4830C1DC35CD700067D4B /* 2(Stone/Glass/Spear) */ = {
 			isa = PBXGroup;
 			children = (
+				1F7047BE1DC3558300C35C12 /* Level 13.sks */,
+				1F7047C01DC355AC00C35C12 /* Level 14.sks */,
+				1F7047C21DC355B700C35C12 /* Level 15.sks */,
+				1F7047C41DC355C800C35C12 /* Level 16.sks */,
 				1F7047C61DC3561200C35C12 /* Level 17.sks */,
 				1F7047C81DC3563100C35C12 /* Level 18.sks */,
 				1F7047CA1DC3566600C35C12 /* Level 19.sks */,

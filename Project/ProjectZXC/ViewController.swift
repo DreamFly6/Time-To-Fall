@@ -10,7 +10,7 @@ import UIKit
 import SpriteKit
 
 public var thisScene = 1
-public var topScene = 9
+public var topScene = 12
 class ViewController: UIViewController {
 
     //это объявление нужно, чтобы сделать их кликабельными/не кликабельными
