@@ -71,14 +71,14 @@
                             <tableViewSection id="2pJ-8s-udJ">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" semanticContentAttribute="playback" selectionStyle="gray" indentationLevel="9" indentationWidth="20" rowHeight="376" id="iZj-bd-cUd">
-                                        <rect key="frame" x="0.0" y="64" width="375" height="376"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="376"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="iZj-bd-cUd" id="6eO-kv-9gN">
-                                            <frame key="frameInset" width="375" height="375"/>
+                                            <frame key="frameInset" width="375" height="375.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Oxa-Ww-Fsq">
-                                                    <frame key="frameInset" minX="2.13%" minY="1.47%" width="95.60%" height="96.53%"/>
+                                                    <frame key="frameInset" minX="2.00%" minY="1.47%" width="95.60%" height="96.41%"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="45"/>
                                                     <color key="tintColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -94,14 +94,14 @@
                                         <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" semanticContentAttribute="playback" selectionStyle="gray" indentationLevel="9" indentationWidth="20" rowHeight="375" id="xwT-bX-8bH">
-                                        <rect key="frame" x="0.0" y="440" width="375" height="375"/>
+                                        <rect key="frame" x="0.0" y="376" width="375" height="375"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="xwT-bX-8bH" id="IZw-tZ-0xV">
-                                            <frame key="frameInset" width="375" height="374"/>
+                                            <frame key="frameInset" width="375" height="374.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ru4-fa-81v">
-                                                    <frame key="frameInset" minX="2.13%" minY="1.60%" width="95.60%" height="96.52%"/>
+                                                    <frame key="frameInset" minX="2.00%" minY="1.60%" width="95.60%" height="96.53%"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="45"/>
                                                     <color key="tintColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -117,14 +117,14 @@
                                         <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" semanticContentAttribute="playback" selectionStyle="gray" indentationLevel="9" indentationWidth="20" rowHeight="375" id="dYE-9k-OMh">
-                                        <rect key="frame" x="0.0" y="815" width="375" height="375"/>
+                                        <rect key="frame" x="0.0" y="751" width="375" height="375"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="dYE-9k-OMh" id="F0C-UX-DfA">
-                                            <frame key="frameInset" width="375" height="374"/>
+                                            <frame key="frameInset" width="375" height="374.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="biX-Dz-dJL">
-                                                    <frame key="frameInset" minX="2.13%" minY="1.74%" width="95.73%" height="96.52%"/>
+                                                    <frame key="frameInset" minX="2.00%" minY="1.74%" width="95.73%" height="96.53%"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                                     <color key="backgroundColor" red="0.25876882950000002" green="0.27759480339999998" blue="0.38945926050000002" alpha="1" colorSpace="calibratedRGB"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="45"/>
@@ -138,14 +138,14 @@
                                         <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" semanticContentAttribute="playback" selectionStyle="gray" indentationLevel="9" indentationWidth="20" rowHeight="375" id="tBe-33-BWh">
-                                        <rect key="frame" x="0.0" y="1190" width="375" height="375"/>
+                                        <rect key="frame" x="0.0" y="1126" width="375" height="375"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="tBe-33-BWh" id="36L-NK-Wao">
-                                            <frame key="frameInset" width="375" height="374"/>
+                                            <frame key="frameInset" width="375" height="374.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Un-hB-sBK">
-                                                    <frame key="frameInset" minX="2.13%" minY="1.74%" width="95.73%" height="96.52%"/>
+                                                    <frame key="frameInset" minX="2.00%" minY="1.74%" width="95.73%" height="96.53%"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="45"/>
                                                     <color key="tintColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -187,7 +187,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QCZ-W5-2xa">
-                                <frame key="frameInset" minX="7.20%" minY="9.75%" width="18.40%" height="10.79%"/>
+                                <frame key="frameInset" minX="10.40%" minY="9.60%" width="18.40%" height="10.79%"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.25876882950000002" green="0.27759480339999998" blue="0.38945926050000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <accessibility key="accessibilityConfiguration" label="menuSelecter"/>
@@ -201,7 +201,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8sZ-O8-jgY">
-                                <frame key="frameInset" minX="29.20%" minY="9.75%" width="18.40%" height="10.79%"/>
+                                <frame key="frameInset" minX="40.80%" minY="9.60%" width="18.40%" height="10.79%"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.25876882950000002" green="0.27759480339999998" blue="0.38945926050000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <accessibility key="accessibilityConfiguration" label="menuSelecter"/>
@@ -215,7 +215,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uBR-lg-hF7">
-                                <frame key="frameInset" minX="51.20%" minY="9.75%" width="18.40%" height="10.79%"/>
+                                <frame key="frameInset" minX="71.73%" minY="9.60%" width="18.40%" height="10.79%"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.25876882950000002" green="0.27759480339999998" blue="0.38945926050000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <accessibility key="accessibilityConfiguration" label="menuSelecter"/>
@@ -229,7 +229,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lj7-QD-CSB">
-                                <frame key="frameInset" minX="73.87%" minY="9.75%" width="18.40%" height="10.79%"/>
+                                <frame key="frameInset" minX="10.40%" minY="26.69%" width="18.40%" height="10.79%"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.25876882950000002" green="0.27759480339999998" blue="0.38945926050000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <accessibility key="accessibilityConfiguration" label="menuSelecter"/>
@@ -243,7 +243,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="csR-SN-fwL">
-                                <frame key="frameInset" minX="7.20%" minY="22.04%" width="18.40%" height="10.72%"/>
+                                <frame key="frameInset" minX="40.80%" minY="26.69%" width="18.40%" height="10.72%"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.25876882950000002" green="0.27759480339999998" blue="0.38945926050000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <accessibility key="accessibilityConfiguration" label="menuSelecter"/>
@@ -257,7 +257,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6fV-zs-Pbc">
-                                <frame key="frameInset" minX="29.20%" minY="22.04%" width="18.40%" height="10.72%"/>
+                                <frame key="frameInset" minX="71.73%" minY="26.69%" width="18.40%" height="10.72%"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.25876882950000002" green="0.27759480339999998" blue="0.38945926050000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <accessibility key="accessibilityConfiguration" label="menuSelecter"/>
@@ -271,7 +271,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N3L-yD-7YR">
-                                <frame key="frameInset" minX="51.20%" minY="22.04%" width="18.40%" height="10.72%"/>
+                                <frame key="frameInset" minX="10.40%" minY="43.93%" width="18.40%" height="10.72%"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.25876882950000002" green="0.27759480339999998" blue="0.38945926050000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <accessibility key="accessibilityConfiguration" label="menuSelecter"/>
@@ -285,7 +285,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dyg-yB-FUj">
-                                <frame key="frameInset" minX="73.87%" minY="21.74%" width="18.40%" height="10.72%"/>
+                                <frame key="frameInset" minX="40.80%" minY="43.93%" width="18.40%" height="10.72%"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.25876882950000002" green="0.27759480339999998" blue="0.38945926050000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <accessibility key="accessibilityConfiguration" label="menuSelecter"/>
@@ -299,7 +299,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oN8-ki-erw">
-                                <frame key="frameInset" minX="29.07%" minY="34.03%" width="18.40%" height="10.57%"/>
+                                <frame key="frameInset" minX="10.40%" minY="61.62%" width="18.40%" height="10.57%"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.25876882950000002" green="0.27759480339999998" blue="0.38945926050000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <accessibility key="accessibilityConfiguration" label="menuSelecter"/>
@@ -313,7 +313,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="30a-N5-w7l">
-                                <frame key="frameInset" minX="51.20%" minY="34.03%" width="18.40%" height="10.57%"/>
+                                <frame key="frameInset" minX="40.80%" minY="61.62%" width="18.40%" height="10.57%"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.25876882950000002" green="0.27759480339999998" blue="0.38945926050000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <accessibility key="accessibilityConfiguration" label="menuSelecter"/>
@@ -326,20 +326,6 @@
                                     <action selector="buttonLevel1:" destination="tZT-fh-9NA" eventType="touchUpInside" id="fv7-Ie-0cj"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zLp-Dw-h4N">
-                                <frame key="frameInset" minX="73.87%" minY="34.03%" width="18.40%" height="10.57%"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.25876882950000002" green="0.27759480339999998" blue="0.38945926050000002" alpha="1" colorSpace="calibratedRGB"/>
-                                <accessibility key="accessibilityConfiguration" label="menuSelecter"/>
-                                <fontDescription key="fontDescription" name="AvenirNextCondensed-Regular" family="Avenir Next Condensed" pointSize="30"/>
-                                <size key="titleShadowOffset" width="1" height="1"/>
-                                <state key="normal" title="12" backgroundImage="StoneBlock">
-                                    <color key="titleShadowColor" name="knobColor" catalog="System" colorSpace="catalog"/>
-                                </state>
-                                <connections>
-                                    <action selector="buttonLevel1:" destination="tZT-fh-9NA" eventType="touchUpInside" id="ORs-3Y-pWG"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mna-Hy-efS">
                                 <frame key="frameInset" minX="7.20%" minY="85.16%" width="18.67%" height="10.50%"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
@@ -350,7 +336,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wYF-rK-Izs">
-                                <frame key="frameInset" minX="7.20%" minY="34.03%" width="18.40%" height="10.57%"/>
+                                <frame key="frameInset" minX="71.73%" minY="43.93%" width="18.40%" height="10.57%"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.25538635563977291" green="0.27473711644241344" blue="0.38945926050000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <accessibility key="accessibilityConfiguration" label="menuSelecter"/>
@@ -361,6 +347,20 @@
                                 </state>
                                 <connections>
                                     <action selector="buttonLevel1:" destination="tZT-fh-9NA" eventType="touchUpInside" id="5gu-vC-9gx"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zLp-Dw-h4N">
+                                <frame key="frameInset" minX="71.73%" minY="61.62%" width="18.40%" height="10.57%"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.25876882950000002" green="0.27759480339999998" blue="0.38945926050000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <accessibility key="accessibilityConfiguration" label="menuSelecter"/>
+                                <fontDescription key="fontDescription" name="AvenirNextCondensed-Regular" family="Avenir Next Condensed" pointSize="30"/>
+                                <size key="titleShadowOffset" width="1" height="1"/>
+                                <state key="normal" title="12" backgroundImage="StoneBlock">
+                                    <color key="titleShadowColor" name="knobColor" catalog="System" colorSpace="catalog"/>
+                                </state>
+                                <connections>
+                                    <action selector="buttonLevel1:" destination="tZT-fh-9NA" eventType="touchUpInside" id="ORs-3Y-pWG"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -510,7 +510,7 @@
         <image name="backgroundMainMenu.png" width="1080" height="1920"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="VOA-lr-Xpa"/>
+        <segue reference="niA-ea-5fX"/>
         <segue reference="BMl-Bn-Sl2"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
