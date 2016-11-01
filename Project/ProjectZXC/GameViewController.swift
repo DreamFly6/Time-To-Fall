@@ -20,19 +20,25 @@ class GameViewController: UIViewController {
         self.navigationController?.isNavigationBarHidden = true
         super.viewDidLoad()
         //ПРОСТ
-//        if let scene = GameScene(fileNamed:"Test_Level") {
-//            let skView = SKView(frame: self.view.frame)
-//            self.view.addSubview(skView)
-//            scene.viewController = self
-//            print("ViewController в viewDidLoad " + String(describing: self) )
-//            skView.showsFPS = true
-//            skView.showsNodeCount = true
-//            skView.ignoresSiblingOrder = true
-//            scene.scaleMode = .aspectFill
-//            viewController = self
-//            skView.presentScene(scene)
-//            
-//        }
+        let scene = GameScene(fileNamed:"Level 1")
+            let skView = SKView(frame: self.view.frame)
+            self.view.addSubview(skView)
+            scene?.viewController = self
+            print("ViewController в viewDidLoad " + String(describing: self) )
+            skView.showsFPS = true
+            skView.showsNodeCount = true
+            skView.ignoresSiblingOrder = true
+            scene?.scaleMode = .aspectFill
+            viewController = self
+            skView.presentScene(scene)
+            
+        
+        skView.showsFPS = true
+        skView.showsNodeCount = true
+        skView.showsPhysics = true
+        skView.ignoresSiblingOrder = true
+        
+        scene?.scaleMode = .aspectFill
     }
     override var supportedInterfaceOrientations : UIInterfaceOrientationMask {
         if UIDevice.current.userInterfaceIdiom == .phone {
