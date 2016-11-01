@@ -184,7 +184,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QCZ-W5-2xa">
-                                <frame key="frameInset" minX="6.40%" minY="9.14%" width="18.40%" height="10.35%"/>
+                                <frame key="frameInset" minX="6.40%" minY="9.07%" width="18.40%" height="10.42%"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.25876882950000002" green="0.27759480339999998" blue="0.38945926050000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <accessibility key="accessibilityConfiguration" label="menuSelecter"/>
@@ -198,7 +198,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8sZ-O8-jgY">
-                                <frame key="frameInset" minX="29.33%" minY="9.14%" width="18.40%" height="10.35%"/>
+                                <frame key="frameInset" minX="29.20%" minY="9.07%" width="18.40%" height="10.42%"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.25876882950000002" green="0.27759480339999998" blue="0.38945926050000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <accessibility key="accessibilityConfiguration" label="menuSelecter"/>
@@ -212,7 +212,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uBR-lg-hF7">
-                                <frame key="frameInset" minX="52.00%" minY="9.14%" width="18.40%" height="10.35%"/>
+                                <frame key="frameInset" minX="52.00%" minY="9.07%" width="18.40%" height="10.42%"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.25876882950000002" green="0.27759480339999998" blue="0.38945926050000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <accessibility key="accessibilityConfiguration" label="menuSelecter"/>
@@ -226,7 +226,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lj7-QD-CSB">
-                                <frame key="frameInset" minX="75.20%" minY="9.14%" width="18.40%" height="10.35%"/>
+                                <frame key="frameInset" minX="75.20%" minY="9.07%" width="18.40%" height="10.42%"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.25876882950000002" green="0.27759480339999998" blue="0.38945926050000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <accessibility key="accessibilityConfiguration" label="menuSelecter"/>
@@ -254,7 +254,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6fV-zs-Pbc">
-                                <frame key="frameInset" minX="29.33%" minY="24.44%" width="18.40%" height="10.35%"/>
+                                <frame key="frameInset" minX="29.20%" minY="24.44%" width="18.40%" height="10.35%"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.25876882950000002" green="0.27759480339999998" blue="0.38945926050000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <accessibility key="accessibilityConfiguration" label="menuSelecter"/>
@@ -310,7 +310,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oN8-ki-erw">
-                                <frame key="frameInset" minX="29.33%" minY="41.08%" width="18.40%" height="10.35%"/>
+                                <frame key="frameInset" minX="29.20%" minY="41.08%" width="18.40%" height="10.35%"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.25876882950000002" green="0.27759480339999998" blue="0.38945926050000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <accessibility key="accessibilityConfiguration" label="menuSelecter"/>
@@ -361,7 +361,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X3k-5e-Zfh">
-                                <frame key="frameInset" minX="6.40%" minY="58.77%" width="18.40%" height="10.35%"/>
+                                <frame key="frameInset" minX="6.40%" minY="58.70%" width="18.40%" height="10.42%"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.2553863556" green="0.27473711639999998" blue="0.38945926050000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <accessibility key="accessibilityConfiguration" label="menuSelecter"/>
@@ -375,7 +375,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xs3-qc-cyB">
-                                <frame key="frameInset" minX="29.33%" minY="58.77%" width="18.40%" height="10.35%"/>
+                                <frame key="frameInset" minX="29.20%" minY="58.70%" width="18.40%" height="10.42%"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.25876882950000002" green="0.27759480339999998" blue="0.38945926050000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <accessibility key="accessibilityConfiguration" label="menuSelecter"/>
@@ -389,7 +389,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DdM-Hm-irr">
-                                <frame key="frameInset" minX="52.00%" minY="58.77%" width="18.40%" height="10.35%"/>
+                                <frame key="frameInset" minX="52.00%" minY="58.70%" width="18.40%" height="10.42%"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.25876882950000002" green="0.27759480339999998" blue="0.38945926050000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <accessibility key="accessibilityConfiguration" label="menuSelecter"/>
@@ -403,7 +403,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X26-E6-Al6">
-                                <frame key="frameInset" minX="75.20%" minY="58.77%" width="18.40%" height="10.35%"/>
+                                <frame key="frameInset" minX="75.20%" minY="58.70%" width="18.40%" height="10.42%"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.25876882950000002" green="0.27759480339999998" blue="0.38945926050000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <accessibility key="accessibilityConfiguration" label="menuSelecter"/>
