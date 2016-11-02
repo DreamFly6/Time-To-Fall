@@ -3,7 +3,7 @@
 //  ProjectZXC
 //
 //  Created by Женя on 01.05.16.
-//  Copyright © 2016 Женя. All rights reserved.
+//  Copyright © 2016 Женя. All rights rqeserved.
 //
 
 import UIKit

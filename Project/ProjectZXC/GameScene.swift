@@ -45,7 +45,16 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
 //        appDelegate = UIApplication.shared.delegate as! AppDelegate
 //    }
     
-
+    
+    
+    func topMostController() -> UIViewController {
+        var topController: UIViewController = UIApplication.shared.keyWindow!.rootViewController!
+        while (topController.presentedViewController != nil) {
+            topController = topController.presentedViewController!
+        }
+        return topController
+    }
+    
     //При вызове этой функции, показывается меню проигрыша.
     func showLMenu(){
         let menuBoard = SKSpriteNode(imageNamed: "MenuBoard.png")
@@ -128,27 +137,9 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         for main in self.children {
             if main.name == "MainCharacter" {
                 if let main = main as? SKSpriteNode {
-                    //var i = 2.0
-                    let offsetX: CGFloat = main.frame.size.width * (main.anchorPoint.x - 0.05)
-                    let offsetY: CGFloat = main.frame.size.height * (main.anchorPoint.y - 0.05)
-                    
-                    let path = CGMutablePath()
-                        path.move(to: CGPoint(x: 48 - offsetX, y: 35 - offsetY))
-                        path.addLine(to: CGPoint(x: 110 - offsetX, y: 35 - offsetY))
-                        path.addLine(to: CGPoint(x: 123 - offsetX, y: 52 - offsetY))
-                        path.addLine(to: CGPoint(x: 127 - offsetX, y: 82 - offsetY))
-                        path.addLine(to: CGPoint(x: 123 - offsetX, y: 202 - offsetY))
-                        path.addLine(to: CGPoint(x: 104 - offsetX, y: 214 - offsetY))
-                        path.addLine(to: CGPoint(x: 68 - offsetX, y: 218 - offsetY))
-                        path.addLine(to: CGPoint(x: 36 - offsetX, y: 209 - offsetY))
-                        path.addLine(to: CGPoint(x: 25 - offsetX, y: 199 - offsetY))
-                        path.addLine(to: CGPoint(x: 27 - offsetX, y: 67 - offsetY))
-                        path.addLine(to: CGPoint(x: 33 - offsetX, y: 47 - offsetY))
-                    path.closeSubpath()
-                    
-                    main.physicsBody! = SKPhysicsBody(polygonFrom: path)
+
                     main.physicsBody?.friction = 0.2
-                    main.physicsBody?.restitution = 0.5
+                    main.physicsBody?.restitution = 0.3
                     main.physicsBody?.linearDamping = 0.2
                     main.physicsBody?.angularDamping = 0.2
                     main.physicsBody?.mass = 2.0
@@ -431,6 +422,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                 let transition = SKTransition.doorsCloseHorizontal(withDuration: 0.5)
                 currentScene!.scaleMode = SKSceneScaleMode.aspectFill
                 self.scene!.view?.presentScene(currentScene!, transition: transition)
+                
             }
             
             if node.name == "next"{
@@ -449,110 +441,21 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                 let transition = SKTransition.doorway(withDuration: 0.5)
                 currentScene!.scaleMode = SKSceneScaleMode.aspectFill
                 self.scene!.view?.presentScene(currentScene!, transition: transition)
+                
+                
             }
             
             
             
-            
+            //переходим в главное меню
             if node.name == "menu"{
                 
-                //СЕЙЧАС РАБОТАЕТ ТОЛЬКО ТЕСТОВАЯ СЦЕНА
+                //просто создал Segue и задал ей имя, с помощью имени ищем Segue и переходим
+                self.viewController.performSegue(withIdentifier: "GoToMainMenu", sender: self)
                 
-                //ЕСЛИ УДАЛИТЬ В ИСХОДНОМ КОДЕ МАИН СТОРИБОРд ЭТО:
-//                //<view key="view" multipleTouchEnabled="YES" contentMode="scaleToFill" id="3se-qz-xqx" customClass="SCView""UnrecognizedClassName">
-//                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-//                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-//                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-//                </view>
-                
-                
-//                <view key="view" multipleTouchEnabled="YES" contentMode="scaleToFill" id="3se-qz-xqx" customClass="SCView">
-//                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-//                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-//                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-//                </view>
-                
-                //ТО ОШИБКА "ProjectZXC[32493:2260288] Unknown class SCView in Interface Builder file."
-                //В САМОМ НАЧАЛЕ УЙДЕТ. НО НИЧЕГО РАБОТАТЬ ОТ ЭТОГО НЕ СТАНЕТ
-//                
-//                var vc: UIViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "GameLolka") as UIViewController
-//                
-                
-//
-                
-                   // let lol = self.viewController
-//                self.viewController?.performSegue(withIdentifier: "testSegue", sender: vc)
-                
-                
-                //let vc = GameViewController() //change this to your class name
-                
-//                print(self.viewController)
-                //self.viewController.performSegue(withIdentifier: "testSegue", sender: nil)
-                
-//                kek.viewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "GameViewController") as UIViewController
-                
-               let mainStoryboard = UIStoryboard(name: "Main", bundle: nil)
-                let vc = mainStoryboard.instantiateViewController(withIdentifier: "ViewControllerLolka")
-                var currentViewController = self.view?.window!.rootViewController!
-//                self.viewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "GameViewController") as UIViewController
-//                currentViewController?.present(self.viewController!, animated: true, completion: { _ in })
-//                print("ViewController перед переходом " + String(describing: self.viewController))
-////                self.viewController?.present(vc, animated: true, completion: nil)
-//                
-//                self.viewController?.performSegue(withIdentifier: "lolkek", sender: vc)
-                
-                
-//                let secondViewController = mainStoryboard.instantiateViewController(withIdentifier: "ViewControllerLolka")
-////                                self.navigationController?.pushViewController(secondViewController, animated: true)
-//                
-//                
-                var obj = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "nav") as! UINavigationController
-//                var appDelegate = UIApplication.shared.delegate as! AppDelegate
-//                
-//                obj.modalPresentationStyle = .formSheet
-//                obj.modalTransitionStyle = .coverVertical
-//                
-//                appDelegate.window?.rootViewController?.present(obj, animated: false, completion: nil)
-                
-//                print(String(describing: obj))
-//                obj.popToRootViewController(animated: false)
-                
-               // var navigationController = self.navigation!
-                //obj.popToRootViewController(animated: false)
-//                obj.popToRootViewController(animated: false)
-//                obj.popToViewController(viewController, animated: true)
-//                obj.pushViewController(viewController, animated: true)
-                
-//                var navigationArray = [Any](arrayLiteral: obj.viewControllers)
-//                // [navigationArray removeAllObjects];    // This is just for remove all view controller from navigation stack.
-//                navigationArray.removeAll()
-//                // You can pass your index here
-//                obj.viewControllers = navigationArray as! [UIViewController]
-//                //navigationArray.release()
-
-                //obj.viewControllers[0].
-                //print(String(describing: obj.viewControllers[0]))
-                //obj.popToViewController(obj.viewControllers[0], animated: true)
-//                obj.pushViewController(viewController, animated: true)
-
-                
-//                appDelegate = UIApplication.shared.delegate as! AppDelegate
-//                appDelegate.window?.rootViewController?.present(obj, animated: false, completion: nil)
-
-                //keklol?.present(self.obj, animated: false, completion: nil)
-//                print("kek")
-//               obj.pushViewController(viewController, animated: true)
-                
-//                let VC1 = mainStoryboard.instantiateViewController(withIdentifier: "ViewControllerLolka")
-//                obj.pushViewController(VC1, animated: true)
-//                self.viewController.present(obj, animated:true, completion: nil)
-                
-               // obj.popViewController(animated: true)
-                print("после удаления " + String(describing: obj.viewControllers))
-                //obj.pushViewController(viewController, animated: true)
-                obj.popToRootViewController(animated: true)
-                
-                print("после добавления " + String(describing: obj.viewControllers))
+                //удаляем все говно со сцены, чтобы при новом открытии фпс норм были
+                self.removeAllActions()
+                self.removeAllChildren()
                 
             }
             

@@ -2,60 +2,45 @@
 //  GameViewController.swift
 //  ProjectZXC
 //
-//  Created by Женя on 01.05.16.
-//  Copyright (c) 2016 Женя. All rights reserved.
+//  Created by Даниленко Данила Сергеевич on 02.11.16.
+//  Copyright © 2016 Женя. All rights reserved.
 //
 
+import Foundation
 import UIKit
 import SpriteKit
 
 
+//Класс, который принадлежит одноименному ViewController`у
+//Он открывает уровень, когда пользователь нажал на кнопку
+//Зачем нужен отдельный ViewController? Как я понял, раньше у нас scene (scene.view) создавалась на ViewControllere меню. Теперь для scene сделал отдельный ViewController
+//Ты скажешь, что в прошлой версии тоже был GameViewController — да, был, но на нем все действия происходили, если пользователь нажимал кнопку test_level, а не переходил из меню выбора уровня
+//Надеюсь, что понятно объяснил
+
 class GameViewController: UIViewController {
     
-    var viewController: UIViewController?
     
     override func viewDidLoad() {
         
         
-        self.navigationController?.isNavigationBarHidden = true
-        super.viewDidLoad()
-        //ПРОСТ
-//        let scene = GameScene(fileNamed:"Level 1")
-//            let skView = SKView(frame: self.view.frame)
-//            self.view.addSubview(skView)
-//            scene?.viewController = self
-//            print("ViewController в viewDidLoad " + String(describing: self) )
-//            skView.showsFPS = true
-//            skView.showsNodeCount = true
-//            skView.ignoresSiblingOrder = true
-//            scene?.scaleMode = .aspectFill
-//            viewController = self
-//            skView.presentScene(scene)
-//            
-//        
-//        skView.showsFPS = true
-//        skView.showsNodeCount = true
-//        skView.showsPhysics = true
-//        skView.ignoresSiblingOrder = true
-//        
-//        scene?.scaleMode = .aspectFill
-    }
-    override var supportedInterfaceOrientations : UIInterfaceOrientationMask {
-        if UIDevice.current.userInterfaceIdiom == .phone {
-            return .allButUpsideDown
-        } else {
-            return .all
-        }
+        print(buttonTitle)
+        
+        var sceneView = GameScene(fileNamed:"Test_Level")
+        thisScene = Int(buttonTitle)!
+        print(buttonTitle, " <---- Эта сцена")
+        sceneView = GameScene(fileNamed: "Level " + String(buttonTitle))
+        
+        let skView = SKView(frame: self.view.frame)
+        sceneView?.viewController = self
+        self.view.addSubview(skView)
+        
+        skView.showsFPS = true
+        skView.showsNodeCount = true
+        skView.ignoresSiblingOrder = true
+        sceneView!.scaleMode = .aspectFill
+        skView.presentScene(sceneView)
+        
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Release any cached data, images, etc that aren't in use.
-    }
-
-    override var prefersStatusBarHidden : Bool {
-        return true
-    }
-    
     
 }
