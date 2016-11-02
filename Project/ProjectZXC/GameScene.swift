@@ -22,38 +22,11 @@ fileprivate func < <T : Comparable>(lhs: T?, rhs: T?) -> Bool {
 
 class GameScene: SKScene, SKPhysicsContactDelegate {
     
-    
-    
-    //И ЗАКОМЕНТЬ ЭТО ПОЖАЛУЙСТА
      var viewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "GameViewController") as UIViewController
-    
-    //РАСКОМЕНТЬ ЭТО ПОЖАЛУЙСТА
-    //И ТОГДА БУДЕТ РАБОТАТЬ ТОЛЬКО ТЕСТ_СЦЕНА. А ОСТАЛЬНЫЕ БУДУТ НИЛ (ВЬЮ КОНТРОЛЛЕР)
-//    var viewController: UIViewController?
-//    var obj = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "nav") as! UINavigationController
-//    var appDelegate = UIApplication.shared.delegate as! AppDelegate
-//    var keklol = UIApplication.shared.delegate!.window!?.rootViewController!
-
 
     
-//    func initVC(){
-////        viewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "GameViewController") as UIViewController
-//        obj = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "nav") as! UINavigationController
-//        obj.modalPresentationStyle = .formSheet
-//        obj.modalTransitionStyle = .coverVertical
-//        
-//        appDelegate = UIApplication.shared.delegate as! AppDelegate
-//    }
     
-    
-    
-    func topMostController() -> UIViewController {
-        var topController: UIViewController = UIApplication.shared.keyWindow!.rootViewController!
-        while (topController.presentedViewController != nil) {
-            topController = topController.presentedViewController!
-        }
-        return topController
-    }
+  
     
     //При вызове этой функции, показывается меню проигрыша.
     func showLMenu(){
@@ -426,13 +399,14 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             }
             
             if node.name == "next"{
-//                let mainStoryboard = UIStoryboard(name: "Main", bundle: nil)
+
                 thisScene+=1
+                
                 let currentScene = GameScene(fileNamed: "Level "+String(thisScene))
-//                currentScene?.viewController = mainStoryboard.instantiateViewController(withIdentifier: "ViewControllerLolka")
                 let transition = SKTransition.doorway(withDuration: 0.5)
                 currentScene!.scaleMode = SKSceneScaleMode.aspectFill
                 self.scene!.view?.presentScene(currentScene!, transition: transition)
+                
             }
             
             if node.name == "prev"{
@@ -450,8 +424,9 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             //переходим в главное меню
             if node.name == "menu"{
                 
-                //просто создал Segue и задал ей имя, с помощью имени ищем Segue и переходим
+//                просто создал Segue и задал ей имя, с помощью имени ищем Segue и переходим
                 self.viewController.performSegue(withIdentifier: "GoToMainMenu", sender: self)
+                
                 
                 //удаляем все говно со сцены, чтобы при новом открытии фпс норм были
                 self.removeAllActions()
@@ -468,6 +443,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             
         }
     }
+    
     public var onGroundTime = 0;
     public var onGround = false
     public var spearKill = false
