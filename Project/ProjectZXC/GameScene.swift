@@ -110,9 +110,27 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         for main in self.children {
             if main.name == "MainCharacter" {
                 if let main = main as? SKSpriteNode {
-
+                    let offsetX: CGFloat = main.frame.size.width * (main.anchorPoint.x - 0.05)
+                    let offsetY: CGFloat = main.frame.size.height * (main.anchorPoint.y - 0.05)
+                    
+                    let path = CGMutablePath()
+                    path.move(to: CGPoint(x: 48 - offsetX, y: 35 - offsetY))
+                    path.addLine(to: CGPoint(x: 110 - offsetX, y: 35 - offsetY))
+                    path.addLine(to: CGPoint(x: 123 - offsetX, y: 52 - offsetY))
+                    path.addLine(to: CGPoint(x: 127 - offsetX, y: 82 - offsetY))
+                    path.addLine(to: CGPoint(x: 123 - offsetX, y: 202 - offsetY))
+                    path.addLine(to: CGPoint(x: 104 - offsetX, y: 214 - offsetY))
+                    path.addLine(to: CGPoint(x: 68 - offsetX, y: 218 - offsetY))
+                    path.addLine(to: CGPoint(x: 36 - offsetX, y: 209 - offsetY))
+                    path.addLine(to: CGPoint(x: 25 - offsetX, y: 199 - offsetY))
+                    path.addLine(to: CGPoint(x: 27 - offsetX, y: 67 - offsetY))
+                    path.addLine(to: CGPoint(x: 33 - offsetX, y: 47 - offsetY))
+                    path.closeSubpath()
+                    
+                    main.physicsBody! = SKPhysicsBody(polygonFrom: path)
                     main.physicsBody?.friction = 0.2
                     main.physicsBody?.restitution = 0.3
+                    main.physicsBody?.restitution = 0.45
                     main.physicsBody?.linearDamping = 0.2
                     main.physicsBody?.angularDamping = 0.2
                     main.physicsBody?.mass = 2.0
