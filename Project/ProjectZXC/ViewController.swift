@@ -10,7 +10,7 @@ import UIKit
 import SpriteKit
 
 public var thisScene = 1
-public var topScene = 20
+public var topScene = 90
 public var buttonTitle : String = ""
 
 
@@ -41,7 +41,7 @@ class ViewController: UIViewController {
     @IBAction func buttonLevel1(_ sender: AnyObject) {
         
         buttonTitle = sender.currentTitle!!
-        
+        thisScene = Int(buttonTitle)!
         print(String(buttonTitle))
         self.performSegue(withIdentifier: "GoToGameViewController", sender: self)
         

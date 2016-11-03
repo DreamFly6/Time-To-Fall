@@ -559,9 +559,11 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         }
         else {
             mainChrctr?.texture = SKTexture(imageNamed: "MainCharacter")
+            if((mainChrctr?.physicsBody?.velocity.dy)! < CGFloat(6.0) || (mainChrctr?.physicsBody?.velocity.dy)! > CGFloat(0.0)) {
+                //сделать антибаг
+                print("ПРЫГ")
+            }
         }
-        
-        print((mainChrctr?.physicsBody?.velocity.dy.description)!+"<-----")
 
 
         //если ГГ улетел за сцену, показываем меню
@@ -575,7 +577,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     }
     
     override func update(_ currentTime: TimeInterval) {  /* Called before each frame is rendered */
-
+        //print("this "+String(thisScene)+" top "+String(topScene))
     }
     
     
