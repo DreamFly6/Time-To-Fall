@@ -1,4 +1,4 @@
-// Ver 0.0000000013
+// Ver 0.0000000014
 
 import SpriteKit
 fileprivate func < <T : Comparable>(lhs: T?, rhs: T?) -> Bool {
@@ -24,7 +24,10 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     
      var viewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "GameViewController") as UIViewController
 
-    
+    //Рандомные FLOAT цифры
+    func randomBetweenNumbers(firstNum: CGFloat, secondNum: CGFloat) -> CGFloat{
+        return CGFloat(arc4random()) / CGFloat(UINT32_MAX) * abs(firstNum - secondNum) + min(firstNum, secondNum)
+    }
     
   
     
@@ -137,9 +140,11 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                     main.physicsBody?.categoryBitMask = 1
                     main.physicsBody?.contactTestBitMask = 2
                     main.physicsBody?.collisionBitMask =  2
+
                 }
             }
         }
+
 
         
         //  Инициализация Ground
@@ -157,6 +162,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                     ground.physicsBody?.categoryBitMask = 2;
                     ground.physicsBody?.contactTestBitMask = 1;
                     ground.physicsBody?.collisionBitMask =  1;
+                    ground.color = #colorLiteral(red:Float(randomBetweenNumbers(firstNum: 0.0, secondNum:1.0)), green: Float(randomBetweenNumbers(firstNum: 0.0, secondNum:1.0)), blue: Float(randomBetweenNumbers(firstNum: 0.0, secondNum:1.0)), alpha: 1)
                 }
             }
         }
@@ -542,6 +548,32 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             }
             
         }
+        
+//        if (mainChrctr?.physicsBody?.isDynamic)! {
+//            print("DINAMICS")
+//        }
+//        else {
+//            print("NOT_DINAMICS")
+//        }
+//        
+//        if (mainChrctr?.physicsBody?.isResting)! {
+//            print("RESTING")
+//        }
+//        else {
+//            print("NOT_RESTING")
+//        }
+        
+        //Если персонаж не прикасается к поверхности, он меняет анимацию
+        if ((mainChrctr?.physicsBody?.velocity.dy)! > CGFloat(400.0) || (mainChrctr?.physicsBody?.velocity.dy)! < CGFloat(-400.0)) {
+            //print("OOOO")
+            mainChrctr?.texture = SKTexture(imageNamed: "MainCharacter_scare")
+        }
+        else {
+            mainChrctr?.texture = SKTexture(imageNamed: "MainCharacter")
+            //print("XXXX")
+        }
+        
+        print((mainChrctr?.physicsBody?.velocity.dy.description)!+"<-----")
 
 
         //если ГГ улетел за сцену, показываем меню
