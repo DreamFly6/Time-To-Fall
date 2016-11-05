@@ -10,7 +10,7 @@ import UIKit
 import SpriteKit
 
 public var thisScene = 1
-public var topScene = 90
+public var topScene = 21
 public var buttonTitle : String = ""
 
 
