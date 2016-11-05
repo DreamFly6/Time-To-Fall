@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="jC2-zd-pnK">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="jC2-zd-pnK">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
@@ -32,7 +32,7 @@
                                     <color key="titleShadowColor" name="controlDarkShadowColor" catalog="System" colorSpace="catalog"/>
                                 </state>
                                 <connections>
-                                    <segue destination="Zdr-oO-o6b" kind="show" id="VOA-lr-Xpa"/>
+                                    <segue destination="PDi-oG-0zJ" kind="show" id="dPW-Vv-bJ8"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fJo-bh-ZtI">
@@ -54,120 +54,10 @@
             </objects>
             <point key="canvasLocation" x="-721" y="-1039"/>
         </scene>
-        <!--Table View Controller-->
-        <scene sceneID="FUD-Yx-c7q">
-            <objects>
-                <tableViewController id="Zdr-oO-o6b" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" indicatorStyle="black" dataMode="static" style="plain" separatorStyle="default" rowHeight="138" sectionHeaderHeight="28" sectionFooterHeight="28" id="KKl-Zy-tvc">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <color key="separatorColor" red="0.25876882950000002" green="0.27759480339999998" blue="0.38945926050000002" alpha="1" colorSpace="calibratedRGB"/>
-                        <color key="sectionIndexBackgroundColor" name="knobColor" catalog="System" colorSpace="catalog"/>
-                        <sections>
-                            <tableViewSection id="2pJ-8s-udJ">
-                                <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" semanticContentAttribute="playback" selectionStyle="gray" indentationLevel="9" indentationWidth="20" rowHeight="376" id="iZj-bd-cUd">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="376"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="iZj-bd-cUd" id="6eO-kv-9gN">
-                                            <frame key="frameInset" width="375" height="375.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Oxa-Ww-Fsq">
-                                                    <frame key="frameInset" minX="2.00%" minY="1.47%" width="95.60%" height="96.41%"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="45"/>
-                                                    <color key="tintColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
-                                                    <state key="normal" title="Stage 1" backgroundImage="WoodenBox"/>
-                                                    <connections>
-                                                        <segue destination="tZT-fh-9NA" kind="show" id="BMl-Bn-Sl2"/>
-                                                    </connections>
-                                                </button>
-                                            </subviews>
-                                            <color key="tintColor" name="alternateSelectedControlColor" catalog="System" colorSpace="catalog"/>
-                                        </tableViewCellContentView>
-                                        <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                    </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" semanticContentAttribute="playback" selectionStyle="gray" indentationLevel="9" indentationWidth="20" rowHeight="375" id="xwT-bX-8bH">
-                                        <rect key="frame" x="0.0" y="376" width="375" height="375"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="xwT-bX-8bH" id="IZw-tZ-0xV">
-                                            <frame key="frameInset" width="375" height="374.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ru4-fa-81v">
-                                                    <frame key="frameInset" minX="2.13%" minY="1.87%" width="95.60%" height="96.53%"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="45"/>
-                                                    <color key="tintColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
-                                                    <state key="normal" title="Stage 2" backgroundImage="StoneBlock"/>
-                                                </button>
-                                            </subviews>
-                                            <color key="tintColor" name="alternateSelectedControlColor" catalog="System" colorSpace="catalog"/>
-                                        </tableViewCellContentView>
-                                        <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                    </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" semanticContentAttribute="playback" selectionStyle="gray" indentationLevel="9" indentationWidth="20" rowHeight="375" id="dYE-9k-OMh">
-                                        <rect key="frame" x="0.0" y="751" width="375" height="375"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="dYE-9k-OMh" id="F0C-UX-DfA">
-                                            <frame key="frameInset" width="375" height="374.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="biX-Dz-dJL">
-                                                    <frame key="frameInset" minX="2.00%" minY="1.74%" width="95.73%" height="96.53%"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
-                                                    <color key="backgroundColor" red="0.25876882950000002" green="0.27759480339999998" blue="0.38945926050000002" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="45"/>
-                                                    <color key="tintColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
-                                                    <state key="normal" title="Stage 3" backgroundImage="GlassBlock"/>
-                                                </button>
-                                            </subviews>
-                                            <color key="tintColor" name="alternateSelectedControlColor" catalog="System" colorSpace="catalog"/>
-                                        </tableViewCellContentView>
-                                        <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                    </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" semanticContentAttribute="playback" selectionStyle="gray" indentationLevel="9" indentationWidth="20" rowHeight="375" id="tBe-33-BWh">
-                                        <rect key="frame" x="0.0" y="1126" width="375" height="375"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="tBe-33-BWh" id="36L-NK-Wao">
-                                            <frame key="frameInset" width="375" height="374.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Un-hB-sBK">
-                                                    <frame key="frameInset" minX="2.00%" minY="1.74%" width="95.73%" height="96.53%"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="45"/>
-                                                    <color key="tintColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
-                                                    <state key="normal" title="Stage 4" backgroundImage="ActivaBlock_On"/>
-                                                </button>
-                                            </subviews>
-                                            <color key="tintColor" name="alternateSelectedControlColor" catalog="System" colorSpace="catalog"/>
-                                        </tableViewCellContentView>
-                                        <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                    </tableViewCell>
-                                </cells>
-                            </tableViewSection>
-                        </sections>
-                        <connections>
-                            <outlet property="dataSource" destination="Zdr-oO-o6b" id="Ndw-Hl-02l"/>
-                            <outlet property="delegate" destination="Zdr-oO-o6b" id="Uz6-GW-VuM"/>
-                        </connections>
-                    </tableView>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Vtz-MX-nla" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1" y="-360"/>
-        </scene>
         <!--View Controller-->
         <scene sceneID="59C-w9-YyG">
             <objects>
-                <viewController storyboardIdentifier="Menu1" id="tZT-fh-9NA" customClass="ViewController" customModule="ProjectZXC" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="One" id="tZT-fh-9NA" customClass="ViewController" customModule="ProjectZXC" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="nfd-dL-lq1"/>
                         <viewControllerLayoutGuide type="bottom" id="DsP-zo-ytl"/>
@@ -442,7 +332,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                 <state key="normal" title="Menu" backgroundImage="MenuBoard"/>
                                 <connections>
-                                    <segue destination="Zdr-oO-o6b" kind="show" identifier="" id="niA-ea-5fX"/>
+                                    <segue destination="jC2-zd-pnK" kind="show" id="7YK-DB-9VQ"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -454,7 +344,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fSZ-S0-9nV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1735" y="-1075"/>
+            <point key="canvasLocation" x="1674" y="-1537"/>
         </scene>
         <!--Game View Controller-->
         <scene sceneID="LtY-X4-3S3">
@@ -480,7 +370,7 @@
         <!--View Controller-->
         <scene sceneID="K1L-7A-dnF">
             <objects>
-                <viewController storyboardIdentifier="menulol2" id="yLZ-da-FN1" customClass="ViewController" customModule="ProjectZXC" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Two" id="yLZ-da-FN1" customClass="ViewController" customModule="ProjectZXC" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="IrR-LX-ILK"/>
                         <viewControllerLayoutGuide type="bottom" id="ftc-Vw-fRp"/>
@@ -556,7 +446,7 @@
                                 <color key="tintColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 <state key="normal" title="Menu" backgroundImage="MenuBoard"/>
                                 <connections>
-                                    <segue destination="Zdr-oO-o6b" kind="show" id="jbh-tk-fxD"/>
+                                    <segue destination="jC2-zd-pnK" kind="show" id="xur-7c-ZLw"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -565,12 +455,28 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="coi-yn-EUx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="633" y="-1522"/>
+            <point key="canvasLocation" x="751" y="-1655"/>
+        </scene>
+        <!--Page View Controller-->
+        <scene sceneID="CPc-IU-N2j">
+            <objects>
+                <viewController id="PDi-oG-0zJ" customClass="PageViewController" customModule="ProjectZXC" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Sej-F1-5i7"/>
+                        <viewControllerLayoutGuide type="bottom" id="OTZ-8C-TMN"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="xT6-hM-NU9">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="l2A-X7-68Z" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="266" y="-795"/>
         </scene>
     </scenes>
     <resources>
-        <image name="ActivaBlock_On" width="600" height="600"/>
-        <image name="GlassBlock" width="600" height="600"/>
         <image name="MenuBg1" width="1080" height="1920"/>
         <image name="MenuBoard" width="720" height="480"/>
         <image name="MenuSelect1" width="600" height="600"/>
@@ -579,6 +485,6 @@
         <image name="backgroundMainMenu.png" width="1080" height="1920"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="niA-ea-5fX"/>
+        <segue reference="xur-7c-ZLw"/>
     </inferredMetricsTieBreakers>
 </document>
