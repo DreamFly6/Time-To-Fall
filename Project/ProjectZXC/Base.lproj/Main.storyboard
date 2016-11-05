@@ -353,11 +353,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fSZ-S0-9nV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-<<<<<<< HEAD
-            <point key="canvasLocation" x="1246" y="-1447"/>
-=======
             <point key="canvasLocation" x="-86" y="-1048"/>
->>>>>>> origin/master
         </scene>
         <!--Game View Controller-->
         <scene sceneID="LtY-X4-3S3">
@@ -423,8 +419,7 @@
                                     <color key="titleShadowColor" name="knobColor" catalog="System" colorSpace="catalog"/>
                                 </state>
                                 <connections>
-                                    <action selector="buttonLevel1:" destination="tZT-fh-9NA" eventType="touchUpInside" id="8nS-sb-QMn"/>
-                                    <action selector="buttonLevel1:" destination="yLZ-da-FN1" eventType="touchUpInside" id="lnX-On-Spb"/>
+                                    <action selector="buttonLevel1:" destination="yLZ-da-FN1" eventType="touchUpInside" id="SaU-dG-uZy"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xyh-Bu-fEW">
@@ -440,8 +435,7 @@
                                     <color key="titleShadowColor" name="knobColor" catalog="System" colorSpace="catalog"/>
                                 </state>
                                 <connections>
-                                    <action selector="buttonLevel1:" destination="tZT-fh-9NA" eventType="touchUpInside" id="MgP-SS-GoB"/>
-                                    <action selector="buttonLevel1:" destination="yLZ-da-FN1" eventType="touchUpInside" id="yrv-ey-baV"/>
+                                    <action selector="buttonLevel1:" destination="yLZ-da-FN1" eventType="touchUpInside" id="CFi-sf-P7R"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ntr-6L-52d">
@@ -457,8 +451,7 @@
                                     <color key="titleShadowColor" name="knobColor" catalog="System" colorSpace="catalog"/>
                                 </state>
                                 <connections>
-                                    <action selector="buttonLevel1:" destination="yLZ-da-FN1" eventType="touchUpInside" id="ExH-hE-xdL"/>
-                                    <action selector="buttonLevel1:" destination="tZT-fh-9NA" eventType="touchUpInside" id="uJe-v2-ltQ"/>
+                                    <action selector="buttonLevel1:" destination="yLZ-da-FN1" eventType="touchUpInside" id="Pw4-9f-yvm"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cz0-6R-cpm">
@@ -474,7 +467,7 @@
                                     <color key="titleShadowColor" name="knobColor" catalog="System" colorSpace="catalog"/>
                                 </state>
                                 <connections>
-                                    <action selector="buttonLevel1:" destination="tZT-fh-9NA" eventType="touchUpInside" id="54c-Un-spo"/>
+                                    <action selector="buttonLevel1:" destination="yLZ-da-FN1" eventType="touchUpInside" id="rCJ-to-qeV"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jzr-Xe-bX9">
@@ -490,7 +483,7 @@
                                     <color key="titleShadowColor" name="knobColor" catalog="System" colorSpace="catalog"/>
                                 </state>
                                 <connections>
-                                    <action selector="buttonLevel1:" destination="tZT-fh-9NA" eventType="touchUpInside" id="FsD-uJ-SQ0"/>
+                                    <action selector="buttonLevel1:" destination="yLZ-da-FN1" eventType="touchUpInside" id="Xzs-vY-aVg"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9f8-fS-owK">
@@ -506,7 +499,7 @@
                                     <color key="titleShadowColor" name="knobColor" catalog="System" colorSpace="catalog"/>
                                 </state>
                                 <connections>
-                                    <action selector="buttonLevel1:" destination="tZT-fh-9NA" eventType="touchUpInside" id="2Wf-2V-yQp"/>
+                                    <action selector="buttonLevel1:" destination="yLZ-da-FN1" eventType="touchUpInside" id="bwj-5T-OiZ"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qTM-Ow-3vJ">
@@ -522,7 +515,7 @@
                                     <color key="titleShadowColor" name="knobColor" catalog="System" colorSpace="catalog"/>
                                 </state>
                                 <connections>
-                                    <action selector="buttonLevel1:" destination="tZT-fh-9NA" eventType="touchUpInside" id="rzr-ME-gkw"/>
+                                    <action selector="buttonLevel1:" destination="yLZ-da-FN1" eventType="touchUpInside" id="mOq-Jw-48o"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Ve-Rf-DPf">
@@ -538,7 +531,7 @@
                                     <color key="titleShadowColor" name="knobColor" catalog="System" colorSpace="catalog"/>
                                 </state>
                                 <connections>
-                                    <action selector="buttonLevel1:" destination="tZT-fh-9NA" eventType="touchUpInside" id="9C7-eg-6bX"/>
+                                    <action selector="buttonLevel1:" destination="yLZ-da-FN1" eventType="touchUpInside" id="kVG-iM-6nq"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9UF-oI-bMj">
@@ -554,7 +547,7 @@
                                     <color key="titleShadowColor" name="knobColor" catalog="System" colorSpace="catalog"/>
                                 </state>
                                 <connections>
-                                    <action selector="buttonLevel1:" destination="tZT-fh-9NA" eventType="touchUpInside" id="GOS-9n-1kc"/>
+                                    <action selector="buttonLevel1:" destination="yLZ-da-FN1" eventType="touchUpInside" id="c9M-SI-d9c"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BsB-v6-ZDr">
@@ -570,7 +563,7 @@
                                     <color key="titleShadowColor" name="knobColor" catalog="System" colorSpace="catalog"/>
                                 </state>
                                 <connections>
-                                    <action selector="buttonLevel1:" destination="tZT-fh-9NA" eventType="touchUpInside" id="aaT-ac-asZ"/>
+                                    <action selector="buttonLevel1:" destination="yLZ-da-FN1" eventType="touchUpInside" id="tTw-jA-UT7"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E3R-jg-FV2">
@@ -586,7 +579,7 @@
                                     <color key="titleShadowColor" name="knobColor" catalog="System" colorSpace="catalog"/>
                                 </state>
                                 <connections>
-                                    <action selector="buttonLevel1:" destination="tZT-fh-9NA" eventType="touchUpInside" id="0fF-1x-qSo"/>
+                                    <action selector="buttonLevel1:" destination="yLZ-da-FN1" eventType="touchUpInside" id="XEu-HA-1h5"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SxD-Xw-pnA">
@@ -602,7 +595,7 @@
                                     <color key="titleShadowColor" name="knobColor" catalog="System" colorSpace="catalog"/>
                                 </state>
                                 <connections>
-                                    <action selector="buttonLevel1:" destination="tZT-fh-9NA" eventType="touchUpInside" id="Buh-ow-SeD"/>
+                                    <action selector="buttonLevel1:" destination="yLZ-da-FN1" eventType="touchUpInside" id="o1X-wq-anp"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uje-m2-oPW">
@@ -618,7 +611,7 @@
                                     <color key="titleShadowColor" name="knobColor" catalog="System" colorSpace="catalog"/>
                                 </state>
                                 <connections>
-                                    <action selector="buttonLevel1:" destination="tZT-fh-9NA" eventType="touchUpInside" id="TQG-xi-aKV"/>
+                                    <action selector="buttonLevel1:" destination="yLZ-da-FN1" eventType="touchUpInside" id="UQ8-iC-wOv"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZYY-Bl-v2C">
@@ -634,7 +627,7 @@
                                     <color key="titleShadowColor" name="knobColor" catalog="System" colorSpace="catalog"/>
                                 </state>
                                 <connections>
-                                    <action selector="buttonLevel1:" destination="tZT-fh-9NA" eventType="touchUpInside" id="fTF-Lg-8dd"/>
+                                    <action selector="buttonLevel1:" destination="yLZ-da-FN1" eventType="touchUpInside" id="sGq-IF-fm2"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p37-1e-MGc">
@@ -650,7 +643,7 @@
                                     <color key="titleShadowColor" name="knobColor" catalog="System" colorSpace="catalog"/>
                                 </state>
                                 <connections>
-                                    <action selector="buttonLevel1:" destination="tZT-fh-9NA" eventType="touchUpInside" id="7ZN-I8-I7J"/>
+                                    <action selector="buttonLevel1:" destination="yLZ-da-FN1" eventType="touchUpInside" id="UXj-Q2-a5f"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PWM-2d-KDe">
@@ -666,8 +659,7 @@
                                     <color key="titleShadowColor" name="knobColor" catalog="System" colorSpace="catalog"/>
                                 </state>
                                 <connections>
-                                    <action selector="buttonLevel1:" destination="yLZ-da-FN1" eventType="touchUpInside" id="OJO-dk-T3D"/>
-                                    <action selector="buttonLevel1:" destination="tZT-fh-9NA" eventType="touchUpInside" id="aPR-X2-lTn"/>
+                                    <action selector="buttonLevel1:" destination="yLZ-da-FN1" eventType="touchUpInside" id="9VC-ZK-eQ6"/>
                                 </connections>
                             </button>
                             <pageControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="2" currentPage="1" translatesAutoresizingMaskIntoConstraints="NO" id="FK5-cq-cCM">
@@ -678,12 +670,12 @@
                         <color key="tintColor" name="keyboardFocusIndicatorColor" catalog="System" colorSpace="catalog"/>
                     </view>
                     <connections>
-                        <segue destination="he1-fk-wh8" kind="show" identifier="GoToGameViewController" id="jm3-Uw-ed4"/>
+                        <segue destination="he1-fk-wh8" kind="show" identifier="GoToGameViewController" id="bGM-qk-ksc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="coi-yn-EUx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="575" y="-1048"/>
+            <point key="canvasLocation" x="1245.5999999999999" y="-1566.5667166416792"/>
         </scene>
         <!--Page View Controller-->
         <scene sceneID="CPc-IU-N2j">
@@ -714,11 +706,7 @@
         <image name="backgroundMainMenu.png" width="1080" height="1920"/>
     </resources>
     <inferredMetricsTieBreakers>
-<<<<<<< HEAD
-        <segue reference="7YK-DB-9VQ"/>
-        <segue reference="jm3-Uw-ed4"/>
-=======
         <segue reference="xur-7c-ZLw"/>
->>>>>>> origin/master
+        <segue reference="bGM-qk-ksc"/>
     </inferredMetricsTieBreakers>
 </document>
