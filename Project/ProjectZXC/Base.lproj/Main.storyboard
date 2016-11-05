@@ -98,14 +98,11 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ru4-fa-81v">
-                                                    <frame key="frameInset" minX="2.00%" minY="1.60%" width="95.60%" height="96.53%"/>
+                                                    <frame key="frameInset" minX="2.13%" minY="1.87%" width="95.60%" height="96.53%"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="45"/>
                                                     <color key="tintColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
                                                     <state key="normal" title="Stage 2" backgroundImage="StoneBlock"/>
-                                                    <connections>
-                                                        <segue destination="yLZ-da-FN1" kind="show" id="ink-kd-yIA"/>
-                                                    </connections>
                                                 </button>
                                             </subviews>
                                             <color key="tintColor" name="alternateSelectedControlColor" catalog="System" colorSpace="catalog"/>
@@ -165,7 +162,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Vtz-MX-nla" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="82" y="-871"/>
+            <point key="canvasLocation" x="1" y="-360"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="59C-w9-YyG">
@@ -179,18 +176,20 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="backgroundMainMenu.png" translatesAutoresizingMaskIntoConstraints="NO" id="mjE-vE-aRh">
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="MenuBg1" translatesAutoresizingMaskIntoConstraints="NO" id="mjE-vE-aRh">
                                 <frame key="frameInset" minX="-8.80%" minY="-8.92%" width="110.40%" height="111.02%"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QCZ-W5-2xa">
                                 <frame key="frameInset" minX="6.40%" minY="9.00%" width="18.40%" height="10.50%"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.25876882950000002" green="0.27759480339999998" blue="0.38945926050000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <accessibility key="accessibilityConfiguration" label="menuSelecter"/>
                                 <fontDescription key="fontDescription" name="AvenirNextCondensed-Regular" family="Avenir Next Condensed" pointSize="30"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <size key="titleShadowOffset" width="1" height="1"/>
-                                <state key="normal" title="1" backgroundImage="StoneBlock">
+                                <state key="normal" title="1" backgroundImage="MenuSelect1">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" name="knobColor" catalog="System" colorSpace="catalog"/>
                                 </state>
                                 <connections>
@@ -200,11 +199,13 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8sZ-O8-jgY">
                                 <frame key="frameInset" minX="29.20%" minY="9.00%" width="18.40%" height="10.50%"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.25876882950000002" green="0.27759480339999998" blue="0.38945926050000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <accessibility key="accessibilityConfiguration" label="menuSelecter"/>
                                 <fontDescription key="fontDescription" name="AvenirNextCondensed-Regular" family="Avenir Next Condensed" pointSize="30"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <size key="titleShadowOffset" width="1" height="1"/>
-                                <state key="normal" title="2" backgroundImage="StoneBlock">
+                                <state key="normal" title="2" backgroundImage="MenuSelect1">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" name="knobColor" catalog="System" colorSpace="catalog"/>
                                 </state>
                                 <connections>
@@ -214,11 +215,13 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uBR-lg-hF7">
                                 <frame key="frameInset" minX="52.00%" minY="9.00%" width="18.40%" height="10.50%"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.25876882950000002" green="0.27759480339999998" blue="0.38945926050000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <accessibility key="accessibilityConfiguration" label="menuSelecter"/>
                                 <fontDescription key="fontDescription" name="AvenirNextCondensed-Regular" family="Avenir Next Condensed" pointSize="30"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <size key="titleShadowOffset" width="1" height="1"/>
-                                <state key="normal" title="3" backgroundImage="StoneBlock">
+                                <state key="normal" title="3" backgroundImage="MenuSelect1">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" name="knobColor" catalog="System" colorSpace="catalog"/>
                                 </state>
                                 <connections>
@@ -228,11 +231,13 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lj7-QD-CSB">
                                 <frame key="frameInset" minX="75.20%" minY="9.00%" width="18.40%" height="10.50%"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.25876882950000002" green="0.27759480339999998" blue="0.38945926050000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <accessibility key="accessibilityConfiguration" label="menuSelecter"/>
                                 <fontDescription key="fontDescription" name="AvenirNextCondensed-Regular" family="Avenir Next Condensed" pointSize="30"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <size key="titleShadowOffset" width="1" height="1"/>
-                                <state key="normal" title="4" backgroundImage="StoneBlock">
+                                <state key="normal" title="4" backgroundImage="MenuSelect1">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" name="knobColor" catalog="System" colorSpace="catalog"/>
                                 </state>
                                 <connections>
@@ -242,11 +247,13 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="csR-SN-fwL">
                                 <frame key="frameInset" minX="6.40%" minY="24.44%" width="18.40%" height="10.35%"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.25876882950000002" green="0.27759480339999998" blue="0.38945926050000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <accessibility key="accessibilityConfiguration" label="menuSelecter"/>
                                 <fontDescription key="fontDescription" name="AvenirNextCondensed-Regular" family="Avenir Next Condensed" pointSize="30"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <size key="titleShadowOffset" width="1" height="1"/>
-                                <state key="normal" title="5" backgroundImage="StoneBlock">
+                                <state key="normal" title="5" backgroundImage="MenuSelect1">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" name="knobColor" catalog="System" colorSpace="catalog"/>
                                 </state>
                                 <connections>
@@ -256,11 +263,13 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6fV-zs-Pbc">
                                 <frame key="frameInset" minX="29.20%" minY="24.44%" width="18.40%" height="10.35%"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.25876882950000002" green="0.27759480339999998" blue="0.38945926050000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <accessibility key="accessibilityConfiguration" label="menuSelecter"/>
                                 <fontDescription key="fontDescription" name="AvenirNextCondensed-Regular" family="Avenir Next Condensed" pointSize="30"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <size key="titleShadowOffset" width="1" height="1"/>
-                                <state key="normal" title="6" backgroundImage="StoneBlock">
+                                <state key="normal" title="6" backgroundImage="MenuSelect1">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" name="knobColor" catalog="System" colorSpace="catalog"/>
                                 </state>
                                 <connections>
@@ -270,11 +279,13 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N3L-yD-7YR">
                                 <frame key="frameInset" minX="52.00%" minY="24.44%" width="18.40%" height="10.35%"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.25876882950000002" green="0.27759480339999998" blue="0.38945926050000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <accessibility key="accessibilityConfiguration" label="menuSelecter"/>
                                 <fontDescription key="fontDescription" name="AvenirNextCondensed-Regular" family="Avenir Next Condensed" pointSize="30"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <size key="titleShadowOffset" width="1" height="1"/>
-                                <state key="normal" title="7" backgroundImage="StoneBlock">
+                                <state key="normal" title="7" backgroundImage="MenuSelect1">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" name="knobColor" catalog="System" colorSpace="catalog"/>
                                 </state>
                                 <connections>
@@ -284,11 +295,13 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dyg-yB-FUj">
                                 <frame key="frameInset" minX="75.20%" minY="24.44%" width="18.40%" height="10.35%"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.25876882950000002" green="0.27759480339999998" blue="0.38945926050000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <accessibility key="accessibilityConfiguration" label="menuSelecter"/>
                                 <fontDescription key="fontDescription" name="AvenirNextCondensed-Regular" family="Avenir Next Condensed" pointSize="30"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <size key="titleShadowOffset" width="1" height="1"/>
-                                <state key="normal" title="8" backgroundImage="StoneBlock">
+                                <state key="normal" title="8" backgroundImage="MenuSelect1">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" name="knobColor" catalog="System" colorSpace="catalog"/>
                                 </state>
                                 <connections>
@@ -298,11 +311,13 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wYF-rK-Izs">
                                 <frame key="frameInset" minX="6.40%" minY="41.08%" width="18.40%" height="10.35%"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.25538635563977291" green="0.27473711644241344" blue="0.38945926050000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <accessibility key="accessibilityConfiguration" label="menuSelecter"/>
                                 <fontDescription key="fontDescription" name="AvenirNextCondensed-Regular" family="Avenir Next Condensed" pointSize="30"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <size key="titleShadowOffset" width="1" height="1"/>
-                                <state key="normal" title="9" backgroundImage="StoneBlock">
+                                <state key="normal" title="9" backgroundImage="MenuSelect1">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" name="knobColor" catalog="System" colorSpace="catalog"/>
                                 </state>
                                 <connections>
@@ -312,11 +327,13 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oN8-ki-erw">
                                 <frame key="frameInset" minX="29.20%" minY="41.08%" width="18.40%" height="10.35%"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.25876882950000002" green="0.27759480339999998" blue="0.38945926050000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <accessibility key="accessibilityConfiguration" label="menuSelecter"/>
                                 <fontDescription key="fontDescription" name="AvenirNextCondensed-Regular" family="Avenir Next Condensed" pointSize="30"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <size key="titleShadowOffset" width="1" height="1"/>
-                                <state key="normal" title="10" backgroundImage="StoneBlock">
+                                <state key="normal" title="10" backgroundImage="MenuSelect1">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" name="knobColor" catalog="System" colorSpace="catalog"/>
                                 </state>
                                 <connections>
@@ -326,11 +343,13 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="30a-N5-w7l">
                                 <frame key="frameInset" minX="52.00%" minY="41.08%" width="18.40%" height="10.35%"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.25876882950000002" green="0.27759480339999998" blue="0.38945926050000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <accessibility key="accessibilityConfiguration" label="menuSelecter"/>
                                 <fontDescription key="fontDescription" name="AvenirNextCondensed-Regular" family="Avenir Next Condensed" pointSize="30"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <size key="titleShadowOffset" width="1" height="1"/>
-                                <state key="normal" title="11" backgroundImage="StoneBlock">
+                                <state key="normal" title="11" backgroundImage="MenuSelect1">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" name="knobColor" catalog="System" colorSpace="catalog"/>
                                 </state>
                                 <connections>
@@ -340,34 +359,29 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zLp-Dw-h4N">
                                 <frame key="frameInset" minX="75.20%" minY="41.08%" width="18.40%" height="10.35%"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.25876882950000002" green="0.27759480339999998" blue="0.38945926050000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <accessibility key="accessibilityConfiguration" label="menuSelecter"/>
                                 <fontDescription key="fontDescription" name="AvenirNextCondensed-Regular" family="Avenir Next Condensed" pointSize="30"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <size key="titleShadowOffset" width="1" height="1"/>
-                                <state key="normal" title="12" backgroundImage="StoneBlock">
+                                <state key="normal" title="12" backgroundImage="MenuSelect1">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" name="knobColor" catalog="System" colorSpace="catalog"/>
                                 </state>
                                 <connections>
                                     <action selector="buttonLevel1:" destination="tZT-fh-9NA" eventType="touchUpInside" id="ORs-3Y-pWG"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mna-Hy-efS">
-                                <frame key="frameInset" minX="7.20%" minY="85.16%" width="18.67%" height="10.50%"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
-                                <state key="normal" title="Menu" backgroundImage="MenuBoard"/>
-                                <connections>
-                                    <segue destination="Zdr-oO-o6b" kind="show" identifier="" id="niA-ea-5fX"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X3k-5e-Zfh">
                                 <frame key="frameInset" minX="6.40%" minY="58.70%" width="18.40%" height="10.42%"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.2553863556" green="0.27473711639999998" blue="0.38945926050000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <accessibility key="accessibilityConfiguration" label="menuSelecter"/>
                                 <fontDescription key="fontDescription" name="AvenirNextCondensed-Regular" family="Avenir Next Condensed" pointSize="30"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <size key="titleShadowOffset" width="1" height="1"/>
-                                <state key="normal" title="13" backgroundImage="StoneBlock">
+                                <state key="normal" title="13" backgroundImage="MenuSelect1">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" name="knobColor" catalog="System" colorSpace="catalog"/>
                                 </state>
                                 <connections>
@@ -377,11 +391,13 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xs3-qc-cyB">
                                 <frame key="frameInset" minX="29.20%" minY="58.70%" width="18.40%" height="10.42%"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.25876882950000002" green="0.27759480339999998" blue="0.38945926050000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <accessibility key="accessibilityConfiguration" label="menuSelecter"/>
                                 <fontDescription key="fontDescription" name="AvenirNextCondensed-Regular" family="Avenir Next Condensed" pointSize="30"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <size key="titleShadowOffset" width="1" height="1"/>
-                                <state key="normal" title="14" backgroundImage="StoneBlock">
+                                <state key="normal" title="14" backgroundImage="MenuSelect1">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" name="knobColor" catalog="System" colorSpace="catalog"/>
                                 </state>
                                 <connections>
@@ -391,11 +407,13 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DdM-Hm-irr">
                                 <frame key="frameInset" minX="52.00%" minY="58.70%" width="18.40%" height="10.42%"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.25876882950000002" green="0.27759480339999998" blue="0.38945926050000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <accessibility key="accessibilityConfiguration" label="menuSelecter"/>
                                 <fontDescription key="fontDescription" name="AvenirNextCondensed-Regular" family="Avenir Next Condensed" pointSize="30"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <size key="titleShadowOffset" width="1" height="1"/>
-                                <state key="normal" title="15" backgroundImage="StoneBlock">
+                                <state key="normal" title="15" backgroundImage="MenuSelect1">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" name="knobColor" catalog="System" colorSpace="catalog"/>
                                 </state>
                                 <connections>
@@ -405,15 +423,26 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X26-E6-Al6">
                                 <frame key="frameInset" minX="75.20%" minY="58.70%" width="18.40%" height="10.42%"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.25876882950000002" green="0.27759480339999998" blue="0.38945926050000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <accessibility key="accessibilityConfiguration" label="menuSelecter"/>
                                 <fontDescription key="fontDescription" name="AvenirNextCondensed-Regular" family="Avenir Next Condensed" pointSize="30"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <size key="titleShadowOffset" width="1" height="1"/>
-                                <state key="normal" title="33" backgroundImage="StoneBlock">
+                                <state key="normal" title="33" backgroundImage="MenuSelect1">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" name="knobColor" catalog="System" colorSpace="catalog"/>
                                 </state>
                                 <connections>
                                     <action selector="buttonLevel1:" destination="tZT-fh-9NA" eventType="touchUpInside" id="eB3-ew-1Rf"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mna-Hy-efS">
+                                <frame key="frameInset" minX="7.20%" minY="85.16%" width="18.67%" height="10.50%"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <state key="normal" title="Menu" backgroundImage="MenuBoard"/>
+                                <connections>
+                                    <segue destination="Zdr-oO-o6b" kind="show" identifier="" id="niA-ea-5fX"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -542,7 +571,9 @@
     <resources>
         <image name="ActivaBlock_On" width="600" height="600"/>
         <image name="GlassBlock" width="600" height="600"/>
+        <image name="MenuBg1" width="1080" height="1920"/>
         <image name="MenuBoard" width="720" height="480"/>
+        <image name="MenuSelect1" width="600" height="600"/>
         <image name="StoneBlock" width="600" height="600"/>
         <image name="WoodenBox" width="600" height="600"/>
         <image name="backgroundMainMenu.png" width="1080" height="1920"/>
@@ -550,5 +581,4 @@
     <inferredMetricsTieBreakers>
         <segue reference="niA-ea-5fX"/>
     </inferredMetricsTieBreakers>
-    <color key="tintColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
 </document>
