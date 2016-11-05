@@ -525,6 +525,14 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         /* Меню в конце сцены */
         if onGround == false {
             onGroundTime = 0
+            for progressBar in self.children {
+                if progressBar.name == "ProgressBar" {
+                    if let progressBar = progressBar as? SKSpriteNode {
+                        progressBar.size.width = 0
+                        progressBar.color = UIColor.green
+                    }
+                }
+            }
         }
         else{
             if showMenu == false {
@@ -550,18 +558,17 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             }
             
         }
-        
-
-        
-        //velocity > 0 - перс отлетает от поверхности, velocity < 0 персонаж летит вниз. Состояние покоя около 5.5
-        if ((mainChrctr?.physicsBody?.velocity.dy)! > CGFloat(400.0) || (mainChrctr?.physicsBody?.velocity.dy)! < CGFloat(-400.0)) {
-            mainChrctr?.texture = SKTexture(imageNamed: "MainCharacter_scare")
-        }
-        else {
-            mainChrctr?.texture = SKTexture(imageNamed: "MainCharacter")
-            if((mainChrctr?.physicsBody?.velocity.dy)! < CGFloat(6.0) || (mainChrctr?.physicsBody?.velocity.dy)! > CGFloat(0.0)) {
-                //сделать антибаг
-                print("ПРЫГ")
+        if showMenu == false {
+            //velocity > 0 - перс отлетает от поверхности, velocity < 0 персонаж летит вниз. Состояние покоя около 5.5
+            if ((mainChrctr?.physicsBody?.velocity.dy)! > CGFloat(400.0) || (mainChrctr?.physicsBody?.velocity.dy)! < CGFloat(-400.0)) {
+                mainChrctr?.texture = SKTexture(imageNamed: "MainCharacter_scare")
+            }
+            else {
+                mainChrctr?.texture = SKTexture(imageNamed: "MainCharacter")
+                if((mainChrctr?.physicsBody?.velocity.dy)! < CGFloat(6.0) || (mainChrctr?.physicsBody?.velocity.dy)! > CGFloat(0.0)) {
+                    //сделать антибаг
+                    //print("ПРЫГ")
+                }
             }
         }
 
