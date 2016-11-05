@@ -30,7 +30,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     }
     
 
-    
+
     //При вызове этой функции, показывается меню проигрыша.
     func showLMenu(){
         let menuBoard = SKSpriteNode(imageNamed: "MenuBoard.png")
@@ -47,6 +47,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         button1.xScale = 0.5
         button1.yScale = 0.5
         button1.zPosition = 999
+        button1.color = #colorLiteral(red:Float(randomBetweenNumbers(firstNum: 0.0, secondNum:1.0)), green: Float(randomBetweenNumbers(firstNum: 0.0, secondNum:1.0)), blue: Float(randomBetweenNumbers(firstNum: 0.0, secondNum:1.0)), alpha: 1)
+        button1.colorBlendFactor = CGFloat(1.0)
         self.addChild(button1)
         
         let button2 = SKSpriteNode(imageNamed: "Button2.png")
@@ -55,6 +57,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         button2.xScale = 0.5
         button2.yScale = 0.5
         button2.zPosition = 999
+        button2.color = #colorLiteral(red:Float(randomBetweenNumbers(firstNum: 0.0, secondNum:1.0)), green: Float(randomBetweenNumbers(firstNum: 0.0, secondNum:1.0)), blue: Float(randomBetweenNumbers(firstNum: 0.0, secondNum:1.0)), alpha: 1)
+        button2.colorBlendFactor = CGFloat(1.0)
         self.addChild(button2)
         
         let button3 = SKSpriteNode(imageNamed: "Button3.png")
@@ -63,6 +67,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         button3.xScale = 0.5
         button3.yScale = 0.5
         button3.zPosition = 999
+        button3.color = #colorLiteral(red:Float(randomBetweenNumbers(firstNum: 0.0, secondNum:1.0)), green: Float(randomBetweenNumbers(firstNum: 0.0, secondNum:1.0)), blue: Float(randomBetweenNumbers(firstNum: 0.0, secondNum:1.0)), alpha: 1)
+        button3.colorBlendFactor = CGFloat(1.0)
         self.addChild(button3)
     }
     
@@ -81,21 +87,25 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         menuBoard.zPosition = 998
         self.addChild(menuBoard)
         
-        let button1 = SKSpriteNode(imageNamed: "Button1.png")
-        button1.position = CGPoint(x: self.frame.midX/2, y: self.frame.midY)
-        button1.name = "retry"
-        button1.xScale = 0.5
-        button1.yScale = 0.5
-        button1.zPosition = 999
-        self.addChild(button1)
-        
         let button2 = SKSpriteNode(imageNamed: "nextButton.png")
-        button2.position = CGPoint(x: self.frame.midX, y: self.frame.midY)
+        button2.position = CGPoint(x: self.frame.midX/2, y: self.frame.midY)
         button2.name = "next"
         button2.xScale = 0.5
         button2.yScale = 0.5
         button2.zPosition = 999
+        button2.color = #colorLiteral(red:Float(randomBetweenNumbers(firstNum: 0.0, secondNum:1.0)), green: Float(randomBetweenNumbers(firstNum: 0.0, secondNum:1.0)), blue: Float(randomBetweenNumbers(firstNum: 0.0, secondNum:1.0)), alpha: 1)
+        button2.colorBlendFactor = CGFloat(1.0)
         self.addChild(button2)
+        
+        let button1 = SKSpriteNode(imageNamed: "Button1.png")
+        button1.position = CGPoint(x: self.frame.midX, y: self.frame.midY)
+        button1.name = "retry"
+        button1.xScale = 0.5
+        button1.yScale = 0.5
+        button1.zPosition = 999
+        button1.color = #colorLiteral(red:Float(randomBetweenNumbers(firstNum: 0.0, secondNum:1.0)), green: Float(randomBetweenNumbers(firstNum: 0.0, secondNum:1.0)), blue: Float(randomBetweenNumbers(firstNum: 0.0, secondNum:1.0)), alpha: 1)
+        button1.colorBlendFactor = CGFloat(1.0)
+        self.addChild(button1)
         
         let button3 = SKSpriteNode(imageNamed: "prevButton.png")
         button3.position = CGPoint(x: self.frame.midX+(self.frame.midX/2), y: self.frame.midY)
@@ -103,6 +113,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         button3.xScale = 0.5
         button3.yScale = 0.5
         button3.zPosition = 999
+        button3.color = #colorLiteral(red:Float(randomBetweenNumbers(firstNum: 0.0, secondNum:1.0)), green: Float(randomBetweenNumbers(firstNum: 0.0, secondNum:1.0)), blue: Float(randomBetweenNumbers(firstNum: 0.0, secondNum:1.0)), alpha: 1)
+        button3.colorBlendFactor = CGFloat(1.0)
         self.addChild(button3)
     }
 
@@ -113,9 +125,10 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         for main in self.children {
             if main.name == "MainCharacter" {
                 if let main = main as? SKSpriteNode {
+                    
+                    //Маска коллизии для ГГ
                     let offsetX: CGFloat = main.frame.size.width * (main.anchorPoint.x - 0.05)
                     let offsetY: CGFloat = main.frame.size.height * (main.anchorPoint.y - 0.05)
-                    
                     let path = CGMutablePath()
                     path.move(to: CGPoint(x: 48 - offsetX, y: 35 - offsetY))
                     path.addLine(to: CGPoint(x: 110 - offsetX, y: 35 - offsetY))
@@ -130,10 +143,11 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                     path.addLine(to: CGPoint(x: 33 - offsetX, y: 47 - offsetY))
                     path.closeSubpath()
                     
+                    
                     main.physicsBody! = SKPhysicsBody(polygonFrom: path)
                     main.physicsBody?.friction = 0.2
                     main.physicsBody?.restitution = 0.3
-                    main.physicsBody?.restitution = 0.45
+                    main.physicsBody?.restitution = 0.4
                     main.physicsBody?.linearDamping = 0.2
                     main.physicsBody?.angularDamping = 0.2
                     main.physicsBody?.mass = 2.0
@@ -523,19 +537,19 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
 
         
         /* Меню в конце сцены */
-        if onGround == false {
-            onGroundTime = 0
-            for progressBar in self.children {
-                if progressBar.name == "ProgressBar" {
-                    if let progressBar = progressBar as? SKSpriteNode {
-                        progressBar.size.width = 0
-                        progressBar.color = UIColor.green
+        if showMenu == false {
+            if onGround == false {
+                onGroundTime = 0
+                for progressBar in self.children {
+                    if progressBar.name == "ProgressBar" {
+                        if let progressBar = progressBar as? SKSpriteNode {
+                            progressBar.size.width = 0
+                            progressBar.color = UIColor.green
+                        }
                     }
                 }
             }
-        }
-        else{
-            if showMenu == false {
+            else{
                 //Время которое персонаж лежит на земле
                 onGroundTime+=1
                 print(onGroundTime)
@@ -549,14 +563,15 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                     }
                 }
             
-            }
-
-            //Если свинья на земле и время которое она пролежала на земле равно 100, то победа
-            if onGroundTime > 100 && showMenu == false {
-                showMenu = true //если показывали меню, то true
-                showWMenu() //Показать меню выигрыша
-            }
             
+
+                //Если свинья на земле и время которое она пролежала на земле равно 100, то победа
+                if onGroundTime > 100 && showMenu == false {
+                    showMenu = true //если показывали меню, то true
+                    showWMenu() //Показать меню выигрыша
+                }
+            
+            }
         }
         if showMenu == false {
             //velocity > 0 - перс отлетает от поверхности, velocity < 0 персонаж летит вниз. Состояние покоя около 5.5
@@ -564,13 +579,16 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                 mainChrctr?.texture = SKTexture(imageNamed: "MainCharacter_scare")
             }
             else {
-                mainChrctr?.texture = SKTexture(imageNamed: "MainCharacter")
-                if((mainChrctr?.physicsBody?.velocity.dy)! < CGFloat(6.0) || (mainChrctr?.physicsBody?.velocity.dy)! > CGFloat(0.0)) {
-                    //сделать антибаг
-                    //print("ПРЫГ")
+                if((mainChrctr?.physicsBody?.velocity.dy)! >= CGFloat(10.0)) {
+                    mainChrctr?.texture = SKTexture(imageNamed: "MainCharacter_pain")
+                }
+                else{
+                    mainChrctr?.texture = SKTexture(imageNamed: "MainCharacter")
                 }
             }
         }
+    
+    
 
 
         //если ГГ улетел за сцену, показываем меню
@@ -584,7 +602,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     }
     
     override func update(_ currentTime: TimeInterval) {  /* Called before each frame is rendered */
-        //print("this "+String(thisScene)+" top "+String(topScene))
+
     }
     
     
