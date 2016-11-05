@@ -29,6 +29,26 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         return CGFloat(arc4random()) / CGFloat(UINT32_MAX) * abs(firstNum - secondNum) + min(firstNum, secondNum)
     }
     
+    func colorPicker(level: Int) ->  UIColor {
+        if (level > 0 && level <= 16) {
+            return color1
+        }
+        else {
+            if (level > 16 && level <= 32) {
+                return color2
+            }
+            else {
+                return color0
+            }
+        }
+    }
+    
+    //Палитра для интерфеса
+    var color0 = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
+    var color1 = #colorLiteral(red: 1, green: 0.7871779203, blue: 0.5874175429, alpha: 1)
+    var color2 = #colorLiteral(red: 0.6314342022, green: 0.7059366107, blue: 0.7861329317, alpha: 1)
+
+    
 
 
     //При вызове этой функции, показывается меню проигрыша.
@@ -39,25 +59,27 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         menuBoard.xScale = 1.4
         menuBoard.yScale = 1.4
         menuBoard.zPosition = 998
+        menuBoard.color = colorPicker(level: thisScene)
+        menuBoard.colorBlendFactor = CGFloat(0.7)
         self.addChild(menuBoard)
         
-        let button1 = SKSpriteNode(imageNamed: "Button1.png")
+        let button1 = SKSpriteNode(imageNamed: "retryButton.png")
         button1.position = CGPoint(x: self.frame.midX/2, y: self.frame.midY)
         button1.name = "retry"
         button1.xScale = 0.5
         button1.yScale = 0.5
         button1.zPosition = 999
-        button1.color = #colorLiteral(red:Float(randomBetweenNumbers(firstNum: 0.0, secondNum:1.0)), green: Float(randomBetweenNumbers(firstNum: 0.0, secondNum:1.0)), blue: Float(randomBetweenNumbers(firstNum: 0.0, secondNum:1.0)), alpha: 1)
+        button1.color = colorPicker(level: thisScene)
         button1.colorBlendFactor = CGFloat(1.0)
         self.addChild(button1)
         
-        let button2 = SKSpriteNode(imageNamed: "Button2.png")
+        let button2 = SKSpriteNode(imageNamed: "menuButton.png")
         button2.position = CGPoint(x: self.frame.midX, y: self.frame.midY)
         button2.name = "menu"
         button2.xScale = 0.5
         button2.yScale = 0.5
         button2.zPosition = 999
-        button2.color = #colorLiteral(red:Float(randomBetweenNumbers(firstNum: 0.0, secondNum:1.0)), green: Float(randomBetweenNumbers(firstNum: 0.0, secondNum:1.0)), blue: Float(randomBetweenNumbers(firstNum: 0.0, secondNum:1.0)), alpha: 1)
+        button2.color = colorPicker(level: thisScene)
         button2.colorBlendFactor = CGFloat(1.0)
         self.addChild(button2)
         
@@ -67,7 +89,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         button3.xScale = 0.5
         button3.yScale = 0.5
         button3.zPosition = 999
-        button3.color = #colorLiteral(red:Float(randomBetweenNumbers(firstNum: 0.0, secondNum:1.0)), green: Float(randomBetweenNumbers(firstNum: 0.0, secondNum:1.0)), blue: Float(randomBetweenNumbers(firstNum: 0.0, secondNum:1.0)), alpha: 1)
+        button3.color = colorPicker(level: thisScene)
         button3.colorBlendFactor = CGFloat(1.0)
         self.addChild(button3)
     }
@@ -85,6 +107,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         menuBoard.xScale = 1.4
         menuBoard.yScale = 1.4
         menuBoard.zPosition = 998
+        menuBoard.color = colorPicker(level: thisScene)
+        menuBoard.colorBlendFactor = CGFloat(0.7)
         self.addChild(menuBoard)
         
         let button2 = SKSpriteNode(imageNamed: "nextButton.png")
@@ -93,17 +117,17 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         button2.xScale = 0.5
         button2.yScale = 0.5
         button2.zPosition = 999
-        button2.color = #colorLiteral(red:Float(randomBetweenNumbers(firstNum: 0.0, secondNum:1.0)), green: Float(randomBetweenNumbers(firstNum: 0.0, secondNum:1.0)), blue: Float(randomBetweenNumbers(firstNum: 0.0, secondNum:1.0)), alpha: 1)
+        button2.color = colorPicker(level: thisScene)
         button2.colorBlendFactor = CGFloat(1.0)
         self.addChild(button2)
         
-        let button1 = SKSpriteNode(imageNamed: "Button1.png")
+        let button1 = SKSpriteNode(imageNamed: "retryButton.png")
         button1.position = CGPoint(x: self.frame.midX, y: self.frame.midY)
         button1.name = "retry"
         button1.xScale = 0.5
         button1.yScale = 0.5
         button1.zPosition = 999
-        button1.color = #colorLiteral(red:Float(randomBetweenNumbers(firstNum: 0.0, secondNum:1.0)), green: Float(randomBetweenNumbers(firstNum: 0.0, secondNum:1.0)), blue: Float(randomBetweenNumbers(firstNum: 0.0, secondNum:1.0)), alpha: 1)
+        button1.color = colorPicker(level: thisScene)
         button1.colorBlendFactor = CGFloat(1.0)
         self.addChild(button1)
         
@@ -113,7 +137,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         button3.xScale = 0.5
         button3.yScale = 0.5
         button3.zPosition = 999
-        button3.color = #colorLiteral(red:Float(randomBetweenNumbers(firstNum: 0.0, secondNum:1.0)), green: Float(randomBetweenNumbers(firstNum: 0.0, secondNum:1.0)), blue: Float(randomBetweenNumbers(firstNum: 0.0, secondNum:1.0)), alpha: 1)
+        button3.color = colorPicker(level: thisScene)
         button3.colorBlendFactor = CGFloat(1.0)
         self.addChild(button3)
     }
