@@ -262,20 +262,6 @@
                                     <action selector="buttonLevel1:" destination="tZT-fh-9NA" eventType="touchUpInside" id="ORs-3Y-pWG"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mna-Hy-efS">
-                                <frame key="frameInset" minX="7.20%" minY="85.16%" width="18.67%" height="10.50%"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                <size key="titleShadowOffset" width="1" height="1"/>
-                                <state key="normal" title="Menu" backgroundImage="MenuSelect1">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                    <color key="titleShadowColor" name="knobColor" catalog="System" colorSpace="catalog"/>
-                                </state>
-                                <connections>
-                                    <segue destination="jC2-zd-pnK" kind="show" id="7YK-DB-9VQ"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X3k-5e-Zfh">
                                 <frame key="frameInset" minX="6.40%" minY="48.88%" width="18.40%" height="10.42%"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
@@ -340,6 +326,24 @@
                                     <action selector="buttonLevel1:" destination="tZT-fh-9NA" eventType="touchUpInside" id="eB3-ew-1Rf"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mna-Hy-efS">
+                                <frame key="frameInset" minX="7.20%" minY="85.16%" width="18.67%" height="10.50%"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <size key="titleShadowOffset" width="1" height="1"/>
+                                <state key="normal" title="Menu" backgroundImage="MenuSelect1">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" name="knobColor" catalog="System" colorSpace="catalog"/>
+                                </state>
+                                <connections>
+                                    <segue destination="jC2-zd-pnK" kind="show" id="7YK-DB-9VQ"/>
+                                </connections>
+                            </button>
+                            <pageControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="2" translatesAutoresizingMaskIntoConstraints="NO" id="lRy-9C-9oR">
+                                <frame key="frameInset" minX="168" minY="601" width="39" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </pageControl>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
@@ -349,7 +353,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fSZ-S0-9nV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1246" y="-1048"/>
+            <point key="canvasLocation" x="-86" y="-1048"/>
         </scene>
         <!--Game View Controller-->
         <scene sceneID="LtY-X4-3S3">
@@ -658,13 +662,17 @@
                                     <action selector="buttonLevel1:" destination="tZT-fh-9NA" eventType="touchUpInside" id="aPR-X2-lTn"/>
                                 </connections>
                             </button>
+                            <pageControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="2" currentPage="1" translatesAutoresizingMaskIntoConstraints="NO" id="FK5-cq-cCM">
+                                <frame key="frameInset" minX="168" minY="601" width="39" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </pageControl>
                         </subviews>
                         <color key="tintColor" name="keyboardFocusIndicatorColor" catalog="System" colorSpace="catalog"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="coi-yn-EUx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-95.200000000000003" y="-1048.4257871064469"/>
+            <point key="canvasLocation" x="558" y="-1048"/>
         </scene>
         <!--Page View Controller-->
         <scene sceneID="CPc-IU-N2j">
@@ -695,6 +703,6 @@
         <image name="backgroundMainMenu.png" width="1080" height="1920"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="7YK-DB-9VQ"/>
+        <segue reference="xur-7c-ZLw"/>
     </inferredMetricsTieBreakers>
 </document>
