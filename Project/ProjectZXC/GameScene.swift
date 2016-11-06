@@ -526,6 +526,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                 let currentScene = GameScene(fileNamed: "Level "+String(thisScene))
                 let transition = SKTransition.doorsCloseHorizontal(withDuration: 0.5)
                 currentScene!.scaleMode = SKSceneScaleMode.aspectFill
+                currentScene?.viewController = self.viewController
                 self.scene!.view?.presentScene(currentScene!, transition: transition)
                 
             }
@@ -537,6 +538,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                 let currentScene = GameScene(fileNamed: "Level "+String(thisScene))
                 let transition = SKTransition.doorway(withDuration: 0.5)
                 currentScene!.scaleMode = SKSceneScaleMode.aspectFill
+                currentScene?.viewController = self.viewController
                 self.scene!.view?.presentScene(currentScene!, transition: transition)
                 
             }
@@ -546,6 +548,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                 let currentScene = GameScene(fileNamed: "Level "+String(thisScene))
                 let transition = SKTransition.doorway(withDuration: 0.5)
                 currentScene!.scaleMode = SKSceneScaleMode.aspectFill
+                currentScene?.viewController = self.viewController
                 self.scene!.view?.presentScene(currentScene!, transition: transition)
                 
                 

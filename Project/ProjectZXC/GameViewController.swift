@@ -27,6 +27,7 @@ class GameViewController: UIViewController {
         
         let sceneView = GameScene(fileNamed: "Level " + String(buttonTitle))
         let skView = SKView(frame: self.view.frame)
+        sceneView?.viewController = self
         self.view.addSubview(skView)
         
         skView.showsFPS = true
@@ -34,6 +35,9 @@ class GameViewController: UIViewController {
         skView.ignoresSiblingOrder = true
         sceneView!.scaleMode = .aspectFill
         skView.presentScene(sceneView)
+        
+        
+        
         
     }
 
