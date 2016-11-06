@@ -92,8 +92,68 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         button3.color = colorPicker(level: thisScene)
         button3.colorBlendFactor = CGFloat(1.0)
         self.addChild(button3)
+        
+        var myLabel:SKLabelNode!
+        myLabel = SKLabelNode(fontNamed: "Arial")
+        myLabel.text = "Lose"
+        myLabel.fontSize = 100
+        myLabel.zPosition = 999
+        myLabel.position = CGPoint(x: self.frame.midX, y: self.frame.midY + 190)
+        self.addChild(myLabel)
     }
     
+    
+    //При вызове этой функции, показывается меню перезапуска.
+    func showRMenu(){
+        let menuBoard = SKSpriteNode(imageNamed: "MenuBoard.png")
+        menuBoard.position = CGPoint(x: self.frame.midX, y: self.frame.midY)
+        menuBoard.name = "menuBoard"
+        menuBoard.xScale = 1.4
+        menuBoard.yScale = 1.4
+        menuBoard.zPosition = 998
+        menuBoard.color = colorPicker(level: thisScene)
+        menuBoard.colorBlendFactor = CGFloat(0.7)
+        self.addChild(menuBoard)
+        
+        let button1 = SKSpriteNode(imageNamed: "retryButton.png")
+        button1.position = CGPoint(x: self.frame.midX/2, y: self.frame.midY)
+        button1.name = "retry"
+        button1.xScale = 0.5
+        button1.yScale = 0.5
+        button1.zPosition = 999
+        button1.color = colorPicker(level: thisScene)
+        button1.colorBlendFactor = CGFloat(1.0)
+        self.addChild(button1)
+        
+        let button2 = SKSpriteNode(imageNamed: "menuButton.png")
+        button2.position = CGPoint(x: self.frame.midX, y: self.frame.midY)
+        button2.name = "menu"
+        button2.xScale = 0.5
+        button2.yScale = 0.5
+        button2.zPosition = 999
+        button2.color = colorPicker(level: thisScene)
+        button2.colorBlendFactor = CGFloat(1.0)
+        self.addChild(button2)
+        
+
+        let button3 = SKSpriteNode(imageNamed: "nextButton.png")
+        button3.position = CGPoint(x: self.frame.midX+(self.frame.midX/2), y: self.frame.midY)
+        button3.name = "next"
+        button3.xScale = 0.5
+        button3.yScale = 0.5
+        button3.zPosition = 999
+        button3.color = colorPicker(level: thisScene)
+        button3.colorBlendFactor = CGFloat(1.0)
+        self.addChild(button3)
+        
+        var myLabel:SKLabelNode!
+        myLabel = SKLabelNode(fontNamed: "Arial")
+        myLabel.text = "Retry"
+        myLabel.fontSize = 100
+        myLabel.zPosition = 999
+        myLabel.position = CGPoint(x: self.frame.midX, y: self.frame.midY + 190)
+        self.addChild(myLabel)
+    }
 
     
     //При вызове этой функции, показывается меню выигрыша.
@@ -140,6 +200,14 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         button3.color = colorPicker(level: thisScene)
         button3.colorBlendFactor = CGFloat(1.0)
         self.addChild(button3)
+        
+        var myLabel:SKLabelNode!
+        myLabel = SKLabelNode(fontNamed: "Arial")
+        myLabel.text = "Win"
+        myLabel.fontSize = 100
+        myLabel.zPosition = 999
+        myLabel.position = CGPoint(x: self.frame.midX, y: self.frame.midY + 190)
+        self.addChild(myLabel)
     }
 
     //Ициализация свойств игровых объектов
@@ -183,9 +251,10 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             }
         }
 
+        //Цвет Ground
+        let groundColor = #colorLiteral(red:Float(randomBetweenNumbers(firstNum: 0.0, secondNum:1.0)), green: Float(randomBetweenNumbers(firstNum: 0.0, secondNum:1.0)), blue: Float(randomBetweenNumbers(firstNum: 0.0, secondNum:1.0)), alpha: 1)
 
-        
-        //  Инициализация Ground
+        //Инициализация Ground
         for ground in self.children {
             if ground.name == "Ground" {
                 if let ground = ground as? SKSpriteNode {
@@ -200,8 +269,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                     ground.physicsBody?.categoryBitMask = 2;
                     ground.physicsBody?.contactTestBitMask = 1;
                     ground.physicsBody?.collisionBitMask =  1;
-                    
-                    ground.color = #colorLiteral(red:Float(randomBetweenNumbers(firstNum: 0.0, secondNum:1.0)), green: Float(randomBetweenNumbers(firstNum: 0.0, secondNum:1.0)), blue: Float(randomBetweenNumbers(firstNum: 0.0, secondNum:1.0)), alpha: 1)
+                    ground.color = groundColor
                 }
             }
         }
@@ -369,9 +437,10 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                 touchedNode.removeFromParent() //удаление
             }
             
-            if touchedNode.name == "stop" {
+            if touchedNode.name == "stop" && showMenu == false {
                 showMenu = true
-                showWMenu()
+                showRMenu()
+                
             }
     
 //            if ( touchedNode.name == "stop" || self.scene!.isPaused == false) {
