@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="jC2-zd-pnK">
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="jC2-zd-pnK">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
@@ -9,7 +9,7 @@
         <!--View Controller-->
         <scene sceneID="24o-iX-FfV">
             <objects>
-                <viewController storyboardIdentifier="ViewControllerLolka" id="jC2-zd-pnK" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ViewControllerLolka" modalTransitionStyle="flipHorizontal" id="jC2-zd-pnK" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ncJ-a9-J0q"/>
                         <viewControllerLayoutGuide type="bottom" id="FAn-Ps-E5p"/>
@@ -57,7 +57,7 @@
         <!--View Controller-->
         <scene sceneID="59C-w9-YyG">
             <objects>
-                <viewController storyboardIdentifier="One" id="tZT-fh-9NA" customClass="ViewController" customModule="ProjectZXC" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="One" modalTransitionStyle="flipHorizontal" id="tZT-fh-9NA" customClass="ViewController" customModule="ProjectZXC" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="nfd-dL-lq1"/>
                         <viewControllerLayoutGuide type="bottom" id="DsP-zo-ytl"/>
@@ -369,7 +369,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <connections>
-                        <segue destination="jC2-zd-pnK" kind="show" identifier="GoToMainMenu" id="Ie8-i5-prt"/>
+                        <segue destination="jC2-zd-pnK" kind="show" identifier="GoToMainMenu" action="showDetailViewController:sender:" id="Ie8-i5-prt"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uHs-bS-vUt" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -680,7 +680,7 @@
         <!--Page View Controller-->
         <scene sceneID="CPc-IU-N2j">
             <objects>
-                <viewController id="PDi-oG-0zJ" customClass="PageViewController" customModule="ProjectZXC" sceneMemberID="viewController">
+                <viewController modalTransitionStyle="flipHorizontal" id="PDi-oG-0zJ" customClass="PageViewController" customModule="ProjectZXC" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Sej-F1-5i7"/>
                         <viewControllerLayoutGuide type="bottom" id="OTZ-8C-TMN"/>
@@ -706,7 +706,7 @@
         <image name="backgroundMainMenu.png" width="1080" height="1920"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="xur-7c-ZLw"/>
-        <segue reference="bGM-qk-ksc"/>
+        <segue reference="7YK-DB-9VQ"/>
+        <segue reference="CII-vB-cZ1"/>
     </inferredMetricsTieBreakers>
 </document>
