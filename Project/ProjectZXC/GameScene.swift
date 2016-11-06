@@ -49,7 +49,57 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     var color2 = #colorLiteral(red: 0.6314342022, green: 0.7059366107, blue: 0.7861329317, alpha: 1)
 
     
+    // ОТЛАДКА ДЛЯ РАЗРАБОТЧИКА
+    public var myLabel1:SKLabelNode!
+    public var myLabel2:SKLabelNode!
+    public var myLabel3:SKLabelNode!
+    public var myLabel4:SKLabelNode!
+    public var myLabel5:SKLabelNode!
+    
+    func statusBarInit() {
 
+        myLabel1 = SKLabelNode(fontNamed: "Arial")
+        myLabel1.fontSize = 40
+        myLabel1.zPosition = 999
+        myLabel1.position = CGPoint(x: 300, y: 1800)
+        self.addChild(myLabel1)
+
+        myLabel2 = SKLabelNode(fontNamed: "Arial")
+        myLabel2.fontSize = 40
+        myLabel2.zPosition = 999
+        myLabel2.position = CGPoint(x: 300, y: 1760)
+        self.addChild(myLabel2)
+        
+
+        myLabel3 = SKLabelNode(fontNamed: "Arial")
+        myLabel3.fontSize = 40
+        myLabel3.zPosition = 999
+        myLabel3.position = CGPoint(x: 300, y: 1720)
+        self.addChild(myLabel3)
+        
+
+        myLabel4 = SKLabelNode(fontNamed: "Arial")
+        myLabel4.fontSize = 40
+        myLabel4.zPosition = 999
+        myLabel4.position = CGPoint(x: 300, y: 1680)
+        self.addChild(myLabel4)
+        
+        
+        myLabel5 = SKLabelNode(fontNamed: "Arial")
+        myLabel5.fontSize = 30
+        myLabel5.zPosition = 999
+        myLabel5.position = CGPoint(x: 300, y: 1640)
+        self.addChild(myLabel5)
+        
+    }
+    
+    func statusBar() {
+        myLabel1.text = "Текущая сцена = "+String(thisScene)
+        myLabel2.text = "Топовая сцена = "+String(topScene)
+        myLabel3.text = "Касается земли? = "+String(onGround)
+        myLabel4.text = "Время на земле = "+String(onGroundTime)
+        myLabel5.text = "ГГ dy = "+String(describing: dy.rounded())
+    }
 
     //При вызове этой функции, показывается меню проигрыша.
     func showLMenu(){
@@ -376,7 +426,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                     stoneBlock.physicsBody?.restitution = 0.2
                     stoneBlock.physicsBody?.linearDamping = 0.2
                     stoneBlock.physicsBody?.angularDamping = 0.2
-                    stoneBlock.physicsBody?.mass = 3.0
+                    stoneBlock.physicsBody?.mass = 10.0
                 }
             }
         }
@@ -405,9 +455,9 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     
     //Функция выполняемая до открытия сцены
     override func didMove(to view: SKView) {
-        //initVC()
         initGameObject()
-
+        statusBarInit()
+        statusBar()
         self.physicsWorld.contactDelegate = self
     }
     
@@ -624,6 +674,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     }
 
     var showMenu = false
+    public var dy = CGFloat(0.0)
     
 
     override func didSimulatePhysics() {
@@ -675,6 +726,14 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             }
         }
         if showMenu == false {
+            
+            
+            
+            //ПЕРЕМЕННАЯ ДЛЯ ОТЛАДКИ
+            dy = (mainChrctr?.physicsBody?.velocity.dy)!
+            
+            
+            
             //velocity > 0 - перс отлетает от поверхности, velocity < 0 персонаж летит вниз. Состояние покоя около 5.5
             if ((mainChrctr?.physicsBody?.velocity.dy)! > CGFloat(400.0) || (mainChrctr?.physicsBody?.velocity.dy)! < CGFloat(-400.0)) {
                 mainChrctr?.texture = SKTexture(imageNamed: "MainCharacter_scare")
@@ -690,7 +749,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         }
     
     
-
+        statusBar()
 
         //если ГГ улетел за сцену, показываем меню
         if mainChrctr?.position.y < 0 && showMenu == false {
