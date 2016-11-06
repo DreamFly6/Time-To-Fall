@@ -23,18 +23,31 @@ class GameViewController: UIViewController {
     override func viewDidLoad() {
         
         
-        print(buttonTitle)
-        
-        let sceneView = GameScene(fileNamed: "Level " + String(buttonTitle))
-        let skView = SKView(frame: self.view.frame)
-        sceneView?.viewController = self
-        self.view.addSubview(skView)
-        
-        skView.showsFPS = true
-        skView.showsNodeCount = true
-        skView.ignoresSiblingOrder = true
-        sceneView!.scaleMode = .aspectFill
-        skView.presentScene(sceneView)
+        if buttonTitle == "" {
+            let sceneView = GameScene(fileNamed: "Level " + String(topScene))
+            let skView = SKView(frame: self.view.frame)
+            sceneView?.viewController = self
+            self.view.addSubview(skView)
+            
+            skView.showsFPS = true
+            skView.showsNodeCount = true
+            skView.ignoresSiblingOrder = true
+            sceneView!.scaleMode = .aspectFill
+            skView.presentScene(sceneView)
+        }
+        else{
+            let sceneView = GameScene(fileNamed: "Level " + String(buttonTitle))
+            let skView = SKView(frame: self.view.frame)
+            sceneView?.viewController = self
+            self.view.addSubview(skView)
+            
+            skView.showsFPS = true
+            skView.showsNodeCount = true
+            skView.ignoresSiblingOrder = true
+            sceneView!.scaleMode = .aspectFill
+            skView.presentScene(sceneView)
+        }
+
         
         
         

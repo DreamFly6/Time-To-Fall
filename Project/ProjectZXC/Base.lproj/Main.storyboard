@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="jC2-zd-pnK">
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="jC2-zd-pnK">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
@@ -18,31 +18,40 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="backgroundMainMenu.png" translatesAutoresizingMaskIntoConstraints="NO" id="S7g-TY-KDb">
-                                <frame key="frameInset" minX="0.0%" minY="0.0%" width="110.40%" height="111.02%"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Button3" translatesAutoresizingMaskIntoConstraints="NO" id="S7g-TY-KDb">
+                                <frame key="frameInset" minX="0.0%" minY="0.0%" width="100.00%" height="100.00%"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <gestureRecognizers/>
                             </imageView>
                             <button opaque="NO" contentMode="right" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ICs-io-Qq7">
-                                <frame key="frameInset" minX="23.20%" minY="54.20%" width="53.20%" height="29.91%"/>
+                                <frame key="frameInset" minX="53.87%" minY="52.17%" width="32.00%" height="17.99%"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="28"/>
                                 <size key="titleShadowOffset" width="2" height="2"/>
-                                <state key="normal" title="Levels" backgroundImage="StoneBlock">
+                                <state key="normal" backgroundImage="menuButton">
                                     <color key="titleShadowColor" name="controlDarkShadowColor" catalog="System" colorSpace="catalog"/>
                                 </state>
                                 <connections>
                                     <segue destination="PDi-oG-0zJ" kind="show" id="dPW-Vv-bJ8"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fJo-bh-ZtI">
-                                <frame key="frameInset" minX="23.20%" minY="16.87%" width="53.20%" height="29.91%"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="top" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fJo-bh-ZtI">
+                                <frame key="frameInset" minX="13.60%" minY="29.84%" width="72.53%" height="17.99%"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="28"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="88"/>
                                 <size key="titleShadowOffset" width="2" height="2"/>
-                                <state key="normal" title="Test Level" backgroundImage="WoodenBox">
-                                    <color key="titleColor" name="alternateSelectedControlColor" catalog="System" colorSpace="catalog"/>
-                                    <color key="titleShadowColor" name="controlDarkShadowColor" catalog="System" colorSpace="catalog"/>
+                                <state key="normal" title="&gt;" backgroundImage="Button3">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="he1-fk-wh8" kind="show" identifier="GoToGameViewController" id="bmA-14-dqF"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UBB-cw-IzK">
+                                <frame key="frameInset" minX="13.60%" minY="52.17%" width="32.00%" height="17.99%"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="х" backgroundImage="Button3">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                             </button>
                         </subviews>
@@ -52,7 +61,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BUQ-6n-5Pg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1246" y="-292"/>
+            <point key="canvasLocation" x="1245.5999999999999" y="-292.80359820089956"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="59C-w9-YyG">
@@ -353,7 +362,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fSZ-S0-9nV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-86" y="-1048"/>
+            <point key="canvasLocation" x="-108" y="-1048"/>
         </scene>
         <!--Game View Controller-->
         <scene sceneID="LtY-X4-3S3">
@@ -697,16 +706,15 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Button3" width="500" height="500"/>
         <image name="MenuBg1" width="1080" height="1920"/>
         <image name="MenuBg2" width="1080" height="1920"/>
         <image name="MenuSelect1" width="600" height="600"/>
         <image name="MenuSelect2" width="600" height="600"/>
-        <image name="StoneBlock" width="600" height="600"/>
-        <image name="WoodenBox" width="600" height="600"/>
-        <image name="backgroundMainMenu.png" width="1080" height="1920"/>
+        <image name="menuButton" width="500" height="500"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="7YK-DB-9VQ"/>
-        <segue reference="CII-vB-cZ1"/>
+        <segue reference="bmA-14-dqF"/>
+        <segue reference="CQM-wr-Gwb"/>
     </inferredMetricsTieBreakers>
 </document>
