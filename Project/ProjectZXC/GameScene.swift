@@ -125,9 +125,9 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         button1.colorBlendFactor = CGFloat(1.0)
         self.addChild(button1)
         
-        let button2 = SKSpriteNode(imageNamed: "menuButton.png")
+        let button2 = SKSpriteNode(imageNamed: "nextButton.png")
         button2.position = CGPoint(x: self.frame.midX, y: self.frame.midY)
-        button2.name = "menu"
+        button2.name = "next"
         button2.xScale = 0.5
         button2.yScale = 0.5
         button2.zPosition = 999
@@ -135,16 +135,16 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         button2.colorBlendFactor = CGFloat(1.0)
         self.addChild(button2)
         
-
-        let button3 = SKSpriteNode(imageNamed: "nextButton.png")
+        let button3 = SKSpriteNode(imageNamed: "prevButton.png")
         button3.position = CGPoint(x: self.frame.midX+(self.frame.midX/2), y: self.frame.midY)
-        button3.name = "next"
+        button3.name = "prev"
         button3.xScale = 0.5
         button3.yScale = 0.5
         button3.zPosition = 999
         button3.color = colorPicker(level: thisScene)
         button3.colorBlendFactor = CGFloat(1.0)
         self.addChild(button3)
+
         
         var myLabel:SKLabelNode!
         myLabel = SKLabelNode(fontNamed: "Arial")
