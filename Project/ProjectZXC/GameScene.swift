@@ -523,12 +523,12 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             let node = self.atPoint(location)
             
             if node.name == "retry"{
+                print("retry")
                 let currentScene = GameScene(fileNamed: "Level "+String(thisScene))
                 let transition = SKTransition.doorsCloseHorizontal(withDuration: 0.5)
                 currentScene!.scaleMode = SKSceneScaleMode.aspectFill
                 currentScene?.viewController = self.viewController
                 self.scene!.view?.presentScene(currentScene!, transition: transition)
-                
             }
             
             if node.name == "next"{
@@ -540,7 +540,6 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                 currentScene!.scaleMode = SKSceneScaleMode.aspectFill
                 currentScene?.viewController = self.viewController
                 self.scene!.view?.presentScene(currentScene!, transition: transition)
-                
             }
             
             if node.name == "prev"{
@@ -550,7 +549,6 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                 currentScene!.scaleMode = SKSceneScaleMode.aspectFill
                 currentScene?.viewController = self.viewController
                 self.scene!.view?.presentScene(currentScene!, transition: transition)
-                
                 
             }
             
@@ -564,6 +562,13 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                 
                 
                 //удаляем все говно со сцены, чтобы при новом открытии фпс норм были
+                self.scene!.removeFromParent()
+                
+                //не работали кнопки в игровом меню из-за того, что не было строчки ниже
+                self.scene!.view?.removeFromSuperview()
+                
+                
+                self.removeFromParent()
                 self.removeAllActions()
                 self.removeAllChildren()
                 
