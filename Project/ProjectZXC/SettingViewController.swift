@@ -10,18 +10,21 @@ import Foundation
 import UIKit
 import SpriteKit
 
-
+public var statusBarBool = false
+public let qweewq = 1
 
 class SettingViewController: UIViewController {
-    
+
     @IBOutlet weak var mySwitch: UISwitch!
     
     @IBAction func `switch`(_ sender: AnyObject) {
         
         if mySwitch.isOn {
-            print("UISwitch is ON")
+            statusBarBool = true
+            print(statusBarBool)
         } else {
-            print("UISwitch is OFF")
+            statusBarBool = false
+            print(statusBarBool)
         }
     
     }

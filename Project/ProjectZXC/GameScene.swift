@@ -58,6 +58,20 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     public var myLabel4:SKLabelNode!
     public var myLabel5:SKLabelNode!
     
+    
+    func stopButtonInit() {
+        let stopButton = SKSpriteNode(imageNamed: "stopButton.png")
+        stopButton.position = CGPoint(x: self.frame.width - 140, y: self.frame.height - 180)
+        stopButton.name = "stop"
+        stopButton.xScale = 0.35
+        stopButton.yScale = 0.35
+        stopButton.zPosition = 999
+        stopButton.alpha = 0.7
+        stopButton.color = colorPicker(level: thisScene)
+        stopButton.colorBlendFactor = CGFloat(1.0)
+        self.addChild(stopButton)
+    }
+    
     func statusBarInit() {
 
         myLabel1 = SKLabelNode(fontNamed: "Arial")
@@ -100,7 +114,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         myLabel2.text = "Топовая сцена = "+String(topScene)
         myLabel3.text = "Касается земли? = "+String(onGround)
         myLabel4.text = "Время на земле = "+String(onGroundTime)
-        myLabel5.text = "ГГ dy = "+String(describing: dy.rounded())
+        myLabel5.text = "ГГ dy = "+String(describing: dy)
     }
 
     //При вызове этой функции, показывается меню проигрыша.
@@ -126,7 +140,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         self.addChild(retryButton)
         
         let menuButton = SKSpriteNode(imageNamed: "menuButton.png")
-        menuButton.position = CGPoint(x: self.frame.midX, y: self.frame.midY)
+        menuButton.position = CGPoint(x: self.frame.midX+(self.frame.midX/2), y: self.frame.midY)
         menuButton.name = "menu"
         menuButton.xScale = 0.5
         menuButton.yScale = 0.5
@@ -135,18 +149,19 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         menuButton.colorBlendFactor = CGFloat(1.0)
         self.addChild(menuButton)
         
-        let button3 = SKSpriteNode(imageNamed: "Button3.png")
-        button3.position = CGPoint(x: self.frame.midX+(self.frame.midX/2), y: self.frame.midY)
-        button3.name = "button3"
-        button3.xScale = 0.5
-        button3.yScale = 0.5
-        button3.zPosition = 999
-        button3.color = colorPicker(level: thisScene)
-        button3.colorBlendFactor = CGFloat(1.0)
-        self.addChild(button3)
+//        let button3 = SKSpriteNode(imageNamed: "Button3.png")
+//        button3.position = CGPoint(x: self.frame.midX+(self.frame.midX/2), y: self.frame.midY)
+//        button3.name = "button3"
+//        button3.xScale = 0.5
+//        button3.yScale = 0.5
+//        button3.zPosition = 999
+//        button3.color = colorPicker(level: thisScene)
+//        button3.colorBlendFactor = CGFloat(1.0)
+//        self.addChild(button3)
         
         var myLabel:SKLabelNode!
         myLabel = SKLabelNode(fontNamed: "Arial")
+        myLabel.name = "label"
         myLabel.text = "Lose"
         myLabel.fontSize = 100
         myLabel.zPosition = 999
@@ -212,13 +227,14 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         
         var myLabel:SKLabelNode!
         myLabel = SKLabelNode(fontNamed: "Arial")
+        myLabel.name = "label"
         myLabel.text = "Retry"
         myLabel.fontSize = 100
         myLabel.zPosition = 999
         myLabel.position = CGPoint(x: self.frame.midX, y: self.frame.midY + 190)
         self.addChild(myLabel)
     }
-
+    
     
     //При вызове этой функции, показывается меню выигрыша.
     func showWMenu(){
@@ -278,6 +294,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         
         var myLabel:SKLabelNode!
         myLabel = SKLabelNode(fontNamed: "Arial")
+        myLabel.name = "label"
         myLabel.text = "Win"
         myLabel.fontSize = 100
         myLabel.zPosition = 999
@@ -285,6 +302,72 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         self.addChild(myLabel)
     }
 
+    
+    
+    //При вызове этой функции, показывается меню перезапуска.
+    func removeMenu(){
+        print("Удаляю МЕНЮ")
+        
+        
+        for menuBoard in self.children {
+            if menuBoard.name == "menuBoard" {
+                if let menuBoard = menuBoard as? SKSpriteNode {
+                    menuBoard.removeAllChildren()
+                    menuBoard.removeFromParent()
+                }
+            }
+        }
+        
+        for nextButton in self.children {
+            if nextButton.name == "next" {
+                if let nextButton = nextButton as? SKSpriteNode {
+                    nextButton.removeAllChildren()
+                    nextButton.removeFromParent()
+                }
+            }
+        }
+        
+        for retryButton in self.children {
+            if retryButton.name == "retry" {
+                if let retryButton = retryButton as? SKSpriteNode {
+                    retryButton.removeAllChildren()
+                    retryButton.removeFromParent()
+                }
+            }
+        }
+        
+        for menuButton in self.children {
+            if menuButton.name == "menu" {
+                if let menuButton = menuButton as? SKSpriteNode {
+                    menuButton.removeAllChildren()
+                    menuButton.removeFromParent()
+                }
+            }
+        }
+        
+        for prevButton in self.children {
+            if prevButton.name == "prev" {
+                if let prevButton = prevButton as? SKSpriteNode {
+                    prevButton.removeAllChildren()
+                    prevButton.removeFromParent()
+                }
+            }
+        }
+        
+        for myLabel in self.children {
+            if myLabel.name == "label" {
+                if let myLabel = myLabel as? SKLabelNode {
+                    myLabel.removeAllChildren()
+                    myLabel.removeFromParent()
+                }
+            }
+        }
+    }
+
+    
+    
+    
+    
     //Ициализация свойств игровых объектов
     func initGameObject(){
         //let qwe = You()
@@ -482,9 +565,15 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     
     //Функция выполняемая до открытия сцены
     override func didMove(to view: SKView) {
+        //Инициализация игровых объектов
         initGameObject()
+        //Инициализация статус бара
         statusBarInit()
-        statusBar()
+        //statusBar()
+        
+        //Инициализация и установка кнопки pause
+        stopButtonInit()
+        
         self.physicsWorld.contactDelegate = self
     }
     
@@ -514,31 +603,20 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                 touchedNode.removeFromParent() //удаление
             }
             
-            if touchedNode.name == "stop" && showMenu == false {
-                showMenu = true
-                showRMenu()
-                
+            if (touchedNode.name == "stop") {
+                if (showMenu == true ) {
+                    showMenu = false
+                    print("SHOW_MENU_FALSE")
+                    removeMenu()
+                }
+                else {
+                    showMenu = true
+                    print("SHOW_MENU_TRUE")
+                    showRMenu()
+                }
             }
-    
-//            if ( touchedNode.name == "stop" || self.scene!.isPaused == false) {
-//                print("нажали на кнопку СТОП (false)")
-//                self.scene!.isPaused = true;
-//            }
-//            else {
-//                print("нажали на кнопку СТОП (true)")
-//                self.scene!.isPaused = false;
-//            }
-            //            else {
-            //                print("В таче else")
-            //                let sprite = StarNode.star(touch.locationInNode(self))
-            //                sprite.name = "WoodenBox"
-            //                sprite.xScale = 0.35
-            //                sprite.yScale = 0.35
-            //                print (sprite.name);
-            //                self.addChild(sprite)
-            //            }
-            
 
+    
 
             
             if let spriteNode = touchedNode as? SKSpriteNode {
@@ -737,8 +815,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                     if progressBar.name == "ProgressBar" {
                         if let progressBar = progressBar as? SKSpriteNode {
                             progressBar.size.width = CGFloat(onGroundTime) * 39
-                            //progressBar.color = UIColor.green
-                            progressBar.color = groundColorPub
+                            progressBar.color = UIColor.green
+                            //progressBar.color = groundColorPub
                         }
                     }
                 }
@@ -776,8 +854,9 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             }
         }
     
-    
-        statusBar()
+            statusBar()
+        
+
 
         //если ГГ улетел за сцену, показываем меню
         if mainChrctr?.position.y < 0 && showMenu == false {
