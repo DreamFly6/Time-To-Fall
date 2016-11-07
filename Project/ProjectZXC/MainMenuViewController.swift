@@ -13,7 +13,21 @@ import SpriteKit
 
 
 class MainMenuViewController: UIViewController {
-  
+    
+    
+    override func viewDidLoad() {
+        
+        
+        self.navigationController?.isNavigationBarHidden = true
+        
+        for case let button as UIButton in self.view.subviews {
+            if button.restorationIdentifier == "goTo" {
+                button.setTitle(" "+String(topScene), for: UIControlState.normal)
+            }
+        }
+    }
+    
+    
     @IBAction func topScenButton(_ sender: AnyObject) {
         buttonTitle = String(topScene)
         thisScene = topScene

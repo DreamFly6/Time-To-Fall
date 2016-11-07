@@ -10,15 +10,11 @@ import UIKit
 import SpriteKit
 
 public var thisScene = 1
-public var topScene = 20
+public var topScene = 1
 public var buttonTitle : String = ""
 
 
 class ViewController: UIViewController {
-
-
-    
-    
     
     override func viewDidLoad() {
         
@@ -30,9 +26,6 @@ class ViewController: UIViewController {
                   button.isEnabled = true
             }
         }
-        
-       
-        
     }
     
     

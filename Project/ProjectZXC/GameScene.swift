@@ -113,25 +113,25 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         menuBoard.colorBlendFactor = CGFloat(0.7)
         self.addChild(menuBoard)
         
-        let button1 = SKSpriteNode(imageNamed: "retryButton.png")
-        button1.position = CGPoint(x: self.frame.midX/2, y: self.frame.midY)
-        button1.name = "retry"
-        button1.xScale = 0.5
-        button1.yScale = 0.5
-        button1.zPosition = 999
-        button1.color = colorPicker(level: thisScene)
-        button1.colorBlendFactor = CGFloat(1.0)
-        self.addChild(button1)
+        let retryButton = SKSpriteNode(imageNamed: "retryButton.png")
+        retryButton.position = CGPoint(x: self.frame.midX/2, y: self.frame.midY)
+        retryButton.name = "retry"
+        retryButton.xScale = 0.5
+        retryButton.yScale = 0.5
+        retryButton.zPosition = 999
+        retryButton.color = colorPicker(level: thisScene)
+        retryButton.colorBlendFactor = CGFloat(1.0)
+        self.addChild(retryButton)
         
-        let button2 = SKSpriteNode(imageNamed: "menuButton.png")
-        button2.position = CGPoint(x: self.frame.midX, y: self.frame.midY)
-        button2.name = "menu"
-        button2.xScale = 0.5
-        button2.yScale = 0.5
-        button2.zPosition = 999
-        button2.color = colorPicker(level: thisScene)
-        button2.colorBlendFactor = CGFloat(1.0)
-        self.addChild(button2)
+        let menuButton = SKSpriteNode(imageNamed: "menuButton.png")
+        menuButton.position = CGPoint(x: self.frame.midX, y: self.frame.midY)
+        menuButton.name = "menu"
+        menuButton.xScale = 0.5
+        menuButton.yScale = 0.5
+        menuButton.zPosition = 999
+        menuButton.color = colorPicker(level: thisScene)
+        menuButton.colorBlendFactor = CGFloat(1.0)
+        self.addChild(menuButton)
         
         let button3 = SKSpriteNode(imageNamed: "Button3.png")
         button3.position = CGPoint(x: self.frame.midX+(self.frame.midX/2), y: self.frame.midY)
@@ -165,35 +165,47 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         menuBoard.colorBlendFactor = CGFloat(0.7)
         self.addChild(menuBoard)
         
-        let button1 = SKSpriteNode(imageNamed: "retryButton.png")
-        button1.position = CGPoint(x: self.frame.midX/2, y: self.frame.midY)
-        button1.name = "retry"
-        button1.xScale = 0.5
-        button1.yScale = 0.5
-        button1.zPosition = 999
-        button1.color = colorPicker(level: thisScene)
-        button1.colorBlendFactor = CGFloat(1.0)
-        self.addChild(button1)
+        let retryButton = SKSpriteNode(imageNamed: "retryButton.png")
+        retryButton.position = CGPoint(x: self.frame.midX/2, y: self.frame.midY)
+        retryButton.name = "retry"
+        retryButton.xScale = 0.5
+        retryButton.yScale = 0.5
+        retryButton.zPosition = 999
+        retryButton.color = colorPicker(level: thisScene)
+        retryButton.colorBlendFactor = CGFloat(1.0)
+        self.addChild(retryButton)
         
-        let button2 = SKSpriteNode(imageNamed: "nextButton.png")
-        button2.position = CGPoint(x: self.frame.midX, y: self.frame.midY)
-        button2.name = "next"
-        button2.xScale = 0.5
-        button2.yScale = 0.5
-        button2.zPosition = 999
-        button2.color = colorPicker(level: thisScene)
-        button2.colorBlendFactor = CGFloat(1.0)
-        self.addChild(button2)
+        let nextButton = SKSpriteNode(imageNamed: "nextButton.png")
+        nextButton.position = CGPoint(x: self.frame.midX, y: self.frame.midY)
+        nextButton.name = "next"
+        nextButton.xScale = 0.5
+        nextButton.yScale = 0.5
+        nextButton.zPosition = 999
+        nextButton.color = colorPicker(level: thisScene)
+        nextButton.colorBlendFactor = CGFloat(1.0)
+        self.addChild(nextButton)
         
-        let button3 = SKSpriteNode(imageNamed: "prevButton.png")
-        button3.position = CGPoint(x: self.frame.midX+(self.frame.midX/2), y: self.frame.midY)
-        button3.name = "prev"
-        button3.xScale = 0.5
-        button3.yScale = 0.5
-        button3.zPosition = 999
-        button3.color = colorPicker(level: thisScene)
-        button3.colorBlendFactor = CGFloat(1.0)
-        self.addChild(button3)
+        let menuButton = SKSpriteNode(imageNamed: "menuButton.png")
+        menuButton.position = CGPoint(x: self.frame.midX+(self.frame.midX/2), y: self.frame.midY)
+        menuButton.name = "menu"
+        menuButton.xScale = 0.5
+        menuButton.yScale = 0.5
+        menuButton.zPosition = 999
+        menuButton.color = colorPicker(level: thisScene)
+        menuButton.colorBlendFactor = CGFloat(1.0)
+        self.addChild(menuButton)
+        
+        
+        //Для отладки
+        let prevButton = SKSpriteNode(imageNamed: "prevButton.png")
+        prevButton.position = CGPoint(x: self.frame.midX, y: self.frame.midY-(self.frame.midY/2))
+        prevButton.name = "prev"
+        prevButton.xScale = 0.5
+        prevButton.yScale = 0.5
+        prevButton.zPosition = 999
+        prevButton.color = colorPicker(level: thisScene)
+        prevButton.colorBlendFactor = CGFloat(1.0)
+        self.addChild(prevButton)
 
         
         var myLabel:SKLabelNode!
@@ -221,35 +233,46 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         menuBoard.colorBlendFactor = CGFloat(0.7)
         self.addChild(menuBoard)
         
-        let button2 = SKSpriteNode(imageNamed: "nextButton.png")
-        button2.position = CGPoint(x: self.frame.midX/2, y: self.frame.midY)
-        button2.name = "next"
-        button2.xScale = 0.5
-        button2.yScale = 0.5
-        button2.zPosition = 999
-        button2.color = colorPicker(level: thisScene)
-        button2.colorBlendFactor = CGFloat(1.0)
-        self.addChild(button2)
+        let nextButton = SKSpriteNode(imageNamed: "nextButton.png")
+        nextButton.position = CGPoint(x: self.frame.midX/2, y: self.frame.midY)
+        nextButton.name = "next"
+        nextButton.xScale = 0.5
+        nextButton.yScale = 0.5
+        nextButton.zPosition = 999
+        nextButton.color = colorPicker(level: thisScene)
+        nextButton.colorBlendFactor = CGFloat(1.0)
+        self.addChild(nextButton)
         
-        let button1 = SKSpriteNode(imageNamed: "retryButton.png")
-        button1.position = CGPoint(x: self.frame.midX, y: self.frame.midY)
-        button1.name = "retry"
-        button1.xScale = 0.5
-        button1.yScale = 0.5
-        button1.zPosition = 999
-        button1.color = colorPicker(level: thisScene)
-        button1.colorBlendFactor = CGFloat(1.0)
-        self.addChild(button1)
+        let retryButton = SKSpriteNode(imageNamed: "retryButton.png")
+        retryButton.position = CGPoint(x: self.frame.midX, y: self.frame.midY)
+        retryButton.name = "retry"
+        retryButton.xScale = 0.5
+        retryButton.yScale = 0.5
+        retryButton.zPosition = 999
+        retryButton.color = colorPicker(level: thisScene)
+        retryButton.colorBlendFactor = CGFloat(1.0)
+        self.addChild(retryButton)
         
-        let button3 = SKSpriteNode(imageNamed: "prevButton.png")
-        button3.position = CGPoint(x: self.frame.midX+(self.frame.midX/2), y: self.frame.midY)
-        button3.name = "prev"
-        button3.xScale = 0.5
-        button3.yScale = 0.5
-        button3.zPosition = 999
-        button3.color = colorPicker(level: thisScene)
-        button3.colorBlendFactor = CGFloat(1.0)
-        self.addChild(button3)
+        let menuButton = SKSpriteNode(imageNamed: "menuButton.png")
+        menuButton.position = CGPoint(x: self.frame.midX+(self.frame.midX/2), y: self.frame.midY)
+        menuButton.name = "menu"
+        menuButton.xScale = 0.5
+        menuButton.yScale = 0.5
+        menuButton.zPosition = 999
+        menuButton.color = colorPicker(level: thisScene)
+        menuButton.colorBlendFactor = CGFloat(1.0)
+        self.addChild(menuButton)
+        
+        //Для отладки
+        let prevButton = SKSpriteNode(imageNamed: "prevButton.png")
+        prevButton.position = CGPoint(x: self.frame.midX, y: self.frame.midY-(self.frame.midY/2))
+        prevButton.name = "prev"
+        prevButton.xScale = 0.5
+        prevButton.yScale = 0.5
+        prevButton.zPosition = 999
+        prevButton.color = colorPicker(level: thisScene)
+        prevButton.colorBlendFactor = CGFloat(1.0)
+        self.addChild(prevButton)
         
         var myLabel:SKLabelNode!
         myLabel = SKLabelNode(fontNamed: "Arial")
@@ -555,9 +578,9 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
 
             if let spriteNode = touchedNode as? SKSpriteNode {
                 if spriteNode.name == "StoneBlock"{
-                    if spriteNode.physicsBody?.mass == 3.0 {
+                    if spriteNode.physicsBody?.mass == 10.0 {
                         spriteNode.texture = SKTexture(imageNamed: "BrokenStoneBlock")
-                        spriteNode.physicsBody?.mass = 2.0
+                        spriteNode.physicsBody?.mass = 9.0
                     }
                     else{
                         spriteNode.removeFromParent()
