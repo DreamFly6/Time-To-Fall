@@ -66,7 +66,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         stopButton.xScale = 0.35
         stopButton.yScale = 0.35
         stopButton.zPosition = 999
-        stopButton.alpha = 0.7
+        stopButton.alpha = 0.4
         stopButton.color = colorPicker(level: thisScene)
         stopButton.colorBlendFactor = CGFloat(1.0)
         self.addChild(stopButton)
@@ -784,12 +784,15 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
 
     override func didSimulatePhysics() {
 
-        //Удаляет спрайт, когда он улетел за экран       
         let mainChrctr = self.childNode(withName: "MainCharacter") as? SKSpriteNode
-        let wdnBx = self.childNode(withName: "WoodenBox") as? SKSpriteNode
-
-        if (wdnBx?.position.y < 0) {
-            wdnBx?.removeFromParent()
+        
+        //Удаляет спрайт, когда он улетел за экран
+        for allObject in self.children {
+            if let allObject = allObject as? SKSpriteNode {
+                if (allObject.position.y < 0) {
+                    allObject.removeFromParent()
+                }
+            }
         }
 
         
@@ -831,14 +834,15 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             
             }
         }
+        
+        
+        
+
+        
         if showMenu == false {
-            
-            
             
             //ПЕРЕМЕННАЯ ДЛЯ ОТЛАДКИ
             dy = (mainChrctr?.physicsBody?.velocity.dy)!
-            
-            
             
             //velocity > 0 - перс отлетает от поверхности, velocity < 0 персонаж летит вниз. Состояние покоя около 5.5
             if ((mainChrctr?.physicsBody?.velocity.dy)! > CGFloat(400.0) || (mainChrctr?.physicsBody?.velocity.dy)! < CGFloat(-400.0)) {
@@ -854,9 +858,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             }
         }
     
-            statusBar()
+        statusBar()
         
-
 
         //если ГГ улетел за сцену, показываем меню
         if mainChrctr?.position.y < 0 && showMenu == false {
