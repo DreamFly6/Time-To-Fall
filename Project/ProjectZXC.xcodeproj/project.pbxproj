@@ -63,6 +63,7 @@
 		3262F1381D49B3F50056D72B /* buttonLevel.png in Resources */ = {isa = PBXBuildFile; fileRef = 3262F1371D49B3F50056D72B /* buttonLevel.png */; };
 		3262F13C1D49B7E90056D72B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3262F13B1D49B7E90056D72B /* ViewController.swift */; };
 		329649221DCA21100078720A /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 329649211DCA21100078720A /* GameViewController.swift */; };
+		32B848621DD03D23004247DA /* MainMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32B848611DD03D23004247DA /* MainMenuViewController.swift */; };
 		32BE5B8F1CD79BA100C7A815 /* backgroundMainMenu.png in Resources */ = {isa = PBXBuildFile; fileRef = 32BE5B8E1CD79BA100C7A815 /* backgroundMainMenu.png */; };
 		32BE5B911CD79C7000C7A815 /* buttonStart.png in Resources */ = {isa = PBXBuildFile; fileRef = 32BE5B901CD79C7000C7A815 /* buttonStart.png */; };
 		32C496E81DB7CBD900DFDAF9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F4C24711CD5E55600D3B0DB /* Main.storyboard */; };
@@ -159,6 +160,7 @@
 		3262F1371D49B3F50056D72B /* buttonLevel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = buttonLevel.png; sourceTree = "<group>"; };
 		3262F13B1D49B7E90056D72B /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		329649211DCA21100078720A /* GameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
+		32B848611DD03D23004247DA /* MainMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainMenuViewController.swift; sourceTree = "<group>"; };
 		32BE5B8E1CD79BA100C7A815 /* backgroundMainMenu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = backgroundMainMenu.png; path = pic/backgroundMainMenu.png; sourceTree = SOURCE_ROOT; };
 		32BE5B901CD79C7000C7A815 /* buttonStart.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = buttonStart.png; path = pic/buttonStart.png; sourceTree = SOURCE_ROOT; };
 		32D80D411DCDE7AC00BF6274 /* PageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageViewController.swift; sourceTree = "<group>"; };
@@ -393,6 +395,7 @@
 				1FE0F3FF1CE6F5B9007E1B98 /* Test_Level.sks */,
 				1F4C24691CD5E55600D3B0DB /* AppDelegate.swift */,
 				1F4C24711CD5E55600D3B0DB /* Main.storyboard */,
+				32B848611DD03D23004247DA /* MainMenuViewController.swift */,
 				32D80D411DCDE7AC00BF6274 /* PageViewController.swift */,
 				329649211DCA21100078720A /* GameViewController.swift */,
 				3262F13B1D49B7E90056D72B /* ViewController.swift */,
@@ -607,6 +610,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				32B848621DD03D23004247DA /* MainMenuViewController.swift in Sources */,
 				329649221DCA21100078720A /* GameViewController.swift in Sources */,
 				32D80D421DCDE7AC00BF6274 /* PageViewController.swift in Sources */,
 				32C496EF1DB7CF4100DFDAF9 /* GameScene.swift in Sources */,
