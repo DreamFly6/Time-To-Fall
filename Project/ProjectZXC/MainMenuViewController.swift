@@ -26,7 +26,7 @@ class MainMenuViewController: UIViewController {
             }
         }
     }
-    
+
     
     @IBAction func topScenButton(_ sender: AnyObject) {
         buttonTitle = String(topScene)

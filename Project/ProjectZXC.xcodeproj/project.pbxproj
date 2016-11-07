@@ -59,20 +59,15 @@
 		1FB483311DC36BA600067D4B /* Level 48.sks in Resources */ = {isa = PBXBuildFile; fileRef = 1FB483301DC36BA600067D4B /* Level 48.sks */; };
 		1FE0F4001CE6F5B9007E1B98 /* Test_Level.sks in Resources */ = {isa = PBXBuildFile; fileRef = 1FE0F3FF1CE6F5B9007E1B98 /* Test_Level.sks */; };
 		1FF6BA481DB47E8A0058BEC2 /* Level 6.sks in Resources */ = {isa = PBXBuildFile; fileRef = 1FF6BA471DB47E8A0058BEC2 /* Level 6.sks */; };
-		32257FF11D50AF6F0071BB06 /* stop.png in Resources */ = {isa = PBXBuildFile; fileRef = 32257FF01D50AF6F0071BB06 /* stop.png */; };
-		3262F1381D49B3F50056D72B /* buttonLevel.png in Resources */ = {isa = PBXBuildFile; fileRef = 3262F1371D49B3F50056D72B /* buttonLevel.png */; };
 		3262F13C1D49B7E90056D72B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3262F13B1D49B7E90056D72B /* ViewController.swift */; };
 		329649221DCA21100078720A /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 329649211DCA21100078720A /* GameViewController.swift */; };
 		32B848621DD03D23004247DA /* MainMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32B848611DD03D23004247DA /* MainMenuViewController.swift */; };
-		32BE5B8F1CD79BA100C7A815 /* backgroundMainMenu.png in Resources */ = {isa = PBXBuildFile; fileRef = 32BE5B8E1CD79BA100C7A815 /* backgroundMainMenu.png */; };
-		32BE5B911CD79C7000C7A815 /* buttonStart.png in Resources */ = {isa = PBXBuildFile; fileRef = 32BE5B901CD79C7000C7A815 /* buttonStart.png */; };
 		32C496E81DB7CBD900DFDAF9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F4C24711CD5E55600D3B0DB /* Main.storyboard */; };
 		32C496EA1DB7CF0000DFDAF9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F4C24691CD5E55600D3B0DB /* AppDelegate.swift */; };
 		32C496EC1DB7CF0000DFDAF9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3262F13B1D49B7E90056D72B /* ViewController.swift */; };
 		32C496ED1DB7CF0000DFDAF9 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F4C246D1CD5E55600D3B0DB /* GameScene.swift */; };
 		32C496EF1DB7CF4100DFDAF9 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F4C246D1CD5E55600D3B0DB /* GameScene.swift */; };
 		32D80D421DCDE7AC00BF6274 /* PageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32D80D411DCDE7AC00BF6274 /* PageViewController.swift */; };
-		32E0A4251CF5A9CB00D575A7 /* MyLaunchScreen.png in Resources */ = {isa = PBXBuildFile; fileRef = 32E0A4241CF5A9CB00D575A7 /* MyLaunchScreen.png */; };
 		32F5A4291D3CA45B00631FE0 /* Level 3.sks in Resources */ = {isa = PBXBuildFile; fileRef = 32F5A4281D3CA45B00631FE0 /* Level 3.sks */; };
 		32F5A42B1D3CA47E00631FE0 /* Level 4.sks in Resources */ = {isa = PBXBuildFile; fileRef = 32F5A42A1D3CA47E00631FE0 /* Level 4.sks */; };
 		32F5A42D1D3CA49100631FE0 /* Level 5.sks in Resources */ = {isa = PBXBuildFile; fileRef = 32F5A42C1D3CA49100631FE0 /* Level 5.sks */; };
@@ -156,15 +151,10 @@
 		1FB483301DC36BA600067D4B /* Level 48.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = "Level 48.sks"; sourceTree = "<group>"; };
 		1FE0F3FF1CE6F5B9007E1B98 /* Test_Level.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Test_Level.sks; sourceTree = "<group>"; };
 		1FF6BA471DB47E8A0058BEC2 /* Level 6.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = "Level 6.sks"; sourceTree = "<group>"; };
-		32257FF01D50AF6F0071BB06 /* stop.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = stop.png; sourceTree = "<group>"; };
-		3262F1371D49B3F50056D72B /* buttonLevel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = buttonLevel.png; sourceTree = "<group>"; };
 		3262F13B1D49B7E90056D72B /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		329649211DCA21100078720A /* GameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		32B848611DD03D23004247DA /* MainMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainMenuViewController.swift; sourceTree = "<group>"; };
-		32BE5B8E1CD79BA100C7A815 /* backgroundMainMenu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = backgroundMainMenu.png; path = pic/backgroundMainMenu.png; sourceTree = SOURCE_ROOT; };
-		32BE5B901CD79C7000C7A815 /* buttonStart.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = buttonStart.png; path = pic/buttonStart.png; sourceTree = SOURCE_ROOT; };
 		32D80D411DCDE7AC00BF6274 /* PageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageViewController.swift; sourceTree = "<group>"; };
-		32E0A4241CF5A9CB00D575A7 /* MyLaunchScreen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = MyLaunchScreen.png; path = ../pic/MyLaunchScreen.png; sourceTree = "<group>"; };
 		32F5A4281D3CA45B00631FE0 /* Level 3.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; name = "Level 3.sks"; path = "../Level 3.sks"; sourceTree = "<group>"; };
 		32F5A42A1D3CA47E00631FE0 /* Level 4.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = "Level 4.sks"; sourceTree = "<group>"; };
 		32F5A42C1D3CA49100631FE0 /* Level 5.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = "Level 5.sks"; sourceTree = "<group>"; };
@@ -400,21 +390,8 @@
 				329649211DCA21100078720A /* GameViewController.swift */,
 				3262F13B1D49B7E90056D72B /* ViewController.swift */,
 				1F4C246D1CD5E55600D3B0DB /* GameScene.swift */,
-				32BE5B8D1CD79B8B00C7A815 /* Menu_Image */,
 			);
 			name = Scene;
-			sourceTree = "<group>";
-		};
-		32BE5B8D1CD79B8B00C7A815 /* Menu_Image */ = {
-			isa = PBXGroup;
-			children = (
-				3262F1371D49B3F50056D72B /* buttonLevel.png */,
-				32257FF01D50AF6F0071BB06 /* stop.png */,
-				32BE5B901CD79C7000C7A815 /* buttonStart.png */,
-				32E0A4241CF5A9CB00D575A7 /* MyLaunchScreen.png */,
-				32BE5B8E1CD79BA100C7A815 /* backgroundMainMenu.png */,
-			);
-			name = Menu_Image;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -552,17 +529,13 @@
 				1F7047CB1DC3566600C35C12 /* Level 19.sks in Resources */,
 				1F7047C91DC3563100C35C12 /* Level 18.sks in Resources */,
 				1FB4832B1DC36AB700067D4B /* Level 45.sks in Resources */,
-				32257FF11D50AF6F0071BB06 /* stop.png in Resources */,
 				1F7047D51DC3573800C35C12 /* Level 24.sks in Resources */,
-				32E0A4251CF5A9CB00D575A7 /* MyLaunchScreen.png in Resources */,
 				1FE0F4001CE6F5B9007E1B98 /* Test_Level.sks in Resources */,
 				1F1E11DB1DB4DB5A0006631B /* Level 8.sks in Resources */,
 				1F1E11D91DB4DB0F0006631B /* Level 7.sks in Resources */,
 				1F7047D91DC357B500C35C12 /* Level 26.sks in Resources */,
-				32BE5B8F1CD79BA100C7A815 /* backgroundMainMenu.png in Resources */,
 				1FB483191DC368E300067D4B /* Level 36.sks in Resources */,
 				1F7047DB1DC357D600C35C12 /* Level 27.sks in Resources */,
-				32BE5B911CD79C7000C7A815 /* buttonStart.png in Resources */,
 				1FB4831B1DC3692E00067D4B /* Level 37.sks in Resources */,
 				1F7047DD1DC357E900C35C12 /* Level 28.sks in Resources */,
 				1F7047C51DC355C800C35C12 /* Level 16.sks in Resources */,
@@ -581,7 +554,6 @@
 				1F7047C31DC355B700C35C12 /* Level 15.sks in Resources */,
 				1F7047CD1DC356B300C35C12 /* Level 20.sks in Resources */,
 				1F1E11E31DB4DDB40006631B /* Level 12.sks in Resources */,
-				3262F1381D49B3F50056D72B /* buttonLevel.png in Resources */,
 				32F5A4291D3CA45B00631FE0 /* Level 3.sks in Resources */,
 				1FB483271DC36A4400067D4B /* Level 43.sks in Resources */,
 				1FB4831D1DC369E600067D4B /* Level 38.sks in Resources */,

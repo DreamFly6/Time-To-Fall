@@ -29,6 +29,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         return CGFloat(arc4random()) / CGFloat(UINT32_MAX) * abs(firstNum - secondNum) + min(firstNum, secondNum)
     }
     
+    public var groundColorPub = UIColor.green
+    
     func colorPicker(level: Int) ->  UIColor {
         if (level > 0 && level <= 16) {
             return color1
@@ -326,6 +328,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
 
         //Цвет Ground
         let groundColor = #colorLiteral(red:Float(randomBetweenNumbers(firstNum: 0.0, secondNum:1.0)), green: Float(randomBetweenNumbers(firstNum: 0.0, secondNum:1.0)), blue: Float(randomBetweenNumbers(firstNum: 0.0, secondNum:1.0)), alpha: 1)
+        
+        groundColorPub = groundColor
 
         //Инициализация Ground
         for ground in self.children {
@@ -733,7 +737,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                     if progressBar.name == "ProgressBar" {
                         if let progressBar = progressBar as? SKSpriteNode {
                             progressBar.size.width = CGFloat(onGroundTime) * 39
-                            progressBar.color = UIColor.green
+                            //progressBar.color = UIColor.green
+                            progressBar.color = groundColorPub
                         }
                     }
                 }
