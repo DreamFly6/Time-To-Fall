@@ -755,7 +755,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             //print("On Ground(true)")
         }
         else {
-            onGround = false
+            //onGround = false
             //print("On Ground(false)")
         }
         
@@ -785,6 +785,11 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     override func didSimulatePhysics() {
 
         let mainChrctr = self.childNode(withName: "MainCharacter") as? SKSpriteNode
+        if mainChrctr?.position.y < 0 {
+            onGround = false
+        }
+        
+        
         
         //Удаляет спрайт, когда он улетел за экран
         for allObject in self.children {
