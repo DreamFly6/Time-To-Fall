@@ -64,11 +64,33 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     func setTopScene(topStage: Int) {
         UserDefaults.standard.set(topStage, forKey: "topStage")
         UserDefaults.standard.synchronize()
+        
+        print("=======================")
+        print("=======================")
+        print("=======================")
+        print("Был сохранен " + String(topStage))
+        print("=======================")
+        print("Текущий topScene " + String(topScene))
+        print("=======================")
+        print("=======================")
+        print("=======================")
+        
+        
     }
     
     //Загрузка топовой сцены
     func getTopScene() -> (Int) {
-       return UserDefaults.standard.integer(forKey: "topStage")
+        print("=======================")
+        print("=======================")
+        print("=======================")
+        print("=======================")
+        print("Был загружен " + String(UserDefaults.standard.integer(forKey: "topStage")))
+        print("=======================")
+        print("=======================")
+        print("=======================")
+        print("=======================")
+        
+        return UserDefaults.standard.integer(forKey: "topStage")
     }
     
     //Инициализация кнопки стоп
@@ -592,6 +614,14 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         stopButtonInit()
         
         
+        //Определение макс уровня, до которого дошел игрок
+        if thisScene >= topScene {
+            topScene = thisScene
+            setTopScene(topStage: topScene)
+        }
+        
+        
+        
         self.physicsWorld.contactDelegate = self
         
     }
@@ -682,7 +712,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             
             //Блок кода для обработки кнопок меню
             if node.name == "retry" {
-                setTopScene(topStage: topScene)
+                //setTopScene(topStage: topScene)
                 print("retry")
                 let currentScene = GameScene(fileNamed: "Level "+String(thisScene))
                 let transition = SKTransition.doorsCloseHorizontal(withDuration: 0.5)
@@ -692,7 +722,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             }
             
             if node.name == "next" {
-                setTopScene(topStage: topScene)
+                //setTopScene(topStage: topScene)
                 thisScene+=1
                 
                 let currentScene = GameScene(fileNamed: "Level "+String(thisScene))
@@ -703,7 +733,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             }
             
             if node.name == "prev" {
-                setTopScene(topStage: topScene)
+                //setTopScene(topStage: topScene)
                 thisScene-=1
                 let currentScene = GameScene(fileNamed: "Level "+String(thisScene))
                 let transition = SKTransition.doorway(withDuration: 0.5)
@@ -714,7 +744,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             }
             
             if node.name == "menu" {
-                setTopScene(topStage: topScene)
+                //setTopScene(topStage: topScene)
                 //Просто создал Segue и задал ей имя, с помощью имени ищем Segue и переходим
                 self.viewController.performSegue(withIdentifier: "GoToMainMenu", sender: self)
                 
@@ -739,15 +769,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                     showMenu = true
                     showRMenu()
                 }
-                setTopScene(topStage: topScene)
             }
-            
-            //Определение макс уровня, до которого дошел игрок
-            if thisScene >= topScene {
-                topScene = thisScene
-            }
-
-            
         }
     }
     
