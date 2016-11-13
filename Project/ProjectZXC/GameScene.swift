@@ -61,6 +61,15 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     public var myLabel5:SKLabelNode!
     
     
+    func setTopScene(topStage: Int) {
+        UserDefaults.standard.set(topStage, forKey: "topStage")
+        UserDefaults.standard.synchronize()
+    }
+    
+    func getTopScene() -> (Int) {
+       return UserDefaults.standard.integer(forKey: "topStage")
+    }
+    
     func stopButtonInit() {
         let stopButton = SKSpriteNode(imageNamed: "stopButton.png")
         stopButton.position = CGPoint(x: self.frame.width - 140, y: self.frame.height - 180)
@@ -748,22 +757,12 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             
             if node.name == "1"{
                 //Получение данных green
-                let defaults = UserDefaults.standard
-                let age = defaults.integer(forKey: "age")
-                topScene = age
-                print("================================")
-                print("================================")
-                print("=========КНОПКА НАЖАТА==========")
-                print("================================")
-                print("=========="+String(age)+"==========")
-                print("================================")
+                topScene = getTopScene()
             }
             
             if node.name == "2"{
                 //Сохранение данных red
-                let defaults = UserDefaults.standard
-                defaults.set(topScene, forKey: "age")
-                defaults.synchronize()
+                setTopScene(topStage: topScene)
 
             }
 
