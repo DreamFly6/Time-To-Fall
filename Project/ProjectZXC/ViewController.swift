@@ -11,7 +11,7 @@ import SpriteKit
 import CoreData
 
 public var thisScene = 1
-public var topScene = 1
+public var topScene = UserDefaults.standard.integer(forKey: "topStage")
 public var buttonTitle : String = ""
 
 

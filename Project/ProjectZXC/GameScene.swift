@@ -82,27 +82,27 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         stopButton.colorBlendFactor = CGFloat(1.0)
         self.addChild(stopButton)
         
-        let stopButton1 = SKSpriteNode(imageNamed: "stopButton.png")
-        stopButton1.position = CGPoint(x: self.frame.midX/2, y: self.frame.midY)
-        stopButton1.name = "1"
-        stopButton1.xScale = 0.35
-        stopButton1.yScale = 0.35
-        stopButton1.zPosition = 999
-        stopButton1.alpha = 0.8
-        stopButton1.color = UIColor.green
-        stopButton1.colorBlendFactor = CGFloat(1.0)
-        self.addChild(stopButton1)
-       
-        let stopButton2 = SKSpriteNode(imageNamed: "stopButton.png")
-        stopButton2.position = CGPoint(x: self.frame.midX+(self.frame.midX/2), y: self.frame.midY)
-        stopButton2.name = "2"
-        stopButton2.xScale = 0.35
-        stopButton2.yScale = 0.35
-        stopButton2.zPosition = 999
-        stopButton2.alpha = 0.8
-        stopButton2.color = UIColor.red
-        stopButton2.colorBlendFactor = CGFloat(1.0)
-        self.addChild(stopButton2)
+//        let stopButton1 = SKSpriteNode(imageNamed: "stopButton.png")
+//        stopButton1.position = CGPoint(x: self.frame.midX/2, y: self.frame.midY)
+//        stopButton1.name = "1"
+//        stopButton1.xScale = 0.35
+//        stopButton1.yScale = 0.35
+//        stopButton1.zPosition = 999
+//        stopButton1.alpha = 0.8
+//        stopButton1.color = UIColor.green
+//        stopButton1.colorBlendFactor = CGFloat(1.0)
+//        self.addChild(stopButton1)
+//       
+//        let stopButton2 = SKSpriteNode(imageNamed: "stopButton.png")
+//        stopButton2.position = CGPoint(x: self.frame.midX+(self.frame.midX/2), y: self.frame.midY)
+//        stopButton2.name = "2"
+//        stopButton2.xScale = 0.35
+//        stopButton2.yScale = 0.35
+//        stopButton2.zPosition = 999
+//        stopButton2.alpha = 0.8
+//        stopButton2.color = UIColor.red
+//        stopButton2.colorBlendFactor = CGFloat(1.0)
+//        self.addChild(stopButton2)
     }
     
     func statusBarInit() {
@@ -726,6 +726,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             let node = self.atPoint(location)
             
             if node.name == "retry"{
+                setTopScene(topStage: topScene)
                 print("retry")
                 let currentScene = GameScene(fileNamed: "Level "+String(thisScene))
                 let transition = SKTransition.doorsCloseHorizontal(withDuration: 0.5)
@@ -735,7 +736,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             }
             
             if node.name == "next"{
-
+                setTopScene(topStage: topScene)
                 thisScene+=1
                 
                 let currentScene = GameScene(fileNamed: "Level "+String(thisScene))
@@ -746,6 +747,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             }
             
             if node.name == "prev"{
+                setTopScene(topStage: topScene)
                 thisScene-=1
                 let currentScene = GameScene(fileNamed: "Level "+String(thisScene))
                 let transition = SKTransition.doorway(withDuration: 0.5)
@@ -755,23 +757,22 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                 
             }
             
-            if node.name == "1"{
-                //Получение данных green
-                topScene = getTopScene()
-            }
-            
-            if node.name == "2"{
-                //Сохранение данных red
-                setTopScene(topStage: topScene)
-
-            }
+//            if node.name == "1"{
+//                //Получение данных green
+//                topScene = getTopScene()
+//            }
+//            
+//            if node.name == "2"{
+//                //Сохранение данных red
+//                setTopScene(topStage: topScene)
+//            }
 
             
             
             
             //переходим в главное меню
             if node.name == "menu"{
-                
+                setTopScene(topStage: topScene)
 //                просто создал Segue и задал ей имя, с помощью имени ищем Segue и переходим
                 self.viewController.performSegue(withIdentifier: "GoToMainMenu", sender: self)
                 
