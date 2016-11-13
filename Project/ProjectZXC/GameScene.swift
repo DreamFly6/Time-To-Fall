@@ -60,16 +60,18 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     public var myLabel4:SKLabelNode!
     public var myLabel5:SKLabelNode!
     
-    
+    //Сохранение топовой сцены
     func setTopScene(topStage: Int) {
         UserDefaults.standard.set(topStage, forKey: "topStage")
         UserDefaults.standard.synchronize()
     }
     
+    //Загрузка топовой сцены
     func getTopScene() -> (Int) {
        return UserDefaults.standard.integer(forKey: "topStage")
     }
     
+    //Инициализация кнопки стоп
     func stopButtonInit() {
         let stopButton = SKSpriteNode(imageNamed: "stopButton.png")
         stopButton.position = CGPoint(x: self.frame.width - 140, y: self.frame.height - 180)
@@ -81,30 +83,9 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         stopButton.color = colorPicker(level: thisScene)
         stopButton.colorBlendFactor = CGFloat(1.0)
         self.addChild(stopButton)
-        
-//        let stopButton1 = SKSpriteNode(imageNamed: "stopButton.png")
-//        stopButton1.position = CGPoint(x: self.frame.midX/2, y: self.frame.midY)
-//        stopButton1.name = "1"
-//        stopButton1.xScale = 0.35
-//        stopButton1.yScale = 0.35
-//        stopButton1.zPosition = 999
-//        stopButton1.alpha = 0.8
-//        stopButton1.color = UIColor.green
-//        stopButton1.colorBlendFactor = CGFloat(1.0)
-//        self.addChild(stopButton1)
-//       
-//        let stopButton2 = SKSpriteNode(imageNamed: "stopButton.png")
-//        stopButton2.position = CGPoint(x: self.frame.midX+(self.frame.midX/2), y: self.frame.midY)
-//        stopButton2.name = "2"
-//        stopButton2.xScale = 0.35
-//        stopButton2.yScale = 0.35
-//        stopButton2.zPosition = 999
-//        stopButton2.alpha = 0.8
-//        stopButton2.color = UIColor.red
-//        stopButton2.colorBlendFactor = CGFloat(1.0)
-//        self.addChild(stopButton2)
     }
     
+    //Инициализация текста для разработчиков
     func statusBarInit() {
 
         myLabel1 = SKLabelNode(fontNamed: "Arial")
@@ -142,6 +123,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         
     }
     
+    //Изменение текста для разработчиков
     func statusBar() {
         myLabel1.text = "Текущая сцена = "+String(thisScene)
         myLabel2.text = "Топовая сцена = "+String(topScene)
@@ -652,7 +634,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             }
             
             if (touchedNode.name == "stop") {
-                if (showMenu == true ) {
+                
+                if showMenu == true {
                     showMenu = false
                     print("SHOW_MENU_FALSE")
                     removeMenu()
@@ -662,6 +645,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                     print("SHOW_MENU_TRUE")
                     showRMenu()
                 }
+                
+                setTopScene(topStage: topScene)
             }
 
     
