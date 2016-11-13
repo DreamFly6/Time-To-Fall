@@ -591,20 +591,9 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         //Инициализация и установка кнопки pause
         stopButtonInit()
         
-
         
         self.physicsWorld.contactDelegate = self
         
-
-        
-//        print("================================")
-//        print("================================")
-//        print("====ИНИЦИАЛИЗАЦИЯ ЗАВЕРШЕНА=====")
-//        let age = defaults.integer(forKey: "age")
-//        print("================================")
-//        print("============="+String(age)+"============")
-//        print("================================")
-
     }
     
     
