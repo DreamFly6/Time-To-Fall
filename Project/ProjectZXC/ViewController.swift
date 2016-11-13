@@ -11,14 +11,16 @@ import SpriteKit
 import CoreData
 
 public var thisScene = 1
-public var topScene = UserDefaults.standard.integer(forKey: "topStage")
+public var topScene = -1
 public var buttonTitle : String = ""
 
 
 class ViewController: UIViewController {
     
     override func viewDidLoad() {
+
         self.navigationController?.isNavigationBarHidden = true
+
         
         for case let button as UIButton in self.view.subviews {
             if (button.accessibilityLabel == "menuSelecter") && (Int(button.currentTitle!)! <= topScene)  {

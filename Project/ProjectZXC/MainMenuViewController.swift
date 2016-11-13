@@ -16,7 +16,26 @@ class MainMenuViewController: UIViewController {
     
     
     override func viewDidLoad() {
+        print("Жопа")
         
+        if (UserDefaults.standard.integer(forKey: "topStage") == nil) {
+            print("================================")
+            print("================================")
+            print("====NIL NIL NIL NIL NIL NIL=====")
+            print("================================")
+            print("================================")
+            print("================================")
+            topScene = 1
+        }
+        else{
+            print("================================")
+            print("================================")
+            print("=++++++++++++++++++++++++++++++=")
+            print("================================")
+            print("================================")
+            print("================================")
+            topScene = UserDefaults.standard.integer(forKey: "topStage")
+        }
         
         self.navigationController?.isNavigationBarHidden = true
         

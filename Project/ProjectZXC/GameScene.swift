@@ -617,11 +617,13 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         // Цикл считывающий нажатие на экран
         for touch: AnyObject in touches {
             
-            //print(thisScene," <-- Текущая ",topScene, "<-- Топовая")
             
-            
+            //Удаление блока при нажатии
             let touchLocation = touch.location(in: self)
             let touchedNode = self.atPoint(touchLocation)
+            let touch = touches
+            let location = touch.first!.location(in: self)
+            let node = self.atPoint(location)
             
             if  (
                 touchedNode.name == "WoodenBox"
@@ -630,28 +632,15 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                 || touchedNode.name == "GlassBlock"
                 )
             {
-                touchedNode.removeFromParent() //удаление
+                //Удаление
+                touchedNode.removeFromParent()
             }
             
-            if (touchedNode.name == "stop") {
-                
-                if showMenu == true {
-                    showMenu = false
-                    print("SHOW_MENU_FALSE")
-                    removeMenu()
-                }
-                else {
-                    showMenu = true
-                    print("SHOW_MENU_TRUE")
-                    showRMenu()
-                }
-                
-                setTopScene(topStage: topScene)
-            }
+
 
     
 
-            
+            //Механика Волл блока
             if let spriteNode = touchedNode as? SKSpriteNode {
                 if spriteNode.name == "WallBlock"{
                     if spriteNode.physicsBody?.allowsRotation == true {
@@ -668,9 +657,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             }
             
             
-            
-            
-            //TODO: Переделать условие на человеческое(Мб и такое норм)
+            //Механика Актив блока
             if let spriteNode = touchedNode as? SKSpriteNode {
                 if spriteNode.name == "ActiveBlock"{
                     if spriteNode.physicsBody?.pinned == false{
@@ -691,6 +678,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             }
             
 
+            //Механика Каменного блока
             if let spriteNode = touchedNode as? SKSpriteNode {
                 if spriteNode.name == "StoneBlock"{
                     if spriteNode.physicsBody?.mass == 10.0 {
@@ -703,14 +691,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                 }
             }
             
-            
-            
-            
-            let touch = touches
-            let location = touch.first!.location(in: self)
-            let node = self.atPoint(location)
-            
-            if node.name == "retry"{
+            //Блок кода для обработки кнопок меню
+            if node.name == "retry" {
                 setTopScene(topStage: topScene)
                 print("retry")
                 let currentScene = GameScene(fileNamed: "Level "+String(thisScene))
@@ -720,7 +702,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                 self.scene!.view?.presentScene(currentScene!, transition: transition)
             }
             
-            if node.name == "next"{
+            if node.name == "next" {
                 setTopScene(topStage: topScene)
                 thisScene+=1
                 
@@ -731,7 +713,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                 self.scene!.view?.presentScene(currentScene!, transition: transition)
             }
             
-            if node.name == "prev"{
+            if node.name == "prev" {
                 setTopScene(topStage: topScene)
                 thisScene-=1
                 let currentScene = GameScene(fileNamed: "Level "+String(thisScene))
@@ -742,32 +724,16 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                 
             }
             
-//            if node.name == "1"{
-//                //Получение данных green
-//                topScene = getTopScene()
-//            }
-//            
-//            if node.name == "2"{
-//                //Сохранение данных red
-//                setTopScene(topStage: topScene)
-//            }
-
-            
-            
-            
-            //переходим в главное меню
-            if node.name == "menu"{
+            if node.name == "menu" {
                 setTopScene(topStage: topScene)
-//                просто создал Segue и задал ей имя, с помощью имени ищем Segue и переходим
+                //Просто создал Segue и задал ей имя, с помощью имени ищем Segue и переходим
                 self.viewController.performSegue(withIdentifier: "GoToMainMenu", sender: self)
                 
-                
-                //удаляем все говно со сцены, чтобы при новом открытии фпс норм были
+                //Удаляем все говно со сцены, чтобы при новом открытии фпс норм были
                 self.scene!.removeFromParent()
                 
-                //не работали кнопки в игровом меню из-за того, что не было строчки ниже
+                //Не работали кнопки в игровом меню из-за того, что не было строчки ниже
                 self.scene!.view?.removeFromSuperview()
-                
                 
                 self.removeFromParent()
                 self.removeAllActions()
@@ -775,6 +741,17 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                 
             }
             
+            if touchedNode.name == "stop" {
+                if showMenu == true {
+                    showMenu = false
+                    removeMenu()
+                }
+                else {
+                    showMenu = true
+                    showRMenu()
+                }
+                setTopScene(topStage: topScene)
+            }
             
             //Определение макс уровня, до которого дошел игрок
             if thisScene >= topScene {
@@ -840,7 +817,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         //Удаляет спрайт, когда он улетел за экран
         for allObject in self.children {
             if let allObject = allObject as? SKSpriteNode {
-                if (allObject.position.y < 0) {
+                if (allObject.position.y < 0 && allObject.name != "MainCharacter") {
                     allObject.removeFromParent()
                 }
             }
