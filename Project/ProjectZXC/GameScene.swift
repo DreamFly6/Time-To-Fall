@@ -84,16 +84,16 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         stopButton1.colorBlendFactor = CGFloat(1.0)
         self.addChild(stopButton1)
        
-//        let stopButton2 = SKSpriteNode(imageNamed: "stopButton.png")
-//        stopButton2.position = CGPoint(x: self.frame.midX+(self.frame.midX/2), y: self.frame.midY)
-//        stopButton2.name = "2"
-//        stopButton2.xScale = 0.35
-//        stopButton2.yScale = 0.35
-//        stopButton2.zPosition = 999
-//        stopButton2.alpha = 0.8
-//        stopButton2.color = UIColor.red
-//        stopButton2.colorBlendFactor = CGFloat(1.0)
-//        self.addChild(stopButton2)
+        let stopButton2 = SKSpriteNode(imageNamed: "stopButton.png")
+        stopButton2.position = CGPoint(x: self.frame.midX+(self.frame.midX/2), y: self.frame.midY)
+        stopButton2.name = "2"
+        stopButton2.xScale = 0.35
+        stopButton2.yScale = 0.35
+        stopButton2.zPosition = 999
+        stopButton2.alpha = 0.8
+        stopButton2.color = UIColor.red
+        stopButton2.colorBlendFactor = CGFloat(1.0)
+        self.addChild(stopButton2)
     }
     
     func statusBarInit() {
@@ -753,7 +753,14 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                 let defaults = UserDefaults.standard
                 let age = defaults.integer(forKey: "age")
                 topScene = age
+                print("================================")
+                print("================================")
+                print("=========КНОПКА НАЖАТА==========")
+                print("================================")
+                print("=========="+String(age)+"==========")
+                print("================================")
             }
+            
             if node.name == "2"{
                 //Сохранение данных red
 
