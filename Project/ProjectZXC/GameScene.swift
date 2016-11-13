@@ -604,17 +604,15 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         
         self.physicsWorld.contactDelegate = self
         
-        let defaults = UserDefaults.standard
-        defaults.set(topScene, forKey: "age")
-        defaults.synchronize()
+
         
-        print("================================")
-        print("================================")
-        print("====ИНИЦИАЛИЗАЦИЯ ЗАВЕРШЕНА=====")
-        let age = defaults.integer(forKey: "age")
-        print("================================")
-        print("============="+String(age)+"============")
-        print("================================")
+//        print("================================")
+//        print("================================")
+//        print("====ИНИЦИАЛИЗАЦИЯ ЗАВЕРШЕНА=====")
+//        let age = defaults.integer(forKey: "age")
+//        print("================================")
+//        print("============="+String(age)+"============")
+//        print("================================")
 
     }
     
@@ -763,6 +761,9 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             
             if node.name == "2"{
                 //Сохранение данных red
+                let defaults = UserDefaults.standard
+                defaults.set(topScene, forKey: "age")
+                defaults.synchronize()
 
             }
 
