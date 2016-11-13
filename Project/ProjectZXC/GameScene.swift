@@ -31,6 +31,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     
     public var groundColorPub = UIColor.green
     
+
+    
     func colorPicker(level: Int) ->  UIColor {
         if (level > 0 && level <= 16) {
             return color1
@@ -70,6 +72,28 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         stopButton.color = colorPicker(level: thisScene)
         stopButton.colorBlendFactor = CGFloat(1.0)
         self.addChild(stopButton)
+        
+        let stopButton1 = SKSpriteNode(imageNamed: "stopButton.png")
+        stopButton1.position = CGPoint(x: self.frame.midX/2, y: self.frame.midY)
+        stopButton1.name = "1"
+        stopButton1.xScale = 0.35
+        stopButton1.yScale = 0.35
+        stopButton1.zPosition = 999
+        stopButton1.alpha = 0.8
+        stopButton1.color = UIColor.green
+        stopButton1.colorBlendFactor = CGFloat(1.0)
+        self.addChild(stopButton1)
+       
+        let stopButton2 = SKSpriteNode(imageNamed: "stopButton.png")
+        stopButton2.position = CGPoint(x: self.frame.midX+(self.frame.midX/2), y: self.frame.midY)
+        stopButton2.name = "2"
+        stopButton2.xScale = 0.35
+        stopButton2.yScale = 0.35
+        stopButton2.zPosition = 999
+        stopButton2.alpha = 0.8
+        stopButton2.color = UIColor.red
+        stopButton2.colorBlendFactor = CGFloat(1.0)
+        self.addChild(stopButton2)
     }
     
     func statusBarInit() {
@@ -241,6 +265,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         if thisScene == topScene {
             topScene+=1
         }
+        
         let menuBoard = SKSpriteNode(imageNamed: "MenuBoard.png")
         menuBoard.position = CGPoint(x: self.frame.midX, y: self.frame.midY)
         menuBoard.name = "menuBoard"
@@ -565,16 +590,25 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     
     //Функция выполняемая до открытия сцены
     override func didMove(to view: SKView) {
+        
         //Инициализация игровых объектов
         initGameObject()
+
         //Инициализация статус бара
         statusBarInit()
-        //statusBar()
-        
+
         //Инициализация и установка кнопки pause
         stopButtonInit()
         
+        
         self.physicsWorld.contactDelegate = self
+        print("================================")
+        print("================================")
+        print("====ИНИЦИАЛИЗАЦИЯ ЗАВЕРШЕНА=====")
+        print("================================")
+        print("================================")
+        print("================================")
+
     }
     
     
@@ -706,6 +740,20 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                 self.scene!.view?.presentScene(currentScene!, transition: transition)
                 
             }
+            
+            if node.name == "1"{
+                //Получение данных greed
+                let defaults = UserDefaults.standard
+                let age = defaults.integer(forKey: "age")
+                topScene = age
+            }
+            if node.name == "2"{
+                //Сохранение данных red
+                let defaults = UserDefaults.standard
+                defaults.set(topScene, forKey: "age")
+                defaults.synchronize()
+            }
+
             
             
             

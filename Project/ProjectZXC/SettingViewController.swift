@@ -26,6 +26,10 @@ class SettingViewController: UIViewController {
             statusBarBool = false
             print(statusBarBool)
         }
+
+
+
+        
     
     }
     
