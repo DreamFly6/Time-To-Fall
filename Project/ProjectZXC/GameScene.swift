@@ -868,6 +868,11 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                 //Если свинья на земле и время которое она пролежала на земле равно 100, то победа
                 if onGroundTime > 100 && showMenu == false {
                     showMenu = true //если показывали меню, то true
+                    
+                    if (getTopScene() < (thisScene+1)){
+                        setTopScene(topStage: (thisScene+1))
+                    }
+
                     showWMenu() //Показать меню выигрыша
                 }
             
