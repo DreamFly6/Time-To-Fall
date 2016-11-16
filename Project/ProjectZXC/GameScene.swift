@@ -30,7 +30,6 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     }
     
     public var groundColorPub = UIColor.green
-    
 
     
     func colorPicker(level: Int) ->  UIColor {
@@ -769,6 +768,21 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                     showMenu = true
                     showRMenu()
                 }
+                
+                let NumColumns = 2 //кол-во массивов
+                let NumRows = 2 //кол-во элементов в массиве
+                var array = Array<Array<Int>>()
+                
+                for column in 0...NumColumns-1 {
+                    var columnArray = Array<Int>()
+                    for row in 0...NumRows-1 {
+                        columnArray.append(column)
+                    }
+                    array.append(columnArray)
+                }
+                
+                print("array \(array)")
+                
             }
         }
     }
