@@ -20,6 +20,8 @@ class PageViewController: UIViewController, UIPageViewControllerDataSource {
         viewControllers = [
             storyboard!.instantiateViewController(withIdentifier: "One"),
             storyboard!.instantiateViewController(withIdentifier: "Two"),
+            storyboard!.instantiateViewController(withIdentifier: "Three"),
+            storyboard!.instantiateViewController(withIdentifier: "Four"),
         ]
         pageViewController.dataSource = self
         
