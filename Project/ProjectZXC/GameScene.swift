@@ -59,6 +59,38 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     public var myLabel4:SKLabelNode!
     public var myLabel5:SKLabelNode!
     
+    
+    
+    //Сохранение статистики
+    func saveStat(info:String) {
+        switch info {
+            //нажатие кнопки next
+        case "next":
+            statsАrray[thisScene][0] += 1
+            break
+            //Перезагрузка уровня
+        case "retry":
+            statsАrray[thisScene][1] += 1
+            break
+            //Проигрышь
+        case "lose":
+            statsАrray[thisScene][2] += 1
+            break
+            //Разрушенные блоки
+        case "destroy":
+            statsАrray[thisScene][3] += 1
+            break
+            //Время в игре
+        case "time":
+            statsАrray[thisScene][4] += 1
+            break
+        default:
+            print("НЕПРАВИЛЬНОЕ НАПИСАНИЕ")
+        }
+        UserDefaults.standard.set(statsАrray, forKey: "stat")
+        UserDefaults.standard.synchronize()
+    }
+    
     //Сохранение топовой сцены
     func setTopScene(topStage: Int) {
         UserDefaults.standard.set(topStage, forKey: "topStage")
@@ -652,6 +684,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             {
                 //Удаление
                 touchedNode.removeFromParent()
+                saveStat(info: "destroy")
             }
             
 
@@ -704,6 +737,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                         spriteNode.physicsBody?.mass = 9.0
                     }
                     else{
+                        saveStat(info: "destroy")
                         spriteNode.removeFromParent()
                     }
                 }
@@ -713,6 +747,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             if node.name == "retry" {
                 //setTopScene(topStage: topScene)
                 print("retry")
+                saveStat(info: "retry")
                 let currentScene = GameScene(fileNamed: "Level "+String(thisScene))
                 let transition = SKTransition.doorsCloseHorizontal(withDuration: 0.5)
                 currentScene!.scaleMode = SKSceneScaleMode.aspectFill
@@ -723,7 +758,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             if node.name == "next" {
                 //setTopScene(topStage: topScene)
                 thisScene+=1
-                
+                saveStat(info: "next")
                 let currentScene = GameScene(fileNamed: "Level "+String(thisScene))
                 let transition = SKTransition.doorway(withDuration: 0.5)
                 currentScene!.scaleMode = SKSceneScaleMode.aspectFill
@@ -768,21 +803,6 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                     showMenu = true
                     showRMenu()
                 }
-                
-                let NumColumns = 2 //кол-во массивов
-                let NumRows = 2 //кол-во элементов в массиве
-                var array = Array<Array<Int>>()
-                
-                for column in 0...NumColumns-1 {
-                    var columnArray = Array<Int>()
-                    for row in 0...NumRows-1 {
-                        columnArray.append(column)
-                    }
-                    array.append(columnArray)
-                }
-                
-                print("array \(array)")
-                
             }
         }
     }
@@ -820,6 +840,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                 }
             }
             sleep(UInt32(0.5))
+            saveStat(info: "lose")
             showMenu = true
             showLMenu()
         }
@@ -921,6 +942,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
 
         //если ГГ улетел за сцену, показываем меню
         if mainChrctr?.position.y < 0 && showMenu == false {
+            saveStat(info: "lose")
             showMenu = true //если показывали меню, то true
             showLMenu() //Показать меню проигрыша
             onGround = false //Свинья не на земле(за экраном она не может определить это)
@@ -930,7 +952,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     }
     
     override func update(_ currentTime: TimeInterval) {  /* Called before each frame is rendered */
-
+        saveStat(info: "time")
     }
     
     

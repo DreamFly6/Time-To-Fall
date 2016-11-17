@@ -23,7 +23,9 @@ class MainMenuViewController: UIViewController {
             topScene = 1
         }
         
-
+        if topScene > 1 {
+            statsАrray = UserDefaults.standard.array(forKey: "stat") as! [[Int]]
+        }
         
         
         self.navigationController?.isNavigationBarHidden = true

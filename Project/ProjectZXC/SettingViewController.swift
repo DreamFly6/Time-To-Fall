@@ -40,6 +40,7 @@ class SettingViewController: UIViewController {
         if mySwitch.isOn {
             statusBarBool = true
             setTopScene(topStage: 1)
+            UserDefaults.standard.removeObject(forKey: "stat")
             print(statusBarBool)
         } else {
             statusBarBool = false
