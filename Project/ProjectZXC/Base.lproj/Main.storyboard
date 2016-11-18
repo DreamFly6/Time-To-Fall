@@ -3,8 +3,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
-        <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
-        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -27,7 +25,8 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iUf-xk-Dvu">
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="70" id="gsm-4l-qHx"/>
+                                    <constraint firstAttribute="width" constant="70" id="6Sg-Yx-lNK"/>
+                                    <constraint firstAttribute="height" constant="70" id="9eU-HJ-wzy"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -39,82 +38,65 @@
                                     <segue destination="jC2-zd-pnK" kind="show" id="uLA-Vy-bLj"/>
                                 </connections>
                             </button>
-                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="jeP-TR-ObN">
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="jeP-TR-ObN">
                                 <connections>
                                     <action selector="switch:" destination="NK0-Gf-iH8" eventType="valueChanged" id="Zzj-Dc-Cdc"/>
                                 </connections>
                             </switch>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="30" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U4u-0h-MlI">
-                                <fontDescription key="fontDescription" type="system" pointSize="33"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mcj-Py-Kqg">
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="27" id="t2E-Uh-q9j"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="33"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="topScene" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ozd-zK-hJZ">
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SAr-AV-PpJ">
-                                <frame key="frameInset" minX="16" minY="103" width="343" height="466"/>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SAr-AV-PpJ">
                                 <subviews>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="=" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zUK-CO-b1F">
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="466" id="1Nj-Wk-oQb"/>
+                                            <constraint firstAttribute="height" constant="466" id="rsx-86-QY1"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="zUK-CO-b1F" firstAttribute="centerX" secondItem="SAr-AV-PpJ" secondAttribute="centerX" id="3RP-xg-ACV"/>
-                                    <constraint firstItem="zUK-CO-b1F" firstAttribute="top" secondItem="SAr-AV-PpJ" secondAttribute="top" id="CHs-Lk-221"/>
-                                    <constraint firstAttribute="trailing" secondItem="zUK-CO-b1F" secondAttribute="trailing" id="PPX-TC-sAr"/>
-                                    <constraint firstItem="zUK-CO-b1F" firstAttribute="leading" secondItem="SAr-AV-PpJ" secondAttribute="leading" id="WQf-Bh-xA5"/>
-                                    <constraint firstAttribute="bottom" secondItem="zUK-CO-b1F" secondAttribute="bottom" constant="-15" id="cyL-4Z-djg"/>
+                                    <constraint firstAttribute="bottom" secondItem="zUK-CO-b1F" secondAttribute="bottom" constant="-15" id="M0n-6v-foy"/>
+                                    <constraint firstAttribute="trailing" secondItem="zUK-CO-b1F" secondAttribute="trailing" id="fz1-e1-9Jb"/>
+                                    <constraint firstItem="zUK-CO-b1F" firstAttribute="top" secondItem="SAr-AV-PpJ" secondAttribute="top" id="jzI-KV-4Xa"/>
+                                    <constraint firstItem="zUK-CO-b1F" firstAttribute="leading" secondItem="SAr-AV-PpJ" secondAttribute="leading" id="kcd-BY-etg"/>
+                                    <constraint firstItem="zUK-CO-b1F" firstAttribute="centerX" secondItem="SAr-AV-PpJ" secondAttribute="centerX" id="xLo-LH-OL5"/>
                                 </constraints>
                             </scrollView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Statistics" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aZl-l3-c7Y">
-                                <frame key="frameInset" minX="16" minY="74" width="138" height="29"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Statistics" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aZl-l3-c7Y">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="29" id="x4q-eg-wZU"/>
+                                    <constraint firstAttribute="width" constant="138" id="yYK-vu-Lfo"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="topScene = 1 + delet statistics" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mcj-Py-Kqg">
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="Ols-GG-F78" firstAttribute="top" secondItem="JJ8-mo-Fxg" secondAttribute="top" id="22i-AF-QPa"/>
-                            <constraint firstItem="SAr-AV-PpJ" firstAttribute="leading" secondItem="JJ8-mo-Fxg" secondAttribute="leadingMargin" id="6or-wK-VIX"/>
-                            <constraint firstItem="SAr-AV-PpJ" firstAttribute="top" secondItem="JJ8-mo-Fxg" secondAttribute="top" constant="105" id="DUe-8L-oYx"/>
-                            <constraint firstItem="jeP-TR-ObN" firstAttribute="leading" secondItem="Ozd-zK-hJZ" secondAttribute="trailing" constant="43" id="KKG-h7-QIN"/>
-                            <constraint firstItem="mcj-Py-Kqg" firstAttribute="leading" secondItem="jeP-TR-ObN" secondAttribute="trailing" constant="8" symbolic="YES" id="Maf-IK-BlU"/>
-                            <constraint firstItem="iUf-xk-Dvu" firstAttribute="top" secondItem="SAr-AV-PpJ" secondAttribute="bottom" constant="21" id="Oct-Tc-bhf"/>
-                            <constraint firstItem="jeP-TR-ObN" firstAttribute="leading" secondItem="U4u-0h-MlI" secondAttribute="trailing" constant="1" id="PgF-n7-j2O"/>
-                            <constraint firstAttribute="trailing" secondItem="mcj-Py-Kqg" secondAttribute="trailing" constant="136" id="QBW-wO-H7T"/>
-                            <constraint firstItem="Ols-GG-F78" firstAttribute="bottom" secondItem="754-A2-QPK" secondAttribute="top" id="Rn3-AR-fuk"/>
-                            <constraint firstItem="mcj-Py-Kqg" firstAttribute="centerY" secondItem="Ozd-zK-hJZ" secondAttribute="centerY" id="Uc5-zL-jVK"/>
-                            <constraint firstItem="iUf-xk-Dvu" firstAttribute="leading" secondItem="SAr-AV-PpJ" secondAttribute="leading" id="dWP-QI-ZyJ"/>
-                            <constraint firstItem="Ols-GG-F78" firstAttribute="leading" secondItem="JJ8-mo-Fxg" secondAttribute="leading" id="fP8-sG-n8d"/>
-                            <constraint firstItem="mcj-Py-Kqg" firstAttribute="baseline" secondItem="Ozd-zK-hJZ" secondAttribute="baseline" id="gbv-aI-d8k"/>
-                            <constraint firstAttribute="bottom" secondItem="iUf-xk-Dvu" secondAttribute="bottom" constant="20" symbolic="YES" id="m1X-TG-fDC"/>
-                            <constraint firstAttribute="bottom" secondItem="SAr-AV-PpJ" secondAttribute="bottom" constant="111" id="mlZ-m8-IZb"/>
-                            <constraint firstItem="SAr-AV-PpJ" firstAttribute="centerX" secondItem="Ols-GG-F78" secondAttribute="centerX" id="pSO-7j-c4j"/>
-                            <constraint firstItem="mcj-Py-Kqg" firstAttribute="centerY" secondItem="jeP-TR-ObN" secondAttribute="centerY" id="prf-Nk-Cc8"/>
-                            <constraint firstItem="Ozd-zK-hJZ" firstAttribute="leading" secondItem="JJ8-mo-Fxg" secondAttribute="leadingMargin" constant="-5" id="raV-in-ReI"/>
-                            <constraint firstItem="mcj-Py-Kqg" firstAttribute="baseline" secondItem="U4u-0h-MlI" secondAttribute="firstBaseline" id="tkH-sK-5uv"/>
-                            <constraint firstItem="U4u-0h-MlI" firstAttribute="leading" secondItem="JJ8-mo-Fxg" secondAttribute="leadingMargin" constant="93" id="uBS-5W-fgf"/>
-                            <constraint firstItem="mcj-Py-Kqg" firstAttribute="centerY" secondItem="U4u-0h-MlI" secondAttribute="centerY" id="xFL-AP-UG9"/>
-                            <constraint firstItem="mcj-Py-Kqg" firstAttribute="top" secondItem="O2t-K1-Rgo" secondAttribute="bottom" constant="29" id="xrO-L2-zB2"/>
-                            <constraint firstItem="SAr-AV-PpJ" firstAttribute="trailing" secondItem="JJ8-mo-Fxg" secondAttribute="trailingMargin" id="y0j-yZ-dXY"/>
+                            <constraint firstItem="jeP-TR-ObN" firstAttribute="leading" secondItem="aZl-l3-c7Y" secondAttribute="leading" id="4zK-Ki-oyg"/>
+                            <constraint firstItem="aZl-l3-c7Y" firstAttribute="top" secondItem="mcj-Py-Kqg" secondAttribute="bottom" constant="11" id="59T-L2-JBI"/>
+                            <constraint firstItem="SAr-AV-PpJ" firstAttribute="leading" secondItem="iUf-xk-Dvu" secondAttribute="leading" id="79b-IU-CcE"/>
+                            <constraint firstAttribute="trailing" secondItem="Ols-GG-F78" secondAttribute="trailing" id="C4U-BX-sVu"/>
+                            <constraint firstItem="Ols-GG-F78" firstAttribute="top" secondItem="JJ8-mo-Fxg" secondAttribute="top" id="DnH-6u-kqa"/>
+                            <constraint firstItem="mcj-Py-Kqg" firstAttribute="trailing" secondItem="SAr-AV-PpJ" secondAttribute="trailing" id="Fbu-V4-Ze6"/>
+                            <constraint firstItem="jeP-TR-ObN" firstAttribute="leading" secondItem="JJ8-mo-Fxg" secondAttribute="leadingMargin" id="G2y-og-sZL"/>
+                            <constraint firstItem="Ols-GG-F78" firstAttribute="bottom" secondItem="754-A2-QPK" secondAttribute="top" id="Pra-Df-uco"/>
+                            <constraint firstItem="aZl-l3-c7Y" firstAttribute="leading" secondItem="SAr-AV-PpJ" secondAttribute="leading" id="W7O-da-v0Y"/>
+                            <constraint firstItem="Ols-GG-F78" firstAttribute="leading" secondItem="JJ8-mo-Fxg" secondAttribute="leading" id="ZeG-0n-fcK"/>
+                            <constraint firstAttribute="bottom" secondItem="iUf-xk-Dvu" secondAttribute="bottom" constant="20" symbolic="YES" id="aZl-Gn-weJ"/>
+                            <constraint firstItem="mcj-Py-Kqg" firstAttribute="top" secondItem="O2t-K1-Rgo" secondAttribute="bottom" constant="3" id="dQW-zL-Xvf"/>
+                            <constraint firstItem="Ols-GG-F78" firstAttribute="centerX" secondItem="SAr-AV-PpJ" secondAttribute="centerX" id="k4g-Ly-7nk"/>
+                            <constraint firstItem="jeP-TR-ObN" firstAttribute="top" secondItem="O2t-K1-Rgo" secondAttribute="bottom" constant="8" symbolic="YES" id="nvf-on-U1B"/>
+                            <constraint firstItem="jeP-TR-ObN" firstAttribute="centerY" secondItem="mcj-Py-Kqg" secondAttribute="centerY" id="ri5-MO-KV6"/>
+                            <constraint firstItem="SAr-AV-PpJ" firstAttribute="top" secondItem="aZl-l3-c7Y" secondAttribute="bottom" constant="2" id="v0N-xW-tRJ"/>
+                            <constraint firstItem="iUf-xk-Dvu" firstAttribute="top" secondItem="SAr-AV-PpJ" secondAttribute="bottom" constant="21" id="wO2-Tc-bHP"/>
+                            <constraint firstItem="mcj-Py-Kqg" firstAttribute="leading" secondItem="jeP-TR-ObN" secondAttribute="trailing" constant="3" id="yCo-pV-AIc"/>
                         </constraints>
                     </view>
                     <connections>
@@ -539,8 +521,8 @@
                                 <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <size key="titleShadowOffset" width="1" height="1"/>
                                 <state key="normal" title="33" backgroundImage="MenuSelect3">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                    <color key="titleShadowColor" name="knobColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="titleColor" red="0.35979769749012014" green="0.72940573452328672" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="buttonLevel1:" destination="zkX-S2-bbu" eventType="touchUpInside" id="TsB-lF-PaQ"/>
@@ -555,8 +537,8 @@
                                 <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <size key="titleShadowOffset" width="1" height="1"/>
                                 <state key="normal" title="34" backgroundImage="MenuSelect3">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                    <color key="titleShadowColor" name="knobColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="titleColor" red="0.35979769749012014" green="0.72940573452328672" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="buttonLevel1:" destination="zkX-S2-bbu" eventType="touchUpInside" id="qgU-4V-iqL"/>
@@ -571,8 +553,8 @@
                                 <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <size key="titleShadowOffset" width="1" height="1"/>
                                 <state key="normal" title="35" backgroundImage="MenuSelect3">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                    <color key="titleShadowColor" name="knobColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="titleColor" red="0.35979769749012014" green="0.72940573452328672" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="buttonLevel1:" destination="zkX-S2-bbu" eventType="touchUpInside" id="ghh-5O-daa"/>
@@ -587,8 +569,8 @@
                                 <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <size key="titleShadowOffset" width="1" height="1"/>
                                 <state key="normal" title="36" backgroundImage="MenuSelect3">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                    <color key="titleShadowColor" name="knobColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="titleColor" red="0.35979769749012014" green="0.72940573452328672" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="buttonLevel1:" destination="zkX-S2-bbu" eventType="touchUpInside" id="3rh-9e-uSl"/>
@@ -603,8 +585,8 @@
                                 <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <size key="titleShadowOffset" width="1" height="1"/>
                                 <state key="normal" title="37" backgroundImage="MenuSelect3">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                    <color key="titleShadowColor" name="knobColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="titleColor" red="0.35979769749012014" green="0.72940573452328672" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="buttonLevel1:" destination="zkX-S2-bbu" eventType="touchUpInside" id="RIs-L8-bi8"/>
@@ -619,8 +601,8 @@
                                 <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <size key="titleShadowOffset" width="1" height="1"/>
                                 <state key="normal" title="38" backgroundImage="MenuSelect3">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                    <color key="titleShadowColor" name="knobColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="titleColor" red="0.35979769749012014" green="0.72940573452328672" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="buttonLevel1:" destination="zkX-S2-bbu" eventType="touchUpInside" id="OLj-IZ-TRy"/>
@@ -635,8 +617,8 @@
                                 <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <size key="titleShadowOffset" width="1" height="1"/>
                                 <state key="normal" title="39" backgroundImage="MenuSelect3">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                    <color key="titleShadowColor" name="knobColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="titleColor" red="0.35979769749012014" green="0.72940573452328672" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="buttonLevel1:" destination="zkX-S2-bbu" eventType="touchUpInside" id="Lw9-eX-WYu"/>
@@ -651,8 +633,8 @@
                                 <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <size key="titleShadowOffset" width="1" height="1"/>
                                 <state key="normal" title="40" backgroundImage="MenuSelect3">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                    <color key="titleShadowColor" name="knobColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="titleColor" red="0.35979769749012014" green="0.72940573452328672" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="buttonLevel1:" destination="zkX-S2-bbu" eventType="touchUpInside" id="HCt-pf-8sf"/>
@@ -667,8 +649,8 @@
                                 <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <size key="titleShadowOffset" width="1" height="1"/>
                                 <state key="normal" title="41" backgroundImage="MenuSelect3">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                    <color key="titleShadowColor" name="knobColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="titleColor" red="0.35979769749012014" green="0.72940573452328672" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="buttonLevel1:" destination="zkX-S2-bbu" eventType="touchUpInside" id="66d-EY-KP2"/>
@@ -683,8 +665,8 @@
                                 <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <size key="titleShadowOffset" width="1" height="1"/>
                                 <state key="normal" title="42" backgroundImage="MenuSelect3">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                    <color key="titleShadowColor" name="knobColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="titleColor" red="0.35979769749012014" green="0.72940573452328672" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="buttonLevel1:" destination="zkX-S2-bbu" eventType="touchUpInside" id="Lki-IE-mEM"/>
@@ -699,8 +681,8 @@
                                 <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <size key="titleShadowOffset" width="1" height="1"/>
                                 <state key="normal" title="43" backgroundImage="MenuSelect3">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                    <color key="titleShadowColor" name="knobColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="titleColor" red="0.35979769749012014" green="0.72940573452328672" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="buttonLevel1:" destination="zkX-S2-bbu" eventType="touchUpInside" id="X1v-nD-PiK"/>
@@ -715,8 +697,8 @@
                                 <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <size key="titleShadowOffset" width="1" height="1"/>
                                 <state key="normal" title="44" backgroundImage="MenuSelect3">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                    <color key="titleShadowColor" name="knobColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="titleColor" red="0.35979769749012014" green="0.72940573452328672" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="buttonLevel1:" destination="zkX-S2-bbu" eventType="touchUpInside" id="k0X-2q-VCT"/>
@@ -731,8 +713,8 @@
                                 <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <size key="titleShadowOffset" width="1" height="1"/>
                                 <state key="normal" title="45" backgroundImage="MenuSelect3">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                    <color key="titleShadowColor" name="knobColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="titleColor" red="0.35979769749012014" green="0.72940573452328672" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="buttonLevel1:" destination="zkX-S2-bbu" eventType="touchUpInside" id="po2-PF-lo7"/>
@@ -747,8 +729,8 @@
                                 <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <size key="titleShadowOffset" width="1" height="1"/>
                                 <state key="normal" title="46" backgroundImage="MenuSelect3">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                    <color key="titleShadowColor" name="knobColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="titleColor" red="0.35979769749012014" green="0.72940573452328672" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="buttonLevel1:" destination="zkX-S2-bbu" eventType="touchUpInside" id="tJe-O2-9iz"/>
@@ -763,8 +745,8 @@
                                 <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <size key="titleShadowOffset" width="1" height="1"/>
                                 <state key="normal" title="47" backgroundImage="MenuSelect3">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                    <color key="titleShadowColor" name="knobColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="titleColor" red="0.35979769749012014" green="0.72940573452328672" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="buttonLevel1:" destination="zkX-S2-bbu" eventType="touchUpInside" id="VAv-Nd-nLp"/>
@@ -779,8 +761,8 @@
                                 <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <size key="titleShadowOffset" width="1" height="1"/>
                                 <state key="normal" title="48" backgroundImage="MenuSelect3">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                    <color key="titleShadowColor" name="knobColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="titleColor" red="0.35979769749012014" green="0.72940573452328672" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="buttonLevel1:" destination="zkX-S2-bbu" eventType="touchUpInside" id="cfe-Hh-f1V"/>
@@ -793,8 +775,8 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <size key="titleShadowOffset" width="1" height="1"/>
                                 <state key="normal" title="Menu" backgroundImage="MenuSelect3">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                    <color key="titleShadowColor" name="knobColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="titleColor" red="0.35979769749012014" green="0.72940573452328672" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
                                     <segue destination="jC2-zd-pnK" kind="show" id="IM4-i2-N5D"/>
@@ -813,7 +795,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3SU-tn-Zzk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2430" y="-1776"/>
+            <point key="canvasLocation" x="1246" y="-1048"/>
         </scene>
         <!--Game View Controller-->
         <scene sceneID="LtY-X4-3S3">
@@ -1135,7 +1117,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="coi-yn-EUx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1245.5999999999999" y="-1566.5667166416792"/>
+            <point key="canvasLocation" x="570" y="-1048"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="Z9e-Ur-4Ak">
@@ -1166,7 +1148,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WD5-tu-0dW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3332" y="-1995"/>
+            <point key="canvasLocation" x="1902" y="-1048"/>
         </scene>
         <!--Page View Controller-->
         <scene sceneID="CPc-IU-N2j">
@@ -1203,6 +1185,6 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="uLA-Vy-bLj"/>
-        <segue reference="2VE-Yg-a2t"/>
+        <segue reference="p0P-a2-eIE"/>
     </inferredMetricsTieBreakers>
 </document>

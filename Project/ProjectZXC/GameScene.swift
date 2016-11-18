@@ -41,7 +41,12 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                 return color2
             }
             else {
-                return color0
+                if (level > 32 && level <= 48) {
+                    return color3
+                }
+                else {
+                    return color0
+                }
             }
         }
     }
@@ -50,7 +55,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     var color0 = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
     var color1 = #colorLiteral(red: 1, green: 0.7871779203, blue: 0.5874175429, alpha: 1)
     var color2 = #colorLiteral(red: 0.6314342022, green: 0.7059366107, blue: 0.7861329317, alpha: 1)
-
+    var color3 = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
     
     // ОТЛАДКА ДЛЯ РАЗРАБОТЧИКА
     public var myLabel1:SKLabelNode!
