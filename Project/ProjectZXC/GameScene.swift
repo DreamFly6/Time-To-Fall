@@ -373,7 +373,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
 
     
     
-    //При вызове этой функции, показывается меню перезапуска.
+    //При вызове этой функции, удаляется меню в игре.
     func removeMenu(){
         print("Удаляю МЕНЮ")
         
@@ -433,7 +433,6 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         }
     }
 
-    
     
     
     

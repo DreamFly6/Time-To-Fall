@@ -10,20 +10,19 @@ import Foundation
 import UIKit
 import SpriteKit
 
-
+public var thisScene = 1
+public var topScene = 1
+public var statsАrray: [[Int]] = [[Int]](repeating:[Int](repeating:0, count: 5), count:64)
+public var buttonTitle : String = ""
 
 class MainMenuViewController: UIViewController {
     
     
     override func viewDidLoad() {
         
-        topScene = UserDefaults.standard.integer(forKey: "topStage")
-        
-        if topScene == 0 {
-            topScene = 1
-        }
-        
+
         if topScene > 1 {
+            topScene = UserDefaults.standard.integer(forKey: "topStage")
             statsАrray = UserDefaults.standard.array(forKey: "stat") as! [[Int]]
         }
         

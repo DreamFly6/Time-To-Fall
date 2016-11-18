@@ -10,26 +10,13 @@ import UIKit
 import SpriteKit
 import CoreData
 
-public var thisScene = 1
-public var topScene = -1
-public var statsАrray: [[Int]] = [[Int]](repeating:[Int](repeating:0, count: 5), count:64)
-public var buttonTitle : String = ""
-
-
 class ViewController: UIViewController {
     
     override func viewDidLoad() {
 
 
         
-        for i in 0...63 {
-            print("============== "+String(i)+" ===============")
-            print("Next    - "+String(statsАrray[i][0]))
-            print("Retry   - "+String(statsАrray[i][1]))
-            print("Lose    - "+String(statsАrray[i][2]))
-            print("Destroy - "+String(statsАrray[i][3]))
-            print("Time    - "+String(statsАrray[i][4]))
-        }
+
         
         self.navigationController?.isNavigationBarHidden = true
 
