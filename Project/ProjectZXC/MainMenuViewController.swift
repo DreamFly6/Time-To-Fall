@@ -12,7 +12,7 @@ import SpriteKit
 
 public var thisScene = 1
 public var topScene = 0
-public var topActualScene = 26
+public var topActualScene = 99
 public var statsАrray: [[Int]] = [[Int]](repeating:[Int](repeating:0, count: 5), count:64)
 public var buttonTitle : String = ""
 
