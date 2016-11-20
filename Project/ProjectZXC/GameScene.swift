@@ -655,7 +655,16 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             setTopScene(topStage: topScene)
         }
         
-        
+        //Если текущая сцена больше либо равна актуальной, то в меню
+        if (topActualScene + 1) <= thisScene {
+            thisScene = 1
+
+            let currentScene = GameScene(fileNamed: "Level 1")
+            let transition = SKTransition.doorway(withDuration: 0.5)
+            currentScene!.scaleMode = SKSceneScaleMode.aspectFill
+            currentScene?.viewController = self.viewController
+            self.scene!.view?.presentScene(currentScene!, transition: transition)
+        }
         
         self.physicsWorld.contactDelegate = self
         

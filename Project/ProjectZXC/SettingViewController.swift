@@ -63,12 +63,5 @@ class SettingViewController: UIViewController {
         else {
             statusBarBool = false
         }
-
-
-
-        
-    
     }
-    
-    
 }
