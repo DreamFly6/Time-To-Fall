@@ -10,11 +10,6 @@ import Foundation
 import UIKit
 import SpriteKit
 
-public var thisScene = 1
-public var topScene = 0
-public var topActualScene = 99
-public var statsАrray: [[Int]] = [[Int]](repeating:[Int](repeating:0, count: 5), count:64)
-public var buttonTitle : String = ""
 
 class MainMenuViewController: UIViewController {
     
@@ -27,7 +22,11 @@ class MainMenuViewController: UIViewController {
             statsАrray = UserDefaults.standard.array(forKey: "stat") as! [[Int]]
         }
         
-        //topScene = 45
+        if topScene == 0 {
+            topScene = 1
+        }
+        
+        topScene = 45
         
         self.navigationController?.isNavigationBarHidden = true
         

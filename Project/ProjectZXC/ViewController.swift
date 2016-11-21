@@ -35,7 +35,7 @@ class ViewController: UIViewController {
         
         buttonTitle = sender.currentTitle!!
         thisScene = Int(buttonTitle)!
-        print(String(buttonTitle))
+        print(String(buttonTitle)!)
         self.performSegue(withIdentifier: "GoToGameViewController", sender: self)
         
         

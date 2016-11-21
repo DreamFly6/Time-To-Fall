@@ -12,15 +12,15 @@ fileprivate func < <T : Comparable>(lhs: T?, rhs: T?) -> Bool {
   }
 }
 
-
-    
-
-
-
-
+public var thisScene = 1
+public var topScene = 1
+public var topActualScene = 99
+public var statsАrray: [[Int]] = [[Int]](repeating:[Int](repeating:0, count: 5), count:64)
+public var buttonTitle : String = ""
 
 
 class GameScene: SKScene, SKPhysicsContactDelegate {
+    
     
      var viewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "GameViewController") as UIViewController
 
@@ -265,15 +265,6 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         retryButton.colorBlendFactor = CGFloat(1.0)
         self.addChild(retryButton)
         
-        let nextButton = SKSpriteNode(imageNamed: "nextButton.png")
-        nextButton.position = CGPoint(x: self.frame.midX, y: self.frame.midY)
-        nextButton.name = "next"
-        nextButton.xScale = 0.5
-        nextButton.yScale = 0.5
-        nextButton.zPosition = 999
-        nextButton.color = colorPicker(level: thisScene)
-        nextButton.colorBlendFactor = CGFloat(1.0)
-        self.addChild(nextButton)
         
         let menuButton = SKSpriteNode(imageNamed: "menuButton.png")
         menuButton.position = CGPoint(x: self.frame.midX+(self.frame.midX/2), y: self.frame.midY)
@@ -296,7 +287,15 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         prevButton.color = colorPicker(level: thisScene)
         prevButton.colorBlendFactor = CGFloat(1.0)
         self.addChild(prevButton)
-
+        let nextButton = SKSpriteNode(imageNamed: "nextButton.png")
+        nextButton.position = CGPoint(x: self.frame.midX, y: self.frame.midY)
+        nextButton.name = "next"
+        nextButton.xScale = 0.5
+        nextButton.yScale = 0.5
+        nextButton.zPosition = 999
+        nextButton.color = colorPicker(level: thisScene)
+        nextButton.colorBlendFactor = CGFloat(1.0)
+        self.addChild(nextButton)
         
         var myLabel:SKLabelNode!
         myLabel = SKLabelNode(fontNamed: "Arial")
