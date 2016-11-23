@@ -240,6 +240,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         myLabel.zPosition = 999
         myLabel.position = CGPoint(x: self.frame.midX, y: self.frame.midY + 190)
         self.addChild(myLabel)
+        
     }
     
     
@@ -305,6 +306,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         myLabel.zPosition = 999
         myLabel.position = CGPoint(x: self.frame.midX, y: self.frame.midY + 190)
         self.addChild(myLabel)
+        
     }
     
     
@@ -373,6 +375,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         myLabel.zPosition = 999
         myLabel.position = CGPoint(x: self.frame.midX, y: self.frame.midY + 190)
         self.addChild(myLabel)
+
     }
 
     
@@ -875,7 +878,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         //Удаляет спрайт, когда он улетел за экран
         for allObject in self.children {
             if let allObject = allObject as? SKSpriteNode {
-                if (allObject.position.y < 0 && allObject.name != "MainCharacter") {
+                if ((allObject.position.y < 0 || allObject.position.x < -100 || allObject.position.x > 1380) && allObject.name != "MainCharacter") {
                     allObject.removeFromParent()
                 }
             }
@@ -921,6 +924,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                     }
 
                     showWMenu() //Показать меню выигрыша
+                    mainChrctr?.physicsBody?.pinned = true
+                    mainChrctr?.physicsBody?.allowsRotation = false
                 }
             
             }
