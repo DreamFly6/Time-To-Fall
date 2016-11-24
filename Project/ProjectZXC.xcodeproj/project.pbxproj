@@ -61,6 +61,8 @@
 		1FF6BA481DB47E8A0058BEC2 /* Level 6.sks in Resources */ = {isa = PBXBuildFile; fileRef = 1FF6BA471DB47E8A0058BEC2 /* Level 6.sks */; };
 		32290C781DD08282002CBBF5 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32290C771DD08282002CBBF5 /* SettingViewController.swift */; };
 		3262F13C1D49B7E90056D72B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3262F13B1D49B7E90056D72B /* ViewController.swift */; };
+		328125E71DE6912200E81EB4 /* TutorialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 328125E61DE6912200E81EB4 /* TutorialViewController.swift */; };
+		328125E91DE6913100E81EB4 /* TutorialPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 328125E81DE6913100E81EB4 /* TutorialPageViewController.swift */; };
 		329649221DCA21100078720A /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 329649211DCA21100078720A /* GameViewController.swift */; };
 		32B848621DD03D23004247DA /* MainMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32B848611DD03D23004247DA /* MainMenuViewController.swift */; };
 		32C496E81DB7CBD900DFDAF9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F4C24711CD5E55600D3B0DB /* Main.storyboard */; };
@@ -154,6 +156,8 @@
 		1FF6BA471DB47E8A0058BEC2 /* Level 6.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = "Level 6.sks"; sourceTree = "<group>"; };
 		32290C771DD08282002CBBF5 /* SettingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
 		3262F13B1D49B7E90056D72B /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		328125E61DE6912200E81EB4 /* TutorialViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TutorialViewController.swift; sourceTree = "<group>"; };
+		328125E81DE6913100E81EB4 /* TutorialPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TutorialPageViewController.swift; sourceTree = "<group>"; };
 		329649211DCA21100078720A /* GameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		32B848611DD03D23004247DA /* MainMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainMenuViewController.swift; sourceTree = "<group>"; };
 		32D80D411DCDE7AC00BF6274 /* PageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageViewController.swift; sourceTree = "<group>"; };
@@ -385,6 +389,8 @@
 				1FE0F3FF1CE6F5B9007E1B98 /* Test_Level.sks */,
 				1F4C24691CD5E55600D3B0DB /* AppDelegate.swift */,
 				1F4C24711CD5E55600D3B0DB /* Main.storyboard */,
+				328125E81DE6913100E81EB4 /* TutorialPageViewController.swift */,
+				328125E61DE6912200E81EB4 /* TutorialViewController.swift */,
 				32290C771DD08282002CBBF5 /* SettingViewController.swift */,
 				32B848611DD03D23004247DA /* MainMenuViewController.swift */,
 				32D80D411DCDE7AC00BF6274 /* PageViewController.swift */,
@@ -603,8 +609,10 @@
 			files = (
 				32B848621DD03D23004247DA /* MainMenuViewController.swift in Sources */,
 				329649221DCA21100078720A /* GameViewController.swift in Sources */,
+				328125E71DE6912200E81EB4 /* TutorialViewController.swift in Sources */,
 				32D80D421DCDE7AC00BF6274 /* PageViewController.swift in Sources */,
 				32C496EF1DB7CF4100DFDAF9 /* GameScene.swift in Sources */,
+				328125E91DE6913100E81EB4 /* TutorialPageViewController.swift in Sources */,
 				3262F13C1D49B7E90056D72B /* ViewController.swift in Sources */,
 				32290C781DD08282002CBBF5 /* SettingViewController.swift in Sources */,
 				1F4C246A1CD5E55600D3B0DB /* AppDelegate.swift in Sources */,
