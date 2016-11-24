@@ -1102,10 +1102,10 @@
             </objects>
             <point key="canvasLocation" x="1902" y="-1048"/>
         </scene>
-        <!--Tutorial View Controller-->
+        <!--Swipe View Controller-->
         <scene sceneID="dhU-58-KaT">
             <objects>
-                <viewController id="SAe-p0-sjC" customClass="TutorialViewController" customModule="ProjectZXC" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="SAe-p0-sjC" customClass="SwipeViewController" customModule="ProjectZXC" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="FYR-vR-pAm"/>
                         <viewControllerLayoutGuide type="bottom" id="3dU-0J-liA"/>
@@ -1161,10 +1161,10 @@
             </objects>
             <point key="canvasLocation" x="2348" y="93.103448275862078"/>
         </scene>
-        <!--Tutorial Page View Controller-->
+        <!--Swipe Page View Controller-->
         <scene sceneID="bpv-3K-xHI">
             <objects>
-                <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="4pI-WT-r1H" customClass="TutorialPageViewController" customModule="ProjectZXC" customModuleProvider="target" sceneMemberID="viewController"/>
+                <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="4pI-WT-r1H" customClass="SwipePageViewController" customModule="ProjectZXC" customModuleProvider="target" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9IT-7t-ckb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2348" y="983"/>

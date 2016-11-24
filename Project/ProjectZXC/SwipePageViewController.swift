@@ -1,8 +1,8 @@
 import UIKit
 
-class TutorialPageViewController: UIPageViewController {
+class SwipePageViewController: UIPageViewController {
     
-    weak var tutorialDelegate: TutorialPageViewControllerDelegate?
+    weak var swipeDelegate: SwipePageViewControllerDelegate?
     
     fileprivate(set) lazy var orderedViewControllers: [UIViewController] = {
         // The view controllers will be shown in this order
@@ -22,7 +22,7 @@ class TutorialPageViewController: UIPageViewController {
             scrollToViewController(initialViewController)
         }
         
-        tutorialDelegate?.tutorialPageViewController(self,
+        swipeDelegate?.swipePageViewController(self,
                                                      didUpdatePageCount: orderedViewControllers.count)
     }
     
@@ -71,17 +71,17 @@ class TutorialPageViewController: UIPageViewController {
                             // Setting the view controller programmatically does not fire
                             // any delegate methods, so we have to manually notify the
                             // 'tutorialDelegate' of the new index.
-                            self.notifyTutorialDelegateOfNewIndex()
+                            self.notifySwipeDelegateOfNewIndex()
         })
     }
     
     /**
      Notifies '_tutorialDelegate' that the current page index was updated.
      */
-    fileprivate func notifyTutorialDelegateOfNewIndex() {
+    fileprivate func notifySwipeDelegateOfNewIndex() {
         if let firstViewController = viewControllers?.first,
             let index = orderedViewControllers.index(of: firstViewController) {
-            tutorialDelegate?.tutorialPageViewController(self,
+            swipeDelegate?.swipePageViewController(self,
                                                          didUpdatePageIndex: index)
         }
     }
@@ -90,7 +90,7 @@ class TutorialPageViewController: UIPageViewController {
 
 // MARK: UIPageViewControllerDataSource
 
-extension TutorialPageViewController: UIPageViewControllerDataSource {
+extension SwipePageViewController: UIPageViewControllerDataSource {
     
     func pageViewController(_ pageViewController: UIPageViewController,
                             viewControllerBefore viewController: UIViewController) -> UIViewController? {
@@ -137,18 +137,18 @@ extension TutorialPageViewController: UIPageViewControllerDataSource {
     
 }
 
-extension TutorialPageViewController: UIPageViewControllerDelegate {
+extension SwipePageViewController: UIPageViewControllerDelegate {
     
     func pageViewController(_ pageViewController: UIPageViewController,
                             didFinishAnimating finished: Bool,
                             previousViewControllers: [UIViewController],
                             transitionCompleted completed: Bool) {
-        notifyTutorialDelegateOfNewIndex()
+        notifySwipeDelegateOfNewIndex()
     }
     
 }
 
-protocol TutorialPageViewControllerDelegate: class {
+protocol SwipePageViewControllerDelegate: class {
     
     /**
      Called when the number of pages is updated.
@@ -156,7 +156,7 @@ protocol TutorialPageViewControllerDelegate: class {
      - parameter tutorialPageViewController: the TutorialPageViewController instance
      - parameter count: the total number of pages.
      */
-    func tutorialPageViewController(_ tutorialPageViewController: TutorialPageViewController,
+    func swipePageViewController(_ swipePageViewController: SwipePageViewController,
                                     didUpdatePageCount count: Int)
     
     /**
@@ -165,7 +165,7 @@ protocol TutorialPageViewControllerDelegate: class {
      - parameter tutorialPageViewController: the TutorialPageViewController instance
      - parameter index: the index of the currently visible page.
      */
-    func tutorialPageViewController(_ tutorialPageViewController: TutorialPageViewController,
+    func swipePageViewController(_ swipePageViewController: SwipePageViewController,
                                     didUpdatePageIndex index: Int)
     
 }

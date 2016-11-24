@@ -8,15 +8,15 @@
 
 import UIKit
 
-class TutorialViewController: UIViewController {
+class SwipeViewController: UIViewController {
 
     @IBOutlet weak var pageControl: UIPageControl!
     @IBOutlet weak var containerView: UIView!
     
     @IBOutlet weak var MenuButton: UIButton!
-    var tutorialPageViewController: TutorialPageViewController? {
+    var swipePageViewController: SwipePageViewController? {
         didSet {
-            tutorialPageViewController?.tutorialDelegate = self
+            swipePageViewController?.swipeDelegate = self
         }
     }
     
@@ -27,23 +27,23 @@ class TutorialViewController: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let tutorialPageViewController = segue.destination as? TutorialPageViewController {
-            self.tutorialPageViewController = tutorialPageViewController
+        if let swipePageViewController = segue.destination as? SwipePageViewController {
+            self.swipePageViewController = swipePageViewController
         }
     }
 
 
 }
 
-extension TutorialViewController: TutorialPageViewControllerDelegate {
+extension SwipeViewController: SwipePageViewControllerDelegate {
     
-    func tutorialPageViewController(_ tutorialPageViewController: TutorialPageViewController,
+    func swipePageViewController(_ swipePageViewController: SwipePageViewController,
         didUpdatePageCount count: Int) {
         pageControl.numberOfPages = count
         //MenuButton.setBackgroundImage(UIImage(named: "MenuSelect"+String(count)+".png"), for: UIControlState.normal)
     }
     
-    func tutorialPageViewController(_ tutorialPageViewController: TutorialPageViewController,
+    func swipePageViewController(_ swipePageViewController: SwipePageViewController,
         didUpdatePageIndex index: Int) {
         pageControl.currentPage = index
         let selector = "MenuSelect"+String(index + 1)+".png"
