@@ -14,7 +14,7 @@ fileprivate func < <T : Comparable>(lhs: T?, rhs: T?) -> Bool {
 
 public var thisScene = 1
 public var topScene = 1
-public var topActualScene = 99
+public var topActualScene = 34
 public var statsАrray: [[Int]] = [[Int]](repeating:[Int](repeating:0, count: 5), count:64)
 public var buttonTitle : String = ""
 
@@ -280,7 +280,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         
         //Для отладки
         let prevButton = SKSpriteNode(imageNamed: "prevButton.png")
-        prevButton.position = CGPoint(x: self.frame.midX, y: self.frame.midY-(self.frame.midY/2))
+        prevButton.position = CGPoint(x: self.frame.midX - 200, y: self.frame.midY-(self.frame.midY/2))
         prevButton.name = "prev"
         prevButton.xScale = 0.5
         prevButton.yScale = 0.5
@@ -289,7 +289,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         prevButton.colorBlendFactor = CGFloat(1.0)
         self.addChild(prevButton)
         let nextButton = SKSpriteNode(imageNamed: "nextButton.png")
-        nextButton.position = CGPoint(x: self.frame.midX, y: self.frame.midY)
+        nextButton.position = CGPoint(x: self.frame.midX + 200, y: self.frame.midY-(self.frame.midY/2))
         nextButton.name = "next"
         nextButton.xScale = 0.5
         nextButton.yScale = 0.5
@@ -297,6 +297,16 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         nextButton.color = colorPicker(level: thisScene)
         nextButton.colorBlendFactor = CGFloat(1.0)
         self.addChild(nextButton)
+        var myLabel1:SKLabelNode!
+        myLabel1 = SKLabelNode(fontNamed: "Arial")
+        myLabel1.name = "label"
+        myLabel1.text = "Developer buttons"
+        myLabel1.fontSize = 50
+        myLabel1.zPosition = 1000
+        myLabel1.position = CGPoint(x: self.frame.midX, y: self.frame.midY-(self.frame.midY/2) + 140)
+        self.addChild(myLabel1)
+        
+        
         
         var myLabel:SKLabelNode!
         myLabel = SKLabelNode(fontNamed: "Arial")
@@ -645,7 +655,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         initGameObject()
 
         //Инициализация статус бара
-        statusBarInit()
+        //statusBarInit()
 
         //Инициализация и установка кнопки pause
         stopButtonInit()
@@ -760,7 +770,6 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             
             //Блок кода для обработки кнопок меню
             if node.name == "retry" {
-                //setTopScene(topStage: topScene)
                 print("retry")
                 saveStat(info: "retry")
                 let currentScene = GameScene(fileNamed: "Level "+String(thisScene))
@@ -771,7 +780,6 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             }
             
             if node.name == "next" {
-                //setTopScene(topStage: topScene)
                 thisScene+=1
                 saveStat(info: "next")
                 let currentScene = GameScene(fileNamed: "Level "+String(thisScene))
@@ -782,18 +790,25 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             }
             
             if node.name == "prev" {
-                //setTopScene(topStage: topScene)
                 thisScene-=1
-                let currentScene = GameScene(fileNamed: "Level "+String(thisScene))
-                let transition = SKTransition.doorway(withDuration: 0.5)
-                currentScene!.scaleMode = SKSceneScaleMode.aspectFill
-                currentScene?.viewController = self.viewController
-                self.scene!.view?.presentScene(currentScene!, transition: transition)
-                
+                if thisScene == 0 {
+                    thisScene = topActualScene
+                    let currentScene = GameScene(fileNamed: "Level "+String(topActualScene))
+                    let transition = SKTransition.doorway(withDuration: 0.5)
+                    currentScene!.scaleMode = SKSceneScaleMode.aspectFill
+                    currentScene?.viewController = self.viewController
+                    self.scene!.view?.presentScene(currentScene!, transition: transition)
+                }
+                else {
+                    let currentScene = GameScene(fileNamed: "Level "+String(thisScene))
+                    let transition = SKTransition.doorway(withDuration: 0.5)
+                    currentScene!.scaleMode = SKSceneScaleMode.aspectFill
+                    currentScene?.viewController = self.viewController
+                    self.scene!.view?.presentScene(currentScene!, transition: transition)
+                }
             }
             
             if node.name == "menu" {
-                //setTopScene(topStage: topScene)
                 //Просто создал Segue и задал ей имя, с помощью имени ищем Segue и переходим
                 self.viewController.performSegue(withIdentifier: "GoToMainMenu", sender: self)
                 
@@ -954,8 +969,6 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             }
         }
     
-        statusBar()
-        
 
         //если ГГ улетел за сцену, показываем меню
         if mainChrctr?.position.y < 0 && showMenu == false {
@@ -965,7 +978,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             onGround = false //Свинья не на земле(за экраном она не может определить это)
         }
         
-        
+        //statusBar()
     }
     
     override func update(_ currentTime: TimeInterval) {  /* Called before each frame is rendered */

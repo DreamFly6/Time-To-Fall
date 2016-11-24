@@ -29,11 +29,11 @@ class GameViewController: UIViewController {
         self.view.addSubview(skView)
         
         skView.showsFPS = true
-        skView.showsNodeCount = true
-        skView.ignoresSiblingOrder = true
-        skView.showsPhysics = true
-        skView.showsDrawCount = true
-        skView.showsFields = true
+//        skView.showsNodeCount = true
+//        skView.ignoresSiblingOrder = true
+//        skView.showsPhysics = true
+//        skView.showsDrawCount = true
+//        skView.showsFields = true
         
         sceneView!.scaleMode = .aspectFill
         skView.presentScene(sceneView)
