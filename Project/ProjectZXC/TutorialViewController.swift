@@ -13,6 +13,7 @@ class TutorialViewController: UIViewController {
     @IBOutlet weak var pageControl: UIPageControl!
     @IBOutlet weak var containerView: UIView!
     
+    @IBOutlet weak var MenuButton: UIButton!
     var tutorialPageViewController: TutorialPageViewController? {
         didSet {
             tutorialPageViewController?.tutorialDelegate = self
@@ -39,11 +40,15 @@ extension TutorialViewController: TutorialPageViewControllerDelegate {
     func tutorialPageViewController(_ tutorialPageViewController: TutorialPageViewController,
         didUpdatePageCount count: Int) {
         pageControl.numberOfPages = count
+        //MenuButton.setBackgroundImage(UIImage(named: "MenuSelect"+String(count)+".png"), for: UIControlState.normal)
     }
     
     func tutorialPageViewController(_ tutorialPageViewController: TutorialPageViewController,
         didUpdatePageIndex index: Int) {
         pageControl.currentPage = index
+        let selector = "MenuSelect"+String(index + 1)+".png"
+        print(selector)
+        MenuButton.setBackgroundImage(UIImage(named: selector), for: UIControlState.normal)
     }
     
 }
