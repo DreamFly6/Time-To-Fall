@@ -19,6 +19,9 @@ public var topActualScene = 34
 public var statsАrray: [[Int]] = [[Int]](repeating:[Int](repeating:0, count: 5), count:64)
 public var buttonTitle : String = ""
 
+//  Мета игра (фрии ту плей)
+//  Показ рекламы
+//  Просмотр видео за след уровень
 
 class GameScene: SKScene, SKPhysicsContactDelegate {
     
