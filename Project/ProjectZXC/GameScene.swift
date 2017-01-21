@@ -15,7 +15,7 @@ fileprivate func < <T : Comparable>(lhs: T?, rhs: T?) -> Bool {
 
 public var thisScene = 1
 public var topScene = 1
-public var topActualScene = 34
+public var topActualScene = 40
 public var statsАrray: [[Int]] = [[Int]](repeating:[Int](repeating:0, count: 5), count:64)
 public var buttonTitle : String = ""
 
@@ -519,6 +519,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                     ground.physicsBody?.contactTestBitMask = 1;
                     ground.physicsBody?.collisionBitMask =  1;
                     ground.color = groundColor
+
                 }
             }
         }
@@ -527,6 +528,12 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         for spearBlock in self.children {
             if spearBlock.name == "SpearBlock" {
                 if let spearBlock = spearBlock as? SKSpriteNode {
+                    
+//    ground.physicsBody = SKPhysicsBody(rectangleOf: CGSize(width: ground.size.width, height: ground.size.height))
+                    
+                    let spearBlockTexture = SKTexture(imageNamed: "SpearBlock.png")
+                    spearBlock.physicsBody  = SKPhysicsBody(texture: spearBlockTexture, size: CGSize(width: spearBlock.size.width, height: spearBlock.size.height))
+                    
                     spearBlock.physicsBody?.friction = 0.1
                     spearBlock.physicsBody?.restitution = 0.1
                     spearBlock.physicsBody?.linearDamping = 0.1
@@ -648,6 +655,23 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             }
         }
         
+        //  Инициализация GravityBlock
+        for activeBlock in self.children {
+            if activeBlock.name == "GravityBlock" {
+                if let activeBlock = activeBlock as? SKSpriteNode {
+                    activeBlock.physicsBody?.friction = 0.3
+                    activeBlock.physicsBody?.restitution = 0.3
+                    activeBlock.physicsBody?.linearDamping = 0.4
+                    activeBlock.physicsBody?.angularDamping = 0.4
+                    activeBlock.physicsBody?.mass = 2.9
+                    
+                    //Особые характеристики
+//                    activeBlock.physicsBody?.pinned = true
+//                    activeBlock.physicsBody?.isDynamic = false
+                }
+            }
+        }
+        
     }
     
     
@@ -684,6 +708,14 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         
         self.physicsWorld.contactDelegate = self
         
+        if (thisScene == 39){
+            let thirdSeven = self.childNode(withName: "GravityBlock") as? SKSpriteNode
+            let gravity = self.childNode(withName: "Gravity") as? SKFieldNode
+            thirdSeven?.physicsBody?.mass = 3.0
+            gravity?.isEnabled = true
+            gravity?.strength = 30
+        }
+        
     }
     
     
@@ -713,7 +745,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             {
                 //Удаление
                 touchedNode.removeFromParent()
-                saveStat(info: "destroy")
+                //saveStat(info: "destroy")
             }
             
 
@@ -757,6 +789,27 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                 }
             }
             
+            
+            //Механика Гравити блока
+            if let spriteNode = touchedNode as? SKSpriteNode {
+                if spriteNode.name == "GravityBlock"{
+                    let gravity = self.childNode(withName: "Gravity") as? SKFieldNode
+                    if (spriteNode.physicsBody?.mass == 3.0){
+                        // OFF
+                        spriteNode.texture = SKTexture(imageNamed: "GravityBlock_Off")
+                        spriteNode.physicsBody?.mass = 2.9
+                        gravity?.isEnabled = false
+                    }
+                    else{
+
+                        //ON
+                        spriteNode.texture = SKTexture(imageNamed: "GravityBlock_On")
+                        spriteNode.physicsBody?.mass = 3.0
+                        gravity?.isEnabled = true
+                    }
+                }
+            }
+            
 
             //Механика Каменного блока
             if let spriteNode = touchedNode as? SKSpriteNode {
@@ -766,7 +819,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                         spriteNode.physicsBody?.mass = 9.0
                     }
                     else{
-                        saveStat(info: "destroy")
+                        //saveStat(info: "destroy")
                         spriteNode.removeFromParent()
                     }
                 }
@@ -874,7 +927,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                 }
             }
             sleep(UInt32(0.5))
-            saveStat(info: "lose")
+
             showMenu = true
             showLMenu()
         }
@@ -891,7 +944,6 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         if mainChrctr?.position.y < 0 {
             onGround = false
         }
-        
         
         
         //Удаляет спрайт, когда он улетел за экран
@@ -927,7 +979,6 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                         if let progressBar = progressBar as? SKSpriteNode {
                             progressBar.size.width = CGFloat(onGroundTime) * 39
                             progressBar.color = UIColor.green
-                            //progressBar.color = groundColorPub
                         }
                     }
                 }
@@ -976,7 +1027,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
 
         //если ГГ улетел за сцену, показываем меню
         if mainChrctr?.position.y < 0 && showMenu == false {
-            saveStat(info: "lose")
+            //saveStat(info: "lose")
             showMenu = true //если показывали меню, то true
             showLMenu() //Показать меню проигрыша
             onGround = false //Свинья не на земле(за экраном она не может определить это)
@@ -984,10 +1035,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         
         //statusBar()
     }
-    
-    override func update(_ currentTime: TimeInterval) {  /* Called before each frame is rendered */
-        saveStat(info: "time")
-    }
+
     
     
 

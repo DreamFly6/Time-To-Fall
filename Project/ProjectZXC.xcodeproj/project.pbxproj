@@ -285,6 +285,17 @@
 			path = ProjectZXCUITests;
 			sourceTree = "<group>";
 		};
+		1F790EAC1E33524300F53024 /* 2 + GravityBlock */ = {
+			isa = PBXGroup;
+			children = (
+				1FB4831A1DC3692E00067D4B /* Level 37.sks */,
+				1FB4831C1DC369E600067D4B /* Level 38.sks */,
+				1FB4831E1DC369FC00067D4B /* Level 39.sks */,
+				1FB483201DC36A1400067D4B /* Level 40.sks */,
+			);
+			name = "2 + GravityBlock";
+			sourceTree = "<group>";
+		};
 		1FA08D661D3E1A2D00A4BA06 /* Levels */ = {
 			isa = PBXGroup;
 			children = (
@@ -366,10 +377,7 @@
 			isa = PBXGroup;
 			children = (
 				1FF7A4A71DE5CC5500349329 /* 1 +ActiveBlock */,
-				1FB4831A1DC3692E00067D4B /* Level 37.sks */,
-				1FB4831C1DC369E600067D4B /* Level 38.sks */,
-				1FB4831E1DC369FC00067D4B /* Level 39.sks */,
-				1FB483201DC36A1400067D4B /* Level 40.sks */,
+				1F790EAC1E33524300F53024 /* 2 + GravityBlock */,
 				1FB483221DC36A2100067D4B /* Level 41.sks */,
 				1FB483241DC36A3100067D4B /* Level 42.sks */,
 				1FB483261DC36A4400067D4B /* Level 43.sks */,
