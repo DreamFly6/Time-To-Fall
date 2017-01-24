@@ -493,6 +493,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                     main.physicsBody?.categoryBitMask = 1
                     main.physicsBody?.contactTestBitMask = 2
                     main.physicsBody?.collisionBitMask =  2
+                    main.physicsBody?.fieldBitMask = 4
 
                 }
             }
@@ -576,6 +577,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                     slimeBlock.physicsBody?.linearDamping = 0.1
                     slimeBlock.physicsBody?.angularDamping = 0.1
                     slimeBlock.physicsBody?.mass = 2.0
+                    slimeBlock.physicsBody?.fieldBitMask = 4
                 }
             }
         }
@@ -591,6 +593,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                     woodenBox.physicsBody?.angularDamping = 0.2
                     woodenBox.physicsBody?.mass = 1.0
                     woodenBox.physicsBody?.pinned = false
+                    woodenBox.physicsBody?.fieldBitMask = 4
                 }
             }
         }
@@ -620,6 +623,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                     woodenPlank.physicsBody?.linearDamping = 0.2
                     woodenPlank.physicsBody?.angularDamping = 0.2
                     woodenPlank.physicsBody?.mass = 1.5
+                    woodenPlank.physicsBody?.fieldBitMask = 4
                 }
             }
         }
@@ -633,6 +637,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                     stoneBlock.physicsBody?.linearDamping = 0.2
                     stoneBlock.physicsBody?.angularDamping = 0.2
                     stoneBlock.physicsBody?.mass = 10.0
+                    stoneBlock.physicsBody?.fieldBitMask = 4
                 }
             }
         }
@@ -647,10 +652,25 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                     activeBlock.physicsBody?.linearDamping = 0.4
                     activeBlock.physicsBody?.angularDamping = 0.4
                     activeBlock.physicsBody?.mass = 3.0
+                    activeBlock.physicsBody?.fieldBitMask = 4
                     
                     //Особые характеристики
                     activeBlock.physicsBody?.pinned = true
                     activeBlock.physicsBody?.isDynamic = false
+                }
+            }
+        }
+        
+        //  Инициализация ActiveBlock
+        for activeBlock in self.children {
+            if activeBlock.name == "IronBlock" {
+                if let activeBlock = activeBlock as? SKSpriteNode {
+                    activeBlock.physicsBody?.friction = 0.3
+                    activeBlock.physicsBody?.restitution = 0.3
+                    activeBlock.physicsBody?.linearDamping = 0.4
+                    activeBlock.physicsBody?.angularDamping = 0.4
+                    activeBlock.physicsBody?.mass = 3.0
+                    activeBlock.physicsBody?.fieldBitMask = 3
                 }
             }
         }
@@ -664,6 +684,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                     activeBlock.physicsBody?.linearDamping = 0.4
                     activeBlock.physicsBody?.angularDamping = 0.4
                     activeBlock.physicsBody?.mass = 2.9
+                    activeBlock.physicsBody?.fieldBitMask = 4
                     
                     //Особые характеристики
 //                    activeBlock.physicsBody?.pinned = true
@@ -671,6 +692,9 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                 }
             }
         }
+        
+        
+        
         
     }
     
@@ -793,7 +817,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             //Механика Гравити блока
             if let spriteNode = touchedNode as? SKSpriteNode {
                 if spriteNode.name == "GravityBlock"{
-                    let gravity = self.childNode(withName: "Gravity") as? SKFieldNode
+                    let gravity = self.childNode(withName: "Gravity111") as? SKFieldNode
                     if (spriteNode.physicsBody?.mass == 3.0){
                         // OFF
                         spriteNode.texture = SKTexture(imageNamed: "GravityBlock_Off")
