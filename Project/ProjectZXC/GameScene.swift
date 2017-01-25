@@ -661,7 +661,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             }
         }
         
-        //  Инициализация ActiveBlock
+        //  Инициализация Iron
         for activeBlock in self.children {
             if activeBlock.name == "IronBlock" {
                 if let activeBlock = activeBlock as? SKSpriteNode {
@@ -671,6 +671,20 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                     activeBlock.physicsBody?.angularDamping = 0.4
                     activeBlock.physicsBody?.mass = 3.0
                     activeBlock.physicsBody?.fieldBitMask = 3
+                }
+            }
+        }
+        
+        //  Инициализация Magnit
+        for activeBlock in self.children {
+            if activeBlock.name == "Magnit" {
+                if let activeBlock = activeBlock as? SKSpriteNode {
+                    activeBlock.physicsBody?.friction = 0.3
+                    activeBlock.physicsBody?.restitution = 0.3
+                    activeBlock.physicsBody?.linearDamping = 0.4
+                    activeBlock.physicsBody?.angularDamping = 0.4
+                    activeBlock.physicsBody?.mass = 2.9
+                    //activeBlock.physicsBody?.fieldBitMask = 3
                 }
             }
         }
@@ -694,8 +708,25 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         }
         
         
-        
-        
+        //  Инициализация RotationBlock
+        for activeBlock in self.children {
+            if activeBlock.name == "RotationBlock" {
+                if let activeBlock = activeBlock as? SKSpriteNode {
+                    activeBlock.physicsBody?.friction = 0.3
+                    activeBlock.physicsBody?.restitution = 0.3
+                    activeBlock.physicsBody?.linearDamping = 0.4
+                    activeBlock.physicsBody?.angularDamping = 0.4
+                    activeBlock.physicsBody?.mass = 2.9
+                    activeBlock.physicsBody?.fieldBitMask = 4
+                    activeBlock.zRotation = 1.57079637050629
+                    
+                    //Особые характеристики
+                    activeBlock.physicsBody?.pinned = true
+                    //activeBlock.physicsBody?.allowsRotation = false
+                }
+            }
+        }
+    
     }
     
     
@@ -817,7 +848,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             //Механика Гравити блока
             if let spriteNode = touchedNode as? SKSpriteNode {
                 if spriteNode.name == "GravityBlock"{
-                    let gravity = self.childNode(withName: "Gravity111") as? SKFieldNode
+                    let gravity = self.childNode(withName: "Gravity") as? SKFieldNode
                     if (spriteNode.physicsBody?.mass == 3.0){
                         // OFF
                         spriteNode.texture = SKTexture(imageNamed: "GravityBlock_Off")
@@ -828,6 +859,27 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
 
                         //ON
                         spriteNode.texture = SKTexture(imageNamed: "GravityBlock_On")
+                        spriteNode.physicsBody?.mass = 3.0
+                        gravity?.isEnabled = true
+                    }
+                }
+            }
+            
+            
+            //Механика Магнита блока
+            if let spriteNode = touchedNode as? SKSpriteNode {
+                if spriteNode.name == "Magnit"{
+                    let gravity = self.childNode(withName: "MagnitGravity") as? SKFieldNode
+                    if (spriteNode.physicsBody?.mass == 3.0){
+                        // OFF
+                        spriteNode.texture = SKTexture(imageNamed: "Magnit_Off")
+                        spriteNode.physicsBody?.mass = 2.9
+                        gravity?.isEnabled = false
+                    }
+                    else{
+                        
+                        //ON
+                        spriteNode.texture = SKTexture(imageNamed: "Magnit_On")
                         spriteNode.physicsBody?.mass = 3.0
                         gravity?.isEnabled = true
                     }
@@ -846,6 +898,17 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                         //saveStat(info: "destroy")
                         spriteNode.removeFromParent()
                     }
+                }
+            }
+            
+            
+            //Механика Поворотного блока
+            if let spriteNode = touchedNode as? SKSpriteNode {
+                if spriteNode.name == "RotationBlock"{
+                    spriteNode.physicsBody?.isDynamic = true
+                    spriteNode.zRotation = spriteNode.zRotation - CGFloat(M_PI/8.0)
+                    spriteNode.physicsBody?.isDynamic = false
+                    //print(spriteNode.zRotation)
                 }
             }
             

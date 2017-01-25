@@ -191,6 +191,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1F2795051E38A07800F4BE64 /* 3 + IronBlock / Magnit */ = {
+			isa = PBXGroup;
+			children = (
+				1FB483221DC36A2100067D4B /* Level 41.sks */,
+				1FB483241DC36A3100067D4B /* Level 42.sks */,
+				1FB483261DC36A4400067D4B /* Level 43.sks */,
+				1FB483281DC36A7700067D4B /* Level 44.sks */,
+			);
+			name = "3 + IronBlock / Magnit";
+			sourceTree = "<group>";
+		};
 		1F4B7FDA1DC603D200B4EE82 /* 1 +Stone */ = {
 			isa = PBXGroup;
 			children = (
@@ -378,10 +389,7 @@
 			children = (
 				1FF7A4A71DE5CC5500349329 /* 1 +ActiveBlock */,
 				1F790EAC1E33524300F53024 /* 2 + GravityBlock */,
-				1FB483221DC36A2100067D4B /* Level 41.sks */,
-				1FB483241DC36A3100067D4B /* Level 42.sks */,
-				1FB483261DC36A4400067D4B /* Level 43.sks */,
-				1FB483281DC36A7700067D4B /* Level 44.sks */,
+				1F2795051E38A07800F4BE64 /* 3 + IronBlock / Magnit */,
 				1FB4832A1DC36AB700067D4B /* Level 45.sks */,
 				1FB4832C1DC36B0700067D4B /* Level 46.sks */,
 				1FB4832E1DC36B4700067D4B /* Level 47.sks */,
