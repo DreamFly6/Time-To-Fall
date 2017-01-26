@@ -26,7 +26,7 @@ class MainMenuViewController: UIViewController {
             topScene = 1
         }
         
-        topScene = 40
+        topScene = 1
         
         self.navigationController?.isNavigationBarHidden = true
         

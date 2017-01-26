@@ -18,6 +18,7 @@ public var topScene = 1
 public var topActualScene = 40
 public var statsАrray: [[Int]] = [[Int]](repeating:[Int](repeating:0, count: 5), count:64)
 public var buttonTitle : String = ""
+public var itsNewBlock = true
 
 //  Мета игра (фрии ту плей)
 //  Показ рекламы
@@ -25,6 +26,92 @@ public var buttonTitle : String = ""
 
 class GameScene: SKScene, SKPhysicsContactDelegate {
     
+    func initNewBlockScreen() {
+        let n = [1,5,9,17,21,25,33,35,37,41]
+        var ok = false
+        
+        for index in 0...(n.count - 1) {
+            if (topScene == n[index]){
+                ok = true
+                print("OK - " + String(index))
+            }
+        }
+        
+        if (ok == true && itsNewBlock == true && thisScene > 0){
+            itsNewBlock = false
+            print("TRUE")
+            let currentScene = GameScene(fileNamed: "Level 0")
+            thisScene = 0
+            let transition = SKTransition.doorway(withDuration: 0.5)
+            currentScene!.scaleMode = SKSceneScaleMode.aspectFill
+            currentScene?.viewController = self.viewController
+            self.scene!.view?.presentScene(currentScene!, transition: transition)
+        }
+        else {
+            itsNewBlock = true
+            print("FALSE")
+        }
+        
+        if(thisScene == 0){
+            
+            
+            for ground in self.children {
+                if ground.name == "NewBlock" {
+                    if let ground = ground as? SKSpriteNode {
+                        let text = self.childNode(withName: "Text") as? SKLabelNode
+                        switch topScene {
+                        case 1:
+                            ground.texture = SKTexture(imageNamed: "WoodenBox")
+                            text?.text = "Wooden box"
+                        case 5:
+                            ground.texture = SKTexture(imageNamed: "WoodenPlank")
+                            ground.size.width = 620
+                            ground.size.height = 70
+                            text?.text = "Wooden plank"
+                        case 9:
+                            ground.texture = SKTexture(imageNamed: "SlimeBlock")
+                            ground.size.width = 342
+                            ground.size.height = 342
+                            text?.text = "Slime"
+                        case 17:
+                            ground.texture = SKTexture(imageNamed: "StoneBlock")
+                            text?.text = "Stone block"
+                        case 21:
+                            ground.texture = SKTexture(imageNamed: "GlassBlock")
+                            text?.text = "Glass"
+                        case 25:
+                            ground.texture = SKTexture(imageNamed: "SpearBlock")
+                            text?.text = "Spear"
+                        case 33:
+                            ground.texture = SKTexture(imageNamed: "ActivaBlock_Off")
+                            text?.text = "Non-gravity block"
+                        case 35:
+                            ground.texture = SKTexture(imageNamed: "RotationBlock")
+                            text?.text = "Rotating block"
+                        case 37:
+                            ground.texture = SKTexture(imageNamed: "GravityBlock_Off")
+                            text?.text = "Gravity changer"
+                        case 41:
+                            ground.texture = SKTexture(imageNamed: "Magnit_Off")
+                            text?.text = "Magnet"
+                        default:
+                            print("SHIT TEXTURE")
+                        }
+                    }
+                }
+            }
+            
+            
+            backgroundColor = #colorLiteral(red:Float(randomBetweenNumbers(firstNum: 0.0, secondNum:0.5)), green: Float(randomBetweenNumbers(firstNum: 0.0, secondNum:0.5)), blue: Float(randomBetweenNumbers(firstNum: 0.0, secondNum:0.5)), alpha: 1)
+            
+            
+        }
+        
+
+
+        
+
+    }
     
      var viewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "GameViewController") as UIViewController
 
@@ -56,7 +143,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     }
     
     //Палитра для интерфеса
-    var color0 = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
+    var color0 = #colorLiteral(red: 1, green: 0.9325733781, blue: 0.3592393398, alpha: 1)
     var color1 = #colorLiteral(red: 1, green: 0.7871779203, blue: 0.5874175429, alpha: 1)
     var color2 = #colorLiteral(red: 0.6314342022, green: 0.7059366107, blue: 0.7861329317, alpha: 1)
     var color3 = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
@@ -699,10 +786,6 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                     activeBlock.physicsBody?.angularDamping = 0.4
                     activeBlock.physicsBody?.mass = 2.9
                     activeBlock.physicsBody?.fieldBitMask = 4
-                    
-                    //Особые характеристики
-//                    activeBlock.physicsBody?.pinned = true
-//                    activeBlock.physicsBody?.isDynamic = false
                 }
             }
         }
@@ -712,6 +795,9 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         for activeBlock in self.children {
             if activeBlock.name == "RotationBlock" {
                 if let activeBlock = activeBlock as? SKSpriteNode {
+
+
+                    
                     activeBlock.physicsBody?.friction = 0.3
                     activeBlock.physicsBody?.restitution = 0.3
                     activeBlock.physicsBody?.linearDamping = 0.4
@@ -719,13 +805,20 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                     activeBlock.physicsBody?.mass = 2.9
                     activeBlock.physicsBody?.fieldBitMask = 4
                     activeBlock.zRotation = 1.57079637050629
-                    
-                    //Особые характеристики
                     activeBlock.physicsBody?.pinned = true
+                    activeBlock.physicsBody?.isDynamic = false
+
                     //activeBlock.physicsBody?.allowsRotation = false
                 }
             }
         }
+        
+
+        
+        
+        
+        
+        
     
     }
     
@@ -734,11 +827,14 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     //Функция выполняемая до открытия сцены
     override func didMove(to view: SKView) {
         
+
+        
+        
         //Инициализация игровых объектов
         initGameObject()
 
         //Инициализация статус бара
-        //statusBarInit()
+        statusBarInit()
 
         //Инициализация и установка кнопки pause
         stopButtonInit()
@@ -763,6 +859,10 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         
         self.physicsWorld.contactDelegate = self
         
+        //Инициализация Экрана нового блока
+        initNewBlockScreen()
+        
+        
         if (thisScene == 39){
             let thirdSeven = self.childNode(withName: "GravityBlock") as? SKSpriteNode
             let gravity = self.childNode(withName: "Gravity") as? SKFieldNode
@@ -770,6 +870,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             gravity?.isEnabled = true
             gravity?.strength = 30
         }
+        
         
     }
     
@@ -783,6 +884,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         // Цикл считывающий нажатие на экран
         for touch: AnyObject in touches {
             
+
             
             //Удаление блока при нажатии
             let touchLocation = touch.location(in: self)
@@ -850,16 +952,32 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                 if spriteNode.name == "GravityBlock"{
                     let gravity = self.childNode(withName: "Gravity") as? SKFieldNode
                     if (spriteNode.physicsBody?.mass == 3.0){
-                        // OFF
-                        spriteNode.texture = SKTexture(imageNamed: "GravityBlock_Off")
+                        
                         spriteNode.physicsBody?.mass = 2.9
+                        print("STOP")
+                        let m5 = SKTexture(imageNamed: "GravityBlock_Off")
+                        let animation = SKAction.animate(with: [m5], timePerFrame: 10)
+                        
+                        spriteNode.run(SKAction.repeatForever(animation))
+                        spriteNode.texture = SKTexture(imageNamed: "GravityBlock_Off")
+
                         gravity?.isEnabled = false
                     }
                     else{
-
-                        //ON
-                        spriteNode.texture = SKTexture(imageNamed: "GravityBlock_On")
+                        
                         spriteNode.physicsBody?.mass = 3.0
+                        print("START")
+
+                        let m1 = SKTexture(imageNamed: "GravityBlock_On1")
+                        let m2 = SKTexture(imageNamed: "GravityBlock_On2")
+                        let m3 = SKTexture(imageNamed: "GravityBlock_On3")
+                        let m4 = SKTexture(imageNamed: "GravityBlock_On4")
+                        
+                        let textures = [m1, m2, m3, m4]
+                        let animation = SKAction.animate(with: textures, timePerFrame: 0.1)
+                        
+                        spriteNode.run(SKAction.repeatForever(animation))
+
                         gravity?.isEnabled = true
                     }
                 }
@@ -978,6 +1096,17 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                     showRMenu()
                 }
             }
+            
+            if node.name == "button" {
+                print("AM WORK")
+                itsNewBlock = false
+                thisScene = topScene
+                let currentScene = GameScene(fileNamed: "Level "+String(topScene))
+                let transition = SKTransition.doorway(withDuration: 0.5)
+                currentScene!.scaleMode = SKSceneScaleMode.aspectFill
+                currentScene?.viewController = self.viewController
+                self.scene!.view?.presentScene(currentScene!, transition: transition)
+            }
         }
     }
     
@@ -1026,6 +1155,10 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     
 
     override func didSimulatePhysics() {
+        
+        
+
+        
 
         let mainChrctr = self.childNode(withName: "MainCharacter") as? SKSpriteNode
         if mainChrctr?.position.y < 0 {
@@ -1120,7 +1253,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             onGround = false //Свинья не на земле(за экраном она не может определить это)
         }
         
-        //statusBar()
+        statusBar()
     }
 
     

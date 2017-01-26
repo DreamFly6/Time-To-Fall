@@ -39,6 +39,7 @@
 		1F7047DD1DC357E900C35C12 /* Level 28.sks in Resources */ = {isa = PBXBuildFile; fileRef = 1F7047DC1DC357E900C35C12 /* Level 28.sks */; };
 		1F7047DF1DC358A100C35C12 /* Level 29.sks in Resources */ = {isa = PBXBuildFile; fileRef = 1F7047DE1DC358A100C35C12 /* Level 29.sks */; };
 		1F7047E11DC35A3500C35C12 /* Level 30.sks in Resources */ = {isa = PBXBuildFile; fileRef = 1F7047E01DC35A3500C35C12 /* Level 30.sks */; };
+		1FAF3EBF1E3A1A22001CBA65 /* Level 0.sks in Resources */ = {isa = PBXBuildFile; fileRef = 1FAF3EBE1E3A1A22001CBA65 /* Level 0.sks */; };
 		1FB4830F1DC367A700067D4B /* Level 31.sks in Resources */ = {isa = PBXBuildFile; fileRef = 1FB4830E1DC367A700067D4B /* Level 31.sks */; };
 		1FB483111DC367B600067D4B /* Level 32.sks in Resources */ = {isa = PBXBuildFile; fileRef = 1FB483101DC367B600067D4B /* Level 32.sks */; };
 		1FB483131DC367C200067D4B /* Level 33.sks in Resources */ = {isa = PBXBuildFile; fileRef = 1FB483121DC367C200067D4B /* Level 33.sks */; };
@@ -57,7 +58,6 @@
 		1FB4832D1DC36B0700067D4B /* Level 46.sks in Resources */ = {isa = PBXBuildFile; fileRef = 1FB4832C1DC36B0700067D4B /* Level 46.sks */; };
 		1FB4832F1DC36B4700067D4B /* Level 47.sks in Resources */ = {isa = PBXBuildFile; fileRef = 1FB4832E1DC36B4700067D4B /* Level 47.sks */; };
 		1FB483311DC36BA600067D4B /* Level 48.sks in Resources */ = {isa = PBXBuildFile; fileRef = 1FB483301DC36BA600067D4B /* Level 48.sks */; };
-		1FE0F4001CE6F5B9007E1B98 /* Test_Level.sks in Resources */ = {isa = PBXBuildFile; fileRef = 1FE0F3FF1CE6F5B9007E1B98 /* Test_Level.sks */; };
 		1FF6BA481DB47E8A0058BEC2 /* Level 6.sks in Resources */ = {isa = PBXBuildFile; fileRef = 1FF6BA471DB47E8A0058BEC2 /* Level 6.sks */; };
 		32290C781DD08282002CBBF5 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32290C771DD08282002CBBF5 /* SettingViewController.swift */; };
 		3262F13C1D49B7E90056D72B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3262F13B1D49B7E90056D72B /* ViewController.swift */; };
@@ -134,6 +134,7 @@
 		1F7047DC1DC357E900C35C12 /* Level 28.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = "Level 28.sks"; sourceTree = "<group>"; };
 		1F7047DE1DC358A100C35C12 /* Level 29.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = "Level 29.sks"; sourceTree = "<group>"; };
 		1F7047E01DC35A3500C35C12 /* Level 30.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = "Level 30.sks"; sourceTree = "<group>"; };
+		1FAF3EBE1E3A1A22001CBA65 /* Level 0.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = "Level 0.sks"; sourceTree = "<group>"; };
 		1FB4830E1DC367A700067D4B /* Level 31.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = "Level 31.sks"; sourceTree = "<group>"; };
 		1FB483101DC367B600067D4B /* Level 32.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = "Level 32.sks"; sourceTree = "<group>"; };
 		1FB483121DC367C200067D4B /* Level 33.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = "Level 33.sks"; sourceTree = "<group>"; };
@@ -152,7 +153,6 @@
 		1FB4832C1DC36B0700067D4B /* Level 46.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = "Level 46.sks"; sourceTree = "<group>"; };
 		1FB4832E1DC36B4700067D4B /* Level 47.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = "Level 47.sks"; sourceTree = "<group>"; };
 		1FB483301DC36BA600067D4B /* Level 48.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = "Level 48.sks"; sourceTree = "<group>"; };
-		1FE0F3FF1CE6F5B9007E1B98 /* Test_Level.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Test_Level.sks; sourceTree = "<group>"; };
 		1FF6BA471DB47E8A0058BEC2 /* Level 6.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = "Level 6.sks"; sourceTree = "<group>"; };
 		32290C771DD08282002CBBF5 /* SettingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
 		3262F13B1D49B7E90056D72B /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -387,7 +387,7 @@
 		1FB4830D1DC35DE300067D4B /* 3(Active) */ = {
 			isa = PBXGroup;
 			children = (
-				1FF7A4A71DE5CC5500349329 /* 1 +ActiveBlock */,
+				1FF7A4A71DE5CC5500349329 /* 1 +ActiveBlock / RotationBlock */,
 				1F790EAC1E33524300F53024 /* 2 + GravityBlock */,
 				1F2795051E38A07800F4BE64 /* 3 + IronBlock / Magnit */,
 				1FB4832A1DC36AB700067D4B /* Level 45.sks */,
@@ -402,7 +402,6 @@
 			isa = PBXGroup;
 			children = (
 				1FA08D661D3E1A2D00A4BA06 /* Levels */,
-				1FE0F3FF1CE6F5B9007E1B98 /* Test_Level.sks */,
 				1F4C24691CD5E55600D3B0DB /* AppDelegate.swift */,
 				1F4C24711CD5E55600D3B0DB /* Main.storyboard */,
 				328125E81DE6913100E81EB4 /* SwipePageViewController.swift */,
@@ -417,7 +416,7 @@
 			name = Scene;
 			sourceTree = "<group>";
 		};
-		1FF7A4A71DE5CC5500349329 /* 1 +ActiveBlock */ = {
+		1FF7A4A71DE5CC5500349329 /* 1 +ActiveBlock / RotationBlock */ = {
 			isa = PBXGroup;
 			children = (
 				1FB483121DC367C200067D4B /* Level 33.sks */,
@@ -425,12 +424,13 @@
 				1FB483161DC3681000067D4B /* Level 35.sks */,
 				1FB483181DC368E300067D4B /* Level 36.sks */,
 			);
-			name = "1 +ActiveBlock";
+			name = "1 +ActiveBlock / RotationBlock";
 			sourceTree = "<group>";
 		};
 		325B45D61DDC300E00573074 /* 4 */ = {
 			isa = PBXGroup;
 			children = (
+				1FAF3EBE1E3A1A22001CBA65 /* Level 0.sks */,
 			);
 			name = 4;
 			sourceTree = "<group>";
@@ -559,6 +559,7 @@
 				1FB483211DC36A1400067D4B /* Level 40.sks in Resources */,
 				32F5A42B1D3CA47E00631FE0 /* Level 4.sks in Resources */,
 				1F7047D31DC3572700C35C12 /* Level 23.sks in Resources */,
+				1FAF3EBF1E3A1A22001CBA65 /* Level 0.sks in Resources */,
 				1F4C246C1CD5E55600D3B0DB /* Level 1.sks in Resources */,
 				1F6C00A61CE34FCF00A7C8E6 /* Level 2.sks in Resources */,
 				32C496E81DB7CBD900DFDAF9 /* Main.storyboard in Resources */,
@@ -572,7 +573,6 @@
 				1F7047C91DC3563100C35C12 /* Level 18.sks in Resources */,
 				1FB4832B1DC36AB700067D4B /* Level 45.sks in Resources */,
 				1F7047D51DC3573800C35C12 /* Level 24.sks in Resources */,
-				1FE0F4001CE6F5B9007E1B98 /* Test_Level.sks in Resources */,
 				1F1E11DB1DB4DB5A0006631B /* Level 8.sks in Resources */,
 				1F1E11D91DB4DB0F0006631B /* Level 7.sks in Resources */,
 				1F7047D91DC357B500C35C12 /* Level 26.sks in Resources */,
