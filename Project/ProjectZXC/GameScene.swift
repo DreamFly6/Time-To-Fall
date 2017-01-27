@@ -20,6 +20,7 @@ public var statsАrray: [[Int]] = [[Int]](repeating:[Int](repeating:0, count: 5)
 public var buttonTitle : String = ""
 public var itsNewBlock = true
 public var n = [1,5,9,17,21,25,33,35,37,41]
+public var timer = 0
 
 //  Мета игра (фрии ту плей)
 //  Показ рекламы
@@ -28,24 +29,15 @@ public var n = [1,5,9,17,21,25,33,35,37,41]
 class GameScene: SKScene, SKPhysicsContactDelegate {
     
     func initNewBlockScreen() {
-        //var n = [1,5,9,17,21,25,33,35,37,41]
         var ok = false
         
-        
         for index in 0...(n.count - 1) {
-            print(n[index])
             if (topScene == n[index]){
                 ok = true
                 n[index] = 999
-                print(n[index])
             }
         }
         
-        print("================")
-        
-        for index in 0...(n.count - 1) {
-            print(n[index])
-        }
         
         if (ok == true && itsNewBlock == true && thisScene > 0){
             itsNewBlock = false
@@ -60,8 +52,6 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
 
         
         if(thisScene == 0){
-            
-            
             for ground in self.children {
                 if ground.name == "NewBlock" {
                     if let ground = ground as? SKSpriteNode {
@@ -88,7 +78,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                             text?.text = "Glass"
                         case 25:
                             ground.texture = SKTexture(imageNamed: "SpearBlock")
-                            text?.text = "Spear"
+                            text?.text = "Spiked block"
                         case 33:
                             ground.texture = SKTexture(imageNamed: "ActivaBlock_Off")
                             text?.text = "Non-gravity block"
@@ -154,7 +144,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     }
     
     //Палитра для интерфеса
-    var color0 = #colorLiteral(red: 1, green: 0.9325733781, blue: 0.3592393398, alpha: 1)
+    var color0 = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
     var color1 = #colorLiteral(red: 1, green: 0.7871779203, blue: 0.5874175429, alpha: 1)
     var color2 = #colorLiteral(red: 0.6314342022, green: 0.7059366107, blue: 0.7861329317, alpha: 1)
     var color3 = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
@@ -166,37 +156,6 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     public var myLabel4:SKLabelNode!
     public var myLabel5:SKLabelNode!
     
-    
-    
-    //Сохранение статистики
-    func saveStat(info:String) {
-        switch info {
-            //нажатие кнопки next
-        case "next":
-            statsАrray[thisScene][0] += 1
-            break
-            //Перезагрузка уровня
-        case "retry":
-            statsАrray[thisScene][1] += 1
-            break
-            //Проигрышь
-        case "lose":
-            statsАrray[thisScene][2] += 1
-            break
-            //Разрушенные блоки
-        case "destroy":
-            statsАrray[thisScene][3] += 1
-            break
-            //Время в игре
-        case "time":
-            statsАrray[thisScene][4] += 1
-            break
-        default:
-            print("НЕПРАВИЛЬНОЕ НАПИСАНИЕ")
-        }
-        UserDefaults.standard.set(statsАrray, forKey: "stat")
-        UserDefaults.standard.synchronize()
-    }
     
     //Сохранение топовой сцены
     func setTopScene(topStage: Int) {
@@ -495,6 +454,10 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     }
     
     func initMedal() {
+        var timerWin = timer
+        
+        print("Победное время - " + String(timerWin))
+        
         let menuButtonq = SKSpriteNode(imageNamed: "GoldMedal.png")
         menuButtonq.position = CGPoint(x: self.frame.midX+(self.frame.midX/2), y: self.frame.midY - 350)
         menuButtonq.name = "11menu"
@@ -897,7 +860,14 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             gravity?.strength = 30
         }
         
-        
+        let node = self.childNode(withName: "MainCharacter")! as SKNode
+        timer = 0
+        let wait = SKAction.wait(forDuration: 1.0)
+        let run = SKAction.run {
+            timer = timer + 1
+            print(timer)
+        }
+        node.run(SKAction.repeatForever(SKAction.sequence([wait, run])))
     }
     
     
@@ -1058,8 +1028,6 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             
             //Блок кода для обработки кнопок меню
             if node.name == "retry" {
-                print("retry")
-                saveStat(info: "retry")
                 let currentScene = GameScene(fileNamed: "Level "+String(thisScene))
                 let transition = SKTransition.doorsCloseHorizontal(withDuration: 0.5)
                 currentScene!.scaleMode = SKSceneScaleMode.aspectFill
@@ -1069,7 +1037,6 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             
             if node.name == "next" {
                 thisScene+=1
-                saveStat(info: "next")
                 let currentScene = GameScene(fileNamed: "Level "+String(thisScene))
                 let transition = SKTransition.doorway(withDuration: 0.5)
                 currentScene!.scaleMode = SKSceneScaleMode.aspectFill
