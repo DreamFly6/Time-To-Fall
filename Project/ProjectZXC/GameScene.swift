@@ -19,6 +19,7 @@ public var topActualScene = 40
 public var statsАrray: [[Int]] = [[Int]](repeating:[Int](repeating:0, count: 5), count:64)
 public var buttonTitle : String = ""
 public var itsNewBlock = true
+public var n = [1,5,9,17,21,25,33,35,37,41]
 
 //  Мета игра (фрии ту плей)
 //  Показ рекламы
@@ -27,19 +28,27 @@ public var itsNewBlock = true
 class GameScene: SKScene, SKPhysicsContactDelegate {
     
     func initNewBlockScreen() {
-        let n = [1,5,9,17,21,25,33,35,37,41]
+        //var n = [1,5,9,17,21,25,33,35,37,41]
         var ok = false
         
+        
         for index in 0...(n.count - 1) {
+            print(n[index])
             if (topScene == n[index]){
                 ok = true
-                print("OK - " + String(index))
+                n[index] = 999
+                print(n[index])
             }
+        }
+        
+        print("================")
+        
+        for index in 0...(n.count - 1) {
+            print(n[index])
         }
         
         if (ok == true && itsNewBlock == true && thisScene > 0){
             itsNewBlock = false
-            print("TRUE")
             let currentScene = GameScene(fileNamed: "Level 0")
             thisScene = 0
             let transition = SKTransition.doorway(withDuration: 0.5)
@@ -47,10 +56,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             currentScene?.viewController = self.viewController
             self.scene!.view?.presentScene(currentScene!, transition: transition)
         }
-        else {
-            itsNewBlock = true
-            print("FALSE")
-        }
+
+
         
         if(thisScene == 0){
             
@@ -65,8 +72,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                             text?.text = "Wooden box"
                         case 5:
                             ground.texture = SKTexture(imageNamed: "WoodenPlank")
-                            ground.size.width = 620
-                            ground.size.height = 70
+                            ground.size.width = 720
+                            ground.size.height = 50
                             text?.text = "Wooden plank"
                         case 9:
                             ground.texture = SKTexture(imageNamed: "SlimeBlock")
@@ -100,11 +107,15 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                     }
                 }
             }
+
+            
+            backgroundColor = #colorLiteral(red:Float(randomBetweenNumbers(firstNum: 0.2, secondNum:0.6)), green: Float(randomBetweenNumbers(firstNum: 0.2, secondNum:0.6)), blue: Float(randomBetweenNumbers(firstNum: 0.2, secondNum:0.6)), alpha: 1)
             
             
-            backgroundColor = #colorLiteral(red:Float(randomBetweenNumbers(firstNum: 0.0, secondNum:0.5)), green: Float(randomBetweenNumbers(firstNum: 0.0, secondNum:0.5)), blue: Float(randomBetweenNumbers(firstNum: 0.0, secondNum:0.5)), alpha: 1)
-            
-            
+        }
+        else {
+            //Инициализация и установка кнопки pause
+            stopButtonInit()
         }
         
 
@@ -192,30 +203,30 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         UserDefaults.standard.set(topStage, forKey: "topStage")
         UserDefaults.standard.synchronize()
         
-        print("=======================")
-        print("=======================")
-        print("=======================")
-        print("Был сохранен " + String(topStage))
-        print("=======================")
-        print("Текущий topScene " + String(topScene))
-        print("=======================")
-        print("=======================")
-        print("=======================")
+        //print("=======================")
+        //print("=======================")
+        //print("=======================")
+        //print("Был сохранен " + String(topStage))
+        //print("=======================")
+        //print("Текущий topScene " + String(topScene))
+        //print("=======================")
+        //print("=======================")
+        //print("=======================")
         
         
     }
     
     //Загрузка топовой сцены
     func getTopScene() -> (Int) {
-        print("=======================")
-        print("=======================")
-        print("=======================")
-        print("=======================")
-        print("Был загружен " + String(UserDefaults.standard.integer(forKey: "topStage")))
-        print("=======================")
-        print("=======================")
-        print("=======================")
-        print("=======================")
+        //print("=======================")
+        //print("=======================")
+        //print("=======================")
+        //print("=======================")
+        //print("Был загружен " + String(UserDefaults.standard.integer(forKey: "topStage")))
+        //print("=======================")
+        //print("=======================")
+        //print("=======================")
+        //print("=======================")
         
         return UserDefaults.standard.integer(forKey: "topStage")
     }
@@ -457,6 +468,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         menuButton.colorBlendFactor = CGFloat(1.0)
         self.addChild(menuButton)
         
+        
+        
         //Для отладки
         let prevButton = SKSpriteNode(imageNamed: "prevButton.png")
         prevButton.position = CGPoint(x: self.frame.midX, y: self.frame.midY-(self.frame.midY/2))
@@ -476,7 +489,21 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         myLabel.zPosition = 999
         myLabel.position = CGPoint(x: self.frame.midX, y: self.frame.midY + 190)
         self.addChild(myLabel)
+        
+        initMedal()
 
+    }
+    
+    func initMedal() {
+        let menuButtonq = SKSpriteNode(imageNamed: "GoldMedal.png")
+        menuButtonq.position = CGPoint(x: self.frame.midX+(self.frame.midX/2), y: self.frame.midY - 350)
+        menuButtonq.name = "11menu"
+        menuButtonq.xScale = 3.5
+        menuButtonq.yScale = 3.5
+        menuButtonq.zPosition = 999
+        //menuButtonq.color = colorPicker(level: thisScene)
+        //menuButtonq.colorBlendFactor = CGFloat(1.0)
+        self.addChild(menuButtonq)
     }
 
     
@@ -836,8 +863,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         //Инициализация статус бара
         statusBarInit()
 
-        //Инициализация и установка кнопки pause
-        stopButtonInit()
+
         
         
         //Определение макс уровня, до которого дошел игрок
@@ -1098,8 +1124,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             }
             
             if node.name == "button" {
-                print("AM WORK")
-                itsNewBlock = false
+                itsNewBlock = true
                 thisScene = topScene
                 let currentScene = GameScene(fileNamed: "Level "+String(topScene))
                 let transition = SKTransition.doorway(withDuration: 0.5)
