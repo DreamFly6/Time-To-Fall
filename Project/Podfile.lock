@@ -1,7 +1,6 @@
 PODS:
-  - Firebase/AdMob (3.11.1):
-    - Firebase/Core
-    - Google-Mobile-Ads-SDK (= 7.16.0)
+  - Firebase (3.11.1):
+    - Firebase/Core (= 3.11.1)
   - Firebase/Core (3.11.1):
     - FirebaseAnalytics (= 3.6.0)
     - FirebaseCore (= 3.4.7)
@@ -25,8 +24,7 @@ PODS:
     - GoogleToolboxForMac/Defines (= 2.1.1)
 
 DEPENDENCIES:
-  - Firebase/AdMob
-  - Firebase/Core
+  - Firebase
   - Google-Mobile-Ads-SDK (~> 7.9)
 
 SPEC CHECKSUMS:
@@ -39,6 +37,6 @@ SPEC CHECKSUMS:
   GoogleSymbolUtilities: 631ee17048aa5e9ab133470d768ea997a5ef9b96
   GoogleToolboxForMac: 8e329f1b599f2512c6b10676d45736bcc2cbbeb0
 
-PODFILE CHECKSUM: f8066ae58df787d42b596e8cd94d5985e037bc05
+PODFILE CHECKSUM: c5caeb32acaca2b6633390d5b278a0365a3754b2
 
 COCOAPODS: 1.1.1

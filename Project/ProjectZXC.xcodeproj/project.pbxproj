@@ -329,7 +329,6 @@
 				1FB4830B1DC35B7700067D4B /* 1(Box/Plank/Slime) */,
 				1FB4830C1DC35CD700067D4B /* 2(Stone/Glass/Spear) */,
 				1FB4830D1DC35DE300067D4B /* 3(Active) */,
-				325B45D61DDC300E00573074 /* 4 */,
 			);
 			name = Levels;
 			sourceTree = "<group>";
@@ -406,10 +405,7 @@
 				1FF7A4A71DE5CC5500349329 /* 1 +ActiveBlock / RotationBlock */,
 				1F790EAC1E33524300F53024 /* 2 + GravityBlock */,
 				1F2795051E38A07800F4BE64 /* 3 + IronBlock / Magnit */,
-				1FB4832A1DC36AB700067D4B /* Level 45.sks */,
-				1FB4832C1DC36B0700067D4B /* Level 46.sks */,
-				1FB4832E1DC36B4700067D4B /* Level 47.sks */,
-				1FB483301DC36BA600067D4B /* Level 48.sks */,
+				325B45D61DDC300E00573074 /* 4 */,
 			);
 			name = "3(Active)";
 			sourceTree = "<group>";
@@ -418,6 +414,7 @@
 			isa = PBXGroup;
 			children = (
 				1FA08D661D3E1A2D00A4BA06 /* Levels */,
+				1FAF3EBE1E3A1A22001CBA65 /* Level 0.sks */,
 				1F4C24691CD5E55600D3B0DB /* AppDelegate.swift */,
 				1F4C24711CD5E55600D3B0DB /* Main.storyboard */,
 				328125E81DE6913100E81EB4 /* SwipePageViewController.swift */,
@@ -446,7 +443,10 @@
 		325B45D61DDC300E00573074 /* 4 */ = {
 			isa = PBXGroup;
 			children = (
-				1FAF3EBE1E3A1A22001CBA65 /* Level 0.sks */,
+				1FB4832A1DC36AB700067D4B /* Level 45.sks */,
+				1FB4832C1DC36B0700067D4B /* Level 46.sks */,
+				1FB4832E1DC36B4700067D4B /* Level 47.sks */,
+				1FB483301DC36BA600067D4B /* Level 48.sks */,
 			);
 			name = 4;
 			sourceTree = "<group>";
