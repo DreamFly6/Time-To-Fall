@@ -45,14 +45,14 @@ class ViewController: UIViewController, UIAlertViewDelegate {
         print("AD AD AD AD AD AD AD AD")
         createAndLoadInterstitial()
         UIAlertView(title: "Реклама",
-                    message: "Сейчас должен быть баннер Admob. Если его нет, то я иду нахуй",
+                    message: "Сейчас должен быть баннер Admob",
             delegate: self,
-            cancelButtonTitle: "Дай мне ее сюда нахой").show()
+            cancelButtonTitle: "Ок").show()
 
-        //buttonTitle = sender.currentTitle!!
-        //thisScene = Int(buttonTitle)!
-        //print(String(buttonTitle)!)
-        //self.performSegue(withIdentifier: "GoToGameViewController", sender: self)
+//        buttonTitle = sender.currentTitle!!
+//        thisScene = Int(buttonTitle)!
+//        print(String(buttonTitle)!)
+//        self.performSegue(withIdentifier: "GoToGameViewController", sender: self)
         
         
         

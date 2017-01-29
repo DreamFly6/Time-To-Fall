@@ -60,6 +60,7 @@
 		1FB4832D1DC36B0700067D4B /* Level 46.sks in Resources */ = {isa = PBXBuildFile; fileRef = 1FB4832C1DC36B0700067D4B /* Level 46.sks */; };
 		1FB4832F1DC36B4700067D4B /* Level 47.sks in Resources */ = {isa = PBXBuildFile; fileRef = 1FB4832E1DC36B4700067D4B /* Level 47.sks */; };
 		1FB483311DC36BA600067D4B /* Level 48.sks in Resources */ = {isa = PBXBuildFile; fileRef = 1FB483301DC36BA600067D4B /* Level 48.sks */; };
+		1FC00D561E3E46E800FCA979 /* Level 3.sks in Resources */ = {isa = PBXBuildFile; fileRef = 1FC00D551E3E46E800FCA979 /* Level 3.sks */; };
 		1FF6BA481DB47E8A0058BEC2 /* Level 6.sks in Resources */ = {isa = PBXBuildFile; fileRef = 1FF6BA471DB47E8A0058BEC2 /* Level 6.sks */; };
 		32290C781DD08282002CBBF5 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32290C771DD08282002CBBF5 /* SettingViewController.swift */; };
 		3262F13C1D49B7E90056D72B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3262F13B1D49B7E90056D72B /* ViewController.swift */; };
@@ -73,7 +74,6 @@
 		32C496ED1DB7CF0000DFDAF9 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F4C246D1CD5E55600D3B0DB /* GameScene.swift */; };
 		32C496EF1DB7CF4100DFDAF9 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F4C246D1CD5E55600D3B0DB /* GameScene.swift */; };
 		32D80D421DCDE7AC00BF6274 /* PageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32D80D411DCDE7AC00BF6274 /* PageViewController.swift */; };
-		32F5A4291D3CA45B00631FE0 /* Level 3.sks in Resources */ = {isa = PBXBuildFile; fileRef = 32F5A4281D3CA45B00631FE0 /* Level 3.sks */; };
 		32F5A42B1D3CA47E00631FE0 /* Level 4.sks in Resources */ = {isa = PBXBuildFile; fileRef = 32F5A42A1D3CA47E00631FE0 /* Level 4.sks */; };
 		32F5A42D1D3CA49100631FE0 /* Level 5.sks in Resources */ = {isa = PBXBuildFile; fileRef = 32F5A42C1D3CA49100631FE0 /* Level 5.sks */; };
 		B8EE48476D4814ACEA676511 /* Pods_ProjectZXC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8ED99CC74990D07033EF8C57 /* Pods_ProjectZXC.framework */; };
@@ -159,6 +159,7 @@
 		1FB4832C1DC36B0700067D4B /* Level 46.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = "Level 46.sks"; sourceTree = "<group>"; };
 		1FB4832E1DC36B4700067D4B /* Level 47.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = "Level 47.sks"; sourceTree = "<group>"; };
 		1FB483301DC36BA600067D4B /* Level 48.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = "Level 48.sks"; sourceTree = "<group>"; };
+		1FC00D551E3E46E800FCA979 /* Level 3.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = "Level 3.sks"; sourceTree = "<group>"; };
 		1FF6BA471DB47E8A0058BEC2 /* Level 6.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = "Level 6.sks"; sourceTree = "<group>"; };
 		2DE713DA61C2CC29BACF93E0 /* Pods-ProjectZXC.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ProjectZXC.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ProjectZXC/Pods-ProjectZXC.debug.xcconfig"; sourceTree = "<group>"; };
 		32290C771DD08282002CBBF5 /* SettingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
@@ -168,7 +169,6 @@
 		329649211DCA21100078720A /* GameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		32B848611DD03D23004247DA /* MainMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainMenuViewController.swift; sourceTree = "<group>"; };
 		32D80D411DCDE7AC00BF6274 /* PageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageViewController.swift; sourceTree = "<group>"; };
-		32F5A4281D3CA45B00631FE0 /* Level 3.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; name = "Level 3.sks"; path = "../Level 3.sks"; sourceTree = "<group>"; };
 		32F5A42A1D3CA47E00631FE0 /* Level 4.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = "Level 4.sks"; sourceTree = "<group>"; };
 		32F5A42C1D3CA49100631FE0 /* Level 5.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = "Level 5.sks"; sourceTree = "<group>"; };
 		71F9DFDCF55E8B75872CDE22 /* Pods_ProjectZXCUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ProjectZXCUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -338,7 +338,7 @@
 			children = (
 				1F4C246B1CD5E55600D3B0DB /* Level 1.sks */,
 				1F6C00A51CE34FCF00A7C8E6 /* Level 2.sks */,
-				32F5A4281D3CA45B00631FE0 /* Level 3.sks */,
+				1FC00D551E3E46E800FCA979 /* Level 3.sks */,
 				32F5A42A1D3CA47E00631FE0 /* Level 4.sks */,
 			);
 			name = "1 +Box";
@@ -635,7 +635,7 @@
 				1F7047C31DC355B700C35C12 /* Level 15.sks in Resources */,
 				1F7047CD1DC356B300C35C12 /* Level 20.sks in Resources */,
 				1F1E11E31DB4DDB40006631B /* Level 12.sks in Resources */,
-				32F5A4291D3CA45B00631FE0 /* Level 3.sks in Resources */,
+				1FC00D561E3E46E800FCA979 /* Level 3.sks in Resources */,
 				1FB483271DC36A4400067D4B /* Level 43.sks in Resources */,
 				1FB4831D1DC369E600067D4B /* Level 38.sks in Resources */,
 				1F7047BF1DC3558300C35C12 /* Level 13.sks in Resources */,

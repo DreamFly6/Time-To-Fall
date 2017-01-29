@@ -4,13 +4,6 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>FirebaseOSX.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<true/>
-			<key>orderHint</key>
-			<integer>5</integer>
-		</dict>
 		<key>GoogleToolboxForMac.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
@@ -21,16 +14,6 @@
 			<key>orderHint</key>
 			<integer>2</integer>
 		</dict>
-		<key>Pods-ProjectZXCTests.xcscheme</key>
-		<dict>
-			<key>orderHint</key>
-			<integer>3</integer>
-		</dict>
-		<key>Pods-ProjectZXCUITests.xcscheme</key>
-		<dict>
-			<key>orderHint</key>
-			<integer>4</integer>
-		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
@@ -39,27 +22,7 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>3BB45306FA50DFBACDFC9266A8BA3C98</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>57750C8D15CE553B6F2CDC6FFAC8DC66</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>695BE71B2B0299BF0E0CDD9B1836D3F1</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
 		<key>7D4BE8C30E0E294586DC7E974ACA6713</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>DAE17AAA1548C0AAFE2C3A879A61B6A4</key>
 		<dict>
 			<key>primary</key>
 			<true/>
