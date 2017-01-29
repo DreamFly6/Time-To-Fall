@@ -13,6 +13,7 @@
 		1F1E11DF1DB4DC430006631B /* Level 10.sks in Resources */ = {isa = PBXBuildFile; fileRef = 1F1E11DE1DB4DC430006631B /* Level 10.sks */; };
 		1F1E11E11DB4DCBB0006631B /* Level 11.sks in Resources */ = {isa = PBXBuildFile; fileRef = 1F1E11E01DB4DCBB0006631B /* Level 11.sks */; };
 		1F1E11E31DB4DDB40006631B /* Level 12.sks in Resources */ = {isa = PBXBuildFile; fileRef = 1F1E11E21DB4DDB40006631B /* Level 12.sks */; };
+		1F42FEB01E3E01DB00F97A6F /* FirebaseAnalytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F42FEAF1E3E01DB00F97A6F /* FirebaseAnalytics.framework */; };
 		1F4C246A1CD5E55600D3B0DB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F4C24691CD5E55600D3B0DB /* AppDelegate.swift */; };
 		1F4C246C1CD5E55600D3B0DB /* Level 1.sks in Resources */ = {isa = PBXBuildFile; fileRef = 1F4C246B1CD5E55600D3B0DB /* Level 1.sks */; };
 		1F4C24751CD5E55600D3B0DB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1F4C24741CD5E55600D3B0DB /* Assets.xcassets */; };
@@ -40,6 +41,7 @@
 		1F7047DF1DC358A100C35C12 /* Level 29.sks in Resources */ = {isa = PBXBuildFile; fileRef = 1F7047DE1DC358A100C35C12 /* Level 29.sks */; };
 		1F7047E11DC35A3500C35C12 /* Level 30.sks in Resources */ = {isa = PBXBuildFile; fileRef = 1F7047E01DC35A3500C35C12 /* Level 30.sks */; };
 		1FAF3EBF1E3A1A22001CBA65 /* Level 0.sks in Resources */ = {isa = PBXBuildFile; fileRef = 1FAF3EBE1E3A1A22001CBA65 /* Level 0.sks */; };
+		1FAF8EC21E3E1D1E008388AE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1FAF8EC11E3E1D1E008388AE /* GoogleService-Info.plist */; };
 		1FB4830F1DC367A700067D4B /* Level 31.sks in Resources */ = {isa = PBXBuildFile; fileRef = 1FB4830E1DC367A700067D4B /* Level 31.sks */; };
 		1FB483111DC367B600067D4B /* Level 32.sks in Resources */ = {isa = PBXBuildFile; fileRef = 1FB483101DC367B600067D4B /* Level 32.sks */; };
 		1FB483131DC367C200067D4B /* Level 33.sks in Resources */ = {isa = PBXBuildFile; fileRef = 1FB483121DC367C200067D4B /* Level 33.sks */; };
@@ -74,6 +76,7 @@
 		32F5A4291D3CA45B00631FE0 /* Level 3.sks in Resources */ = {isa = PBXBuildFile; fileRef = 32F5A4281D3CA45B00631FE0 /* Level 3.sks */; };
 		32F5A42B1D3CA47E00631FE0 /* Level 4.sks in Resources */ = {isa = PBXBuildFile; fileRef = 32F5A42A1D3CA47E00631FE0 /* Level 4.sks */; };
 		32F5A42D1D3CA49100631FE0 /* Level 5.sks in Resources */ = {isa = PBXBuildFile; fileRef = 32F5A42C1D3CA49100631FE0 /* Level 5.sks */; };
+		B8EE48476D4814ACEA676511 /* Pods_ProjectZXC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8ED99CC74990D07033EF8C57 /* Pods_ProjectZXC.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -94,12 +97,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1006E196910BF310615FF394 /* Pods-ProjectZXC.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ProjectZXC.release.xcconfig"; path = "Pods/Target Support Files/Pods-ProjectZXC/Pods-ProjectZXC.release.xcconfig"; sourceTree = "<group>"; };
 		1F1E11D81DB4DB0F0006631B /* Level 7.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = "Level 7.sks"; sourceTree = "<group>"; };
 		1F1E11DA1DB4DB5A0006631B /* Level 8.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = "Level 8.sks"; sourceTree = "<group>"; };
 		1F1E11DC1DB4DBCD0006631B /* Level 9.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = "Level 9.sks"; sourceTree = "<group>"; };
 		1F1E11DE1DB4DC430006631B /* Level 10.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = "Level 10.sks"; sourceTree = "<group>"; };
 		1F1E11E01DB4DCBB0006631B /* Level 11.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = "Level 11.sks"; sourceTree = "<group>"; };
 		1F1E11E21DB4DDB40006631B /* Level 12.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = "Level 12.sks"; sourceTree = "<group>"; };
+		1F42FEAF1E3E01DB00F97A6F /* FirebaseAnalytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FirebaseAnalytics.framework; path = Pods/FirebaseAnalytics/Frameworks/frameworks/FirebaseAnalytics.framework; sourceTree = "<group>"; };
 		1F4C24661CD5E55600D3B0DB /* ProjectZXC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ProjectZXC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1F4C24691CD5E55600D3B0DB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1F4C246B1CD5E55600D3B0DB /* Level 1.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = "Level 1.sks"; sourceTree = "<group>"; };
@@ -135,6 +140,7 @@
 		1F7047DE1DC358A100C35C12 /* Level 29.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = "Level 29.sks"; sourceTree = "<group>"; };
 		1F7047E01DC35A3500C35C12 /* Level 30.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = "Level 30.sks"; sourceTree = "<group>"; };
 		1FAF3EBE1E3A1A22001CBA65 /* Level 0.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = "Level 0.sks"; sourceTree = "<group>"; };
+		1FAF8EC11E3E1D1E008388AE /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "ProjectZXC/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		1FB4830E1DC367A700067D4B /* Level 31.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = "Level 31.sks"; sourceTree = "<group>"; };
 		1FB483101DC367B600067D4B /* Level 32.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = "Level 32.sks"; sourceTree = "<group>"; };
 		1FB483121DC367C200067D4B /* Level 33.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = "Level 33.sks"; sourceTree = "<group>"; };
@@ -154,6 +160,7 @@
 		1FB4832E1DC36B4700067D4B /* Level 47.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = "Level 47.sks"; sourceTree = "<group>"; };
 		1FB483301DC36BA600067D4B /* Level 48.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = "Level 48.sks"; sourceTree = "<group>"; };
 		1FF6BA471DB47E8A0058BEC2 /* Level 6.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = "Level 6.sks"; sourceTree = "<group>"; };
+		2DE713DA61C2CC29BACF93E0 /* Pods-ProjectZXC.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ProjectZXC.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ProjectZXC/Pods-ProjectZXC.debug.xcconfig"; sourceTree = "<group>"; };
 		32290C771DD08282002CBBF5 /* SettingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
 		3262F13B1D49B7E90056D72B /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		328125E61DE6912200E81EB4 /* SwipeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwipeViewController.swift; sourceTree = "<group>"; };
@@ -164,6 +171,9 @@
 		32F5A4281D3CA45B00631FE0 /* Level 3.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; name = "Level 3.sks"; path = "../Level 3.sks"; sourceTree = "<group>"; };
 		32F5A42A1D3CA47E00631FE0 /* Level 4.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = "Level 4.sks"; sourceTree = "<group>"; };
 		32F5A42C1D3CA49100631FE0 /* Level 5.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = "Level 5.sks"; sourceTree = "<group>"; };
+		71F9DFDCF55E8B75872CDE22 /* Pods_ProjectZXCUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ProjectZXCUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8ED99CC74990D07033EF8C57 /* Pods_ProjectZXC.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ProjectZXC.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E15E18FC93F999238F1E44F2 /* Pods_ProjectZXCTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ProjectZXCTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -171,6 +181,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1F42FEB01E3E01DB00F97A6F /* FirebaseAnalytics.framework in Frameworks */,
+				B8EE48476D4814ACEA676511 /* Pods_ProjectZXC.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -249,10 +261,14 @@
 		1F4C245D1CD5E55600D3B0DB = {
 			isa = PBXGroup;
 			children = (
+				1FAF8EC11E3E1D1E008388AE /* GoogleService-Info.plist */,
+				1F42FEAF1E3E01DB00F97A6F /* FirebaseAnalytics.framework */,
 				1F4C24681CD5E55600D3B0DB /* ProjectZXC */,
 				1F4C24811CD5E55600D3B0DB /* ProjectZXCTests */,
 				1F4C248C1CD5E55600D3B0DB /* ProjectZXCUITests */,
 				1F4C24671CD5E55600D3B0DB /* Products */,
+				667683D9DB1DC384A635F578 /* Pods */,
+				BEE51B090CC89C93202D8A87 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -435,6 +451,25 @@
 			name = 4;
 			sourceTree = "<group>";
 		};
+		667683D9DB1DC384A635F578 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2DE713DA61C2CC29BACF93E0 /* Pods-ProjectZXC.debug.xcconfig */,
+				1006E196910BF310615FF394 /* Pods-ProjectZXC.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		BEE51B090CC89C93202D8A87 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8ED99CC74990D07033EF8C57 /* Pods_ProjectZXC.framework */,
+				E15E18FC93F999238F1E44F2 /* Pods_ProjectZXCTests.framework */,
+				71F9DFDCF55E8B75872CDE22 /* Pods_ProjectZXCUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -442,9 +477,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1F4C24921CD5E55600D3B0DB /* Build configuration list for PBXNativeTarget "ProjectZXC" */;
 			buildPhases = (
+				783FA49BF83E21D2BDEC532A /* [CP] Check Pods Manifest.lock */,
 				1F4C24621CD5E55600D3B0DB /* Sources */,
 				1F4C24631CD5E55600D3B0DB /* Frameworks */,
 				1F4C24641CD5E55600D3B0DB /* Resources */,
+				209E8A5473294634FC9033D7 /* [CP] Embed Pods Frameworks */,
+				80DB6E7E0BBDD80B8100658F /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -558,6 +596,7 @@
 				1F1E11E11DB4DCBB0006631B /* Level 11.sks in Resources */,
 				1FB483211DC36A1400067D4B /* Level 40.sks in Resources */,
 				32F5A42B1D3CA47E00631FE0 /* Level 4.sks in Resources */,
+				1FAF8EC21E3E1D1E008388AE /* GoogleService-Info.plist in Resources */,
 				1F7047D31DC3572700C35C12 /* Level 23.sks in Resources */,
 				1FAF3EBF1E3A1A22001CBA65 /* Level 0.sks in Resources */,
 				1F4C246C1CD5E55600D3B0DB /* Level 1.sks in Resources */,
@@ -618,6 +657,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		209E8A5473294634FC9033D7 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ProjectZXC/Pods-ProjectZXC-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		783FA49BF83E21D2BDEC532A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		80DB6E7E0BBDD80B8100658F /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ProjectZXC/Pods-ProjectZXC-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		1F4C24621CD5E55600D3B0DB /* Sources */ = {
@@ -729,7 +816,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -771,7 +858,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -782,11 +869,16 @@
 		};
 		1F4C24931CD5E55600D3B0DB /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2DE713DA61C2CC29BACF93E0 /* Pods-ProjectZXC.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = WKK4K5T5H2;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Pods/FirebaseAnalytics/Frameworks/frameworks",
+				);
 				INFOPLIST_FILE = ProjectZXC/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -800,11 +892,16 @@
 		};
 		1F4C24941CD5E55600D3B0DB /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1006E196910BF310615FF394 /* Pods-ProjectZXC.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = WKK4K5T5H2;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Pods/FirebaseAnalytics/Frameworks/frameworks",
+				);
 				INFOPLIST_FILE = ProjectZXC/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

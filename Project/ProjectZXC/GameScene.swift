@@ -454,7 +454,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     }
     
     func initMedal() {
-        var timerWin = timer
+        let timerWin = timer
         
         print("Победное время - " + String(timerWin))
         
