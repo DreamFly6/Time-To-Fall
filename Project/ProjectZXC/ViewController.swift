@@ -62,7 +62,7 @@ class ViewController: UIViewController, UIAlertViewDelegate {
         if interstitial.isReady {
             interstitial.present(fromRootViewController: self)
         } else {
-            print("Ad wasn't ready")
+            print("Ad wasn't ready :(")
         }
         //playAgainButton.isHidden = false
     }
