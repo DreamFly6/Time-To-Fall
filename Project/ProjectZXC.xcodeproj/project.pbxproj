@@ -61,6 +61,9 @@
 		1FB4832F1DC36B4700067D4B /* Level 47.sks in Resources */ = {isa = PBXBuildFile; fileRef = 1FB4832E1DC36B4700067D4B /* Level 47.sks */; };
 		1FB483311DC36BA600067D4B /* Level 48.sks in Resources */ = {isa = PBXBuildFile; fileRef = 1FB483301DC36BA600067D4B /* Level 48.sks */; };
 		1FC00D561E3E46E800FCA979 /* Level 3.sks in Resources */ = {isa = PBXBuildFile; fileRef = 1FC00D551E3E46E800FCA979 /* Level 3.sks */; };
+		1FECF0FB1E3F7F760060B14F /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FECF0FA1E3F7F760060B14F /* Security.framework */; };
+		1FECF0FD1E3F7FB10060B14F /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FECF0FC1E3F7FB10060B14F /* SystemConfiguration.framework */; };
+		1FECF1031E3F801E0060B14F /* libFlurry_7.9.2.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FECF1021E3F801E0060B14F /* libFlurry_7.9.2.a */; };
 		1FF6BA481DB47E8A0058BEC2 /* Level 6.sks in Resources */ = {isa = PBXBuildFile; fileRef = 1FF6BA471DB47E8A0058BEC2 /* Level 6.sks */; };
 		32290C781DD08282002CBBF5 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32290C771DD08282002CBBF5 /* SettingViewController.swift */; };
 		3262F13C1D49B7E90056D72B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3262F13B1D49B7E90056D72B /* ViewController.swift */; };
@@ -98,6 +101,7 @@
 
 /* Begin PBXFileReference section */
 		1006E196910BF310615FF394 /* Pods-ProjectZXC.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ProjectZXC.release.xcconfig"; path = "Pods/Target Support Files/Pods-ProjectZXC/Pods-ProjectZXC.release.xcconfig"; sourceTree = "<group>"; };
+		1F0B07CC1E3F86B700225454 /* ProjectZXC-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ProjectZXC-Bridging-Header.h"; sourceTree = "<group>"; };
 		1F1E11D81DB4DB0F0006631B /* Level 7.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = "Level 7.sks"; sourceTree = "<group>"; };
 		1F1E11DA1DB4DB5A0006631B /* Level 8.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = "Level 8.sks"; sourceTree = "<group>"; };
 		1F1E11DC1DB4DBCD0006631B /* Level 9.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = "Level 9.sks"; sourceTree = "<group>"; };
@@ -160,6 +164,10 @@
 		1FB4832E1DC36B4700067D4B /* Level 47.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = "Level 47.sks"; sourceTree = "<group>"; };
 		1FB483301DC36BA600067D4B /* Level 48.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = "Level 48.sks"; sourceTree = "<group>"; };
 		1FC00D551E3E46E800FCA979 /* Level 3.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = "Level 3.sks"; sourceTree = "<group>"; };
+		1FECF0FA1E3F7F760060B14F /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		1FECF0FC1E3F7FB10060B14F /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		1FECF1011E3F801E0060B14F /* Flurry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Flurry.h; path = "../Pods/Flurry-iOS-SDK/Flurry/Flurry.h"; sourceTree = "<group>"; };
+		1FECF1021E3F801E0060B14F /* libFlurry_7.9.2.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libFlurry_7.9.2.a; path = "../Pods/Flurry-iOS-SDK/Flurry/libFlurry_7.9.2.a"; sourceTree = "<group>"; };
 		1FF6BA471DB47E8A0058BEC2 /* Level 6.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = "Level 6.sks"; sourceTree = "<group>"; };
 		2DE713DA61C2CC29BACF93E0 /* Pods-ProjectZXC.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ProjectZXC.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ProjectZXC/Pods-ProjectZXC.debug.xcconfig"; sourceTree = "<group>"; };
 		32290C771DD08282002CBBF5 /* SettingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
@@ -181,7 +189,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1FECF0FD1E3F7FB10060B14F /* SystemConfiguration.framework in Frameworks */,
+				1FECF0FB1E3F7F760060B14F /* Security.framework in Frameworks */,
 				1F42FEB01E3E01DB00F97A6F /* FirebaseAnalytics.framework in Frameworks */,
+				1FECF1031E3F801E0060B14F /* libFlurry_7.9.2.a in Frameworks */,
 				B8EE48476D4814ACEA676511 /* Pods_ProjectZXC.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -285,6 +296,7 @@
 		1F4C24681CD5E55600D3B0DB /* ProjectZXC */ = {
 			isa = PBXGroup;
 			children = (
+				1F0B07CC1E3F86B700225454 /* ProjectZXC-Bridging-Header.h */,
 				1F6D66B71DBFBA90001EE597 /* TO DO.rtf */,
 				1FDFC02C1CD7A3FA00A3F56D /* Scene */,
 				1F4C24741CD5E55600D3B0DB /* Assets.xcassets */,
@@ -413,6 +425,8 @@
 		1FDFC02C1CD7A3FA00A3F56D /* Scene */ = {
 			isa = PBXGroup;
 			children = (
+				1FECF1011E3F801E0060B14F /* Flurry.h */,
+				1FECF1021E3F801E0060B14F /* libFlurry_7.9.2.a */,
 				1FA08D661D3E1A2D00A4BA06 /* Levels */,
 				1FAF3EBE1E3A1A22001CBA65 /* Level 0.sks */,
 				1F4C24691CD5E55600D3B0DB /* AppDelegate.swift */,
@@ -463,6 +477,8 @@
 		BEE51B090CC89C93202D8A87 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				1FECF0FC1E3F7FB10060B14F /* SystemConfiguration.framework */,
+				1FECF0FA1E3F7F760060B14F /* Security.framework */,
 				8ED99CC74990D07033EF8C57 /* Pods_ProjectZXC.framework */,
 				E15E18FC93F999238F1E44F2 /* Pods_ProjectZXCTests.framework */,
 				71F9DFDCF55E8B75872CDE22 /* Pods_ProjectZXCUITests.framework */,
@@ -882,9 +898,15 @@
 				INFOPLIST_FILE = ProjectZXC/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Pods/Flurry-iOS-SDK/Flurry",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = ind122222;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SWIFT_DISABLE_SAFETY_CHECKS = NO;
+				SWIFT_OBJC_BRIDGING_HEADER = "ProjectZXC/ProjectZXC-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -905,9 +927,15 @@
 				INFOPLIST_FILE = ProjectZXC/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Pods/Flurry-iOS-SDK/Flurry",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = ind122222;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SWIFT_DISABLE_SAFETY_CHECKS = NO;
+				SWIFT_OBJC_BRIDGING_HEADER = "ProjectZXC/ProjectZXC-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};

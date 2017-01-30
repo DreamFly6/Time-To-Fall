@@ -1028,6 +1028,10 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             
             //Блок кода для обработки кнопок меню
             if node.name == "retry" {
+                let articleParams = ["Author": "John Q", "User_Status": "Registered"];
+                
+                Flurry.logEvent("Article_Read", withParameters: articleParams);
+                
                 let currentScene = GameScene(fileNamed: "Level "+String(thisScene))
                 let transition = SKTransition.doorsCloseHorizontal(withDuration: 0.5)
                 currentScene!.scaleMode = SKSceneScaleMode.aspectFill
@@ -1036,6 +1040,9 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             }
             
             if node.name == "next" {
+                
+                Flurry.logPageView();
+                
                 thisScene+=1
                 let currentScene = GameScene(fileNamed: "Level "+String(thisScene))
                 let transition = SKTransition.doorway(withDuration: 0.5)

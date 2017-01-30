@@ -4,6 +4,11 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>Flurry-iOS-SDK.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>3</integer>
+		</dict>
 		<key>GoogleToolboxForMac.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
@@ -22,7 +27,22 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>4C3AAFF387C321D89902AA2FFC7B2EB1</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>7D4BE8C30E0E294586DC7E974ACA6713</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>A7047938F9B3F7E6ACE923A5BEE61BA2</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>B60742998EEB08D41262197A7B027940</key>
 		<dict>
 			<key>primary</key>
 			<true/>
