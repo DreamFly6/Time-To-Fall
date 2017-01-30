@@ -18,6 +18,8 @@ class MainMenuViewController: UIViewController {
         
         topScene = UserDefaults.standard.integer(forKey: "topStage")
         
+        topScene = 1
+        
         if topScene > 1 {
             statsАrray = UserDefaults.standard.array(forKey: "stat") as! [[Int]]
         }
@@ -26,7 +28,7 @@ class MainMenuViewController: UIViewController {
             topScene = 1
         }
         
-        topScene = 1
+
         
         self.navigationController?.isNavigationBarHidden = true
         

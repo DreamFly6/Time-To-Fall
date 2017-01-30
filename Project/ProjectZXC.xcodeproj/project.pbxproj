@@ -40,6 +40,13 @@
 		1F7047DD1DC357E900C35C12 /* Level 28.sks in Resources */ = {isa = PBXBuildFile; fileRef = 1F7047DC1DC357E900C35C12 /* Level 28.sks */; };
 		1F7047DF1DC358A100C35C12 /* Level 29.sks in Resources */ = {isa = PBXBuildFile; fileRef = 1F7047DE1DC358A100C35C12 /* Level 29.sks */; };
 		1F7047E11DC35A3500C35C12 /* Level 30.sks in Resources */ = {isa = PBXBuildFile; fileRef = 1F7047E01DC35A3500C35C12 /* Level 30.sks */; };
+		1F7ED10B1E3FA551007D232D /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F7ED10A1E3FA551007D232D /* libz.tbd */; };
+		1F8F1CC01E3FA614001FDF1E /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F8F1CBF1E3FA614001FDF1E /* AdSupport.framework */; };
+		1F8F1CC21E3FA626001FDF1E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F8F1CC11E3FA626001FDF1E /* CoreGraphics.framework */; };
+		1F8F1CC41E3FA633001FDF1E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F8F1CC31E3FA633001FDF1E /* Foundation.framework */; };
+		1F8F1CC61E3FA647001FDF1E /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F8F1CC51E3FA647001FDF1E /* MediaPlayer.framework */; };
+		1F8F1CC81E3FA652001FDF1E /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F8F1CC71E3FA652001FDF1E /* StoreKit.framework */; };
+		1F8F1CCA1E3FA664001FDF1E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F8F1CC91E3FA664001FDF1E /* UIKit.framework */; };
 		1FAF3EBF1E3A1A22001CBA65 /* Level 0.sks in Resources */ = {isa = PBXBuildFile; fileRef = 1FAF3EBE1E3A1A22001CBA65 /* Level 0.sks */; };
 		1FAF8EC21E3E1D1E008388AE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1FAF8EC11E3E1D1E008388AE /* GoogleService-Info.plist */; };
 		1FB4830F1DC367A700067D4B /* Level 31.sks in Resources */ = {isa = PBXBuildFile; fileRef = 1FB4830E1DC367A700067D4B /* Level 31.sks */; };
@@ -101,7 +108,6 @@
 
 /* Begin PBXFileReference section */
 		1006E196910BF310615FF394 /* Pods-ProjectZXC.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ProjectZXC.release.xcconfig"; path = "Pods/Target Support Files/Pods-ProjectZXC/Pods-ProjectZXC.release.xcconfig"; sourceTree = "<group>"; };
-		1F0B07CC1E3F86B700225454 /* ProjectZXC-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ProjectZXC-Bridging-Header.h"; sourceTree = "<group>"; };
 		1F1E11D81DB4DB0F0006631B /* Level 7.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = "Level 7.sks"; sourceTree = "<group>"; };
 		1F1E11DA1DB4DB5A0006631B /* Level 8.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = "Level 8.sks"; sourceTree = "<group>"; };
 		1F1E11DC1DB4DBCD0006631B /* Level 9.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = "Level 9.sks"; sourceTree = "<group>"; };
@@ -143,6 +149,14 @@
 		1F7047DC1DC357E900C35C12 /* Level 28.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = "Level 28.sks"; sourceTree = "<group>"; };
 		1F7047DE1DC358A100C35C12 /* Level 29.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = "Level 29.sks"; sourceTree = "<group>"; };
 		1F7047E01DC35A3500C35C12 /* Level 30.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = "Level 30.sks"; sourceTree = "<group>"; };
+		1F7ED10A1E3FA551007D232D /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		1F8F1CBF1E3FA614001FDF1E /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
+		1F8F1CC11E3FA626001FDF1E /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		1F8F1CC31E3FA633001FDF1E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		1F8F1CC51E3FA647001FDF1E /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
+		1F8F1CC71E3FA652001FDF1E /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		1F8F1CC91E3FA664001FDF1E /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		1F9D22191E3FA8720002DBA9 /* ProjectZXC-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ProjectZXC-Bridging-Header.h"; sourceTree = SOURCE_ROOT; };
 		1FAF3EBE1E3A1A22001CBA65 /* Level 0.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = "Level 0.sks"; sourceTree = "<group>"; };
 		1FAF8EC11E3E1D1E008388AE /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "ProjectZXC/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		1FB4830E1DC367A700067D4B /* Level 31.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = "Level 31.sks"; sourceTree = "<group>"; };
@@ -190,6 +204,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				1FECF0FD1E3F7FB10060B14F /* SystemConfiguration.framework in Frameworks */,
+				1F8F1CCA1E3FA664001FDF1E /* UIKit.framework in Frameworks */,
+				1F8F1CC81E3FA652001FDF1E /* StoreKit.framework in Frameworks */,
+				1F8F1CC61E3FA647001FDF1E /* MediaPlayer.framework in Frameworks */,
+				1F8F1CC41E3FA633001FDF1E /* Foundation.framework in Frameworks */,
+				1F8F1CC21E3FA626001FDF1E /* CoreGraphics.framework in Frameworks */,
+				1F8F1CC01E3FA614001FDF1E /* AdSupport.framework in Frameworks */,
+				1F7ED10B1E3FA551007D232D /* libz.tbd in Frameworks */,
 				1FECF0FB1E3F7F760060B14F /* Security.framework in Frameworks */,
 				1F42FEB01E3E01DB00F97A6F /* FirebaseAnalytics.framework in Frameworks */,
 				1FECF1031E3F801E0060B14F /* libFlurry_7.9.2.a in Frameworks */,
@@ -296,7 +317,7 @@
 		1F4C24681CD5E55600D3B0DB /* ProjectZXC */ = {
 			isa = PBXGroup;
 			children = (
-				1F0B07CC1E3F86B700225454 /* ProjectZXC-Bridging-Header.h */,
+				1F9D22191E3FA8720002DBA9 /* ProjectZXC-Bridging-Header.h */,
 				1F6D66B71DBFBA90001EE597 /* TO DO.rtf */,
 				1FDFC02C1CD7A3FA00A3F56D /* Scene */,
 				1F4C24741CD5E55600D3B0DB /* Assets.xcassets */,
@@ -477,6 +498,13 @@
 		BEE51B090CC89C93202D8A87 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				1F8F1CC91E3FA664001FDF1E /* UIKit.framework */,
+				1F8F1CC71E3FA652001FDF1E /* StoreKit.framework */,
+				1F8F1CC51E3FA647001FDF1E /* MediaPlayer.framework */,
+				1F8F1CC31E3FA633001FDF1E /* Foundation.framework */,
+				1F8F1CC11E3FA626001FDF1E /* CoreGraphics.framework */,
+				1F8F1CBF1E3FA614001FDF1E /* AdSupport.framework */,
+				1F7ED10A1E3FA551007D232D /* libz.tbd */,
 				1FECF0FC1E3F7FB10060B14F /* SystemConfiguration.framework */,
 				1FECF0FA1E3F7F760060B14F /* Security.framework */,
 				8ED99CC74990D07033EF8C57 /* Pods_ProjectZXC.framework */,
