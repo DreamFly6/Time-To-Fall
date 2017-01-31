@@ -18,7 +18,7 @@ import SpriteKit
 //Надеюсь, что понятно объяснил
 
 class GameViewController: UIViewController {
-    
+
     
     override func viewDidLoad() {
         print(buttonTitle)

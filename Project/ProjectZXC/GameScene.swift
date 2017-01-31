@@ -2,6 +2,8 @@
 // VerTitle: Cyprian
 
 import SpriteKit
+import GoogleMobileAds
+
 fileprivate func < <T : Comparable>(lhs: T?, rhs: T?) -> Bool {
   switch (lhs, rhs) {
   case let (l?, r?):
@@ -21,12 +23,15 @@ public var buttonTitle : String = ""
 public var itsNewBlock = true
 public var n = [1,5,9,17,21,25,33,35,37,41]
 public var timer = 0
+public var AdCounter = 0
 
 //  Мета игра (фрии ту плей)
 //  Показ рекламы
 //  Просмотр видео за след уровень
 
 class GameScene: SKScene, SKPhysicsContactDelegate {
+
+
     
     func initNewBlockScreen() {
         var ok = false
@@ -253,6 +258,11 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
 
     //При вызове этой функции, показывается меню проигрыша.
     func showLMenu(){
+        
+        let articleParams = ["Loose lvl": thisScene];
+        
+        Flurry.logEvent("Loose", withParameters: articleParams)
+        
         let menuBoard = SKSpriteNode(imageNamed: "MenuBoard.png")
         menuBoard.position = CGPoint(x: self.frame.midX, y: self.frame.midY)
         menuBoard.name = "menuBoard"
@@ -381,11 +391,46 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     }
     
     
+    /// The interstitial ad.
+    var interstitial: GADInterstitial!
+    
+    fileprivate func createAndLoadInterstitial() {
+        interstitial = GADInterstitial(adUnitID: "ca-app-pub-2270286479492772/1486792443")
+        let request = GADRequest()
+        // Request test ads on devices you specify. Your test device ID is printed to the console when
+        // an ad request is made.
+        request.testDevices = [ kGADSimulatorID, "2077ef9a63d2b398840261c8221a0c9a" ]
+        interstitial.load(request)
+    }
+    
+    func alertView(_ alertView: UIAlertView, willDismissWithButtonIndex buttonIndex: Int) {
+        print("Alert ADs")
+        if interstitial.isReady {
+            interstitial.present(fromRootViewController: self.viewController)
+        } else {
+            print("Ad wasn't ready :(")
+        }
+        //playAgainButton.isHidden = false
+    }
+    
+    func ads() {
+        print("Alert ADs")
+        if interstitial.isReady {
+            interstitial.present(fromRootViewController: self.viewController)
+        } else {
+            print("Ad wasn't ready :(")
+        }
+        //playAgainButton.isHidden = false
+    }
     //При вызове этой функции, показывается меню выигрыша.
     func showWMenu(){
         if thisScene == topScene {
             topScene+=1
         }
+        
+        let articleParams = ["Win lvl": thisScene];
+        
+        Flurry.logEvent("Win", withParameters: articleParams)
         
         let menuBoard = SKSpriteNode(imageNamed: "MenuBoard.png")
         menuBoard.position = CGPoint(x: self.frame.midX, y: self.frame.midY)
@@ -868,6 +913,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             print(timer)
         }
         node.run(SKAction.repeatForever(SKAction.sequence([wait, run])))
+        
+        createAndLoadInterstitial()
     }
     
     
@@ -1028,20 +1075,39 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             
             //Блок кода для обработки кнопок меню
             if node.name == "retry" {
-                let articleParams = ["Author": "John Q", "User_Status": "Registered"];
+                let articleParams = ["Retry lvl": thisScene];
                 
-                Flurry.logEvent("Article_Read", withParameters: articleParams);
+                Flurry.logEvent("Retry level", withParameters: articleParams)
                 
-                let currentScene = GameScene(fileNamed: "Level "+String(thisScene))
-                let transition = SKTransition.doorsCloseHorizontal(withDuration: 0.5)
-                currentScene!.scaleMode = SKSceneScaleMode.aspectFill
-                currentScene?.viewController = self.viewController
-                self.scene!.view?.presentScene(currentScene!, transition: transition)
+
+
+
+                if AdCounter == 3 {
+
+                    //UIAlertView(title: "Реклама", message: "Сейчас должен быть баннер Admob", delegate: self, cancelButtonTitle: "Ок").show()
+                    ads()
+                    AdCounter = 0
+                }
+                else {
+                    print("Время еще не пришло")
+
+                    AdCounter += 1
+                    let currentScene = GameScene(fileNamed: "Level "+String(thisScene))
+                    let transition = SKTransition.doorsCloseHorizontal(withDuration: 0.5)
+                    currentScene!.scaleMode = SKSceneScaleMode.aspectFill
+                    currentScene?.viewController = self.viewController
+                    self.scene!.view?.presentScene(currentScene!, transition: transition)
+
+                }
+
+
+
             }
             
             if node.name == "next" {
+                let articleParams = ["This lvl": thisScene, "Next lvl": thisScene+1];
                 
-                Flurry.logPageView();
+                Flurry.logEvent("Next Level", withParameters: articleParams)
                 
                 thisScene+=1
                 let currentScene = GameScene(fileNamed: "Level "+String(thisScene))
