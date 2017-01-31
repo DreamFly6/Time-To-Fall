@@ -167,30 +167,30 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         UserDefaults.standard.set(topStage, forKey: "topStage")
         UserDefaults.standard.synchronize()
         
-        //print("=======================")
-        //print("=======================")
-        //print("=======================")
-        //print("Был сохранен " + String(topStage))
-        //print("=======================")
-        //print("Текущий topScene " + String(topScene))
-        //print("=======================")
-        //print("=======================")
-        //print("=======================")
+        print("=======================")
+        print("=======================")
+        print("=======================")
+        print("Был сохранен " + String(topStage))
+        print("=======================")
+        print("Текущий topScene " + String(topScene))
+        print("=======================")
+        print("=======================")
+        print("=======================")
         
         
     }
     
     //Загрузка топовой сцены
     func getTopScene() -> (Int) {
-        //print("=======================")
-        //print("=======================")
-        //print("=======================")
-        //print("=======================")
-        //print("Был загружен " + String(UserDefaults.standard.integer(forKey: "topStage")))
-        //print("=======================")
-        //print("=======================")
-        //print("=======================")
-        //print("=======================")
+        print("=======================")
+        print("=======================")
+        print("=======================")
+        print("=======================")
+        print("Был загружен " + String(UserDefaults.standard.integer(forKey: "topStage")))
+        print("=======================")
+        print("=======================")
+        print("=======================")
+        print("=======================")
         
         return UserDefaults.standard.integer(forKey: "topStage")
     }
@@ -262,7 +262,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         let articleParams = ["Loose lvl": thisScene];
         
         Flurry.logEvent("Loose", withParameters: articleParams)
-        
+        Flurry.logEvent("Loose");
         let menuBoard = SKSpriteNode(imageNamed: "MenuBoard.png")
         menuBoard.position = CGPoint(x: self.frame.midX, y: self.frame.midY)
         menuBoard.name = "menuBoard"
@@ -431,6 +431,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         let articleParams = ["Win lvl": thisScene];
         
         Flurry.logEvent("Win", withParameters: articleParams)
+        Flurry.logEvent("Win");
         
         let menuBoard = SKSpriteNode(imageNamed: "MenuBoard.png")
         menuBoard.position = CGPoint(x: self.frame.midX, y: self.frame.midY)
@@ -1078,7 +1079,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                 let articleParams = ["Retry lvl": thisScene];
                 
                 Flurry.logEvent("Retry level", withParameters: articleParams)
-                
+                Flurry.logEvent("Retry level");
 
 
 
@@ -1108,7 +1109,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                 let articleParams = ["This lvl": thisScene, "Next lvl": thisScene+1];
                 
                 Flurry.logEvent("Next Level", withParameters: articleParams)
-                
+                Flurry.logEvent("Next Level");
                 thisScene+=1
                 let currentScene = GameScene(fileNamed: "Level "+String(thisScene))
                 let transition = SKTransition.doorway(withDuration: 0.5)

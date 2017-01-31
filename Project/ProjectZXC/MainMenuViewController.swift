@@ -17,12 +17,7 @@ class MainMenuViewController: UIViewController {
     override func viewDidLoad() {
         
         topScene = UserDefaults.standard.integer(forKey: "topStage")
-        
-        topScene = 1
-        
-        if topScene > 1 {
-            statsАrray = UserDefaults.standard.array(forKey: "stat") as! [[Int]]
-        }
+        //topScene = 1
         
         if topScene == 0 {
             topScene = 1
