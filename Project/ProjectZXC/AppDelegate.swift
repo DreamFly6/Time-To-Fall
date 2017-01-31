@@ -21,6 +21,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         GADMobileAds.configure(withApplicationID: "ca-app-pub-2270286479492772~7533326047")
         
         Flurry.startSession("CP8FRFQ4RXWZJ2R6N3QJ")
+        Flurry.setVersion(11511)
 
         return true
     }

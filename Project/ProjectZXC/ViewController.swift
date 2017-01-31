@@ -17,9 +17,6 @@ class ViewController: UIViewController, UIAlertViewDelegate {
     override func viewDidLoad() {
 
 
-        
-
-        
         self.navigationController?.isNavigationBarHidden = true
 
         
@@ -30,8 +27,6 @@ class ViewController: UIViewController, UIAlertViewDelegate {
         }
     }
     
-
-    
     
     //По тайтлу кнопки определяем на какой уровень нужен переход и переходим туда
     @IBAction func buttonLevel1(_ sender: AnyObject) {
@@ -40,8 +35,6 @@ class ViewController: UIViewController, UIAlertViewDelegate {
         thisScene = Int(buttonTitle)!
         print(String(buttonTitle)!)
         self.performSegue(withIdentifier: "GoToGameViewController", sender: self)
-        
-        
         
     }
     
