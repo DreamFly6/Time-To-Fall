@@ -22,6 +22,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         Flurry.startSession("CP8FRFQ4RXWZJ2R6N3QJ")
         Flurry.setVersion(11511)
+        //Flurry.setAppVersion("11511")
+        
 
         return true
     }

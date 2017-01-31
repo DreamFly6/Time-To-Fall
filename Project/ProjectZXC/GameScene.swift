@@ -1076,10 +1076,11 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             
             //Блок кода для обработки кнопок меню
             if node.name == "retry" {
+                
+                
                 let articleParams = ["Retry lvl": thisScene];
                 
                 Flurry.logEvent("Retry level", withParameters: articleParams)
-                Flurry.logEvent("Retry level");
 
 
 
@@ -1106,10 +1107,14 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             }
             
             if node.name == "next" {
+                
+                
                 let articleParams = ["This lvl": thisScene, "Next lvl": thisScene+1];
                 
                 Flurry.logEvent("Next Level", withParameters: articleParams)
-                Flurry.logEvent("Next Level");
+
+                
+                
                 thisScene+=1
                 let currentScene = GameScene(fileNamed: "Level "+String(thisScene))
                 let transition = SKTransition.doorway(withDuration: 0.5)
@@ -1138,6 +1143,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             }
             
             if node.name == "menu" {
+                
+                Flurry.logEvent("Menu")
                 //Просто создал Segue и задал ей имя, с помощью имени ищем Segue и переходим
                 self.viewController.performSegue(withIdentifier: "GoToMainMenu", sender: self)
                 
@@ -1154,6 +1161,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             }
             
             if touchedNode.name == "stop" {
+                Flurry.logPageView();
                 if showMenu == true {
                     showMenu = false
                     removeMenu()
