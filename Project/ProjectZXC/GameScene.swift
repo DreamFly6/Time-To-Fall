@@ -24,6 +24,52 @@ public var itsNewBlock = true
 public var n = [1,5,9,17,21,25,33,35,37,41]
 public var timer = 0
 public var AdCounter = 0
+public var timeForMedal = [[10,13,16],//1
+                           [7,8,10],//2
+                           [10,13,16],//3
+                           [10,13,16],//4
+                           [10,13,16],//5
+                           [10,13,16],//6
+                           [10,13,16],//7
+                           [10,13,16],//8
+                           [10,13,16],//9
+                           [10,13,16],//10
+                           [10,13,16],//11
+                           [10,13,16],//12
+                           [10,13,16],//13
+                           [10,13,16],//14
+                           [10,13,16],//15
+                           [10,13,16],//16
+                           [10,13,16],//17
+                           [10,13,16],//18
+                           [10,13,16],//19
+                           [10,13,16],//20
+                           [10,13,16],//21
+                           [10,13,16],//22
+                           [10,13,16],//23
+                           [10,13,16],//24
+                           [10,13,16],//25
+                           [10,13,16],//26
+                           [10,13,16],//27
+                           [10,13,16],//28
+                           [10,13,16],//29
+                           [10,13,16],//30
+                           [10,13,16],//31
+                           [10,13,16],//32
+                           [10,13,16],//33
+                           [10,13,16],//34
+                           [10,13,16],//35
+                           [10,13,16],//36
+                           [10,13,16],//37
+                           [10,13,16],//38
+                           [10,13,16],//39
+                           [10,13,16],//40
+                           [10,13,16],//41
+                           [10,13,16],//42
+                           [10,13,16],//43
+                           [10,13,16],//44
+                           [10,13,16]]//45
+public var bestTime = 99
 
 //  Мета игра (фрии ту плей)
 //  Показ рекламы
@@ -43,6 +89,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             }
         }
         
+
         
         if (ok == true && itsNewBlock == true && thisScene > 0){
             itsNewBlock = false
@@ -501,18 +548,62 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     
     func initMedal() {
         let timerWin = timer
-        
+        if bestTime > timerWin {
+            bestTime = timerWin
+        }
         print("Победное время - " + String(timerWin))
+        print("Лучшее время - " + String(bestTime))
         
-        let menuButtonq = SKSpriteNode(imageNamed: "GoldMedal.png")
-        menuButtonq.position = CGPoint(x: self.frame.midX+(self.frame.midX/2), y: self.frame.midY - 350)
-        menuButtonq.name = "11menu"
-        menuButtonq.xScale = 3.5
-        menuButtonq.yScale = 3.5
-        menuButtonq.zPosition = 999
-        //menuButtonq.color = colorPicker(level: thisScene)
-        //menuButtonq.colorBlendFactor = CGFloat(1.0)
-        self.addChild(menuButtonq)
+        var flag = false
+        for index in 0...2 {
+            if timeForMedal[thisScene][index] >= timerWin && flag == false  {
+                switch index {
+                case 0:
+                    print("Золото")
+                    let menuButtonq = SKSpriteNode(imageNamed: "GoldMedal.png")
+                    
+                    menuButtonq.position = CGPoint(x: self.frame.midX+(self.frame.midX/2), y: self.frame.midY - 350)
+                    menuButtonq.name = "11menu"
+                    menuButtonq.xScale = 3.5
+                    menuButtonq.yScale = 3.5
+                    menuButtonq.zPosition = 999
+                    self.addChild(menuButtonq)
+                    print("0 " + " - " + String(index) + " - " + String(thisScene) + " - " + String(timeForMedal[thisScene][index]))
+                    flag = true
+                    break
+                case 1:
+                    print("Серебро")
+                    let menuButtonq = SKSpriteNode(imageNamed: "SilverMedal.png")
+                    menuButtonq.position = CGPoint(x: self.frame.midX+(self.frame.midX/2), y: self.frame.midY - 350)
+                    menuButtonq.name = "11menu"
+                    menuButtonq.xScale = 3.5
+                    menuButtonq.yScale = 3.5
+                    menuButtonq.zPosition = 999
+                    self.addChild(menuButtonq)
+                    print("1 " + " - " + String(index) + " - " + String(thisScene) + " - " + String(timeForMedal[thisScene][index]))
+                    flag = true
+                    break
+                case 2:
+                    print("Бронза")
+                    let menuButtonq = SKSpriteNode(imageNamed: "BronzeMedal.png")
+                    menuButtonq.position = CGPoint(x: self.frame.midX+(self.frame.midX/2), y: self.frame.midY - 350)
+                    menuButtonq.name = "11menu"
+                    menuButtonq.xScale = 3.5
+                    menuButtonq.yScale = 3.5
+                    menuButtonq.zPosition = 999
+                    self.addChild(menuButtonq)
+                    print("2 " + " - " + String(index) + " - " + String(thisScene) + " - " + String(timeForMedal[thisScene][index]))
+                    flag = true
+                    break
+                default:
+                    print("Без медали")
+                    print("3 " + " - " + String(index) + " - " + String(thisScene) + " - " + String(timeForMedal[thisScene][index]))
+                    flag = true
+                    break
+                }
+
+            }
+        }
     }
 
     
@@ -1113,8 +1204,6 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                 
                 Flurry.logEvent("Next Level", withParameters: articleParams)
 
-                
-                
                 thisScene+=1
                 let currentScene = GameScene(fileNamed: "Level "+String(thisScene))
                 let transition = SKTransition.doorway(withDuration: 0.5)
@@ -1143,8 +1232,6 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             }
             
             if node.name == "menu" {
-                
-                Flurry.logEvent("Menu")
                 //Просто создал Segue и задал ей имя, с помощью имени ищем Segue и переходим
                 self.viewController.performSegue(withIdentifier: "GoToMainMenu", sender: self)
                 
@@ -1161,7 +1248,6 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             }
             
             if touchedNode.name == "stop" {
-                Flurry.logPageView();
                 if showMenu == true {
                     showMenu = false
                     removeMenu()
