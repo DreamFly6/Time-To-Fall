@@ -18,11 +18,40 @@ class ViewController: UIViewController, UIAlertViewDelegate {
 
 
         self.navigationController?.isNavigationBarHidden = true
-
+        
+        var bgImage: UIImageView?
         
         for case let button as UIButton in self.view.subviews {
             if (button.accessibilityLabel == "menuSelecter") && (Int(button.currentTitle!)! <= topScene)  {
-                  button.isEnabled = true
+                button.isEnabled = true
+                //print("----> " + String(MedalOnLvl[Int(button.currentTitle!)!]))
+                
+                    switch MedalOnLvl[Int(button.currentTitle!)!] {
+                    case 0:
+                        bgImage = UIImageView(image: UIImage(named: "GoldMedal.png")!)
+                        break
+                    case 1:
+                        bgImage = UIImageView(image: UIImage(named: "SilverMedal.png")!)
+                        break
+                    case 2:
+                        bgImage = UIImageView(image: UIImage(named: "BronzeMedal.png")!)
+                        break
+                    case 3:
+                        bgImage = UIImageView(image: UIImage(named: "WoodenBox.png")!)
+                        break
+                    default:
+                        bgImage = UIImageView(image: UIImage(named: "StoneBlock.png")!)
+                        break
+                    }
+
+
+                bgImage!.frame = CGRect(origin: CGPoint(x: button.frame.maxX - 22,
+                                                        y :button.frame.maxY - 22),
+                                        size: CGSize(width: 29,
+                                                     height: 35))
+                self.view.addSubview(bgImage!)
+                
+                
             }
         }
     }

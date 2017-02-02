@@ -18,21 +18,21 @@ fileprivate func < <T : Comparable>(lhs: T?, rhs: T?) -> Bool {
 public var thisScene = 1
 public var topScene = 1
 public var topActualScene = 40
-public var statsАrray: [[Int]] = [[Int]](repeating:[Int](repeating:0, count: 5), count:64)
+
 public var buttonTitle : String = ""
 public var itsNewBlock = true
 public var n = [1,5,9,17,21,25,33,35,37,41]
 public var timer = 0
 public var AdCounter = 0
-public var timeForMedal = [[10,13,16],//1
-                           [7,8,10],//2
-                           [10,13,16],//3
-                           [10,13,16],//4
-                           [10,13,16],//5
-                           [10,13,16],//6
+public var timeForMedal = [[10,13,16],//0
+                           [7,9,11],//1
+                           [6,8,10],//2
+                           [8,10,12],//3
+                           [7,9,11],//4
+                           [6,8,10],//5
+                           [6,8,10],//6
                            [10,13,16],//7
                            [10,13,16],//8
-                           [10,13,16],//9
                            [10,13,16],//10
                            [10,13,16],//11
                            [10,13,16],//12
@@ -70,6 +70,7 @@ public var timeForMedal = [[10,13,16],//1
                            [10,13,16],//44
                            [10,13,16]]//45
 public var bestTime = 99
+public var MedalOnLvl: [Int] = [Int] (repeating:3, count: 49)
 
 //  Мета игра (фрии ту плей)
 //  Показ рекламы
@@ -563,44 +564,56 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                     let menuButtonq = SKSpriteNode(imageNamed: "GoldMedal.png")
                     
                     menuButtonq.position = CGPoint(x: self.frame.midX+(self.frame.midX/2), y: self.frame.midY - 350)
-                    menuButtonq.name = "11menu"
+                    menuButtonq.name = "medal"
                     menuButtonq.xScale = 3.5
                     menuButtonq.yScale = 3.5
                     menuButtonq.zPosition = 999
                     self.addChild(menuButtonq)
                     print("0 " + " - " + String(index) + " - " + String(thisScene) + " - " + String(timeForMedal[thisScene][index]))
+                    MedalOnLvl[thisScene] = index
+
+
                     flag = true
                     break
                 case 1:
                     print("Серебро")
                     let menuButtonq = SKSpriteNode(imageNamed: "SilverMedal.png")
                     menuButtonq.position = CGPoint(x: self.frame.midX+(self.frame.midX/2), y: self.frame.midY - 350)
-                    menuButtonq.name = "11menu"
+                    menuButtonq.name = "medal"
                     menuButtonq.xScale = 3.5
                     menuButtonq.yScale = 3.5
                     menuButtonq.zPosition = 999
                     self.addChild(menuButtonq)
                     print("1 " + " - " + String(index) + " - " + String(thisScene) + " - " + String(timeForMedal[thisScene][index]))
+                    MedalOnLvl[thisScene] = index
+
                     flag = true
                     break
                 case 2:
                     print("Бронза")
                     let menuButtonq = SKSpriteNode(imageNamed: "BronzeMedal.png")
                     menuButtonq.position = CGPoint(x: self.frame.midX+(self.frame.midX/2), y: self.frame.midY - 350)
-                    menuButtonq.name = "11menu"
+                    menuButtonq.name = "medal"
                     menuButtonq.xScale = 3.5
                     menuButtonq.yScale = 3.5
                     menuButtonq.zPosition = 999
                     self.addChild(menuButtonq)
                     print("2 " + " - " + String(index) + " - " + String(thisScene) + " - " + String(timeForMedal[thisScene][index]))
+                    MedalOnLvl[thisScene] = index
+                    UserDefaults.standard.set(MedalOnLvl[thisScene], forKey: "MedalOnLvl")
+                    UserDefaults.standard.synchronize()
                     flag = true
                     break
                 default:
                     print("Без медали")
                     print("3 " + " - " + String(index) + " - " + String(thisScene) + " - " + String(timeForMedal[thisScene][index]))
+
                     flag = true
                     break
                 }
+                
+                UserDefaults.standard.set(MedalOnLvl, forKey: "MedalOnLvl")
+                UserDefaults.standard.synchronize()
 
             }
         }

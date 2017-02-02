@@ -1127,7 +1127,7 @@
         <image name="optionButton" width="500" height="500"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="2VE-Yg-a2t"/>
         <segue reference="uLA-Vy-bLj"/>
+        <segue reference="CII-vB-cZ1"/>
     </inferredMetricsTieBreakers>
 </document>
