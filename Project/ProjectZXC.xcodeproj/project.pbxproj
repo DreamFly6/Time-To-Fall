@@ -45,7 +45,6 @@
 		1F8F1CC21E3FA626001FDF1E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F8F1CC11E3FA626001FDF1E /* CoreGraphics.framework */; };
 		1F8F1CC41E3FA633001FDF1E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F8F1CC31E3FA633001FDF1E /* Foundation.framework */; };
 		1F8F1CC61E3FA647001FDF1E /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F8F1CC51E3FA647001FDF1E /* MediaPlayer.framework */; };
-		1F8F1CC81E3FA652001FDF1E /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F8F1CC71E3FA652001FDF1E /* StoreKit.framework */; };
 		1F8F1CCA1E3FA664001FDF1E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F8F1CC91E3FA664001FDF1E /* UIKit.framework */; };
 		1FAF3EBF1E3A1A22001CBA65 /* Level 0.sks in Resources */ = {isa = PBXBuildFile; fileRef = 1FAF3EBE1E3A1A22001CBA65 /* Level 0.sks */; };
 		1FAF8EC21E3E1D1E008388AE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1FAF8EC11E3E1D1E008388AE /* GoogleService-Info.plist */; };
@@ -205,7 +204,6 @@
 			files = (
 				1FECF0FD1E3F7FB10060B14F /* SystemConfiguration.framework in Frameworks */,
 				1F8F1CCA1E3FA664001FDF1E /* UIKit.framework in Frameworks */,
-				1F8F1CC81E3FA652001FDF1E /* StoreKit.framework in Frameworks */,
 				1F8F1CC61E3FA647001FDF1E /* MediaPlayer.framework in Frameworks */,
 				1F8F1CC41E3FA633001FDF1E /* Foundation.framework in Frameworks */,
 				1F8F1CC21E3FA626001FDF1E /* CoreGraphics.framework in Frameworks */,
@@ -345,7 +343,7 @@
 			path = ProjectZXCUITests;
 			sourceTree = "<group>";
 		};
-		1F790EAC1E33524300F53024 /* 2 + GravityBlock */ = {
+		1F790EAC1E33524300F53024 /* 2 + RotationBlock */ = {
 			isa = PBXGroup;
 			children = (
 				1FB4831A1DC3692E00067D4B /* Level 37.sks */,
@@ -353,7 +351,7 @@
 				1FB4831E1DC369FC00067D4B /* Level 39.sks */,
 				1FB483201DC36A1400067D4B /* Level 40.sks */,
 			);
-			name = "2 + GravityBlock";
+			name = "2 + RotationBlock";
 			sourceTree = "<group>";
 		};
 		1FA08D661D3E1A2D00A4BA06 /* Levels */ = {
@@ -435,8 +433,8 @@
 		1FB4830D1DC35DE300067D4B /* 3(Active) */ = {
 			isa = PBXGroup;
 			children = (
-				1FF7A4A71DE5CC5500349329 /* 1 +ActiveBlock / RotationBlock */,
-				1F790EAC1E33524300F53024 /* 2 + GravityBlock */,
+				1FF7A4A71DE5CC5500349329 /* 1 + ActiveBlock */,
+				1F790EAC1E33524300F53024 /* 2 + RotationBlock */,
 				1F2795051E38A07800F4BE64 /* 3 + IronBlock / Magnit */,
 				325B45D61DDC300E00573074 /* 4 */,
 			);
@@ -464,7 +462,7 @@
 			name = Scene;
 			sourceTree = "<group>";
 		};
-		1FF7A4A71DE5CC5500349329 /* 1 +ActiveBlock / RotationBlock */ = {
+		1FF7A4A71DE5CC5500349329 /* 1 + ActiveBlock */ = {
 			isa = PBXGroup;
 			children = (
 				1FB483121DC367C200067D4B /* Level 33.sks */,
@@ -472,7 +470,7 @@
 				1FB483161DC3681000067D4B /* Level 35.sks */,
 				1FB483181DC368E300067D4B /* Level 36.sks */,
 			);
-			name = "1 +ActiveBlock / RotationBlock";
+			name = "1 + ActiveBlock";
 			sourceTree = "<group>";
 		};
 		325B45D61DDC300E00573074 /* 4 */ = {
@@ -860,7 +858,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -902,7 +900,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -924,13 +922,13 @@
 					"$(PROJECT_DIR)/Pods/FirebaseAnalytics/Frameworks/frameworks",
 				);
 				INFOPLIST_FILE = ProjectZXC/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Pods/Flurry-iOS-SDK/Flurry",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = ind122222;
+				PRODUCT_BUNDLE_IDENTIFIER = wewe.application;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SWIFT_DISABLE_SAFETY_CHECKS = NO;
@@ -953,13 +951,13 @@
 					"$(PROJECT_DIR)/Pods/FirebaseAnalytics/Frameworks/frameworks",
 				);
 				INFOPLIST_FILE = ProjectZXC/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Pods/Flurry-iOS-SDK/Flurry",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = ind122222;
+				PRODUCT_BUNDLE_IDENTIFIER = wewe.application;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SWIFT_DISABLE_SAFETY_CHECKS = NO;

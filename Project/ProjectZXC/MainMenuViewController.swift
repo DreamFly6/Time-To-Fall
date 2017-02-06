@@ -18,21 +18,12 @@ class MainMenuViewController: UIViewController {
         
         topScene = UserDefaults.standard.integer(forKey: "topStage")
         
-//        var shitArr: [String] = [String](repeating: " - ", count: 49)
-//        
-//        shitArr = UserDefaults.standard.array(forKey: "MedalOnLvl") as! [String]
-//        
-//
-//        for index in 0...shitArr.count - 1 {
-//            print(shitArr[index] + " <===== ")
-//        }
+        //topScene = 0
         
         if  topScene > 1 {
             MedalOnLvl = UserDefaults.standard.array(forKey: "MedalOnLvl") as! [Int]
         }
 
-
-       
         if topScene == 0 {
             topScene = 1
         }

@@ -47,6 +47,9 @@ class SettingViewController: UIViewController {
         if mySwitch.isOn {
             statusBarBool = true
             UserDefaults.standard.removeObject(forKey: "MedalOnLvl")
+            for index in 0...MedalOnLvl.count-1 {
+                MedalOnLvl[index] = 3
+            }
             setTopScene(topStage: 1)
             topScene = 1
             print("Топ сцена 1 + stat удален")

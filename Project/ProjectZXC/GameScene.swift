@@ -17,7 +17,7 @@ fileprivate func < <T : Comparable>(lhs: T?, rhs: T?) -> Bool {
 
 public var thisScene = 1
 public var topScene = 1
-public var topActualScene = 40
+public var topActualScene = 44
 
 public var buttonTitle : String = ""
 public var itsNewBlock = true
@@ -30,8 +30,9 @@ public var timeForMedal = [[10,13,16],//0
                            [8,10,12],//3
                            [7,9,11],//4
                            [6,8,10],//5
-                           [6,8,10],//6
-                           [10,13,16],//7
+    
+                           [7,8,10],//6
+                           [7,8,10],//7 <---
                            [10,13,16],//8
                            [10,13,16],//10
                            [10,13,16],//11
@@ -108,6 +109,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             for ground in self.children {
                 if ground.name == "NewBlock" {
                     if let ground = ground as? SKSpriteNode {
+                        ground.size.width = 342
+                        ground.size.height = 342
                         let text = self.childNode(withName: "Text") as? SKLabelNode
                         switch topScene {
                         case 1:
@@ -120,8 +123,6 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                             text?.text = "Wooden plank"
                         case 9:
                             ground.texture = SKTexture(imageNamed: "SlimeBlock")
-                            ground.size.width = 342
-                            ground.size.height = 342
                             text?.text = "Slime"
                         case 17:
                             ground.texture = SKTexture(imageNamed: "StoneBlock")
@@ -451,15 +452,15 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         interstitial.load(request)
     }
     
-    func alertView(_ alertView: UIAlertView, willDismissWithButtonIndex buttonIndex: Int) {
-        print("Alert ADs")
-        if interstitial.isReady {
-            interstitial.present(fromRootViewController: self.viewController)
-        } else {
-            print("Ad wasn't ready :(")
-        }
-        //playAgainButton.isHidden = false
-    }
+//    func alertView(_ alertView: UIAlertView, willDismissWithButtonIndex buttonIndex: Int) {
+//        print("Alert ADs")
+//        if interstitial.isReady {
+//            interstitial.present(fromRootViewController: self.viewController)
+//        } else {
+//            print("Ad wasn't ready :(")
+//        }
+//        //playAgainButton.isHidden = false
+//    }
     
     func ads() {
         print("Alert ADs")
@@ -1015,7 +1016,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         let wait = SKAction.wait(forDuration: 1.0)
         let run = SKAction.run {
             timer = timer + 1
-            print(timer)
+            print("Time - " + String(timer))
         }
         node.run(SKAction.repeatForever(SKAction.sequence([wait, run])))
         
