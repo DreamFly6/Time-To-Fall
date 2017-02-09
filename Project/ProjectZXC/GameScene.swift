@@ -451,7 +451,20 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     func showRMenu(){
 
 
+//        let blurEffect = UIBlurEffect(style: UIBlurEffectStyle.dark)
+//        let blurEffectView = UIVisualEffectView(effect: blurEffect)
+//        blurEffectView.frame = (view?.bounds)!
+//        blurEffectView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+//        view?.addSubview(blurEffectView)
+
         
+        
+        let blurEffect =  SKSpriteNode(imageNamed: "lol.png")
+        blurEffect.name = "blurEffect"
+        blurEffect.zPosition = 1
+        blurEffect.size.height = 1000000
+        blurEffect.size.width = 1000000
+        self.addChild(blurEffect)
         
         onPause = true
         let menuBoard = SKSpriteNode(imageNamed: "MenuBoard.png")
@@ -462,7 +475,9 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         menuBoard.zPosition = 998
         menuBoard.color = colorPicker(level: thisScene)
         menuBoard.colorBlendFactor = CGFloat(0.7)
+        menuBoard.zPosition = 2
         self.addChild(menuBoard)
+//        self.view?.insertSubview(menuBoard, at: 100)
         
         let retryButton = SKSpriteNode(imageNamed: "retryButton.png")
         retryButton.position = CGPoint(x: self.frame.midX/2, y: self.frame.midY)
@@ -525,7 +540,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         myLabel.position = CGPoint(x: self.frame.midX, y: self.frame.midY + 190)
         self.addChild(myLabel)
         
-    
+        
+        
 
     }
     
@@ -762,6 +778,15 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                 if let menuBoard = menuBoard as? SKSpriteNode {
                     menuBoard.removeAllChildren()
                     menuBoard.removeFromParent()
+                }
+            }
+        }
+        
+        for blurEffect in self.children {
+            if blurEffect.name == "blurEffect" {
+                if let blurEffect = blurEffect as? SKSpriteNode {
+                    blurEffect.removeAllChildren()
+                    blurEffect.removeFromParent()
                 }
             }
         }
