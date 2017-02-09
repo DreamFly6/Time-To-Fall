@@ -37,7 +37,7 @@ class ViewController: UIViewController, UIAlertViewDelegate {
                         bgImage = UIImageView(image: UIImage(named: "BronzeMedal.png")!)
                         break
                     case 3:
-                        bgImage = UIImageView(image: UIImage(named: "WoodenBox.png")!)
+                        bgImage = UIImageView(image: UIImage(named: "WithOutMedal.png")!)
                         break
                     default:
                         bgImage = UIImageView(image: UIImage(named: "StoneBlock.png")!)
@@ -45,10 +45,10 @@ class ViewController: UIViewController, UIAlertViewDelegate {
                     }
 
 
-                bgImage!.frame = CGRect(origin: CGPoint(x: button.frame.maxX - 22,
-                                                        y :button.frame.maxY - 22),
-                                        size: CGSize(width: 29,
-                                                     height: 35))
+                bgImage!.frame = CGRect(origin: CGPoint(x: button.frame.maxX - 25,
+                                                        y :button.frame.maxY - 25),
+                                        size: CGSize(width: 31,
+                                                     height: 40))
                 self.view.addSubview(bgImage!)
                 
                 
