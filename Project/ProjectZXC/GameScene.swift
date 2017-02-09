@@ -17,11 +17,11 @@ fileprivate func < <T : Comparable>(lhs: T?, rhs: T?) -> Bool {
 
 public var thisScene = 1
 public var topScene = 1
-public var topActualScene = 44
+public var topActualScene = 48
 
 public var buttonTitle : String = ""
 public var itsNewBlock = true
-public var n = [1,5,9,17,21,25,33,35,37,41]
+public var n = [1,5,9,17,21,25,33,37,41]
 public var timer = 0
 public var AdCounter = 0
 public var timeForMedal = [[10,13,16,100],//0
@@ -69,6 +69,10 @@ public var timeForMedal = [[10,13,16,100],//0
                            [10,13,16],//42
                            [10,13,16],//43
                            [10,13,16],//44
+                           [10,13,16],//45
+                           [10,13,16],//45
+                           [10,13,16],//45
+                           [10,13,16],//45
                            [10,13,16]]//45
 public var bestTime = 99
 public var MedalOnLvl: [Int] = [Int] (repeating:3, count: 49)
@@ -266,7 +270,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         myLabel1 = SKLabelNode(fontNamed: "Arial")
         myLabel1.fontSize = 40
         myLabel1.zPosition = 5
-        myLabel1.position = CGPoint(x: self.frame.width - 140, y: self.frame.height - 340)
+        myLabel1.position = CGPoint(x: 70, y: 70)
         myLabel1.name = "MedalLabel"
         self.addChild(myLabel1)
 
@@ -322,7 +326,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                         else {
                             print("!Ничего")
                             let menuBoard = SKSpriteNode(imageNamed: "WithOutMedal.png")
-                            menuBoard.position = CGPoint(x: self.frame.width - 140, y: self.frame.height - 340)
+                            menuBoard.position = CGPoint(x: 70, y: 70)
                             menuBoard.name = "Medal"
                             menuBoard.xScale = 0.25
                             menuBoard.yScale = 0.25
@@ -335,7 +339,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                     else {
                         print("!Бронза")
                         let menuBoard = SKSpriteNode(imageNamed: "BronzeMedal.png")
-                        menuBoard.position = CGPoint(x: self.frame.width - 140, y: self.frame.height - 340)
+                        menuBoard.position = CGPoint(x: 70, y: 70)
                         menuBoard.name = "Medal"
                         menuBoard.xScale = 0.25
                         menuBoard.yScale = 0.25
@@ -349,7 +353,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                 else {
                     print("!Серебро")
                     let menuBoard = SKSpriteNode(imageNamed: "SilverMedal.png")
-                    menuBoard.position = CGPoint(x: self.frame.width - 140, y: self.frame.height - 340)
+                    menuBoard.position = CGPoint(x: 70, y: 70)
                     menuBoard.name = "Medal"
                     menuBoard.xScale = 0.25
                     menuBoard.yScale = 0.25
@@ -362,7 +366,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             else {
                 //print("!Золото")
                 let menuBoard = SKSpriteNode(imageNamed: "GoldMedal.png")
-                menuBoard.position = CGPoint(x: self.frame.width - 140, y: self.frame.height - 340)
+                menuBoard.position = CGPoint(x: 70, y: 70)
                 menuBoard.name = "Medal"
                 menuBoard.xScale = 0.25
                 menuBoard.yScale = 0.25
@@ -441,32 +445,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         self.addChild(myLabel)
         
     }
-    
-    func createlayers() {
-        let node = SKEffectNode()
-        node.shouldEnableEffects = false
-        let filter: CIFilter = CIFilter(name: "CIGaussianBlur", withInputParameters: ["inputRadius" : NSNumber(value:1.0)])!
-        node.filter = filter
-    }
-    
-    
-    func blurWithCompletion() {
-        let duration: CGFloat = 0.5
-        let filter: CIFilter = CIFilter(name: "CIGaussianBlur", withInputParameters: ["inputRadius" : NSNumber(value:1.0)])!
-        scene?.zPosition = 4
-        scene!.filter = filter
-        scene?.zPosition = 4
-        //scene.
-        //scene!.shouldRasterize = true
-        scene!.shouldEnableEffects = true
-        scene!.run(SKAction.customAction(withDuration: 0.5, actionBlock: {
-            (node: SKNode, elapsedTime: CGFloat) in
-            let radius = (elapsedTime/duration) * 10.0
-            (node as? SKEffectNode)!.filter!.setValue(radius, forKey: "inputRadius")
-            
-        }))
-        
-    }
+ 
     
     //При вызове этой функции, показывается меню перезапуска.
     func showRMenu(){
@@ -546,11 +525,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         myLabel.position = CGPoint(x: self.frame.midX, y: self.frame.midY + 190)
         self.addChild(myLabel)
         
-        
-        
-        
-        //BLUR
-        blurWithCompletion()
+    
 
     }
     
