@@ -459,7 +459,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
 
         
         
-        let blurEffect =  SKSpriteNode(imageNamed: "lol.png")
+        let blurEffect =  SKSpriteNode(imageNamed: "blur.png")
         blurEffect.name = "blurEffect"
         blurEffect.zPosition = 1
         blurEffect.size.height = 1000000

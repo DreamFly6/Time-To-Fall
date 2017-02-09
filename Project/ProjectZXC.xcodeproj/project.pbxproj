@@ -72,7 +72,7 @@
 		1FECF1031E3F801E0060B14F /* libFlurry_7.9.2.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FECF1021E3F801E0060B14F /* libFlurry_7.9.2.a */; };
 		1FF6BA481DB47E8A0058BEC2 /* Level 6.sks in Resources */ = {isa = PBXBuildFile; fileRef = 1FF6BA471DB47E8A0058BEC2 /* Level 6.sks */; };
 		3219926A1E4C962300B505E9 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F4C246D1CD5E55600D3B0DB /* GameScene.swift */; };
-		3219926E1E4CA95E00B505E9 /* lol.png in Resources */ = {isa = PBXBuildFile; fileRef = 3219926D1E4CA95E00B505E9 /* lol.png */; };
+		321992701E4CB0F500B505E9 /* blur.png in Resources */ = {isa = PBXBuildFile; fileRef = 3219926F1E4CB0F500B505E9 /* blur.png */; };
 		32290C781DD08282002CBBF5 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32290C771DD08282002CBBF5 /* SettingViewController.swift */; };
 		3262F13C1D49B7E90056D72B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3262F13B1D49B7E90056D72B /* ViewController.swift */; };
 		328125E71DE6912200E81EB4 /* SwipeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 328125E61DE6912200E81EB4 /* SwipeViewController.swift */; };
@@ -185,7 +185,7 @@
 		1FECF1021E3F801E0060B14F /* libFlurry_7.9.2.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libFlurry_7.9.2.a; path = "../Pods/Flurry-iOS-SDK/Flurry/libFlurry_7.9.2.a"; sourceTree = "<group>"; };
 		1FF6BA471DB47E8A0058BEC2 /* Level 6.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = "Level 6.sks"; sourceTree = "<group>"; };
 		2DE713DA61C2CC29BACF93E0 /* Pods-ProjectZXC.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ProjectZXC.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ProjectZXC/Pods-ProjectZXC.debug.xcconfig"; sourceTree = "<group>"; };
-		3219926D1E4CA95E00B505E9 /* lol.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lol.png; sourceTree = "<group>"; };
+		3219926F1E4CB0F500B505E9 /* blur.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = blur.png; sourceTree = "<group>"; };
 		32290C771DD08282002CBBF5 /* SettingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
 		3262F13B1D49B7E90056D72B /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		328125E61DE6912200E81EB4 /* SwipeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwipeViewController.swift; sourceTree = "<group>"; };
@@ -458,8 +458,8 @@
 				32290C771DD08282002CBBF5 /* SettingViewController.swift */,
 				32B848611DD03D23004247DA /* MainMenuViewController.swift */,
 				32D80D411DCDE7AC00BF6274 /* PageViewController.swift */,
+				3219926F1E4CB0F500B505E9 /* blur.png */,
 				329649211DCA21100078720A /* GameViewController.swift */,
-				3219926D1E4CA95E00B505E9 /* lol.png */,
 				3262F13B1D49B7E90056D72B /* ViewController.swift */,
 				1F4C246D1CD5E55600D3B0DB /* GameScene.swift */,
 			);
@@ -652,6 +652,7 @@
 				1F7047D11DC3571700C35C12 /* Level 22.sks in Resources */,
 				1FB483311DC36BA600067D4B /* Level 48.sks in Resources */,
 				1FB483231DC36A2100067D4B /* Level 41.sks in Resources */,
+				321992701E4CB0F500B505E9 /* blur.png in Resources */,
 				1F1E11DD1DB4DBCD0006631B /* Level 9.sks in Resources */,
 				1FB483131DC367C200067D4B /* Level 33.sks in Resources */,
 				1F7047CB1DC3566600C35C12 /* Level 19.sks in Resources */,
@@ -664,7 +665,6 @@
 				1FB483191DC368E300067D4B /* Level 36.sks in Resources */,
 				1F7047DB1DC357D600C35C12 /* Level 27.sks in Resources */,
 				1FB4831B1DC3692E00067D4B /* Level 37.sks in Resources */,
-				3219926E1E4CA95E00B505E9 /* lol.png in Resources */,
 				1F7047DD1DC357E900C35C12 /* Level 28.sks in Resources */,
 				1F7047C51DC355C800C35C12 /* Level 16.sks in Resources */,
 				1F7047CF1DC356C200C35C12 /* Level 21.sks in Resources */,
