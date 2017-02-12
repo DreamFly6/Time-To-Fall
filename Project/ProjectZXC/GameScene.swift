@@ -386,6 +386,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
 //        myLabel3.text = "Касается земли? = "+String(onGround)
 //        myLabel4.text = "Время на земле = "+String(onGroundTime)
 //        myLabel5.text = "ГГ dy = "+String(describing: dy)
+        //
     }
 
     //При вызове этой функции, показывается меню проигрыша.
@@ -395,6 +396,14 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         
         Flurry.logEvent("Loose", withParameters: articleParams)
         Flurry.logEvent("Loose");
+        
+        let blurEffect =  SKSpriteNode(imageNamed: "blur.png")
+        blurEffect.name = "blurEffect"
+        blurEffect.zPosition = 10
+        blurEffect.size.height = 10000
+        blurEffect.size.width = 10000
+        self.addChild(blurEffect)
+        
         let menuBoard = SKSpriteNode(imageNamed: "MenuBoard.png")
         menuBoard.position = CGPoint(x: self.frame.midX, y: self.frame.midY)
         menuBoard.name = "menuBoard"
@@ -461,9 +470,9 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         
         let blurEffect =  SKSpriteNode(imageNamed: "blur.png")
         blurEffect.name = "blurEffect"
-        blurEffect.zPosition = 1
-        blurEffect.size.height = 1000000
-        blurEffect.size.width = 1000000
+        blurEffect.zPosition = 10
+        blurEffect.size.height = 10000
+        blurEffect.size.width = 10000
         self.addChild(blurEffect)
         
         onPause = true
@@ -475,7 +484,6 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         menuBoard.zPosition = 998
         menuBoard.color = colorPicker(level: thisScene)
         menuBoard.colorBlendFactor = CGFloat(0.7)
-        menuBoard.zPosition = 2
         self.addChild(menuBoard)
 //        self.view?.insertSubview(menuBoard, at: 100)
         

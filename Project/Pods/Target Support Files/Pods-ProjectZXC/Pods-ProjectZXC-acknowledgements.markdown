@@ -3,7 +3,7 @@ This application makes use of the following third party libraries:
 
 ## Firebase
 
-Copyright 2016 Google
+Copyright 2017 Google
 
 ## FirebaseAnalytics
 
@@ -24,7 +24,7 @@ Developer's use of the SDK is governed by the license in the applicable Flurry T
 
 ## Google-Mobile-Ads-SDK
 
-Copyright 2016 Google
+Copyright 2017 Google
 
 ## GoogleInterchangeUtilities
 
