@@ -11,6 +11,6 @@
 #endif
 
 
-FOUNDATION_EXPORT double Pods_ProjectZXCVersionNumber;
-FOUNDATION_EXPORT const unsigned char Pods_ProjectZXCVersionString[];
+FOUNDATION_EXPORT double paper_onboardingVersionNumber;
+FOUNDATION_EXPORT const unsigned char paper_onboardingVersionString[];
 

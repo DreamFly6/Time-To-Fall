@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '4E8F82656D76B21281CBF9B4D60EE9EB'
-               BlueprintName = 'Pods-ProjectZXC'
+               BlueprintIdentifier = '436DD5906B4E1B432C3F41AB48B014DF'
+               BlueprintName = 'paper-onboarding'
                ReferencedContainer = 'container:Pods.xcodeproj'
-               BuildableName = 'Pods-ProjectZXC.framework'>
+               BuildableName = 'paper-onboarding.framework'>
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
