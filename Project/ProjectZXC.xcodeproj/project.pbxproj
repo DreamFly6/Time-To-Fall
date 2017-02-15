@@ -73,10 +73,10 @@
 		1FF6BA481DB47E8A0058BEC2 /* Level 6.sks in Resources */ = {isa = PBXBuildFile; fileRef = 1FF6BA471DB47E8A0058BEC2 /* Level 6.sks */; };
 		3219926A1E4C962300B505E9 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F4C246D1CD5E55600D3B0DB /* GameScene.swift */; };
 		32290C781DD08282002CBBF5 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32290C771DD08282002CBBF5 /* SettingViewController.swift */; };
+		323E31BB1E548A060045F557 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 323E31B91E548A060045F557 /* OnboardingView.swift */; };
+		323E31BC1E548A060045F557 /* OnboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 323E31BA1E548A060045F557 /* OnboardViewController.swift */; };
 		3262F13C1D49B7E90056D72B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3262F13B1D49B7E90056D72B /* ViewController.swift */; };
 		326793A91E548584005EBCC6 /* paper_onboarding.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 326793A81E548584005EBCC6 /* paper_onboarding.framework */; };
-		326793AC1E548602005EBCC6 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 326793AA1E548602005EBCC6 /* OnboardingView.swift */; };
-		326793AD1E548602005EBCC6 /* OnboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 326793AB1E548602005EBCC6 /* OnboardViewController.swift */; };
 		328125E71DE6912200E81EB4 /* SwipeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 328125E61DE6912200E81EB4 /* SwipeViewController.swift */; };
 		328125E91DE6913100E81EB4 /* SwipePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 328125E81DE6913100E81EB4 /* SwipePageViewController.swift */; };
 		329649221DCA21100078720A /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 329649211DCA21100078720A /* GameViewController.swift */; };
@@ -189,10 +189,10 @@
 		2DE713DA61C2CC29BACF93E0 /* Pods-ProjectZXC.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ProjectZXC.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ProjectZXC/Pods-ProjectZXC.debug.xcconfig"; sourceTree = "<group>"; };
 		32290C771DD08282002CBBF5 /* SettingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
 		3233B3901E5481BB0018FF47 /* Onboard.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Onboard.framework; path = "Pods/../build/Debug-iphoneos/Onboard/Onboard.framework"; sourceTree = "<group>"; };
+		323E31B91E548A060045F557 /* OnboardingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
+		323E31BA1E548A060045F557 /* OnboardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardViewController.swift; sourceTree = "<group>"; };
 		3262F13B1D49B7E90056D72B /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		326793A81E548584005EBCC6 /* paper_onboarding.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = paper_onboarding.framework; path = "../../../Library/Developer/Xcode/DerivedData/ProjectZXC-dlulpazfcbnlhpaqrtkndughziyy/Build/Products/Debug-iphonesimulator/paper-onboarding/paper_onboarding.framework"; sourceTree = "<group>"; };
-		326793AA1E548602005EBCC6 /* OnboardingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OnboardingView.swift; path = "../../../../Downloads/IOSOnboard-master/ConceptOnboarding/OnboardingView.swift"; sourceTree = "<group>"; };
-		326793AB1E548602005EBCC6 /* OnboardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OnboardViewController.swift; path = "../../../../Downloads/IOSOnboard-master/ConceptOnboarding/OnboardViewController.swift"; sourceTree = "<group>"; };
 		328125E61DE6912200E81EB4 /* SwipeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwipeViewController.swift; sourceTree = "<group>"; };
 		328125E81DE6913100E81EB4 /* SwipePageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwipePageViewController.swift; sourceTree = "<group>"; };
 		329649211DCA21100078720A /* GameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
@@ -458,8 +458,8 @@
 				1FA08D661D3E1A2D00A4BA06 /* Levels */,
 				1FAF3EBE1E3A1A22001CBA65 /* Level 0.sks */,
 				1F4C24691CD5E55600D3B0DB /* AppDelegate.swift */,
-				326793AA1E548602005EBCC6 /* OnboardingView.swift */,
-				326793AB1E548602005EBCC6 /* OnboardViewController.swift */,
+				323E31B91E548A060045F557 /* OnboardingView.swift */,
+				323E31BA1E548A060045F557 /* OnboardViewController.swift */,
 				1F4C24711CD5E55600D3B0DB /* Main.storyboard */,
 				328125E81DE6913100E81EB4 /* SwipePageViewController.swift */,
 				328125E61DE6912200E81EB4 /* SwipeViewController.swift */,
@@ -769,8 +769,8 @@
 				32B848621DD03D23004247DA /* MainMenuViewController.swift in Sources */,
 				329649221DCA21100078720A /* GameViewController.swift in Sources */,
 				328125E71DE6912200E81EB4 /* SwipeViewController.swift in Sources */,
-				326793AC1E548602005EBCC6 /* OnboardingView.swift in Sources */,
-				326793AD1E548602005EBCC6 /* OnboardViewController.swift in Sources */,
+				323E31BB1E548A060045F557 /* OnboardingView.swift in Sources */,
+				323E31BC1E548A060045F557 /* OnboardViewController.swift in Sources */,
 				32D80D421DCDE7AC00BF6274 /* PageViewController.swift in Sources */,
 				32C496EF1DB7CF4100DFDAF9 /* GameScene.swift in Sources */,
 				328125E91DE6913100E81EB4 /* SwipePageViewController.swift in Sources */,
@@ -945,7 +945,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Pods/Flurry-iOS-SDK/Flurry",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = wewe.application12121;
+				PRODUCT_BUNDLE_IDENTIFIER = wewe.application121211;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SWIFT_DISABLE_SAFETY_CHECKS = NO;
@@ -975,7 +975,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Pods/Flurry-iOS-SDK/Flurry",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = wewe.application12121;
+				PRODUCT_BUNDLE_IDENTIFIER = wewe.application121211;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SWIFT_DISABLE_SAFETY_CHECKS = NO;
