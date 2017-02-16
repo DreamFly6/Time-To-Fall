@@ -13,13 +13,13 @@ class OnboardViewController: UIViewController, PaperOnboardingDataSource, PaperO
     
     //MARK: Declaration & IBOutlets
     let userDef = UserDefaults.standard
-    let colorRed = UIColor(red:217.0/255.0, green:72.0/255.0, blue:89.0/255.0, alpha:1.0)
-    let colorGreen = UIColor(red:0.28, green:0.90, blue:0.74, alpha:1.0)
-    let colorWhite = UIColor(red:168.0/255.0, green:200.0/255.0, blue:78.0/255.0, alpha:1.0)
-    let colorButtonBorder = UIColor(red:0.98, green:0.05, blue:0.32, alpha:1.0)
+    let colorRed = #colorLiteral(red: 0.9254902005, green: 0.2352941185, blue: 0.1019607857, alpha: 1)
+    let colorGreen = #colorLiteral(red: 0.4666666687, green: 0.7647058964, blue: 0.2666666806, alpha: 1)
+    let colorWhite = #colorLiteral(red: 0.5568627715, green: 0.3529411852, blue: 0.9686274529, alpha: 1)
+    let colorButtonBorder = #colorLiteral(red: 0.8959465623, green: 0.9631058574, blue: 1, alpha: 1)
     
-    let titleFont = UIFont(name: "GillSans-SemiBoldItalic", size: 24)!
-    let descFont = UIFont(name: "GillSans-Italic", size: 18)!
+    let titleFont = UIFont(name: "AppleSDGothicNeo-UltraLight", size: 44)!
+    let descFont = UIFont(name: "AppleSDGothicNeo-Thin", size: 28)!
     
     @IBOutlet weak var btnGetStarted: UIButton!
 
@@ -54,9 +54,9 @@ class OnboardViewController: UIViewController, PaperOnboardingDataSource, PaperO
     func onboardingItemAtIndex(_ index: Int) -> OnboardingItemInfo {
         //imagename, title, description, iconname, color, titleColor, descriptioncolor, titleFont, description font
         
-        return [("Rocket", "Я","Наша игра самая пиздатая", "", colorRed, UIColor.white, UIColor.white, titleFont, descFont),
-                ("Todo", "Шерстяной","Тут типо пиздатое обучение", "", colorGreen, UIColor.white, UIColor.white, titleFont, descFont),
-                ("Fingerprint", "Волчара","Продолжение пиздатого обучения", "", colorWhite, UIColor.white, UIColor.white, titleFont, descFont)][index]
+        return [("WoodenBox", "Wooden Box","Tap to destroy", "1", #colorLiteral(red: 0.9792104363, green: 0.7648834586, blue: 0.5689498782, alpha: 1), #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1), #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1), titleFont, descFont),
+                ("StoneBlock", "Stone Block","Tap twice to destroy", "2", #colorLiteral(red: 0.6000000238, green: 0.6000000238, blue: 0.6000000238, alpha: 1), #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1), #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1), titleFont, descFont),
+                ("ActivaBlock_On", "Волчара","Продолжение пиздатого обучения", "3", #colorLiteral(red: 0.2392156869, green: 0.6745098233, blue: 0.9686274529, alpha: 1), #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1), #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1), titleFont, descFont)][index]
     }
     
     //MARK: PaperOnboarding Delegate methods
