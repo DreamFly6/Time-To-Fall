@@ -23,14 +23,12 @@ PODS:
   - GoogleToolboxForMac/Defines (2.1.1)
   - GoogleToolboxForMac/NSData+zlib (2.1.1):
     - GoogleToolboxForMac/Defines (= 2.1.1)
-  - Onboard (2.3.1)
   - paper-onboarding (2.0.1)
 
 DEPENDENCIES:
   - Firebase
   - Flurry-iOS-SDK/FlurrySDK
   - Google-Mobile-Ads-SDK (~> 7.9)
-  - Onboard
   - paper-onboarding (~> 2.0.1)
 
 SPEC CHECKSUMS:
@@ -43,9 +41,8 @@ SPEC CHECKSUMS:
   GoogleInterchangeUtilities: d5bc4d88d5b661ab72f9d70c58d02ca8c27ad1f7
   GoogleSymbolUtilities: 631ee17048aa5e9ab133470d768ea997a5ef9b96
   GoogleToolboxForMac: 8e329f1b599f2512c6b10676d45736bcc2cbbeb0
-  Onboard: b6871f25ac753175b2ab9a362fb2feb26a81a311
   paper-onboarding: a8e001214d9ce9decf78e160b3823f396dbd51ac
 
-PODFILE CHECKSUM: 5df4f7302957c25fd02465f54b56d0ca39b5ea6b
+PODFILE CHECKSUM: 985665d6a6a5f5f34001ed488d53f2a1ee801106
 
 COCOAPODS: 1.2.0
