@@ -13,6 +13,7 @@ class SwipeViewController: UIViewController {
     @IBOutlet weak var pageControl: UIPageControl!
     @IBOutlet weak var containerView: UIView!
     
+    @IBOutlet weak var TutorialButton: UIButton!
     @IBOutlet weak var MenuButton: UIButton!
     var swipePageViewController: SwipePageViewController? {
         didSet {
@@ -47,8 +48,9 @@ extension SwipeViewController: SwipePageViewControllerDelegate {
         didUpdatePageIndex index: Int) {
         pageControl.currentPage = index
         let selector = "MenuSelect"+String(index + 1)+".png"
-        print(selector)
+        //print(selector)
         MenuButton.setBackgroundImage(UIImage(named: selector), for: UIControlState.normal)
+        TutorialButton.setBackgroundImage(UIImage(named: selector), for: UIControlState.normal)
     }
     
 }

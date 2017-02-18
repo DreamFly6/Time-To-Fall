@@ -1095,9 +1095,9 @@
                                 <rect key="frame" x="288" y="547" width="70.5" height="70"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
                                 <size key="titleShadowOffset" width="1" height="1"/>
-                                <state key="normal" backgroundImage="Button3">
+                                <state key="normal" title="?" backgroundImage="MenuSelect1">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" name="knobColor" catalog="System" colorSpace="catalog"/>
                                 </state>
@@ -1110,6 +1110,7 @@
                     </view>
                     <connections>
                         <outlet property="MenuButton" destination="WZH-4S-DdY" id="Y4U-y4-777"/>
+                        <outlet property="TutorialButton" destination="Vsp-Hm-PyX" id="s4P-LW-QR2"/>
                         <outlet property="containerView" destination="acK-Bt-JRs" id="afi-gS-USf"/>
                         <outlet property="pageControl" destination="e5S-Tl-G6X" id="QzJ-9j-WNb"/>
                     </connections>
@@ -1178,7 +1179,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Button3" width="500" height="500"/>
         <image name="ComingSoonBG" width="1080" height="1920"/>
         <image name="MenuBg1" width="1080" height="1920"/>
         <image name="MenuBg2" width="1080" height="1920"/>
@@ -1191,7 +1191,7 @@
         <image name="optionButton" width="500" height="500"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="jLA-yU-Ldc"/>
+        <segue reference="s9Z-hb-a4C"/>
         <segue reference="ouL-B0-H4P"/>
     </inferredMetricsTieBreakers>
 </document>
