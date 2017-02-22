@@ -41,26 +41,39 @@ class OnboardViewController: UIViewController, PaperOnboardingDataSource, PaperO
     
     //MARK: PaperOnboarding Datasource methods
     func onboardingItemsCount() -> Int {
-        return 3
+        return 9
     }
     
     func onboardingItemAtIndex(_ index: Int) -> OnboardingItemInfo {
         //imagename, title, description, iconname, color, titleColor, descriptioncolor, titleFont, description font
         
-        return [("WoodenBox", "Wooden Box","Tap to destroy", "1", #colorLiteral(red: 0.9792104363, green: 0.7648834586, blue: 0.5689498782, alpha: 1), #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1), #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1), titleFont, descFont),
-                ("StoneBlock", "Stone Block","Tap twice to destroy", "2", #colorLiteral(red: 0.6000000238, green: 0.6000000238, blue: 0.6000000238, alpha: 1), #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1), #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1), titleFont, descFont),
-                ("ActivaBlock_On", "Description","description", "3", #colorLiteral(red: 0.2392156869, green: 0.6745098233, blue: 0.9686274529, alpha: 1), #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1), #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1), titleFont, descFont)][index]
+        return [
+            ("WoodenBox", "Wooden box","Tap to destroy", "", #colorLiteral(red: 0.9792104363, green: 0.7648834586, blue: 0.5689498782, alpha: 1), #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1), #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1), titleFont, descFont),
+            ("WoodenPlank", "Wooden plank","Tap to destroy", "", #colorLiteral(red: 0.9143895507, green: 0.7194046378, blue: 0.5365042686, alpha: 1), #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1), #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1), titleFont, descFont),
+            ("SlimeBlock", "Slime block","Tap to destroy.\n" + "Bounce block.", "", #colorLiteral(red: 0.8521046638, green: 0.6656171083, blue: 0.5020974874, alpha: 1), #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1), #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1), titleFont, descFont),
+            
+            ("StoneBlock", "Stone block","Tap twice to destroy", "", #colorLiteral(red: 0.6000000238, green: 0.6000000238, blue: 0.6000000238, alpha: 1), #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1), #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1), titleFont, descFont),
+            ("GlassBlock", "Glass","Tap to destroy.\n" + "No effect gravity.", "", #colorLiteral(red: 0.5417124033, green: 0.5396859646, blue: 0.5438287854, alpha: 1), #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1), #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1), titleFont, descFont),
+            ("SpearBlock", "Spiky block","Kill character", "", #colorLiteral(red: 0.4825677276, green: 0.4807422757, blue: 0.4844744205, alpha: 1), #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1), #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1), titleFont, descFont),
+            
+            ("ActivaBlock_On", "Gravity block","Tap to stop affect gravity.\n" + "Tap again to start gravity.", "", #colorLiteral(red: 0.2392156869, green: 0.6745098233, blue: 0.9686274529, alpha: 1), #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1), #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1), titleFont, descFont),
+            ("RotationBlock", "Rotation block","Tap to change degree rotation.", "", #colorLiteral(red: 0.2048775256, green: 0.6115691662, blue: 0.8898333907, alpha: 1), #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1), #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1), titleFont, descFont),
+            ("Magnit_On", "Magnet","Tap to start magnetize", "", #colorLiteral(red: 0.1692203879, green: 0.5242295861, blue: 0.7758041024, alpha: 1), #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1), #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1), titleFont, descFont)
+            
+            ][index]
     }
     
     //MARK: PaperOnboarding Delegate methods
     func onboardingConfigurationItem(_ item: OnboardingContentViewItem, index: Int) {
-        
+        print("1onboardingDidTransitonToIndex " + String(index))
     }
     
     func onboardingDidTransitonToIndex(_ index: Int) {
+        //print("1onboardingDidTransitonToIndex" + String(index))
     }
     
     func onboardingWillTransitonToIndex(_ index: Int) {
+        //print("2onboardingWillTransitonToIndex" + String(index))
     }
     
     //MARK: IBAction
