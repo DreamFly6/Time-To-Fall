@@ -85,6 +85,7 @@ class SkinViewController: UITableViewController {
     // method to run when table view cell is tapped
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print("You tapped cell number \(indexPath.row).")
+        indexCharacterTexture = indexPath.row
         let cell = tableView.cellForRow(at: indexPath)
         
         for index in 0...4 {
