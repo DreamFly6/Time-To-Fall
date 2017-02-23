@@ -77,7 +77,7 @@ public var timeForMedal = [[10,13,16,100],//0
 public var bestTime = 99
 public var MedalOnLvl: [Int] = [Int] (repeating:3, count: 49)
 public var onPause = false
-public var indexCharacterTexture = 0
+public var indexCharacterTexture = 2
 
 //  Мета игра (фрии ту плей)
 //  Показ рекламы
