@@ -77,6 +77,7 @@ public var timeForMedal = [[10,13,16,100],//0
 public var bestTime = 99
 public var MedalOnLvl: [Int] = [Int] (repeating:3, count: 49)
 public var onPause = false
+public var indexCharacterTexture = 1
 
 //  Мета игра (фрии ту плей)
 //  Показ рекламы
@@ -1578,15 +1579,18 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             //dy = (mainChrctr?.physicsBody?.velocity.dy)!
             
             //velocity > 0 - перс отлетает от поверхности, velocity < 0 персонаж летит вниз. Состояние покоя около 5.5
+
+
             if ((mainChrctr?.physicsBody?.velocity.dy)! > CGFloat(400.0) || (mainChrctr?.physicsBody?.velocity.dy)! < CGFloat(-400.0)) {
-                mainChrctr?.texture = SKTexture(imageNamed: "MainCharacter_scare")
+                mainChrctr?.texture = SKTexture(imageNamed:"MainCharacter_scare" + String(indexCharacterTexture))
             }
             else {
                 if((mainChrctr?.physicsBody?.velocity.dy)! >= CGFloat(10.0)) {
-                    mainChrctr?.texture = SKTexture(imageNamed: "MainCharacter_pain")
+                    mainChrctr?.texture = SKTexture(imageNamed: "MainCharacter_pain" + String(indexCharacterTexture))
                 }
                 else{
-                    mainChrctr?.texture = SKTexture(imageNamed: "MainCharacter")
+                    mainChrctr?.texture = SKTexture(imageNamed:"MainCharacter" + String(indexCharacterTexture))
+                    
                 }
             }
         }
