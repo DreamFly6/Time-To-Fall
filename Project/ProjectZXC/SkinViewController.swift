@@ -49,6 +49,12 @@ class SkinViewController: UITableViewController {
 //
 //    }
     
+    
+    
+    
+    
+   
+    
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
@@ -58,5 +64,7 @@ class SkinViewController: UITableViewController {
     // method to run when table view cell is tapped
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print("You tapped cell number \(indexPath.row).")
+        let cell = tableView.cellForRow(at: indexPath)
+        cell?.accessoryType = .checkmark
     }
 }
