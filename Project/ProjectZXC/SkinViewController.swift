@@ -97,6 +97,7 @@ class SkinViewController: UITableViewController {
         }
 
         cell?.accessoryType = .checkmark
+
     }
 }
 
