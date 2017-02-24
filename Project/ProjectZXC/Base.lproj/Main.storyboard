@@ -1492,6 +1492,7 @@
                     </tableView>
                     <connections>
                         <outlet property="bar" destination="eqN-AK-WsE" id="8ti-L3-lDH"/>
+                        <outlet property="cell2" destination="zen-9X-Saf" id="LsR-yC-jbH"/>
                         <outlet property="tableSkin" destination="oDR-C0-HDh" id="AWD-tW-9sf"/>
                         <outletCollection property="cellSkin" destination="TK4-dH-HdH" collectionClass="NSMutableArray" id="CqW-YU-73y"/>
                         <outletCollection property="cellSkin" destination="yjg-c6-jMZ" collectionClass="NSMutableArray" id="4LV-Ot-Bow"/>

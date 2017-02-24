@@ -9,6 +9,9 @@
 import Foundation
 import UIKit
 
+public var skinBoolArr = [true,false,true,false]
+public var skinCondArr = [0,0,0,0]
+
 class SkinViewController: UITableViewController {
     
     
@@ -20,6 +23,7 @@ class SkinViewController: UITableViewController {
     @IBOutlet weak var bar: UINavigationBar!
     @IBOutlet var tableSkin: UITableView!
     
+    @IBOutlet weak var cell2: UILabel!
     
     @IBOutlet var cellSkin: [UITableViewCell]!
     
@@ -32,9 +36,9 @@ class SkinViewController: UITableViewController {
         let tempImageView = UIImageView(image: UIImage(named: "MenuBg1.png"))
         tempImageView.frame = self.tableView.frame
         self.tableView.backgroundView = tempImageView
+        print(skinCondArr)
         
-        
-        
+        cell2.text = String(skinCondArr[2]) + " / 100"
         
         
         tableView.backgroundColor = .clear
@@ -48,11 +52,18 @@ class SkinViewController: UITableViewController {
         tableView.delegate = self
         tableView.dataSource = self
         
-        for index in 0...4 {
+        for index in 0...3 {
             let indexPath = IndexPath(row: index, section: 0)
             let cell = tableView.cellForRow(at: indexPath)
             cell?.backgroundColor = .clear
             
+            // Тут нужно допилить
+            if skinBoolArr[index] == true {
+
+            }
+            if skinCondArr[0] == 1 {
+                
+            }
         }
         bar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
         bar.shadowImage = UIImage()
@@ -98,6 +109,12 @@ class SkinViewController: UITableViewController {
 
         cell?.accessoryType = .checkmark
 
+    }
+    
+    
+    func tableView(tableView: UITableView, didDeselectRowAtIndexPath indexPath: NSIndexPath) {
+        let deselectedCell = tableView.cellForRow(at: indexPath as IndexPath)!
+        deselectedCell.backgroundColor = UIColor.clear
     }
 }
 
