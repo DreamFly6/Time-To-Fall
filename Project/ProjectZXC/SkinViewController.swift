@@ -21,6 +21,7 @@ class SkinViewController: UITableViewController {
     @IBOutlet var tableSkin: UITableView!
     
     
+    @IBOutlet var cellSkin: [UITableViewCell]!
     
     
     
@@ -51,11 +52,12 @@ class SkinViewController: UITableViewController {
             let indexPath = IndexPath(row: index, section: 0)
             let cell = tableView.cellForRow(at: indexPath)
             cell?.backgroundColor = .clear
+            
         }
         bar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
         bar.shadowImage = UIImage()
         bar.isTranslucent = true
-        
+        cellSkin[indexCharacterTexture].accessoryType = .checkmark
         
     }
     
