@@ -1226,6 +1226,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                 //Удаление
                 touchedNode.removeFromParent()
                 //saveStat(info: "destroy")
+                skinCondArr[2] = skinCondArr[2] + 1
             }
             
 
