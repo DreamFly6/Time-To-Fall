@@ -47,6 +47,9 @@ class SettingViewController: UIViewController {
         if mySwitch.isOn {
             statusBarBool = true
             UserDefaults.standard.removeObject(forKey: "MedalOnLvl")
+            UserDefaults.standard.removeObject(forKey: "skinCondArr")
+            UserDefaults.standard.removeObject(forKey: "skinBoolArr")
+            
             for index in 0...MedalOnLvl.count-1 {
                 MedalOnLvl[index] = 3
             }

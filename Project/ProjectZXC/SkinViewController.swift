@@ -9,8 +9,10 @@
 import Foundation
 import UIKit
 
-public var skinBoolArr = [true,false,true,false]
+public var skinBoolArr = [true,false,false,false]
 public var skinCondArr = [0,0,0,0]
+public var indexCharacterTexture = 0
+
 
 class SkinViewController: UITableViewController {
     
@@ -26,7 +28,7 @@ class SkinViewController: UITableViewController {
     @IBOutlet weak var cell2: UILabel!
     
     @IBOutlet var cellSkin: [UITableViewCell]!
-    
+    @IBOutlet var labelSkin: [UILabel]!
     
     
     override func viewDidLoad() {
@@ -38,8 +40,11 @@ class SkinViewController: UITableViewController {
         self.tableView.backgroundView = tempImageView
         print(skinCondArr)
         
-        cell2.text = String(skinCondArr[2]) + " / 100"
         
+        labelSkin[0].text = "Default character"
+        labelSkin[1].text = "First 4 lvl on Gold medal"
+        labelSkin[2].text = "Destroy " + String(skinCondArr[2]) + "/500 blocks"
+        labelSkin[3].text = "Destroy " + String(skinCondArr[3]) + "/1500 blocks"
         
         tableView.backgroundColor = .clear
         
@@ -57,8 +62,9 @@ class SkinViewController: UITableViewController {
             let cell = tableView.cellForRow(at: indexPath)
             cell?.backgroundColor = .clear
             // Тут нужно допилить
-            if skinBoolArr[index] == true {
-                cellSkin[indexCharacterTexture].isUserInteractionEnabled = false
+            if skinBoolArr[index] == false {
+                cellSkin[index].isUserInteractionEnabled = false
+                cellSkin[index].backgroundColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 0.5987338362)
             }
         }
         bar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
@@ -94,7 +100,11 @@ class SkinViewController: UITableViewController {
     // method to run when table view cell is tapped
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print("You tapped cell number \(indexPath.row).")
+        
         indexCharacterTexture = indexPath.row
+        UserDefaults.standard.set(indexCharacterTexture, forKey: "indexCharacterTexture")
+        UserDefaults.standard.synchronize()
+        
         let cell = tableView.cellForRow(at: indexPath)
         
         for index in 0...4 {

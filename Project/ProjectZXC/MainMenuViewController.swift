@@ -19,14 +19,17 @@ class MainMenuViewController: UIViewController {
         topScene = UserDefaults.standard.integer(forKey: "topStage")
         
         //topScene = 0
-//        
-//        if  topScene > 1 {
-//            MedalOnLvl = UserDefaults.standard.array(forKey: "MedalOnLvl") as! [Int]
-//        }
-//
-//        if topScene == 0 {
-//            topScene = 1
-//        }
+        
+        if  topScene > 10 {
+            MedalOnLvl = UserDefaults.standard.array(forKey: "MedalOnLvl") as! [Int]
+            indexCharacterTexture = UserDefaults.standard.integer(forKey: "indexCharacterTexture")
+            skinCondArr = UserDefaults.standard.array(forKey: "skinCondArr") as! [Int]
+            skinBoolArr = UserDefaults.standard.array(forKey: "skinBoolArr") as! [Bool]
+        }
+
+        if topScene == 0 {
+            topScene = 1
+        }
         
 
         

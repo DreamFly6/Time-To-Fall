@@ -77,7 +77,7 @@ public var timeForMedal = [[10,13,16,100],//0
 public var bestTime = 99
 public var MedalOnLvl: [Int] = [Int] (repeating:3, count: 49)
 public var onPause = false
-public var indexCharacterTexture = 1
+
 
 //  Мета игра (фрии ту плей)
 //  Показ рекламы
@@ -85,10 +85,16 @@ public var indexCharacterTexture = 1
 
 class GameScene: SKScene, SKPhysicsContactDelegate {
 
+    func skinArrSync() {
+        UserDefaults.standard.set(skinCondArr,forKey: "skinCondArr")
+        UserDefaults.standard.set(skinBoolArr,forKey: "skinBoolArr")
+        UserDefaults.standard.synchronize()
+    }
 
-    
     func initNewBlockScreen() {
         var ok = false
+        
+
         
         for index in 0...(n.count - 1) {
             if (topScene == n[index]){
@@ -145,14 +151,19 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                         case 37:
                             ground.texture = SKTexture(imageNamed: "RotationBlock")
                             text?.text = "Rotating block"
-//                        case 41:
-//                            ground.texture = SKTexture(imageNamed: "GravityBlock_Off")
-//                            text?.text = "Gravity changer"
                         case 41:
                             ground.texture = SKTexture(imageNamed: "Magnit_Off")
                             text?.text = "Magnet"
                         default:
-                            print("SHIT TEXTURE")
+                            print("SHIT NEW BLOCK CONDITION")
+                            print("SHIT NEW BLOCK CONDITION")
+                            print("SHIT NEW BLOCK CONDITION")
+                            print("SHIT NEW BLOCK CONDITION")
+                            print("SHIT NEW BLOCK CONDITION")
+                            print("SHIT NEW BLOCK CONDITION")
+                            print("SHIT NEW BLOCK CONDITION")
+                            print("SHIT NEW BLOCK CONDITION")
+                            print("SHIT NEW BLOCK CONDITION")
                         }
                     }
                 }
@@ -275,32 +286,32 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         myLabel1.name = "MedalLabel"
         self.addChild(myLabel1)
 
-//        myLabel2 = SKLabelNode(fontNamed: "Arial")
-//        myLabel2.fontSize = 40
-//        myLabel2.zPosition = 999
-//        myLabel2.position = CGPoint(x: 300, y: 1760)
-//        self.addChild(myLabel2)
-//        
-//
-//        myLabel3 = SKLabelNode(fontNamed: "Arial")
-//        myLabel3.fontSize = 40
-//        myLabel3.zPosition = 999
-//        myLabel3.position = CGPoint(x: 300, y: 1720)
-//        self.addChild(myLabel3)
-//        
-//
-//        myLabel4 = SKLabelNode(fontNamed: "Arial")
-//        myLabel4.fontSize = 40
-//        myLabel4.zPosition = 999
-//        myLabel4.position = CGPoint(x: 300, y: 1680)
-//        self.addChild(myLabel4)
-//        
-//        
-//        myLabel5 = SKLabelNode(fontNamed: "Arial")
-//        myLabel5.fontSize = 30
-//        myLabel5.zPosition = 999
-//        myLabel5.position = CGPoint(x: 300, y: 1640)
-//        self.addChild(myLabel5)
+        myLabel2 = SKLabelNode(fontNamed: "Arial")
+        myLabel2.fontSize = 40
+        myLabel2.zPosition = 999
+        myLabel2.position = CGPoint(x: 300, y: 1760)
+        self.addChild(myLabel2)
+        
+
+        myLabel3 = SKLabelNode(fontNamed: "Arial")
+        myLabel3.fontSize = 40
+        myLabel3.zPosition = 999
+        myLabel3.position = CGPoint(x: 300, y: 1720)
+        self.addChild(myLabel3)
+        
+
+        myLabel4 = SKLabelNode(fontNamed: "Arial")
+        myLabel4.fontSize = 40
+        myLabel4.zPosition = 999
+        myLabel4.position = CGPoint(x: 300, y: 1680)
+        self.addChild(myLabel4)
+        
+        
+        myLabel5 = SKLabelNode(fontNamed: "Arial")
+        myLabel5.fontSize = 30
+        myLabel5.zPosition = 999
+        myLabel5.position = CGPoint(x: 300, y: 1640)
+        self.addChild(myLabel5)
         
     }
     
@@ -383,11 +394,11 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             myLabel1.text = ""
         }
        
-//        myLabel2.text = "Топовая сцена = "+String(topScene)
-//        myLabel3.text = "Касается земли? = "+String(onGround)
-//        myLabel4.text = "Время на земле = "+String(onGroundTime)
-//        myLabel5.text = "ГГ dy = "+String(describing: dy)
-        //
+        myLabel2.text = "Топовая сцена = "+String(topScene)
+        myLabel3.text = "Текущая сцена = "+String(thisScene)
+        //myLabel4.text = "NowScene = "+String(nowScene)
+        //myLabel5.text = "ГГ dy = "+String(describing: dy)
+        
     }
 
     //При вызове этой функции, показывается меню проигрыша.
@@ -771,6 +782,11 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
 
             }
         }
+        if(MedalOnLvl[1] == 0 && MedalOnLvl[2] == 0 && MedalOnLvl[3] == 0 && MedalOnLvl[4] == 0 && skinBoolArr[1] == false){
+            skinBoolArr[1] = true
+            skinArrSync()
+            UIAlertView(title: "Скин", message: "Скин 1 открыт", delegate: self, cancelButtonTitle: "Ок").show()
+        }
     }
 
     
@@ -852,8 +868,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     
     //Ициализация свойств игровых объектов
     func initGameObject(){
-        //let qwe = You()
-        //print("Транспорт: \(qwe.description)")
+
         for main in self.children {
             if main.name == "MainCharacter" {
                 if let main = main as? SKSpriteNode {
@@ -1164,8 +1179,12 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         
         self.physicsWorld.contactDelegate = self
         
+
+        
         //Инициализация Экрана нового блока
         initNewBlockScreen()
+        
+
         
         
 //        if (thisScene == 39){
@@ -1194,6 +1213,9 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         if thisScene > 0 {
             statusBar()
         }
+        
+
+
 
     }
     
@@ -1225,8 +1247,25 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             {
                 //Удаление
                 touchedNode.removeFromParent()
-                //saveStat(info: "destroy")
+
+
+                
                 skinCondArr[2] = skinCondArr[2] + 1
+                if skinCondArr[2] == 500 {
+                    skinBoolArr[2] = true
+                    skinArrSync()
+                    UIAlertView(title: "Скин", message: "Скин 2 открыт", delegate: self, cancelButtonTitle: "Ок").show()
+                }
+                
+                skinCondArr[3] = skinCondArr[3] + 1
+                if skinCondArr[3] == 1500 {
+                    skinBoolArr[3] = true
+                    skinArrSync()
+                    UIAlertView(title: "Скин", message: "Скин 3 открыт", delegate: self, cancelButtonTitle: "Ок").show()
+                }
+                
+                print(skinCondArr)
+
             }
             
 
