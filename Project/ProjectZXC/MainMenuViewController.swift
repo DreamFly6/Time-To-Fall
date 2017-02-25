@@ -19,14 +19,14 @@ class MainMenuViewController: UIViewController {
         topScene = UserDefaults.standard.integer(forKey: "topStage")
         
         //topScene = 0
-        
-        if  topScene > 1 {
-            MedalOnLvl = UserDefaults.standard.array(forKey: "MedalOnLvl") as! [Int]
-        }
-
-        if topScene == 0 {
-            topScene = 1
-        }
+//        
+//        if  topScene > 1 {
+//            MedalOnLvl = UserDefaults.standard.array(forKey: "MedalOnLvl") as! [Int]
+//        }
+//
+//        if topScene == 0 {
+//            topScene = 1
+//        }
         
 
         

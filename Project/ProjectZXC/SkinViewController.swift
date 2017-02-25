@@ -56,13 +56,9 @@ class SkinViewController: UITableViewController {
             let indexPath = IndexPath(row: index, section: 0)
             let cell = tableView.cellForRow(at: indexPath)
             cell?.backgroundColor = .clear
-            
             // Тут нужно допилить
             if skinBoolArr[index] == true {
-
-            }
-            if skinCondArr[0] == 1 {
-                
+                cellSkin[indexCharacterTexture].isUserInteractionEnabled = false
             }
         }
         bar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
