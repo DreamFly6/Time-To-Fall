@@ -40,7 +40,11 @@ class SkinViewController: UITableViewController {
         
         cell2.text = String(skinCondArr[2]) + " / 100"
         
+<<<<<<< HEAD
 //        tableView.allowsSelection = false
+=======
+        
+>>>>>>> origin/master
         tableView.backgroundColor = .clear
         
         
@@ -55,9 +59,19 @@ class SkinViewController: UITableViewController {
 //        for index in 0...sizeArray {
         
         for index in 0...3 {
+<<<<<<< HEAD
             // Тут нужно допилить
             if skinBoolArr[index] == true {
                 cellSkin[index].isUserInteractionEnabled = false
+=======
+            let indexPath = IndexPath(row: index, section: 0)
+            let cell = tableView.cellForRow(at: indexPath)
+            cell?.backgroundColor = .clear
+            
+            // Тут нужно допилить
+            if skinBoolArr[index] == true {
+
+>>>>>>> origin/master
             }
             if skinCondArr[0] == 1 {
                 
