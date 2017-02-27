@@ -1170,7 +1170,7 @@
                                         <rect key="frame" x="0.0" y="44" width="375" height="106"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="TK4-dH-HdH" id="Zi2-z3-0Bn">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="105.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="105"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="MainCharacter0" translatesAutoresizingMaskIntoConstraints="NO" id="vdX-hK-yUV">
@@ -1193,7 +1193,7 @@
                                         <rect key="frame" x="0.0" y="150" width="375" height="106"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="yjg-c6-jMZ" id="m7B-wr-cf0">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="105.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="105"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="MainCharacter1" translatesAutoresizingMaskIntoConstraints="NO" id="dmm-LZ-0RF">
@@ -1215,7 +1215,7 @@
                                         <rect key="frame" x="0.0" y="256" width="375" height="106"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="wfX-qS-kRF" id="hNI-5T-MG0">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="105.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="105"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="MainCharacter2" translatesAutoresizingMaskIntoConstraints="NO" id="tTl-OW-QOM">
@@ -1237,7 +1237,7 @@
                                         <rect key="frame" x="0.0" y="362" width="375" height="106"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="b7C-9f-hRy" id="bzT-Ec-jlf">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="105.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="105"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="MainCharacter3" translatesAutoresizingMaskIntoConstraints="NO" id="SmJ-Fg-5o0">
@@ -1245,6 +1245,28 @@
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Default character" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Veh-Gn-XZz">
+                                                    <rect key="frame" x="88" y="30" width="228" height="44"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" alpha="0.0" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="LabelCell" rowHeight="106" id="Z5J-p5-gbc">
+                                        <rect key="frame" x="0.0" y="468" width="375" height="106"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Z5J-p5-gbc" id="ULL-bk-W3f">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="105"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="MainCharacter4" translatesAutoresizingMaskIntoConstraints="NO" id="FL6-GU-Ek1">
+                                                    <rect key="frame" x="17" y="4" width="63" height="97"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Default character" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eUI-jD-t98">
                                                     <rect key="frame" x="88" y="30" width="228" height="44"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -1275,6 +1297,8 @@
                         <outletCollection property="labelSkin" destination="JTu-iv-Xqa" collectionClass="NSMutableArray" id="bQf-3w-d9R"/>
                         <outletCollection property="labelSkin" destination="zen-9X-Saf" collectionClass="NSMutableArray" id="F9V-vJ-3Ax"/>
                         <outletCollection property="labelSkin" destination="Veh-Gn-XZz" collectionClass="NSMutableArray" id="JxM-sC-IxT"/>
+                        <outletCollection property="cellSkin" destination="Z5J-p5-gbc" collectionClass="NSMutableArray" id="aJ3-Uz-YOT"/>
+                        <outletCollection property="labelSkin" destination="eUI-jD-t98" collectionClass="NSMutableArray" id="Dgd-Vg-mai"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fMu-0m-BsG" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1338,6 +1362,7 @@
         <image name="MainCharacter1" width="391" height="601"/>
         <image name="MainCharacter2" width="391" height="601"/>
         <image name="MainCharacter3" width="391" height="601"/>
+        <image name="MainCharacter4" width="391" height="601"/>
         <image name="MenuBg1" width="1080" height="1920"/>
         <image name="MenuBg2" width="1080" height="1920"/>
         <image name="MenuBg3" width="1080" height="1920"/>
@@ -1351,7 +1376,7 @@
         <image name="skinButton" width="500" height="500"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="uLA-Vy-bLj"/>
+        <segue reference="Zfk-BR-emO"/>
         <segue reference="ouL-B0-H4P"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>

@@ -9,8 +9,8 @@
 import Foundation
 import UIKit
 
-public var skinBoolArr = [true,false,false,false]
-public var skinCondArr = [0,0,0,0]
+public var skinBoolArr = [true,true,true,true,true]
+public var skinCondArr = [0,0,0,0,11]
 public var indexCharacterTexture = 0
 
 
@@ -45,6 +45,7 @@ class SkinViewController: UITableViewController {
         labelSkin[1].text = "First 4 lvl on Gold medal"
         labelSkin[2].text = "Destroy " + String(skinCondArr[2]) + "/500 blocks"
         labelSkin[3].text = "Destroy " + String(skinCondArr[3]) + "/1500 blocks"
+        labelSkin[4].text = String(skinCondArr[4])
         
         tableView.backgroundColor = .clear
         
@@ -57,7 +58,7 @@ class SkinViewController: UITableViewController {
         tableView.delegate = self
         tableView.dataSource = self
         
-        for index in 0...3 {
+        for index in 0...cellSkin.count-1 {
             let indexPath = IndexPath(row: index, section: 0)
             let cell = tableView.cellForRow(at: indexPath)
             cell?.backgroundColor = .clear
@@ -87,16 +88,6 @@ class SkinViewController: UITableViewController {
     
     
     
-    
-    
-    
-    
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
-    }
-    
-    
-    
     // method to run when table view cell is tapped
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print("You tapped cell number \(indexPath.row).")
@@ -107,7 +98,7 @@ class SkinViewController: UITableViewController {
         
         let cell = tableView.cellForRow(at: indexPath)
         
-        for index in 0...4 {
+        for index in 0...cellSkin.count-1 {
             let indexPath = IndexPath(row: index, section: 0)
             let cellNone = tableView.cellForRow(at: indexPath)
             cellNone?.accessoryType = .none
