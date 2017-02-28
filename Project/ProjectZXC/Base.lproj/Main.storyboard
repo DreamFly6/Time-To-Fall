@@ -1222,8 +1222,8 @@
                                                     <rect key="frame" x="17" y="4" width="63" height="97"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Default character" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zen-9X-Saf">
-                                                    <rect key="frame" x="88" y="34" width="239" height="36"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Default character" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="83z-lt-1gN">
+                                                    <rect key="frame" x="67" y="30" width="240" height="44"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -1287,18 +1287,17 @@
                     </tableView>
                     <connections>
                         <outlet property="bar" destination="eqN-AK-WsE" id="8ti-L3-lDH"/>
-                        <outlet property="cell2" destination="zen-9X-Saf" id="LsR-yC-jbH"/>
                         <outlet property="tableSkin" destination="oDR-C0-HDh" id="AWD-tW-9sf"/>
                         <outletCollection property="cellSkin" destination="TK4-dH-HdH" collectionClass="NSMutableArray" id="CqW-YU-73y"/>
                         <outletCollection property="cellSkin" destination="yjg-c6-jMZ" collectionClass="NSMutableArray" id="4LV-Ot-Bow"/>
                         <outletCollection property="cellSkin" destination="wfX-qS-kRF" collectionClass="NSMutableArray" id="Jdu-yF-lwx"/>
                         <outletCollection property="cellSkin" destination="b7C-9f-hRy" collectionClass="NSMutableArray" id="541-iO-M2J"/>
-                        <outletCollection property="labelSkin" destination="4ra-ZK-i6u" collectionClass="NSMutableArray" id="TOC-mp-tVb"/>
-                        <outletCollection property="labelSkin" destination="JTu-iv-Xqa" collectionClass="NSMutableArray" id="bQf-3w-d9R"/>
-                        <outletCollection property="labelSkin" destination="zen-9X-Saf" collectionClass="NSMutableArray" id="F9V-vJ-3Ax"/>
-                        <outletCollection property="labelSkin" destination="Veh-Gn-XZz" collectionClass="NSMutableArray" id="JxM-sC-IxT"/>
                         <outletCollection property="cellSkin" destination="Z5J-p5-gbc" collectionClass="NSMutableArray" id="aJ3-Uz-YOT"/>
-                        <outletCollection property="labelSkin" destination="eUI-jD-t98" collectionClass="NSMutableArray" id="Dgd-Vg-mai"/>
+                        <outletCollection property="labelSkin" destination="4ra-ZK-i6u" collectionClass="NSMutableArray" id="BdV-HR-msp"/>
+                        <outletCollection property="labelSkin" destination="JTu-iv-Xqa" collectionClass="NSMutableArray" id="vAZ-H6-naf"/>
+                        <outletCollection property="labelSkin" destination="83z-lt-1gN" collectionClass="NSMutableArray" id="VKS-tn-o6c"/>
+                        <outletCollection property="labelSkin" destination="Veh-Gn-XZz" collectionClass="NSMutableArray" id="Apo-w9-HiP"/>
+                        <outletCollection property="labelSkin" destination="eUI-jD-t98" collectionClass="NSMutableArray" id="SmI-u9-Tw0"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fMu-0m-BsG" userLabel="First Responder" sceneMemberID="firstResponder"/>

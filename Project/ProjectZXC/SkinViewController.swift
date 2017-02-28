@@ -25,7 +25,7 @@ class SkinViewController: UITableViewController {
     @IBOutlet weak var bar: UINavigationBar!
     @IBOutlet var tableSkin: UITableView!
     
-    @IBOutlet weak var cell2: UILabel!
+
     
     @IBOutlet var cellSkin: [UITableViewCell]!
     @IBOutlet var labelSkin: [UILabel]!
