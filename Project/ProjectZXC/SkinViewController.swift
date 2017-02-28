@@ -9,8 +9,8 @@
 import Foundation
 import UIKit
 
-public var skinBoolArr = [true,true,true,true,true]
-public var skinCondArr = [0,0,0,0,11]
+public var skinBoolArr = [true,false,true,false,true]
+public var skinCondArr = [0,0,0,0,11511]
 public var indexCharacterTexture = 0
 
 

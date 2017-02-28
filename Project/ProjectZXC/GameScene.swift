@@ -1214,7 +1214,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             statusBar()
         }
         
-
+        skinArrSync()
 
 
     }
