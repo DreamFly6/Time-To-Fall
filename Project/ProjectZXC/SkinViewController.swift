@@ -62,6 +62,7 @@ class SkinViewController: UITableViewController {
             let indexPath = IndexPath(row: index, section: 0)
             let cell = tableView.cellForRow(at: indexPath)
             cell?.backgroundColor = .clear
+            cell?.tintColor = UIColor.white
             // Тут нужно допилить
             if skinBoolArr[index] == false {
                 cellSkin[index].isUserInteractionEnabled = false
@@ -72,7 +73,7 @@ class SkinViewController: UITableViewController {
         bar.shadowImage = UIImage()
         bar.isTranslucent = true
         cellSkin[indexCharacterTexture].accessoryType = .checkmark
-        
+        cellSkin[indexCharacterTexture].tintColor = UIColor.white
     }
     
     
