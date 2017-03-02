@@ -286,32 +286,32 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         myLabel1.name = "MedalLabel"
         self.addChild(myLabel1)
 
-        myLabel2 = SKLabelNode(fontNamed: "Arial")
-        myLabel2.fontSize = 40
-        myLabel2.zPosition = 999
-        myLabel2.position = CGPoint(x: 300, y: 1760)
-        self.addChild(myLabel2)
-        
-
-        myLabel3 = SKLabelNode(fontNamed: "Arial")
-        myLabel3.fontSize = 40
-        myLabel3.zPosition = 999
-        myLabel3.position = CGPoint(x: 300, y: 1720)
-        self.addChild(myLabel3)
-        
-
-        myLabel4 = SKLabelNode(fontNamed: "Arial")
-        myLabel4.fontSize = 40
-        myLabel4.zPosition = 999
-        myLabel4.position = CGPoint(x: 300, y: 1680)
-        self.addChild(myLabel4)
-        
-        
-        myLabel5 = SKLabelNode(fontNamed: "Arial")
-        myLabel5.fontSize = 30
-        myLabel5.zPosition = 999
-        myLabel5.position = CGPoint(x: 300, y: 1640)
-        self.addChild(myLabel5)
+//        myLabel2 = SKLabelNode(fontNamed: "Arial")
+//        myLabel2.fontSize = 40
+//        myLabel2.zPosition = 999
+//        myLabel2.position = CGPoint(x: 300, y: 1760)
+//        self.addChild(myLabel2)
+//        
+//
+//        myLabel3 = SKLabelNode(fontNamed: "Arial")
+//        myLabel3.fontSize = 40
+//        myLabel3.zPosition = 999
+//        myLabel3.position = CGPoint(x: 300, y: 1720)
+//        self.addChild(myLabel3)
+//        
+//
+//        myLabel4 = SKLabelNode(fontNamed: "Arial")
+//        myLabel4.fontSize = 40
+//        myLabel4.zPosition = 999
+//        myLabel4.position = CGPoint(x: 300, y: 1680)
+//        self.addChild(myLabel4)
+//        
+//        
+//        myLabel5 = SKLabelNode(fontNamed: "Arial")
+//        myLabel5.fontSize = 30
+//        myLabel5.zPosition = 999
+//        myLabel5.position = CGPoint(x: 300, y: 1640)
+//        self.addChild(myLabel5)
         
     }
     
@@ -393,9 +393,9 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             timer = timer - 1
             myLabel1.text = ""
         }
-       
-        myLabel2.text = "Топовая сцена = "+String(topScene)
-        myLabel3.text = "Текущая сцена = "+String(thisScene)
+//       
+//        myLabel2.text = "Топовая сцена = "+String(topScene)
+//        myLabel3.text = "Текущая сцена = "+String(thisScene)
         //myLabel4.text = "NowScene = "+String(nowScene)
         //myLabel5.text = "ГГ dy = "+String(describing: dy)
         
