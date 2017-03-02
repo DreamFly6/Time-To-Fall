@@ -88,6 +88,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     func skinArrSync() {
         UserDefaults.standard.set(skinCondArr,forKey: "skinCondArr")
         UserDefaults.standard.set(skinBoolArr,forKey: "skinBoolArr")
+        UserDefaults.standard.set(MedalOnLvl, forKey: "MedalOnLvl")
         UserDefaults.standard.synchronize()
     }
 
@@ -777,8 +778,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                 default: break
 
                 }
-                UserDefaults.standard.set(MedalOnLvl, forKey: "MedalOnLvl")
-                UserDefaults.standard.synchronize()
+
 
             }
         }
@@ -787,6 +787,10 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             skinArrSync()
             UIAlertView(title: "Скин", message: "Скин 1 открыт", delegate: self, cancelButtonTitle: "Ок").show()
         }
+        
+        
+        UserDefaults.standard.set(MedalOnLvl, forKey: "MedalOnLvl")
+        UserDefaults.standard.synchronize()
     }
 
     
