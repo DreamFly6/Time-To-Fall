@@ -15,13 +15,14 @@ class MainMenuViewController: UIViewController {
     
     
 
-    @IBOutlet weak var imageChangeHere: UIImageView!
+    @IBOutlet weak var MainChar: UIImageView!
+  
     
     override func viewDidLoad() {
         
-        //IF БАХНЕШЬ ВОТ ТУТ
-        imageChangeHere.image = UIImage(named: "MainCharacter0")
         
+        MainChar.image = UIImage(named: "MainCharacter" + String(indexCharacterTexture))
+        print("MainCharacter" , indexCharacterTexture)
         topScene = UserDefaults.standard.integer(forKey: "topStage")
         
         //topScene = 0
