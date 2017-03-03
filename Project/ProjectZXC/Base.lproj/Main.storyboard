@@ -157,6 +157,14 @@
                                 <color key="shadowColor" red="0.097172334730000004" green="0.16155630530000001" blue="0.2335978403" alpha="1" colorSpace="calibratedRGB"/>
                                 <size key="shadowOffset" width="0.0" height="4"/>
                             </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="shadow" translatesAutoresizingMaskIntoConstraints="NO" id="6wn-MU-Uny">
+                                <rect key="frame" x="129" y="229" width="124" height="28"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="MainCharacter0" translatesAutoresizingMaskIntoConstraints="NO" id="4Wa-qW-fmr">
+                                <rect key="frame" x="125" y="59" width="128" height="192"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
@@ -1371,6 +1379,7 @@
         <image name="longButton" width="700" height="310"/>
         <image name="menuButton" width="500" height="500"/>
         <image name="optionButton" width="500" height="500"/>
+        <image name="shadow" width="400" height="400"/>
         <image name="skinButton" width="500" height="500"/>
     </resources>
     <inferredMetricsTieBreakers>
