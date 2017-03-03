@@ -17,12 +17,18 @@ class MainMenuViewController: UIViewController {
 
     @IBOutlet weak var MainChar: UIImageView!
   
+    @IBOutlet weak var MainBG: UIImageView!
+    
+    @IBOutlet weak var shadowMainChar: UIImageView!
     
     override func viewDidLoad() {
         
         
         MainChar.image = UIImage(named: "MainCharacter" + String(indexCharacterTexture))
-        print("MainCharacter" , indexCharacterTexture)
+        MainBG.image = UIImage(named: "MenuBg" + String("1"))
+        
+        shadowMainChar.image =  UIImage(named: "shadow")
+        
         topScene = UserDefaults.standard.integer(forKey: "topStage")
         
         //topScene = 0
