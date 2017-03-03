@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 
 public var skinBoolArr = [true,false,true,false,true]
-public var skinCondArr = [0,0,0,0,11511]
+public var skinCondArr = [0,0,0,0,0]
 public var indexCharacterTexture = 0
 
 
@@ -45,7 +45,7 @@ class SkinViewController: UITableViewController {
         labelSkin[1].text = "First 4 lvl on Gold medal"
         labelSkin[2].text = "Destroy " + String(skinCondArr[2]) + "/500 blocks"
         labelSkin[3].text = "Destroy " + String(skinCondArr[3]) + "/1500 blocks"
-        labelSkin[4].text = String(skinCondArr[4])
+        labelSkin[4].text = "Destroy " + String(skinCondArr[4]) + "/250 Slime blocks"
         
         tableView.backgroundColor = .clear
         

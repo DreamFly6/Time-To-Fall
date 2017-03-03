@@ -86,6 +86,7 @@ public var onPause = false
 class GameScene: SKScene, SKPhysicsContactDelegate {
 
     func skinArrSync() {
+        UserDefaults.standard.set(MainBGPub,forKey: "MainBGPub")
         UserDefaults.standard.set(skinCondArr,forKey: "skinCondArr")
         UserDefaults.standard.set(skinBoolArr,forKey: "skinBoolArr")
         UserDefaults.standard.set(MedalOnLvl, forKey: "MedalOnLvl")
@@ -198,17 +199,21 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     
     func colorPicker(level: Int) ->  UIColor {
         if (level > 0 && level <= 16) {
+            MainBGPub = 1
             return color1
         }
         else {
             if (level > 16 && level <= 32) {
+                MainBGPub = 2
                 return color2
             }
             else {
                 if (level > 32 && level <= 48) {
+                    MainBGPub = 3
                     return color3
                 }
                 else {
+                    MainBGPub = 2
                     return color0
                 }
             }
@@ -1242,6 +1247,17 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             let location = touch.first!.location(in: self)
             let node = self.atPoint(location)
             
+            if touchedNode.name == "SlimeBlock" {
+                skinCondArr[4] = skinCondArr[4] + 1
+                if skinCondArr[4] == 250 {
+                    skinBoolArr[4] = true
+                    skinArrSync()
+                    UIAlertView(title: "Скин", message: "Скин 4 открыт", delegate: self, cancelButtonTitle: "Ок").show()
+                }
+            }
+            
+            
+            
             if  (
                 touchedNode.name == "WoodenBox"
                 || touchedNode.name == "WoodenPlank"
@@ -1249,6 +1265,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                 || touchedNode.name == "GlassBlock"
                 )
             {
+                
+
                 //Удаление
                 touchedNode.removeFromParent()
 

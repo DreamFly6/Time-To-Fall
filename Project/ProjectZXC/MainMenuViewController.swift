@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 import SpriteKit
-
+public var MainBGPub = 0
 
 class MainMenuViewController: UIViewController {
     
@@ -23,9 +23,7 @@ class MainMenuViewController: UIViewController {
     
     override func viewDidLoad() {
         
-        
-        MainChar.image = UIImage(named: "MainCharacter" + String(indexCharacterTexture))
-        MainBG.image = UIImage(named: "MenuBg" + String("1"))
+
         
         shadowMainChar.image =  UIImage(named: "shadow")
         
@@ -35,6 +33,7 @@ class MainMenuViewController: UIViewController {
         print("До " + String(describing: skinCondArr))
         print("До " + String(describing: skinBoolArr))
         if  topScene > 1 {
+            MainBGPub = UserDefaults.standard.integer(forKey: "MainBGPub")
             MedalOnLvl = UserDefaults.standard.array(forKey: "MedalOnLvl") as! [Int]
             indexCharacterTexture = UserDefaults.standard.integer(forKey: "indexCharacterTexture")
             skinCondArr = UserDefaults.standard.array(forKey: "skinCondArr") as! [Int]
@@ -47,6 +46,16 @@ class MainMenuViewController: UIViewController {
             topScene = 1
         }
         
+        
+        MainChar.image = UIImage(named: "MainCharacter" + String(indexCharacterTexture))
+        
+        if MainBGPub == 0 {
+            MainBG.image = UIImage(named: "ConBG1")
+        }
+        else {
+            MainBG.image = UIImage(named: "MenuBg" + String(MainBGPub))
+        }
+
 
         
         self.navigationController?.isNavigationBarHidden = true
