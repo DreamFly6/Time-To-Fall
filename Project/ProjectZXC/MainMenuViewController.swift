@@ -14,7 +14,13 @@ import SpriteKit
 class MainMenuViewController: UIViewController {
     
     
+
+    @IBOutlet weak var imageChangeHere: UIImageView!
+    
     override func viewDidLoad() {
+        
+        //IF БАХНЕШЬ ВОТ ТУТ
+        imageChangeHere.image = UIImage(named: "MainCharacter0")
         
         topScene = UserDefaults.standard.integer(forKey: "topStage")
         
