@@ -105,6 +105,7 @@ class SkinViewController: UITableViewController {
             cellNone?.accessoryType = .none
         }
 
+        cell?.tintColor = UIColor.white
         cell?.accessoryType = .checkmark
 
     }

@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1217" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="jC2-zd-pnK">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="jC2-zd-pnK">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -157,7 +157,7 @@
                                 <color key="shadowColor" red="0.097172334730000004" green="0.16155630530000001" blue="0.2335978403" alpha="1" colorSpace="calibratedRGB"/>
                                 <size key="shadowOffset" width="0.0" height="4"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="520CD355-433C-4282-9B4D-2E014A1045E1" translatesAutoresizingMaskIntoConstraints="NO" id="6wn-MU-Uny">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="EF745B38-0031-4ED9-8172-CDD5283C27D3" translatesAutoresizingMaskIntoConstraints="NO" id="6wn-MU-Uny">
                                 <rect key="frame" x="129" y="229" width="124" height="28"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                             </imageView>
@@ -1180,7 +1180,7 @@
                                         <rect key="frame" x="0.0" y="44" width="375" height="106"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="TK4-dH-HdH" id="Zi2-z3-0Bn">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="105"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="105.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="MainCharacter0" translatesAutoresizingMaskIntoConstraints="NO" id="vdX-hK-yUV">
@@ -1195,6 +1195,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
+                                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -1203,7 +1204,7 @@
                                         <rect key="frame" x="0.0" y="150" width="375" height="106"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="yjg-c6-jMZ" id="m7B-wr-cf0">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="105"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="105.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="MainCharacter1" translatesAutoresizingMaskIntoConstraints="NO" id="dmm-LZ-0RF">
@@ -1225,7 +1226,7 @@
                                         <rect key="frame" x="0.0" y="256" width="375" height="106"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="wfX-qS-kRF" id="hNI-5T-MG0">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="105"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="105.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="MainCharacter2" translatesAutoresizingMaskIntoConstraints="NO" id="tTl-OW-QOM">
@@ -1247,7 +1248,7 @@
                                         <rect key="frame" x="0.0" y="362" width="375" height="106"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="b7C-9f-hRy" id="bzT-Ec-jlf">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="105"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="105.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="MainCharacter3" translatesAutoresizingMaskIntoConstraints="NO" id="SmJ-Fg-5o0">
@@ -1269,7 +1270,7 @@
                                         <rect key="frame" x="0.0" y="468" width="375" height="106"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Z5J-p5-gbc" id="ULL-bk-W3f">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="105"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="105.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="MainCharacter4" translatesAutoresizingMaskIntoConstraints="NO" id="FL6-GU-Ek1">
@@ -1366,7 +1367,9 @@
         </scene>
     </scenes>
     <resources>
-        <image name="520CD355-433C-4282-9B4D-2E014A1045E1" width="400" height="400">
+        <image name="ComingSoonBG" width="1080" height="1920"/>
+        <image name="ConBG1" width="1080" height="1920"/>
+        <image name="EF745B38-0031-4ED9-8172-CDD5283C27D3" width="400" height="400">
             <mutableData key="keyedArchiveRepresentation">
 YnBsaXN0MDDUAQIDBAUGOjtYJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3ASAAGGoK0HCBEW
 GxwgISgrLjQ3VSRudWxs1AkKCwwNDg8QViRjbGFzc1xOU0ltYWdlRmxhZ3NWTlNSZXBzV05TQ29sb3KA
@@ -12062,8 +12065,6 @@ XwAJyGcACch0AAnIeQAJyHsACch9AAnIggAJyIoACciNAAnIkgAJyJoACcidAAnIrwAJyLIACci3AAAA
 AAAABAEAAAAAAAAAPgAAAAAAAAAAAAAAAAAJyLk
 </mutableData>
         </image>
-        <image name="ComingSoonBG" width="1080" height="1920"/>
-        <image name="ConBG1" width="1080" height="1920"/>
         <image name="MainCharacter0" width="391" height="601"/>
         <image name="MainCharacter1" width="391" height="601"/>
         <image name="MainCharacter2" width="391" height="601"/>
