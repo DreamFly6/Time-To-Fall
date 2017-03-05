@@ -24,58 +24,9 @@ public var itsNewBlock = true
 public var n = [1,5,9,17,21,25,33,37,41]
 public var timer = 0
 public var AdCounter = 0
-public var timeForMedal = [[10,13,16,100],//0
-                           [7,9,11,100],//1
-                           [6,8,10,100],//2
-                           [8,10,12,100],//3
-                           [7,9,11,100],//4
-                           [6,8,10,100],//5
-    
-                           [7,8,10],//6
-                           [7,8,10],//7 <---
-                           [10,13,16],//8
-                           [10,13,16],//10
-                           [10,13,16],//11
-                           [10,13,16],//12
-                           [10,13,16],//13
-                           [10,13,16],//14
-                           [10,13,16],//15
-                           [10,13,16],//16
-                           [10,13,16],//17
-                           [10,13,16],//18
-                           [10,13,16],//19
-                           [10,13,16],//20
-                           [10,13,16],//21
-                           [10,13,16],//22
-                           [10,13,16],//23
-                           [10,13,16],//24
-                           [10,13,16],//25
-                           [10,13,16],//26
-                           [10,13,16],//27
-                           [10,13,16],//28
-                           [10,13,16],//29
-                           [10,13,16],//30
-                           [10,13,16],//31
-                           [10,13,16],//32
-                           [10,13,16],//33
-                           [10,13,16],//34
-                           [10,13,16],//35
-                           [10,13,16],//36
-                           [10,13,16],//37
-                           [10,13,16],//38
-                           [10,13,16],//39
-                           [10,13,16],//40
-                           [10,13,16],//41
-                           [10,13,16],//42
-                           [10,13,16],//43
-                           [10,13,16],//44
-                           [10,13,16],//45
-                           [10,13,16],//45
-                           [10,13,16],//45
-                           [10,13,16],//45
-                           [10,13,16]]//45
+public var timeForMedal = Array(repeating: [10,13,16], count: 300)
 public var bestTime = 99
-public var MedalOnLvl: [Int] = [Int] (repeating:3, count: 49)
+public var MedalOnLvl: [Int] = [Int] (repeating:3, count: 300)
 public var onPause = false
 
 
@@ -790,8 +741,18 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         if(MedalOnLvl[1] == 0 && MedalOnLvl[2] == 0 && MedalOnLvl[3] == 0 && MedalOnLvl[4] == 0 && skinBoolArr[1] == false){
             skinBoolArr[1] = true
             skinArrSync()
-            UIAlertView(title: "Скин", message: "Скин 1 открыт", delegate: self, cancelButtonTitle: "Ок").show()
+            UIAlertView(title: "New skin", message: "New skin unlock", delegate: self, cancelButtonTitle: "Ок").show()
         }
+        
+        if(MedalOnLvl[17] == 0 && MedalOnLvl[23] == 0 && MedalOnLvl[25] == 0 && skinBoolArr[5] == false){
+            skinBoolArr[5] = true
+            skinArrSync()
+            UIAlertView(title: "New skin", message: "New skin unlock", delegate: self, cancelButtonTitle: "Ок").show()
+        }
+        
+        //17
+        //23
+        //25
         
         
         UserDefaults.standard.set(MedalOnLvl, forKey: "MedalOnLvl")
@@ -1157,7 +1118,13 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     //Функция выполняемая до открытия сцены
     override func didMove(to view: SKView) {
         
-
+        
+        //for index in 0...300 {
+        //    print(index)
+            timeForMedal[0] = [10,13,16]
+        //}
+                    timeForMedal[1] = [10,13,16]
+        
         
         
         //Инициализация игровых объектов
@@ -1238,7 +1205,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         // Цикл считывающий нажатие на экран
         for touch: AnyObject in touches {
             
-
+            print(timeForMedal)
             
             //Удаление блока при нажатии
             let touchLocation = touch.location(in: self)
@@ -1252,7 +1219,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                 if skinCondArr[4] == 250 {
                     skinBoolArr[4] = true
                     skinArrSync()
-                    UIAlertView(title: "Скин", message: "Скин 4 открыт", delegate: self, cancelButtonTitle: "Ок").show()
+                    UIAlertView(title: "New skin", message: "New skin unlock", delegate: self, cancelButtonTitle: "Ок").show()
                 }
             }
             
@@ -1276,14 +1243,14 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                 if skinCondArr[2] == 500 {
                     skinBoolArr[2] = true
                     skinArrSync()
-                    UIAlertView(title: "Скин", message: "Скин 2 открыт", delegate: self, cancelButtonTitle: "Ок").show()
+                    UIAlertView(title: "New skin", message: "New skin unlock", delegate: self, cancelButtonTitle: "Ок").show()
                 }
                 
                 skinCondArr[3] = skinCondArr[3] + 1
                 if skinCondArr[3] == 1500 {
                     skinBoolArr[3] = true
                     skinArrSync()
-                    UIAlertView(title: "Скин", message: "Скин 3 открыт", delegate: self, cancelButtonTitle: "Ок").show()
+                    UIAlertView(title: "New skin", message: "New skin unlock", delegate: self, cancelButtonTitle: "Ок").show()
                 }
                 
                 print(skinCondArr)
