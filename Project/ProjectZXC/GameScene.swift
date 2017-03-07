@@ -50,7 +50,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
 
         
         for index in 0...(n.count - 1) {
-            if (topScene == n[index]){
+            if (thisScene == topScene && topScene == n[index]){
                 ok = true
                 n[index] = 999
             }
