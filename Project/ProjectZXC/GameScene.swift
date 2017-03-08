@@ -479,32 +479,32 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         
         
         //Для отладки
-        let prevButton = SKSpriteNode(imageNamed: "prevButton.png")
-        prevButton.position = CGPoint(x: self.frame.midX - 200, y: self.frame.midY-(self.frame.midY/2))
-        prevButton.name = "prev"
-        prevButton.xScale = 0.5
-        prevButton.yScale = 0.5
-        prevButton.zPosition = 999
-        prevButton.color = colorPicker(level: thisScene)
-        prevButton.colorBlendFactor = CGFloat(1.0)
-        self.addChild(prevButton)
-        let nextButton = SKSpriteNode(imageNamed: "nextButton.png")
-        nextButton.position = CGPoint(x: self.frame.midX + 200, y: self.frame.midY-(self.frame.midY/2))
-        nextButton.name = "next"
-        nextButton.xScale = 0.5
-        nextButton.yScale = 0.5
-        nextButton.zPosition = 999
-        nextButton.color = colorPicker(level: thisScene)
-        nextButton.colorBlendFactor = CGFloat(1.0)
-        self.addChild(nextButton)
-        var myLabel1:SKLabelNode!
-        myLabel1 = SKLabelNode(fontNamed: "Arial")
-        myLabel1.name = "label"
-        myLabel1.text = "Developer buttons"
-        myLabel1.fontSize = 50
-        myLabel1.zPosition = 1000
-        myLabel1.position = CGPoint(x: self.frame.midX, y: self.frame.midY-(self.frame.midY/2) + 140)
-        self.addChild(myLabel1)
+//        let prevButton = SKSpriteNode(imageNamed: "prevButton.png")
+//        prevButton.position = CGPoint(x: self.frame.midX - 200, y: self.frame.midY-(self.frame.midY/2))
+//        prevButton.name = "prev"
+//        prevButton.xScale = 0.5
+//        prevButton.yScale = 0.5
+//        prevButton.zPosition = 999
+//        prevButton.color = colorPicker(level: thisScene)
+//        prevButton.colorBlendFactor = CGFloat(1.0)
+//        self.addChild(prevButton)
+//        let nextButton = SKSpriteNode(imageNamed: "nextButton.png")
+//        nextButton.position = CGPoint(x: self.frame.midX + 200, y: self.frame.midY-(self.frame.midY/2))
+//        nextButton.name = "next"
+//        nextButton.xScale = 0.5
+//        nextButton.yScale = 0.5
+//        nextButton.zPosition = 999
+//        nextButton.color = colorPicker(level: thisScene)
+//        nextButton.colorBlendFactor = CGFloat(1.0)
+//        self.addChild(nextButton)
+//        var myLabel1:SKLabelNode!
+//        myLabel1 = SKLabelNode(fontNamed: "Arial")
+//        myLabel1.name = "label"
+//        myLabel1.text = "Developer buttons"
+//        myLabel1.fontSize = 50
+//        myLabel1.zPosition = 1000
+//        myLabel1.position = CGPoint(x: self.frame.midX, y: self.frame.midY-(self.frame.midY/2) + 140)
+//        self.addChild(myLabel1)
         
         
         
@@ -629,25 +629,25 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         
         
         //Для отладки
-        let prevButton = SKSpriteNode(imageNamed: "prevButton.png")
-        prevButton.position = CGPoint(x: self.frame.midX, y: self.frame.midY-(self.frame.midY/2))
-        prevButton.name = "prev"
-        prevButton.xScale = 0.5
-        prevButton.yScale = 0.5
-        prevButton.zPosition = 999
-        prevButton.color = colorPicker(level: thisScene)
-        prevButton.colorBlendFactor = CGFloat(1.0)
-        self.addChild(prevButton)
-        
-        var myLabel:SKLabelNode!
-        myLabel = SKLabelNode(fontNamed: "Arial")
-        myLabel.name = "label"
-        myLabel.text = "Win"
-        myLabel.fontSize = 100
-        myLabel.zPosition = 999
-        myLabel.position = CGPoint(x: self.frame.midX, y: self.frame.midY + 190)
-        self.addChild(myLabel)
-        
+//        let prevButton = SKSpriteNode(imageNamed: "prevButton.png")
+//        prevButton.position = CGPoint(x: self.frame.midX, y: self.frame.midY-(self.frame.midY/2))
+//        prevButton.name = "prev"
+//        prevButton.xScale = 0.5
+//        prevButton.yScale = 0.5
+//        prevButton.zPosition = 999
+//        prevButton.color = colorPicker(level: thisScene)
+//        prevButton.colorBlendFactor = CGFloat(1.0)
+//        self.addChild(prevButton)
+//        
+//        var myLabel:SKLabelNode!
+//        myLabel = SKLabelNode(fontNamed: "Arial")
+//        myLabel.name = "label"
+//        myLabel.text = "Win"
+//        myLabel.fontSize = 100
+//        myLabel.zPosition = 999
+//        myLabel.position = CGPoint(x: self.frame.midX, y: self.frame.midY + 190)
+//        self.addChild(myLabel)
+//        
         initMedal()
 
     }
@@ -741,13 +741,13 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         if(MedalOnLvl[1] == 0 && MedalOnLvl[2] == 0 && MedalOnLvl[3] == 0 && MedalOnLvl[4] == 0 && skinBoolArr[1] == false){
             skinBoolArr[1] = true
             skinArrSync()
-            UIAlertView(title: "New skin", message: "New skin unlock", delegate: self, cancelButtonTitle: "Ок").show()
+            UIAlertView(title: "New skin unlock", message: "Go to skin manager", delegate: self, cancelButtonTitle: "Ок").show()
         }
         
         if(MedalOnLvl[17] == 0 && MedalOnLvl[23] == 0 && MedalOnLvl[25] == 0 && skinBoolArr[5] == false){
             skinBoolArr[5] = true
             skinArrSync()
-            UIAlertView(title: "New skin", message: "New skin unlock", delegate: self, cancelButtonTitle: "Ок").show()
+            UIAlertView(title: "New skin unlock", message: "Go to skin manager", delegate: self, cancelButtonTitle: "Ок").show()
         }
         
         //17
@@ -1219,7 +1219,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                 if skinCondArr[4] == 250 {
                     skinBoolArr[4] = true
                     skinArrSync()
-                    UIAlertView(title: "New skin", message: "New skin unlock", delegate: self, cancelButtonTitle: "Ок").show()
+                    UIAlertView(title: "New skin unlock", message: "Go to skin manager", delegate: self, cancelButtonTitle: "Ок").show()
                 }
             }
             
@@ -1243,14 +1243,14 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                 if skinCondArr[2] == 500 {
                     skinBoolArr[2] = true
                     skinArrSync()
-                    UIAlertView(title: "New skin", message: "New skin unlock", delegate: self, cancelButtonTitle: "Ок").show()
+                    UIAlertView(title: "New skin unlock", message: "Go to skin manager", delegate: self, cancelButtonTitle: "Ок").show()
                 }
                 
                 skinCondArr[3] = skinCondArr[3] + 1
                 if skinCondArr[3] == 1500 {
                     skinBoolArr[3] = true
                     skinArrSync()
-                    UIAlertView(title: "New skin", message: "New skin unlock", delegate: self, cancelButtonTitle: "Ок").show()
+                    UIAlertView(title: "New skin unlock", message: "Go to skin manager", delegate: self, cancelButtonTitle: "Ок").show()
                 }
                 
                 print(skinCondArr)
