@@ -639,15 +639,15 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
 //        prevButton.colorBlendFactor = CGFloat(1.0)
 //        self.addChild(prevButton)
 //        
-//        var myLabel:SKLabelNode!
-//        myLabel = SKLabelNode(fontNamed: "Arial")
-//        myLabel.name = "label"
-//        myLabel.text = "Win"
-//        myLabel.fontSize = 100
-//        myLabel.zPosition = 999
-//        myLabel.position = CGPoint(x: self.frame.midX, y: self.frame.midY + 190)
-//        self.addChild(myLabel)
-//        
+        var myLabel:SKLabelNode!
+        myLabel = SKLabelNode(fontNamed: "Arial")
+        myLabel.name = "label"
+        myLabel.text = "Win"
+        myLabel.fontSize = 100
+        myLabel.zPosition = 999
+        myLabel.position = CGPoint(x: self.frame.midX, y: self.frame.midY + 190)
+        self.addChild(myLabel)
+
         initMedal()
 
     }
