@@ -77,36 +77,46 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                         ground.size.width = 342
                         ground.size.height = 342
                         let text = self.childNode(withName: "Text") as? SKLabelNode
+                        let disc = self.childNode(withName: "Disc") as? SKLabelNode
                         switch topScene {
                         case 1:
                             ground.texture = SKTexture(imageNamed: "WoodenBox")
                             text?.text = "Wooden box"
+                            disc?.text = "Tap to destroy"
                         case 5:
                             ground.texture = SKTexture(imageNamed: "WoodenPlank")
                             ground.size.width = 720
                             ground.size.height = 50
                             text?.text = "Wooden plank"
+                            disc?.text = "Tap to destroy"
                         case 9:
                             ground.texture = SKTexture(imageNamed: "SlimeBlock")
                             text?.text = "Slime"
+                            disc?.text = "Tap to destroy.\n" + "Bounce block."
                         case 17:
                             ground.texture = SKTexture(imageNamed: "StoneBlock")
                             text?.text = "Stone block"
+                            disc?.text = "Tap twice to destroy"
                         case 21:
                             ground.texture = SKTexture(imageNamed: "GlassBlock")
                             text?.text = "Glass"
+                            disc?.text = "Tap to destroy.\n" + "No effect gravity."
                         case 25:
                             ground.texture = SKTexture(imageNamed: "SpearBlock")
                             text?.text = "Spiked block"
+                            disc?.text = "Kill character"
                         case 33:
                             ground.texture = SKTexture(imageNamed: "ActivaBlock_Off")
                             text?.text = "Non-gravity block"
+                            disc?.text = "Tap to stop affect gravity.\n" + "Tap again to start gravity."
                         case 37:
                             ground.texture = SKTexture(imageNamed: "RotationBlock")
                             text?.text = "Rotating block"
+                            disc?.text = "Tap to change degree rotation"
                         case 41:
                             ground.texture = SKTexture(imageNamed: "Magnit_Off")
                             text?.text = "Magnet"
+                            disc?.text = "Tap to start magnetize"
                         default:
                             print("SHIT NEW BLOCK CONDITION")
                             print("SHIT NEW BLOCK CONDITION")
@@ -479,32 +489,32 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         
         
         //Для отладки
-//        let prevButton = SKSpriteNode(imageNamed: "prevButton.png")
-//        prevButton.position = CGPoint(x: self.frame.midX - 200, y: self.frame.midY-(self.frame.midY/2))
-//        prevButton.name = "prev"
-//        prevButton.xScale = 0.5
-//        prevButton.yScale = 0.5
-//        prevButton.zPosition = 999
-//        prevButton.color = colorPicker(level: thisScene)
-//        prevButton.colorBlendFactor = CGFloat(1.0)
-//        self.addChild(prevButton)
-//        let nextButton = SKSpriteNode(imageNamed: "nextButton.png")
-//        nextButton.position = CGPoint(x: self.frame.midX + 200, y: self.frame.midY-(self.frame.midY/2))
-//        nextButton.name = "next"
-//        nextButton.xScale = 0.5
-//        nextButton.yScale = 0.5
-//        nextButton.zPosition = 999
-//        nextButton.color = colorPicker(level: thisScene)
-//        nextButton.colorBlendFactor = CGFloat(1.0)
-//        self.addChild(nextButton)
-//        var myLabel1:SKLabelNode!
-//        myLabel1 = SKLabelNode(fontNamed: "Arial")
-//        myLabel1.name = "label"
-//        myLabel1.text = "Developer buttons"
-//        myLabel1.fontSize = 50
-//        myLabel1.zPosition = 1000
-//        myLabel1.position = CGPoint(x: self.frame.midX, y: self.frame.midY-(self.frame.midY/2) + 140)
-//        self.addChild(myLabel1)
+        let prevButton = SKSpriteNode(imageNamed: "prevButton.png")
+        prevButton.position = CGPoint(x: self.frame.midX - 200, y: self.frame.midY-(self.frame.midY/2))
+        prevButton.name = "prev"
+        prevButton.xScale = 0.5
+        prevButton.yScale = 0.5
+        prevButton.zPosition = 999
+        prevButton.color = colorPicker(level: thisScene)
+        prevButton.colorBlendFactor = CGFloat(1.0)
+        self.addChild(prevButton)
+        let nextButton = SKSpriteNode(imageNamed: "nextButton.png")
+        nextButton.position = CGPoint(x: self.frame.midX + 200, y: self.frame.midY-(self.frame.midY/2))
+        nextButton.name = "next"
+        nextButton.xScale = 0.5
+        nextButton.yScale = 0.5
+        nextButton.zPosition = 999
+        nextButton.color = colorPicker(level: thisScene)
+        nextButton.colorBlendFactor = CGFloat(1.0)
+        self.addChild(nextButton)
+        var myLabel1:SKLabelNode!
+        myLabel1 = SKLabelNode(fontNamed: "Arial")
+        myLabel1.name = "label"
+        myLabel1.text = "Developer buttons"
+        myLabel1.fontSize = 50
+        myLabel1.zPosition = 1000
+        myLabel1.position = CGPoint(x: self.frame.midX, y: self.frame.midY-(self.frame.midY/2) + 140)
+        self.addChild(myLabel1)
         
         
         
