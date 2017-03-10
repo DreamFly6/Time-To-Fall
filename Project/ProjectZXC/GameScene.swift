@@ -488,34 +488,34 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         self.addChild(menuButton)
         
         
-        //Для отладки
-        let prevButton = SKSpriteNode(imageNamed: "prevButton.png")
-        prevButton.position = CGPoint(x: self.frame.midX - 200, y: self.frame.midY-(self.frame.midY/2))
-        prevButton.name = "prev"
-        prevButton.xScale = 0.5
-        prevButton.yScale = 0.5
-        prevButton.zPosition = 999
-        prevButton.color = colorPicker(level: thisScene)
-        prevButton.colorBlendFactor = CGFloat(1.0)
-        self.addChild(prevButton)
-        let nextButton = SKSpriteNode(imageNamed: "nextButton.png")
-        nextButton.position = CGPoint(x: self.frame.midX + 200, y: self.frame.midY-(self.frame.midY/2))
-        nextButton.name = "next"
-        nextButton.xScale = 0.5
-        nextButton.yScale = 0.5
-        nextButton.zPosition = 999
-        nextButton.color = colorPicker(level: thisScene)
-        nextButton.colorBlendFactor = CGFloat(1.0)
-        self.addChild(nextButton)
-        var myLabel1:SKLabelNode!
-        myLabel1 = SKLabelNode(fontNamed: "Arial")
-        myLabel1.name = "label"
-        myLabel1.text = "Developer buttons"
-        myLabel1.fontSize = 50
-        myLabel1.zPosition = 1000
-        myLabel1.position = CGPoint(x: self.frame.midX, y: self.frame.midY-(self.frame.midY/2) + 140)
-        self.addChild(myLabel1)
-        
+//        //Для отладки
+//        let prevButton = SKSpriteNode(imageNamed: "prevButton.png")
+//        prevButton.position = CGPoint(x: self.frame.midX - 200, y: self.frame.midY-(self.frame.midY/2))
+//        prevButton.name = "prev"
+//        prevButton.xScale = 0.5
+//        prevButton.yScale = 0.5
+//        prevButton.zPosition = 999
+//        prevButton.color = colorPicker(level: thisScene)
+//        prevButton.colorBlendFactor = CGFloat(1.0)
+//        self.addChild(prevButton)
+//        let nextButton = SKSpriteNode(imageNamed: "nextButton.png")
+//        nextButton.position = CGPoint(x: self.frame.midX + 200, y: self.frame.midY-(self.frame.midY/2))
+//        nextButton.name = "next"
+//        nextButton.xScale = 0.5
+//        nextButton.yScale = 0.5
+//        nextButton.zPosition = 999
+//        nextButton.color = colorPicker(level: thisScene)
+//        nextButton.colorBlendFactor = CGFloat(1.0)
+//        self.addChild(nextButton)
+//        var myLabel1:SKLabelNode!
+//        myLabel1 = SKLabelNode(fontNamed: "Arial")
+//        myLabel1.name = "label"
+//        myLabel1.text = "Developer buttons"
+//        myLabel1.fontSize = 50
+//        myLabel1.zPosition = 1000
+//        myLabel1.position = CGPoint(x: self.frame.midX, y: self.frame.midY-(self.frame.midY/2) + 140)
+//        self.addChild(myLabel1)
+//        
         
         
         var myLabel:SKLabelNode!
@@ -1402,7 +1402,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
 
 
 
-                if AdCounter == 3 {
+                if AdCounter == 4 {
 
                     //UIAlertView(title: "Реклама", message: "Сейчас должен быть баннер Admob", delegate: self, cancelButtonTitle: "Ок").show()
                     ads()
