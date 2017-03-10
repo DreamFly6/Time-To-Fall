@@ -27,10 +27,17 @@ class GameViewController: UIViewController {
         let skView = SKView(frame: self.view.frame)
         sceneView?.viewController = self
         self.view.addSubview(skView)
-        
-//        skView.showsFPS = true
-//        skView.showsNodeCount = true
-//        skView.ignoresSiblingOrder = true
+        if showFPS == true {
+            skView.showsFPS = true
+            skView.showsNodeCount = true
+            skView.ignoresSiblingOrder = true
+        }
+        else {
+            skView.showsFPS = false
+            skView.showsNodeCount = false
+            skView.ignoresSiblingOrder = false
+        }
+
         
 //        skView.showsPhysics = true
 //        skView.showsDrawCount = true

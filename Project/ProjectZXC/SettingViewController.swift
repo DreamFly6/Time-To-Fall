@@ -11,16 +11,33 @@ import UIKit
 import SpriteKit
 
 public var statusBarBool = false
+public var showFPS = false
+
 
 class SettingViewController: UIViewController {
     
     //@IBOutlet weak var Stat: UITextView!
     
-
+    @IBOutlet weak var switchShowFPS: UISwitch!
+    
     override func viewDidLoad() {
-
+        if showFPS == true {
+            switchShowFPS.setOn(true, animated: true)
+        }
+        else {
+            switchShowFPS.setOn(false, animated: false)
+        }
     }
     
+    @IBAction func test(_ sender: UISwitch) {
+        if(switchShowFPS.isOn) {
+            showFPS = true
+        }
+        else {
+            showFPS = false
+        }
+
+    }
 
     //Сохранение топовой сцены
     func setTopScene(topStage: Int) {
@@ -37,28 +54,6 @@ class SettingViewController: UIViewController {
         print("=======================")
         print("=======================")
         
-        
     }
 
-    @IBOutlet weak var mySwitch: UISwitch!
-    
-    @IBAction func `switch`(_ sender: AnyObject) {
-        
-        if mySwitch.isOn {
-            statusBarBool = true
-            UserDefaults.standard.removeObject(forKey: "MedalOnLvl")
-            UserDefaults.standard.removeObject(forKey: "skinCondArr")
-            UserDefaults.standard.removeObject(forKey: "skinBoolArr")
-            
-            for index in 0...MedalOnLvl.count-1 {
-                MedalOnLvl[index] = 3
-            }
-            setTopScene(topStage: 1)
-            topScene = 1
-            print("Топ сцена 1 + stat удален")
-        }
-        else {
-            statusBarBool = false
-        }
-    }
 }

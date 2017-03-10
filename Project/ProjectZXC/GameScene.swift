@@ -1402,7 +1402,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
 
 
 
-                if AdCounter == 4 {
+                if AdCounter == 6 {
 
                     //UIAlertView(title: "Реклама", message: "Сейчас должен быть баннер Admob", delegate: self, cancelButtonTitle: "Ок").show()
                     ads()
