@@ -751,13 +751,13 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         if(MedalOnLvl[1] == 0 && MedalOnLvl[2] == 0 && MedalOnLvl[3] == 0 && MedalOnLvl[4] == 0 && skinBoolArr[1] == false){
             skinBoolArr[1] = true
             skinArrSync()
-            UIAlertView(title: "New skin unlock", message: "Go to skin manager", delegate: self, cancelButtonTitle: "Ок").show()
+            newSkinAlert()
         }
         
         if(MedalOnLvl[17] == 0 && MedalOnLvl[23] == 0 && MedalOnLvl[25] == 0 && skinBoolArr[5] == false){
             skinBoolArr[5] = true
             skinArrSync()
-            UIAlertView(title: "New skin unlock", message: "Go to skin manager", delegate: self, cancelButtonTitle: "Ок").show()
+            newSkinAlert()
         }
         
         //17
@@ -1172,15 +1172,6 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         
 
         
-        
-//        if (thisScene == 39){
-//            let thirdSeven = self.childNode(withName: "GravityBlock") as? SKSpriteNode
-//            let gravity = self.childNode(withName: "Gravity") as? SKFieldNode
-//            thirdSeven?.physicsBody?.mass = 3.0
-//            gravity?.isEnabled = true
-//            gravity?.strength = 30
-//        }
-        
         let node = self.childNode(withName: "MainCharacter")! as SKNode
         timer = 0
         let wait = SKAction.wait(forDuration: 1.0)
@@ -1206,6 +1197,20 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     }
     
     
+    func newSkinAlert() {
+        let alertView = UIAlertView(title: "New skin unlock", message: "Go to skin manager", delegate: self, cancelButtonTitle: "Ок")
+        
+        //IMAGE
+        //let imvImage = UIImageView(frame: CGRect(x: 0, y: 0, width: 10, height: 10))
+        //imvImage.contentMode = UIViewContentMode.center
+        //imvImage.image = UIImage(named: "skinButton")
+        
+        alertView.setValue(imvImage, forKey: "accessoryView")
+        alertView.show()
+        
+        
+    }
+    
     
     
     //Вызывается когда просиходит нажатие
@@ -1224,12 +1229,17 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             let location = touch.first!.location(in: self)
             let node = self.atPoint(location)
             
+
+            
+            
+            
             if touchedNode.name == "SlimeBlock" {
                 skinCondArr[4] = skinCondArr[4] + 1
                 if skinCondArr[4] == 250 {
                     skinBoolArr[4] = true
                     skinArrSync()
-                    UIAlertView(title: "New skin unlock", message: "Go to skin manager", delegate: self, cancelButtonTitle: "Ок").show()
+                    newSkinAlert()
+                    
                 }
             }
             
@@ -1253,14 +1263,14 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                 if skinCondArr[2] == 500 {
                     skinBoolArr[2] = true
                     skinArrSync()
-                    UIAlertView(title: "New skin unlock", message: "Go to skin manager", delegate: self, cancelButtonTitle: "Ок").show()
+                    newSkinAlert()
                 }
                 
                 skinCondArr[3] = skinCondArr[3] + 1
                 if skinCondArr[3] == 1500 {
                     skinBoolArr[3] = true
                     skinArrSync()
-                    UIAlertView(title: "New skin unlock", message: "Go to skin manager", delegate: self, cancelButtonTitle: "Ок").show()
+                    newSkinAlert()
                 }
                 
                 print(skinCondArr)
@@ -1428,8 +1438,10 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                 
                 
                 let articleParams = ["This lvl": thisScene, "Next lvl": thisScene+1];
-                
                 Flurry.logEvent("Next Level", withParameters: articleParams)
+                
+                let articleParams2 = ["Top lvl": topScene];
+                Flurry.logEvent("Top lvl", withParameters: articleParams2)
 
                 thisScene+=1
                 let currentScene = GameScene(fileNamed: "Level "+String(thisScene))
