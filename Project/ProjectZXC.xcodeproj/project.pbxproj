@@ -13,7 +13,6 @@
 		1F1E11DF1DB4DC430006631B /* Level 10.sks in Resources */ = {isa = PBXBuildFile; fileRef = 1F1E11DE1DB4DC430006631B /* Level 10.sks */; };
 		1F1E11E11DB4DCBB0006631B /* Level 11.sks in Resources */ = {isa = PBXBuildFile; fileRef = 1F1E11E01DB4DCBB0006631B /* Level 11.sks */; };
 		1F1E11E31DB4DDB40006631B /* Level 12.sks in Resources */ = {isa = PBXBuildFile; fileRef = 1F1E11E21DB4DDB40006631B /* Level 12.sks */; };
-		1F42FEB01E3E01DB00F97A6F /* FirebaseAnalytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F42FEAF1E3E01DB00F97A6F /* FirebaseAnalytics.framework */; };
 		1F4C246A1CD5E55600D3B0DB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F4C24691CD5E55600D3B0DB /* AppDelegate.swift */; };
 		1F4C246C1CD5E55600D3B0DB /* Level 1.sks in Resources */ = {isa = PBXBuildFile; fileRef = 1F4C246B1CD5E55600D3B0DB /* Level 1.sks */; };
 		1F4C24751CD5E55600D3B0DB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1F4C24741CD5E55600D3B0DB /* Assets.xcassets */; };
@@ -69,15 +68,15 @@
 		1FC00D561E3E46E800FCA979 /* Level 3.sks in Resources */ = {isa = PBXBuildFile; fileRef = 1FC00D551E3E46E800FCA979 /* Level 3.sks */; };
 		1FECF0FB1E3F7F760060B14F /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FECF0FA1E3F7F760060B14F /* Security.framework */; };
 		1FECF0FD1E3F7FB10060B14F /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FECF0FC1E3F7FB10060B14F /* SystemConfiguration.framework */; };
-		1FECF1031E3F801E0060B14F /* libFlurry_7.9.2.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FECF1021E3F801E0060B14F /* libFlurry_7.9.2.a */; };
 		1FF6BA481DB47E8A0058BEC2 /* Level 6.sks in Resources */ = {isa = PBXBuildFile; fileRef = 1FF6BA471DB47E8A0058BEC2 /* Level 6.sks */; };
+		1FF8783C1E76A07100F92403 /* FirebaseAnalytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FF8783B1E76A07100F92403 /* FirebaseAnalytics.framework */; };
+		1FF878401E76A0E400F92403 /* libFlurry_7.10.0.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FF8783F1E76A0E400F92403 /* libFlurry_7.10.0.a */; };
 		32155F781E5DD915000238C8 /* SkinViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32155F771E5DD915000238C8 /* SkinViewController.swift */; };
 		3219926A1E4C962300B505E9 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F4C246D1CD5E55600D3B0DB /* GameScene.swift */; };
 		32290C781DD08282002CBBF5 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32290C771DD08282002CBBF5 /* SettingViewController.swift */; };
 		323E31BB1E548A060045F557 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 323E31B91E548A060045F557 /* OnboardingView.swift */; };
 		323E31BC1E548A060045F557 /* OnboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 323E31BA1E548A060045F557 /* OnboardViewController.swift */; };
 		3262F13C1D49B7E90056D72B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3262F13B1D49B7E90056D72B /* ViewController.swift */; };
-		326793A91E548584005EBCC6 /* paper_onboarding.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 326793A81E548584005EBCC6 /* paper_onboarding.framework */; };
 		328125E71DE6912200E81EB4 /* SwipeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 328125E61DE6912200E81EB4 /* SwipeViewController.swift */; };
 		328125E91DE6913100E81EB4 /* SwipePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 328125E81DE6913100E81EB4 /* SwipePageViewController.swift */; };
 		329649221DCA21100078720A /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 329649211DCA21100078720A /* GameViewController.swift */; };
@@ -118,7 +117,6 @@
 		1F1E11DE1DB4DC430006631B /* Level 10.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = "Level 10.sks"; sourceTree = "<group>"; };
 		1F1E11E01DB4DCBB0006631B /* Level 11.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = "Level 11.sks"; sourceTree = "<group>"; };
 		1F1E11E21DB4DDB40006631B /* Level 12.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = "Level 12.sks"; sourceTree = "<group>"; };
-		1F42FEAF1E3E01DB00F97A6F /* FirebaseAnalytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FirebaseAnalytics.framework; path = Pods/FirebaseAnalytics/Frameworks/frameworks/FirebaseAnalytics.framework; sourceTree = "<group>"; };
 		1F4C24661CD5E55600D3B0DB /* ProjectZXC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ProjectZXC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1F4C24691CD5E55600D3B0DB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1F4C246B1CD5E55600D3B0DB /* Level 1.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = "Level 1.sks"; sourceTree = "<group>"; };
@@ -185,16 +183,15 @@
 		1FECF0FA1E3F7F760060B14F /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		1FECF0FC1E3F7FB10060B14F /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		1FECF1011E3F801E0060B14F /* Flurry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Flurry.h; path = "../Pods/Flurry-iOS-SDK/Flurry/Flurry.h"; sourceTree = "<group>"; };
-		1FECF1021E3F801E0060B14F /* libFlurry_7.9.2.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libFlurry_7.9.2.a; path = "../Pods/Flurry-iOS-SDK/Flurry/libFlurry_7.9.2.a"; sourceTree = "<group>"; };
 		1FF6BA471DB47E8A0058BEC2 /* Level 6.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = "Level 6.sks"; sourceTree = "<group>"; };
+		1FF8783B1E76A07100F92403 /* FirebaseAnalytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FirebaseAnalytics.framework; path = Pods/FirebaseAnalytics/Frameworks/FirebaseAnalytics.framework; sourceTree = "<group>"; };
+		1FF8783F1E76A0E400F92403 /* libFlurry_7.10.0.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libFlurry_7.10.0.a; path = "Pods/Flurry-iOS-SDK/Flurry/libFlurry_7.10.0.a"; sourceTree = SOURCE_ROOT; };
 		2DE713DA61C2CC29BACF93E0 /* Pods-ProjectZXC.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ProjectZXC.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ProjectZXC/Pods-ProjectZXC.debug.xcconfig"; sourceTree = "<group>"; };
 		32155F771E5DD915000238C8 /* SkinViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SkinViewController.swift; sourceTree = "<group>"; };
 		32290C771DD08282002CBBF5 /* SettingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
-		3233B3901E5481BB0018FF47 /* Onboard.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Onboard.framework; path = "Pods/../build/Debug-iphoneos/Onboard/Onboard.framework"; sourceTree = "<group>"; };
 		323E31B91E548A060045F557 /* OnboardingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
 		323E31BA1E548A060045F557 /* OnboardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardViewController.swift; sourceTree = "<group>"; };
 		3262F13B1D49B7E90056D72B /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		326793A81E548584005EBCC6 /* paper_onboarding.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = paper_onboarding.framework; path = "../../../Library/Developer/Xcode/DerivedData/ProjectZXC-dlulpazfcbnlhpaqrtkndughziyy/Build/Products/Debug-iphonesimulator/paper-onboarding/paper_onboarding.framework"; sourceTree = "<group>"; };
 		328125E61DE6912200E81EB4 /* SwipeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwipeViewController.swift; sourceTree = "<group>"; };
 		328125E81DE6913100E81EB4 /* SwipePageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwipePageViewController.swift; sourceTree = "<group>"; };
 		329649211DCA21100078720A /* GameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
@@ -202,9 +199,7 @@
 		32D80D411DCDE7AC00BF6274 /* PageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageViewController.swift; sourceTree = "<group>"; };
 		32F5A42A1D3CA47E00631FE0 /* Level 4.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = "Level 4.sks"; sourceTree = "<group>"; };
 		32F5A42C1D3CA49100631FE0 /* Level 5.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = "Level 5.sks"; sourceTree = "<group>"; };
-		71F9DFDCF55E8B75872CDE22 /* Pods_ProjectZXCUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ProjectZXCUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8ED99CC74990D07033EF8C57 /* Pods_ProjectZXC.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ProjectZXC.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		E15E18FC93F999238F1E44F2 /* Pods_ProjectZXCTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ProjectZXCTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -212,18 +207,17 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				326793A91E548584005EBCC6 /* paper_onboarding.framework in Frameworks */,
 				1FECF0FD1E3F7FB10060B14F /* SystemConfiguration.framework in Frameworks */,
 				1F8F1CCA1E3FA664001FDF1E /* UIKit.framework in Frameworks */,
+				1FF878401E76A0E400F92403 /* libFlurry_7.10.0.a in Frameworks */,
 				1F8F1CC61E3FA647001FDF1E /* MediaPlayer.framework in Frameworks */,
 				1F8F1CC41E3FA633001FDF1E /* Foundation.framework in Frameworks */,
 				1F8F1CC21E3FA626001FDF1E /* CoreGraphics.framework in Frameworks */,
 				1F8F1CC01E3FA614001FDF1E /* AdSupport.framework in Frameworks */,
 				1F7ED10B1E3FA551007D232D /* libz.tbd in Frameworks */,
 				1FECF0FB1E3F7F760060B14F /* Security.framework in Frameworks */,
-				1F42FEB01E3E01DB00F97A6F /* FirebaseAnalytics.framework in Frameworks */,
-				1FECF1031E3F801E0060B14F /* libFlurry_7.9.2.a in Frameworks */,
 				B8EE48476D4814ACEA676511 /* Pods_ProjectZXC.framework in Frameworks */,
+				1FF8783C1E76A07100F92403 /* FirebaseAnalytics.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -302,8 +296,8 @@
 		1F4C245D1CD5E55600D3B0DB = {
 			isa = PBXGroup;
 			children = (
+				1FF8783B1E76A07100F92403 /* FirebaseAnalytics.framework */,
 				1FAF8EC11E3E1D1E008388AE /* GoogleService-Info.plist */,
-				1F42FEAF1E3E01DB00F97A6F /* FirebaseAnalytics.framework */,
 				1F4C24681CD5E55600D3B0DB /* ProjectZXC */,
 				1F4C24811CD5E55600D3B0DB /* ProjectZXCTests */,
 				1F4C248C1CD5E55600D3B0DB /* ProjectZXCUITests */,
@@ -455,8 +449,8 @@
 		1FDFC02C1CD7A3FA00A3F56D /* Scene */ = {
 			isa = PBXGroup;
 			children = (
+				1FF8783F1E76A0E400F92403 /* libFlurry_7.10.0.a */,
 				1FECF1011E3F801E0060B14F /* Flurry.h */,
-				1FECF1021E3F801E0060B14F /* libFlurry_7.9.2.a */,
 				1FA08D661D3E1A2D00A4BA06 /* Levels */,
 				1FAF3EBE1E3A1A22001CBA65 /* Level 0.sks */,
 				1F4C24691CD5E55600D3B0DB /* AppDelegate.swift */,
@@ -510,8 +504,6 @@
 		BEE51B090CC89C93202D8A87 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				326793A81E548584005EBCC6 /* paper_onboarding.framework */,
-				3233B3901E5481BB0018FF47 /* Onboard.framework */,
 				1F8F1CC91E3FA664001FDF1E /* UIKit.framework */,
 				1F8F1CC71E3FA652001FDF1E /* StoreKit.framework */,
 				1F8F1CC51E3FA647001FDF1E /* MediaPlayer.framework */,
@@ -522,8 +514,6 @@
 				1FECF0FC1E3F7FB10060B14F /* SystemConfiguration.framework */,
 				1FECF0FA1E3F7F760060B14F /* Security.framework */,
 				8ED99CC74990D07033EF8C57 /* Pods_ProjectZXC.framework */,
-				E15E18FC93F999238F1E44F2 /* Pods_ProjectZXCTests.framework */,
-				71F9DFDCF55E8B75872CDE22 /* Pods_ProjectZXCUITests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -941,6 +931,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Pods/FirebaseAnalytics/Frameworks/frameworks",
 					"$(PROJECT_DIR)/build/Debug-iphoneos/Onboard",
+					"$(PROJECT_DIR)/Pods/FirebaseAnalytics/Frameworks",
 				);
 				INFOPLIST_FILE = ProjectZXC/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
@@ -948,6 +939,7 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Pods/Flurry-iOS-SDK/Flurry",
+					"$(PROJECT_DIR)/Pods/FirebaseAnalytics/Frameworks/FirebaseAnalytics.framework",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.theklasterstorm.projectzxc;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -971,6 +963,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Pods/FirebaseAnalytics/Frameworks/frameworks",
 					"$(PROJECT_DIR)/build/Debug-iphoneos/Onboard",
+					"$(PROJECT_DIR)/Pods/FirebaseAnalytics/Frameworks",
 				);
 				INFOPLIST_FILE = ProjectZXC/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
@@ -978,6 +971,7 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Pods/Flurry-iOS-SDK/Flurry",
+					"$(PROJECT_DIR)/Pods/FirebaseAnalytics/Frameworks/FirebaseAnalytics.framework",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.theklasterstorm.projectzxc;
 				PRODUCT_NAME = "$(TARGET_NAME)";
