@@ -760,9 +760,6 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             newSkinAlert()
         }
         
-        //17
-        //23
-        //25
         
         
         UserDefaults.standard.set(MedalOnLvl, forKey: "MedalOnLvl")
@@ -1201,11 +1198,11 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         let alertView = UIAlertView(title: "New skin unlock", message: "Go to skin manager", delegate: self, cancelButtonTitle: "Ок")
         
         //IMAGE
-        //let imvImage = UIImageView(frame: CGRect(x: 0, y: 0, width: 10, height: 10))
-        //imvImage.contentMode = UIViewContentMode.center
-        //imvImage.image = UIImage(named: "skinButton")
+//        let imvImage = UIImageView(frame: CGRect(x: 0, y: 0, width: 10, height: 10))
+//        imvImage.contentMode = UIViewContentMode.center
+//        imvImage.image = UIImage(named: "skinButton")
         
-        alertView.setValue(imvImage, forKey: "accessoryView")
+//        alertView.setValue(imvImage, forKey: "accessoryView")
         alertView.show()
         
         
@@ -1412,7 +1409,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
 
 
 
-                if AdCounter == 6 {
+                if AdCounter == 5 {
 
                     //UIAlertView(title: "Реклама", message: "Сейчас должен быть баннер Admob", delegate: self, cancelButtonTitle: "Ок").show()
                     ads()
