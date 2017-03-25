@@ -1409,7 +1409,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
 
 
 
-                if AdCounter >= 6 {
+                if AdCounter >= 5 {
 
                     //UIAlertView(title: "Реклама", message: "Сейчас должен быть баннер Admob", delegate: self, cancelButtonTitle: "Ок").show()
                     ads()
@@ -1440,9 +1440,9 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                 let articleParams2 = ["Top lvl": topScene];
                 Flurry.logEvent("Top lvl", withParameters: articleParams2)
 
-                ads()
+                AdCounter += 2
                 
-                thisScene+=1
+                thisScene += 1
                 let currentScene = GameScene(fileNamed: "Level "+String(thisScene))
                 let transition = SKTransition.doorway(withDuration: 0.5)
                 currentScene!.scaleMode = SKSceneScaleMode.aspectFill
