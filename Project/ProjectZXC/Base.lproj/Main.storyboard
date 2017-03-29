@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="jC2-zd-pnK">
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1217" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="jC2-zd-pnK">
     <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -86,7 +86,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Ramiel 1.2.0.3" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lMQ-9b-tr3">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Gaghiel 1.3" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lMQ-9b-tr3">
                                 <rect key="frame" x="16" y="20" width="187" height="31"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -100,7 +100,7 @@
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="5981B404-B750-4717-834F-F86D48CCB66D" translatesAutoresizingMaskIntoConstraints="NO" id="6wn-MU-Uny">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="8780C845-997E-4B71-9DC3-4B3FF9581E25" translatesAutoresizingMaskIntoConstraints="NO" id="6wn-MU-Uny">
                                 <rect key="frame" x="143" y="253" width="137" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                             </imageView>
@@ -457,7 +457,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fSZ-S0-9nV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-386" y="-1623"/>
+            <point key="canvasLocation" x="-793" y="-1623"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="Wum-Nc-oB0">
@@ -740,7 +740,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3SU-tn-Zzk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1135" y="-2012"/>
+            <point key="canvasLocation" x="671" y="-1623"/>
         </scene>
         <!--Game View Controller-->
         <scene sceneID="LtY-X4-3S3">
@@ -1044,7 +1044,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="coi-yn-EUx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="364" y="-1672"/>
+            <point key="canvasLocation" x="-55" y="-1623"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="Z9e-Ur-4Ak">
@@ -1071,7 +1071,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WD5-tu-0dW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2035" y="-2131"/>
+            <point key="canvasLocation" x="2132" y="-1623"/>
         </scene>
         <!--Swipe View Controller-->
         <scene sceneID="dhU-58-KaT">
@@ -1176,7 +1176,7 @@
                                         <rect key="frame" x="0.0" y="44" width="414" height="106"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="TK4-dH-HdH" id="Zi2-z3-0Bn">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="105.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="105"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="MainCharacter0" translatesAutoresizingMaskIntoConstraints="NO" id="vdX-hK-yUV">
@@ -1200,7 +1200,7 @@
                                         <rect key="frame" x="0.0" y="150" width="414" height="106"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="yjg-c6-jMZ" id="m7B-wr-cf0">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="105.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="105"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="MainCharacter1" translatesAutoresizingMaskIntoConstraints="NO" id="dmm-LZ-0RF">
@@ -1222,7 +1222,7 @@
                                         <rect key="frame" x="0.0" y="256" width="414" height="106"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="wfX-qS-kRF" id="hNI-5T-MG0">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="105.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="105"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="MainCharacter2" translatesAutoresizingMaskIntoConstraints="NO" id="tTl-OW-QOM">
@@ -1244,7 +1244,7 @@
                                         <rect key="frame" x="0.0" y="362" width="414" height="106"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="b7C-9f-hRy" id="bzT-Ec-jlf">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="105.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="105"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="MainCharacter3" translatesAutoresizingMaskIntoConstraints="NO" id="SmJ-Fg-5o0">
@@ -1266,7 +1266,7 @@
                                         <rect key="frame" x="0.0" y="468" width="414" height="106"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Z5J-p5-gbc" id="ULL-bk-W3f">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="105.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="105"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="MainCharacter4" translatesAutoresizingMaskIntoConstraints="NO" id="FL6-GU-Ek1">
@@ -1288,7 +1288,7 @@
                                         <rect key="frame" x="0.0" y="574" width="414" height="106"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="04F-9S-dOZ" id="Moq-cY-KHy">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="105.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="105"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="MainCharacter5" translatesAutoresizingMaskIntoConstraints="NO" id="2nA-f7-Slr">
@@ -1397,7 +1397,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="MenuBg3" translatesAutoresizingMaskIntoConstraints="NO" id="CSB-fd-ZFM">
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="MenuBg4" translatesAutoresizingMaskIntoConstraints="NO" id="CSB-fd-ZFM">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </imageView>
@@ -1409,9 +1409,9 @@
                                 <fontDescription key="fontDescription" name="AvenirNextCondensed-Regular" family="Avenir Next Condensed" pointSize="30"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <size key="titleShadowOffset" width="1" height="1"/>
-                                <state key="normal" title="33" backgroundImage="MenuSelect3">
-                                    <color key="titleColor" red="0.35979769750000001" green="0.72940573450000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="49" backgroundImage="MenuSelect4">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
                                     <action selector="buttonLevel1:" destination="r1j-OP-NVD" eventType="touchUpInside" id="ERH-TN-WeN"/>
@@ -1425,9 +1425,9 @@
                                 <fontDescription key="fontDescription" name="AvenirNextCondensed-Regular" family="Avenir Next Condensed" pointSize="30"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <size key="titleShadowOffset" width="1" height="1"/>
-                                <state key="normal" title="34" backgroundImage="MenuSelect3">
-                                    <color key="titleColor" red="0.35979769750000001" green="0.72940573450000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="50" backgroundImage="MenuSelect4">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
                                     <action selector="buttonLevel1:" destination="r1j-OP-NVD" eventType="touchUpInside" id="z8c-VM-5Cy"/>
@@ -1441,9 +1441,9 @@
                                 <fontDescription key="fontDescription" name="AvenirNextCondensed-Regular" family="Avenir Next Condensed" pointSize="30"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <size key="titleShadowOffset" width="1" height="1"/>
-                                <state key="normal" title="35" backgroundImage="MenuSelect3">
-                                    <color key="titleColor" red="0.35979769750000001" green="0.72940573450000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="51" backgroundImage="MenuSelect4">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
                                     <action selector="buttonLevel1:" destination="r1j-OP-NVD" eventType="touchUpInside" id="JZ4-LO-7BF"/>
@@ -1457,9 +1457,9 @@
                                 <fontDescription key="fontDescription" name="AvenirNextCondensed-Regular" family="Avenir Next Condensed" pointSize="30"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <size key="titleShadowOffset" width="1" height="1"/>
-                                <state key="normal" title="36" backgroundImage="MenuSelect3">
-                                    <color key="titleColor" red="0.35979769750000001" green="0.72940573450000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="52" backgroundImage="MenuSelect4">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
                                     <action selector="buttonLevel1:" destination="r1j-OP-NVD" eventType="touchUpInside" id="czf-Jp-lRT"/>
@@ -1473,9 +1473,9 @@
                                 <fontDescription key="fontDescription" name="AvenirNextCondensed-Regular" family="Avenir Next Condensed" pointSize="30"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <size key="titleShadowOffset" width="1" height="1"/>
-                                <state key="normal" title="37" backgroundImage="MenuSelect3">
-                                    <color key="titleColor" red="0.35979769750000001" green="0.72940573450000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="53" backgroundImage="MenuSelect4">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
                                     <action selector="buttonLevel1:" destination="r1j-OP-NVD" eventType="touchUpInside" id="ZV0-67-mFI"/>
@@ -1489,9 +1489,9 @@
                                 <fontDescription key="fontDescription" name="AvenirNextCondensed-Regular" family="Avenir Next Condensed" pointSize="30"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <size key="titleShadowOffset" width="1" height="1"/>
-                                <state key="normal" title="39" backgroundImage="MenuSelect3">
-                                    <color key="titleColor" red="0.35979769750000001" green="0.72940573450000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="55" backgroundImage="MenuSelect4">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
                                     <action selector="buttonLevel1:" destination="r1j-OP-NVD" eventType="touchUpInside" id="W6G-EZ-m5A"/>
@@ -1505,9 +1505,9 @@
                                 <fontDescription key="fontDescription" name="AvenirNextCondensed-Regular" family="Avenir Next Condensed" pointSize="30"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <size key="titleShadowOffset" width="1" height="1"/>
-                                <state key="normal" title="40" backgroundImage="MenuSelect3">
-                                    <color key="titleColor" red="0.35979769750000001" green="0.72940573450000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="56" backgroundImage="MenuSelect4">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
                                     <action selector="buttonLevel1:" destination="r1j-OP-NVD" eventType="touchUpInside" id="OW3-44-31T"/>
@@ -1521,9 +1521,9 @@
                                 <fontDescription key="fontDescription" name="AvenirNextCondensed-Regular" family="Avenir Next Condensed" pointSize="30"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <size key="titleShadowOffset" width="1" height="1"/>
-                                <state key="normal" title="41" backgroundImage="MenuSelect3">
-                                    <color key="titleColor" red="0.35979769750000001" green="0.72940573450000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="57" backgroundImage="MenuSelect4">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
                                     <action selector="buttonLevel1:" destination="r1j-OP-NVD" eventType="touchUpInside" id="0CB-bF-Ewi"/>
@@ -1537,9 +1537,9 @@
                                 <fontDescription key="fontDescription" name="AvenirNextCondensed-Regular" family="Avenir Next Condensed" pointSize="30"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <size key="titleShadowOffset" width="1" height="1"/>
-                                <state key="normal" title="42" backgroundImage="MenuSelect3">
-                                    <color key="titleColor" red="0.35979769750000001" green="0.72940573450000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="58" backgroundImage="MenuSelect4">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
                                     <action selector="buttonLevel1:" destination="r1j-OP-NVD" eventType="touchUpInside" id="I6u-GG-8Ac"/>
@@ -1553,9 +1553,9 @@
                                 <fontDescription key="fontDescription" name="AvenirNextCondensed-Regular" family="Avenir Next Condensed" pointSize="30"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <size key="titleShadowOffset" width="1" height="1"/>
-                                <state key="normal" title="43" backgroundImage="MenuSelect3">
-                                    <color key="titleColor" red="0.35979769750000001" green="0.72940573450000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="59" backgroundImage="MenuSelect4">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
                                     <action selector="buttonLevel1:" destination="r1j-OP-NVD" eventType="touchUpInside" id="gST-vu-nPA"/>
@@ -1569,9 +1569,9 @@
                                 <fontDescription key="fontDescription" name="AvenirNextCondensed-Regular" family="Avenir Next Condensed" pointSize="30"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <size key="titleShadowOffset" width="1" height="1"/>
-                                <state key="normal" title="44" backgroundImage="MenuSelect3">
-                                    <color key="titleColor" red="0.35979769750000001" green="0.72940573450000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="60" backgroundImage="MenuSelect4">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
                                     <action selector="buttonLevel1:" destination="r1j-OP-NVD" eventType="touchUpInside" id="pK3-KN-ior"/>
@@ -1585,9 +1585,9 @@
                                 <fontDescription key="fontDescription" name="AvenirNextCondensed-Regular" family="Avenir Next Condensed" pointSize="30"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <size key="titleShadowOffset" width="1" height="1"/>
-                                <state key="normal" title="45" backgroundImage="MenuSelect3">
-                                    <color key="titleColor" red="0.35979769750000001" green="0.72940573450000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="61" backgroundImage="MenuSelect4">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
                                     <action selector="buttonLevel1:" destination="r1j-OP-NVD" eventType="touchUpInside" id="cI3-gl-QDY"/>
@@ -1601,9 +1601,9 @@
                                 <fontDescription key="fontDescription" name="AvenirNextCondensed-Regular" family="Avenir Next Condensed" pointSize="30"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <size key="titleShadowOffset" width="1" height="1"/>
-                                <state key="normal" title="46" backgroundImage="MenuSelect3">
-                                    <color key="titleColor" red="0.35979769750000001" green="0.72940573450000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="62" backgroundImage="MenuSelect4">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
                                     <action selector="buttonLevel1:" destination="r1j-OP-NVD" eventType="touchUpInside" id="afZ-QM-mMN"/>
@@ -1617,9 +1617,9 @@
                                 <fontDescription key="fontDescription" name="AvenirNextCondensed-Regular" family="Avenir Next Condensed" pointSize="30"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <size key="titleShadowOffset" width="1" height="1"/>
-                                <state key="normal" title="47" backgroundImage="MenuSelect3">
-                                    <color key="titleColor" red="0.35979769750000001" green="0.72940573450000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="63" backgroundImage="MenuSelect4">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
                                     <action selector="buttonLevel1:" destination="r1j-OP-NVD" eventType="touchUpInside" id="DTA-o0-k4w"/>
@@ -1633,12 +1633,28 @@
                                 <fontDescription key="fontDescription" name="AvenirNextCondensed-Regular" family="Avenir Next Condensed" pointSize="30"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <size key="titleShadowOffset" width="1" height="1"/>
-                                <state key="normal" title="48" backgroundImage="MenuSelect3">
-                                    <color key="titleColor" red="0.35979769750000001" green="0.72940573450000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="64" backgroundImage="MenuSelect4">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
                                     <action selector="buttonLevel1:" destination="r1j-OP-NVD" eventType="touchUpInside" id="bij-7f-qis"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hK8-1R-SAM">
+                                <rect key="frame" x="121" y="196" width="76" height="76"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <accessibility key="accessibilityConfiguration" label="menuSelecter"/>
+                                <fontDescription key="fontDescription" name="AvenirNextCondensed-Regular" family="Avenir Next Condensed" pointSize="30"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <size key="titleShadowOffset" width="1" height="1"/>
+                                <state key="normal" title="54" backgroundImage="MenuSelect4">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="buttonLevel1:" destination="r1j-OP-NVD" eventType="touchUpInside" id="Qfg-IE-oIt"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -1650,11 +1666,11 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bD1-ec-sgS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1794" y="-1445"/>
+            <point key="canvasLocation" x="1404" y="-1623"/>
         </scene>
     </scenes>
     <resources>
-        <image name="5981B404-B750-4717-834F-F86D48CCB66D" width="400" height="400">
+        <image name="8780C845-997E-4B71-9DC3-4B3FF9581E25" width="400" height="400">
             <mutableData key="keyedArchiveRepresentation">
 YnBsaXN0MDDUAQIDBAUGOjtYJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3ASAAGGoK0HCBEW
 GxwgISgrLjQ3VSRudWxs1AkKCwwNDg8QViRjbGFzc1xOU0ltYWdlRmxhZ3NWTlNSZXBzV05TQ29sb3KA
@@ -12361,9 +12377,11 @@ AAAABAEAAAAAAAAAPgAAAAAAAAAAAAAAAAAJyLk
         <image name="MenuBg1" width="1080" height="1920"/>
         <image name="MenuBg2" width="1080" height="1920"/>
         <image name="MenuBg3" width="1080" height="1920"/>
+        <image name="MenuBg4" width="1080" height="1920"/>
         <image name="MenuSelect1" width="600" height="600"/>
         <image name="MenuSelect2" width="600" height="600"/>
         <image name="MenuSelect3" width="600" height="600"/>
+        <image name="MenuSelect4" width="600" height="600"/>
         <image name="adsButton" width="500" height="500"/>
         <image name="longButton" width="700" height="310"/>
         <image name="menuButton" width="500" height="500"/>
@@ -12371,8 +12389,8 @@ AAAABAEAAAAAAAAAPgAAAAAAAAAAAAAAAAAJyLk
         <image name="skinButton" width="500" height="500"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="ouL-B0-H4P"/>
         <segue reference="Zfk-BR-emO"/>
-        <segue reference="2VE-Yg-a2t"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
 </document>

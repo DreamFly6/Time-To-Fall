@@ -844,7 +844,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     
     
     //Ициализация свойств игровых объектов
-    func initGameObject(){
+    func initGameObject(groundInit: Bool){
 
         for main in self.children {
             if main.name == "MainCharacter" {
@@ -884,32 +884,38 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             }
         }
 
-        //Цвет Ground
-        let groundColor = #colorLiteral(red:Float(randomBetweenNumbers(firstNum: 0.0, secondNum:1.0)), green: Float(randomBetweenNumbers(firstNum: 0.0, secondNum:1.0)), blue: Float(randomBetweenNumbers(firstNum: 0.0, secondNum:1.0)), alpha: 1)
         
-        groundColorPub = groundColor
+        if groundInit == true {
+        
+        
+            //Цвет Ground
+            let groundColor = #colorLiteral(red:Float(randomBetweenNumbers(firstNum: 0.0, secondNum:1.0)), green: Float(randomBetweenNumbers(firstNum: 0.0, secondNum:1.0)), blue: Float(randomBetweenNumbers(firstNum: 0.0, secondNum:1.0)), alpha: 1)
+        
+            groundColorPub = groundColor
 
-        //Инициализация Ground
-        for ground in self.children {
-            if ground.name == "Ground" {
-                if let ground = ground as? SKSpriteNode {
-                    ground.physicsBody = SKPhysicsBody(rectangleOf: CGSize(width: ground.size.width, height: ground.size.height))
-                    ground.physicsBody?.pinned = true
-                    ground.physicsBody?.allowsRotation = false
-                    ground.physicsBody?.friction = 0.2
-                    ground.physicsBody?.restitution = 0.2
-                    ground.physicsBody?.linearDamping = 0.1
-                    ground.physicsBody?.angularDamping = 0.1
-                    ground.physicsBody?.mass = 6.0
-                    ground.physicsBody?.categoryBitMask = 2;
-                    ground.physicsBody?.contactTestBitMask = 1;
-                    ground.physicsBody?.collisionBitMask =  1;
-                    ground.color = groundColor
-
+            //Инициализация Ground
+            for ground in self.children {
+                if ground.name == "Ground" {
+                    if let ground = ground as? SKSpriteNode {
+                        ground.physicsBody = SKPhysicsBody(rectangleOf: CGSize(width: ground.size.width, height: ground.size.height))
+                        ground.physicsBody?.pinned = true
+                        ground.physicsBody?.allowsRotation = false
+                        ground.physicsBody?.friction = 0.2
+                        ground.physicsBody?.restitution = 0.2
+                        ground.physicsBody?.linearDamping = 0.1
+                        ground.physicsBody?.angularDamping = 0.1
+                        ground.physicsBody?.mass = 6.0
+                        ground.physicsBody?.categoryBitMask = 2;
+                        ground.physicsBody?.contactTestBitMask = 1;
+                        ground.physicsBody?.collisionBitMask =  1;
+                        ground.color = groundColor
+                    
+                    }
                 }
             }
-        }
         
+        }
+            
         //  Инициализация SpearBlock
         for spearBlock in self.children {
             if spearBlock.name == "SpearBlock" {
@@ -1135,7 +1141,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         
         
         //Инициализация игровых объектов
-        initGameObject()
+        initGameObject(groundInit: true)
 
         //Инициализация статус бара
         statusBarInit()
@@ -1274,7 +1280,49 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
 
             }
             
+            if let spriteNode = touchedNode as? SKSpriteNode {
+                if spriteNode.name == "RandomBlock"{
+                    
+                    print("RANDOM")
+                    var x = randomBetweenNumbers(firstNum: 0.0,secondNum: 0.5)
+                    x = x * 10
+                    x = floor(x)
+                    print(x)
+                    switch x {
+                    case 0.0:
+                        spriteNode.name = "WoodenBox"
+                        spriteNode.texture = SKTexture(imageNamed: "WoodenBox")
+                        initGameObject(groundInit:
+                            false)
+                        break
+                    case 1.0:
+                        spriteNode.name = "SlimeBlock"
+                        spriteNode.texture = SKTexture(imageNamed: "SlimeBlock")
+                        initGameObject(groundInit: false)
+                        break
+                    case 2.0:
+                        spriteNode.name = "StoneBlock"
+                        initGameObject(groundInit: false)
+                        spriteNode.texture = SKTexture(imageNamed: "StoneBlock")
+                        break
+                    case 3.0:
+                        spriteNode.name = "GlassBlock"
+                        spriteNode.texture = SKTexture(imageNamed: "GlassBlock")
+                        initGameObject(groundInit:false)
+                        break
+                    case 4.0:
+                        spriteNode.name = "RotationBlock"
+                        spriteNode.texture = SKTexture(imageNamed: "RotationBlock")
+                        initGameObject(groundInit:false)
+                        break
+                    default: break
+                        
+                    }
 
+
+
+                }
+            }
 
     
 
