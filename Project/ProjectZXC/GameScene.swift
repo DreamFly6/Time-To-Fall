@@ -857,6 +857,9 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     //Ициализация свойств игровых объектов
     func initGameObject(groundInit: Bool){
 
+        
+        
+        if groundInit == true {
         for main in self.children {
             if main.name == "MainCharacter" {
                 if let main = main as? SKSpriteNode {
@@ -895,8 +898,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             }
         }
 
-        
-        if groundInit == true {
+
         
         
             //Цвет Ground
