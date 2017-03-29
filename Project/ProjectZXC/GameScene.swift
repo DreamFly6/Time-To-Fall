@@ -17,7 +17,7 @@ fileprivate func < <T : Comparable>(lhs: T?, rhs: T?) -> Bool {
 
 public var thisScene = 1
 public var topScene = 1
-public var topActualScene = 48
+public var topActualScene = 100
 
 public var buttonTitle : String = ""
 public var itsNewBlock = true
@@ -1195,6 +1195,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         }
         
         skinArrSync()
+
 
 
     }

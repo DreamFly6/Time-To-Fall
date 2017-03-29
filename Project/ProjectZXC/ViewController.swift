@@ -63,6 +63,7 @@ class ViewController: UIViewController, UIAlertViewDelegate {
         buttonTitle = sender.currentTitle!!
         thisScene = Int(buttonTitle)!
         print(String(buttonTitle)!)
+        print("GO")
         self.performSegue(withIdentifier: "GoToGameViewController", sender: self)
         
     }
