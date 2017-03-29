@@ -9,7 +9,8 @@ class SwipePageViewController: UIPageViewController {
         return [self.newColoredViewController("One"),
                 self.newColoredViewController("Two"),
                 self.newColoredViewController("Three"),
-                self.newColoredViewController("Four")]
+                self.newColoredViewController("Four"),
+                self.newColoredViewController("Five")]
     }()
     
     override func viewDidLoad() {
