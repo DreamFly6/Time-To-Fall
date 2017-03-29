@@ -21,7 +21,7 @@ public var topActualScene = 100
 
 public var buttonTitle : String = ""
 public var itsNewBlock = true
-public var n = [1,5,9,17,21,25,33,37,41]
+public var n = [1,5,9,17,21,25,33,37,41,49]
 public var timer = 0
 public var AdCounter = 0
 public var timeForMedal = Array(repeating: [10,13,16], count: 300)
@@ -117,6 +117,10 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                             ground.texture = SKTexture(imageNamed: "Magnit_Off")
                             text?.text = "Magnet"
                             disc?.text = "Tap to start magnetize"
+                        case 49:
+                            ground.texture = SKTexture(imageNamed: "RandomBlockGreen")
+                            text?.text = "Random Block"
+                            disc?.text = "Tap to ?"
                         default:
                             print("SHIT NEW BLOCK CONDITION")
                             print("SHIT NEW BLOCK CONDITION")
@@ -174,8 +178,14 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                     return color3
                 }
                 else {
-                    MainBGPub = 2
-                    return color0
+                    if (level > 48 && level <= 64) {
+                        MainBGPub = 4
+                        return color4
+                    }
+                    else {
+                        MainBGPub = 2
+                        return color0
+                    }
                 }
             }
         }
@@ -186,6 +196,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     var color1 = #colorLiteral(red: 1, green: 0.7871779203, blue: 0.5874175429, alpha: 1)
     var color2 = #colorLiteral(red: 0.6314342022, green: 0.7059366107, blue: 0.7861329317, alpha: 1)
     var color3 = #colorLiteral(red: 0.8959465623, green: 0.9631058574, blue: 1, alpha: 1)
+    var color4 = #colorLiteral(red: 0.3883877099, green: 0.7459719181, blue: 0.5895844102, alpha: 1)
     
     // ОТЛАДКА ДЛЯ РАЗРАБОТЧИКА
     public var myLabel1:SKLabelNode!
@@ -989,6 +1000,39 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             }
         }
         
+        
+        //  Инициализация RandomBlock
+        for woodenBox in self.children {
+            if woodenBox.name == "RandomBlock" {
+                if let woodenBox = woodenBox as? SKSpriteNode {
+                    woodenBox.physicsBody?.friction = 0.2
+                    woodenBox.physicsBody?.restitution = 0.3
+                    woodenBox.physicsBody?.linearDamping = 0.2
+                    woodenBox.physicsBody?.angularDamping = 0.2
+                    woodenBox.physicsBody?.mass = 1.0
+                    woodenBox.physicsBody?.pinned = false
+                    woodenBox.physicsBody?.fieldBitMask = 4
+                }
+            }
+        }
+        
+        
+        //  Инициализация RandomBlock2
+        for woodenBox in self.children {
+            if woodenBox.name == "RandomBlock2" {
+                if let woodenBox = woodenBox as? SKSpriteNode {
+                    woodenBox.physicsBody?.friction = 0.2
+                    woodenBox.physicsBody?.restitution = 0.3
+                    woodenBox.physicsBody?.linearDamping = 0.2
+                    woodenBox.physicsBody?.angularDamping = 0.2
+                    woodenBox.physicsBody?.mass = 1.0
+                    woodenBox.physicsBody?.pinned = true
+                    woodenBox.physicsBody?.allowsRotation = false
+                    woodenBox.physicsBody?.fieldBitMask = 4
+                }
+            }
+        }
+        
         //  Инициализация GlassBlock
         for glassBlock in self.children {
             if glassBlock.name == "GlassBlock" {
@@ -1029,6 +1073,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                     stoneBlock.physicsBody?.angularDamping = 0.2
                     stoneBlock.physicsBody?.mass = 10.0
                     stoneBlock.physicsBody?.fieldBitMask = 4
+                    stoneBlock.texture = SKTexture(imageNamed: "StoneBlock")
                 }
             }
         }
@@ -1095,28 +1140,31 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         }
         
         
-        //  Инициализация RotationBlock
-        for activeBlock in self.children {
-            if activeBlock.name == "RotationBlock" {
-                if let activeBlock = activeBlock as? SKSpriteNode {
+        if groundInit == true {
+        
+            //  Инициализация RotationBlock
+            for activeBlock in self.children {
+                if activeBlock.name == "RotationBlock" {
+                    if let activeBlock = activeBlock as? SKSpriteNode {
 
 
                     
-                    activeBlock.physicsBody?.friction = 0.3
-                    activeBlock.physicsBody?.restitution = 0.3
-                    activeBlock.physicsBody?.linearDamping = 0.4
-                    activeBlock.physicsBody?.angularDamping = 0.4
-                    activeBlock.physicsBody?.mass = 2.9
-                    activeBlock.physicsBody?.fieldBitMask = 4
-                    activeBlock.zRotation = 1.57079637050629
-                    activeBlock.physicsBody?.pinned = true
-                    activeBlock.physicsBody?.isDynamic = false
-
-                    //activeBlock.physicsBody?.allowsRotation = false
+                        activeBlock.physicsBody?.friction = 0.3
+                        activeBlock.physicsBody?.restitution = 0.3
+                        activeBlock.physicsBody?.linearDamping = 0.4
+                        activeBlock.physicsBody?.angularDamping = 0.4
+                        activeBlock.physicsBody?.mass = 2.9
+                        activeBlock.physicsBody?.fieldBitMask = 4
+                        activeBlock.zRotation = 1.57079637050629
+                        activeBlock.physicsBody?.pinned = true
+                        activeBlock.physicsBody?.isDynamic = false
+                    
+                        //activeBlock.physicsBody?.allowsRotation = false
+                    }
                 }
             }
-        }
         
+        }
 
         
         
@@ -1285,7 +1333,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                 if spriteNode.name == "RandomBlock"{
                     
                     print("RANDOM")
-                    var x = randomBetweenNumbers(firstNum: 0.0,secondNum: 0.5)
+                    var x = randomBetweenNumbers(firstNum: 0.0,secondNum: 0.3)
                     x = x * 10
                     x = floor(x)
                     print(x)
@@ -1302,29 +1350,48 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                         initGameObject(groundInit: false)
                         break
                     case 2.0:
-                        spriteNode.name = "StoneBlock"
-                        initGameObject(groundInit: false)
-                        spriteNode.texture = SKTexture(imageNamed: "StoneBlock")
-                        break
-                    case 3.0:
                         spriteNode.name = "GlassBlock"
                         spriteNode.texture = SKTexture(imageNamed: "GlassBlock")
-                        initGameObject(groundInit:false)
-                        break
-                    case 4.0:
-                        spriteNode.name = "RotationBlock"
-                        spriteNode.texture = SKTexture(imageNamed: "RotationBlock")
-                        initGameObject(groundInit:false)
+                        initGameObject(groundInit:
+                            false)
                         break
                     default: break
                         
                     }
-
-
-
                 }
             }
 
+            
+            if let spriteNode = touchedNode as? SKSpriteNode {
+                if spriteNode.name == "RandomBlock2"{
+                    
+                    print("RANDOM")
+                    var x = randomBetweenNumbers(firstNum: 0.0,secondNum: 0.3)
+                    x = x * 10
+                    x = floor(x)
+                    print(x)
+                    switch x {
+                    case 0.0:
+                        spriteNode.name = "GlassBlock"
+                        spriteNode.texture = SKTexture(imageNamed: "GlassBlock")
+                        initGameObject(groundInit:
+                            false)
+                        break
+                    case 1.0:
+                        spriteNode.name = "SpearBlock"
+                        spriteNode.texture = SKTexture(imageNamed: "SpearBlock")
+                        initGameObject(groundInit: false)
+                        break
+                    case 2.0:
+                        spriteNode.name = "RotationBlock"
+                        spriteNode.texture = SKTexture(imageNamed: "RotationBlock")
+                        initGameObject(groundInit: false)
+                        break
+                    default: break
+                        
+                    }
+                }
+            }
     
 
             //Механика Волл блока
@@ -1458,7 +1525,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
 
 
 
-                if AdCounter >= 5 {
+                if AdCounter >= 6 {
 
                     //UIAlertView(title: "Реклама", message: "Сейчас должен быть баннер Admob", delegate: self, cancelButtonTitle: "Ок").show()
                     ads()
@@ -1489,7 +1556,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                 let articleParams2 = ["Top lvl": topScene];
                 Flurry.logEvent("Top lvl", withParameters: articleParams2)
 
-                AdCounter += 2
+                AdCounter += 1
                 
                 thisScene += 1
                 let currentScene = GameScene(fileNamed: "Level "+String(thisScene))

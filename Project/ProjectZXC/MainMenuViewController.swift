@@ -46,7 +46,7 @@ class MainMenuViewController: UIViewController {
             topScene = 1
         }
         
-        topScene = 64
+        topScene = 56
         
         MainChar.image = UIImage(named: "MainCharacter" + String(indexCharacterTexture))
         
