@@ -41,7 +41,7 @@ class OnboardViewController: UIViewController, PaperOnboardingDataSource, PaperO
     
     //MARK: PaperOnboarding Datasource methods
     func onboardingItemsCount() -> Int {
-        return 9
+        return 10
     }
     
     func onboardingItemAtIndex(_ index: Int) -> OnboardingItemInfo {
@@ -58,8 +58,8 @@ class OnboardViewController: UIViewController, PaperOnboardingDataSource, PaperO
             
             ("ActivaBlock_On", "Gravity block","Tap to stop affect gravity.\n" + "Tap again to start gravity.", "", #colorLiteral(red: 0.2392156869, green: 0.6745098233, blue: 0.9686274529, alpha: 1), #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1), #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1), titleFont, descFont),
             ("RotationBlock", "Rotation block","Tap to change degree rotation.", "", #colorLiteral(red: 0.2048775256, green: 0.6115691662, blue: 0.8898333907, alpha: 1), #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1), #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1), titleFont, descFont),
-            ("Magnit_On", "Magnet","Tap to start magnetize", "", #colorLiteral(red: 0.1692203879, green: 0.5242295861, blue: 0.7758041024, alpha: 1), #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1), #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1), titleFont, descFont)
-            
+            ("Magnit_On", "Magnet","Tap to start magnetize", "", #colorLiteral(red: 0.1692203879, green: 0.5242295861, blue: 0.7758041024, alpha: 1), #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1), #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1), titleFont, descFont),
+            ("RandomBlockGreen", "Random block","Tap to spawn random block.", "", #colorLiteral(red: 0.3883877099, green: 0.7459719181, blue: 0.5895844102, alpha: 1), #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1), #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1), titleFont, descFont)
             ][index]
     }
     

@@ -120,7 +120,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                         case 49:
                             ground.texture = SKTexture(imageNamed: "RandomBlockGreen")
                             text?.text = "Random Block"
-                            disc?.text = "Tap to ?"
+                            disc?.text = "Tap to spawn random block"
                         default:
                             print("SHIT NEW BLOCK CONDITION")
                             print("SHIT NEW BLOCK CONDITION")
@@ -178,7 +178,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                     return color3
                 }
                 else {
-                    if (level > 48 && level <= 64) {
+                    if (level > 48 && level <= 65) {
                         MainBGPub = 4
                         return color4
                     }
