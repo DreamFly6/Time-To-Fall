@@ -7,33 +7,36 @@ PODS:
   - FirebaseAnalytics (3.7.0):
     - FirebaseCore (~> 3.5)
     - FirebaseInstanceID (~> 1.0)
-    - GoogleToolboxForMac/NSData+zlib (~> 2.1)
+    - "GoogleToolboxForMac/NSData+zlib (~> 2.1)"
   - FirebaseCore (3.5.1):
-    - GoogleToolboxForMac/NSData+zlib (~> 2.1)
+    - "GoogleToolboxForMac/NSData+zlib (~> 2.1)"
   - FirebaseInstanceID (1.0.9)
-  - Flurry-iOS-SDK/FlurrySDK (7.10.0)
   - Google-Mobile-Ads-SDK (7.18.0)
   - GoogleToolboxForMac/Defines (2.1.1)
-  - GoogleToolboxForMac/NSData+zlib (2.1.1):
+  - "GoogleToolboxForMac/NSData+zlib (2.1.1)":
     - GoogleToolboxForMac/Defines (= 2.1.1)
-  - paper-onboarding (2.0.1)
 
 DEPENDENCIES:
   - Firebase
-  - Flurry-iOS-SDK/FlurrySDK
   - Google-Mobile-Ads-SDK
-  - paper-onboarding (~> 2.0.1)
+
+SPEC REPOS:
+  https://github.com/CocoaPods/Specs.git:
+    - Firebase
+    - FirebaseAnalytics
+    - FirebaseCore
+    - FirebaseInstanceID
+    - Google-Mobile-Ads-SDK
+    - GoogleToolboxForMac
 
 SPEC CHECKSUMS:
   Firebase: 85a581fb04e44f63ae9f4fbc8d6dabf4a4c18653
   FirebaseAnalytics: 0d1b7d81d5021155be37702a94ba1ec16d45365d
   FirebaseCore: 225d40532489835a034b8f4e2c9c87fbf4f615a2
   FirebaseInstanceID: 2d0518b1378fe9d685ef40cbdd63d2fdc1125339
-  Flurry-iOS-SDK: e6975df9e57010d582bf9bed0f6312553cf24bc2
   Google-Mobile-Ads-SDK: 658065b4cb5a299bea254c4d24bf7786b6d3e75d
   GoogleToolboxForMac: 8e329f1b599f2512c6b10676d45736bcc2cbbeb0
-  paper-onboarding: a8e001214d9ce9decf78e160b3823f396dbd51ac
 
-PODFILE CHECKSUM: f79825f981d833dd17d42bf938be7bf786dbd694
+PODFILE CHECKSUM: 1c41c2bf60899d6459a02206285cf60d0cf19143
 
-COCOAPODS: 1.2.0
+COCOAPODS: 1.9.3

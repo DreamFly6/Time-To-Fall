@@ -29,18 +29,18 @@ class PageViewController: UIViewController, UIPageViewControllerDataSource {
         pageViewController.setViewControllers([viewControllers[0]], direction: .forward, animated: true, completion: nil)
         
         // Add page view Controller as a child of the main View controller
-        self.addChildViewController(pageViewController)
+        self.addChild(pageViewController)
         
         // make pageview same size as current view
         pageViewController.view.frame = self.view.frame
         
         // Add view, and complete child view controller transition
         self.view.addSubview(pageViewController.view)
-        pageViewController.didMove(toParentViewController: self)
+        pageViewController.didMove(toParent: self)
     }
     
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerAfter viewController: UIViewController) -> UIViewController? {
-        guard let index = viewControllers.index(of: viewController) else {
+        guard let index = viewControllers.firstIndex(of: viewController) else {
             return viewController //if the currently displayed on is not in the viewcontrollers list we have issues
         }
         guard (viewControllers.startIndex..<viewControllers.endIndex).contains(index + 1) else { //will the next one be in the array
@@ -49,7 +49,7 @@ class PageViewController: UIViewController, UIPageViewControllerDataSource {
         return viewControllers[index + 1]
     }
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController? {
-        guard let index = viewControllers.index(of: viewController) else {
+        guard let index = viewControllers.firstIndex(of: viewController) else {
             return viewController //if the currently displayed on is not in the viewcontrollers list we have issues
         }
         guard (viewControllers.startIndex..<viewControllers.endIndex).contains(index - 1) else { //will the previous one be in the array

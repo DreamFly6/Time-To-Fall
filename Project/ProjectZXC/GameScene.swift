@@ -5,14 +5,14 @@ import SpriteKit
 import GoogleMobileAds
 
 fileprivate func < <T : Comparable>(lhs: T?, rhs: T?) -> Bool {
-  switch (lhs, rhs) {
-  case let (l?, r?):
-    return l < r
-  case (nil, _?):
-    return true
-  default:
-    return false
-  }
+    switch (lhs, rhs) {
+    case let (l?, r?):
+        return l < r
+    case (nil, _?):
+        return true
+    default:
+        return false
+    }
 }
 
 public var thisScene = 1
@@ -35,7 +35,7 @@ public var onPause = false
 //  Просмотр видео за след уровень
 
 class GameScene: SKScene, SKPhysicsContactDelegate {
-
+    
     func skinArrSync() {
         UserDefaults.standard.set(MainBGPub,forKey: "MainBGPub")
         UserDefaults.standard.set(skinCondArr,forKey: "skinCondArr")
@@ -43,11 +43,11 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         UserDefaults.standard.set(MedalOnLvl, forKey: "MedalOnLvl")
         UserDefaults.standard.synchronize()
     }
-
+    
     func initNewBlockScreen() {
         var ok = false
         
-
+        
         
         for index in 0...(n.count - 1) {
             if (thisScene == topScene && topScene == n[index]){
@@ -56,7 +56,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             }
         }
         
-
+        
         
         if (ok == true && itsNewBlock == true && thisScene > 0){
             itsNewBlock = false
@@ -67,8 +67,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             currentScene?.viewController = self.viewController
             self.scene!.view?.presentScene(currentScene!, transition: transition)
         }
-
-
+        
+        
         
         if(thisScene == 0){
             for ground in self.children {
@@ -135,7 +135,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                     }
                 }
             }
-
+            
             
             backgroundColor = #colorLiteral(red:Float(randomBetweenNumbers(firstNum: 0.2, secondNum:0.6)), green: Float(randomBetweenNumbers(firstNum: 0.2, secondNum:0.6)), blue: Float(randomBetweenNumbers(firstNum: 0.2, secondNum:0.6)), alpha: 1)
             
@@ -146,21 +146,22 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             stopButtonInit()
         }
         
-
-
         
-
+        
+        
+        
     }
     
-     var viewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "GameViewController") as UIViewController
-
+    var viewController = UIStoryboard(name: "Main", bundle: nil)
+        .instantiateViewController(withIdentifier: "GameViewController") as UIViewController
+    
     //Рандомные FLOAT цифры
     func randomBetweenNumbers(firstNum: CGFloat, secondNum: CGFloat) -> CGFloat{
         return CGFloat(arc4random()) / CGFloat(UINT32_MAX) * abs(firstNum - secondNum) + min(firstNum, secondNum)
     }
     
     public var groundColorPub = UIColor.green
-
+    
     
     func colorPicker(level: Int) ->  UIColor {
         if (level > 0 && level <= 16) {
@@ -199,7 +200,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     var color4 = #colorLiteral(red: 0.3883877099, green: 0.7459719181, blue: 0.5895844102, alpha: 1)
     
     // ОТЛАДКА ДЛЯ РАЗРАБОТЧИКА
-    public var myLabel1:SKLabelNode!
+    public var medalLabel:SKLabelNode!
     public var myLabel2:SKLabelNode!
     public var myLabel3:SKLabelNode!
     public var myLabel4:SKLabelNode!
@@ -256,47 +257,43 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     
     //Инициализация текста для разработчиков
     func statusBarInit() {
-
-        myLabel1 = SKLabelNode(fontNamed: "Arial")
-        myLabel1.fontSize = 40
-        myLabel1.zPosition = 5
-        myLabel1.position = CGPoint(x: 70, y: 70)
-        myLabel1.name = "MedalLabel"
-        self.addChild(myLabel1)
-
-//        myLabel2 = SKLabelNode(fontNamed: "Arial")
-//        myLabel2.fontSize = 40
-//        myLabel2.zPosition = 999
-//        myLabel2.position = CGPoint(x: 300, y: 1760)
-//        self.addChild(myLabel2)
-//        
-//
-//        myLabel3 = SKLabelNode(fontNamed: "Arial")
-//        myLabel3.fontSize = 40
-//        myLabel3.zPosition = 999
-//        myLabel3.position = CGPoint(x: 300, y: 1720)
-//        self.addChild(myLabel3)
-//        
-//
-//        myLabel4 = SKLabelNode(fontNamed: "Arial")
-//        myLabel4.fontSize = 40
-//        myLabel4.zPosition = 999
-//        myLabel4.position = CGPoint(x: 300, y: 1680)
-//        self.addChild(myLabel4)
-//        
-//        
-//        myLabel5 = SKLabelNode(fontNamed: "Arial")
-//        myLabel5.fontSize = 30
-//        myLabel5.zPosition = 999
-//        myLabel5.position = CGPoint(x: 300, y: 1640)
-//        self.addChild(myLabel5)
+        
+        medalLabel = createLabel(text: "-", fontSize: 40, position: CGPoint(x: 70, y: 70))
+        addChild(medalLabel)
+        
+        //        myLabel2 = SKLabelNode(fontNamed: "Arial")
+        //        myLabel2.fontSize = 40
+        //        myLabel2.zPosition = 999
+        //        myLabel2.position = CGPoint(x: 300, y: 1760)
+        //        self.addChild(myLabel2)
+        //
+        //
+        //        myLabel3 = SKLabelNode(fontNamed: "Arial")
+        //        myLabel3.fontSize = 40
+        //        myLabel3.zPosition = 999
+        //        myLabel3.position = CGPoint(x: 300, y: 1720)
+        //        self.addChild(myLabel3)
+        //
+        //
+        //        myLabel4 = SKLabelNode(fontNamed: "Arial")
+        //        myLabel4.fontSize = 40
+        //        myLabel4.zPosition = 999
+        //        myLabel4.position = CGPoint(x: 300, y: 1680)
+        //        self.addChild(myLabel4)
+        //
+        //
+        //        myLabel5 = SKLabelNode(fontNamed: "Arial")
+        //        myLabel5.fontSize = 30
+        //        myLabel5.zPosition = 999
+        //        myLabel5.position = CGPoint(x: 300, y: 1640)
+        //        self.addChild(myLabel5)
         
     }
     
-//    //Изменение текста для разработчиков
+    //    //Изменение текста для разработчиков
     func statusBar() {
         if onPause == false {
-            myLabel1.text = String(timer)
+            medalLabel.text = String(timer)
             
             for menuBoard in self.children {
                 if menuBoard.name == "Medal" {
@@ -306,7 +303,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                     }
                 }
             }
-
+            
             if timer > timeForMedal[thisScene][0] {
                 if timer > timeForMedal[thisScene][1] {
                     if timer > timeForMedal[thisScene][2] {
@@ -365,28 +362,25 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                 //menuBoard.colorBlendFactor = CGFloat(0.7)
                 self.addChild(menuBoard)
             }
-
+            
         }
         else {
             timer = timer - 1
-            myLabel1.text = ""
+            medalLabel.text = ""
         }
-//       
-//        myLabel2.text = "Топовая сцена = "+String(topScene)
-//        myLabel3.text = "Текущая сцена = "+String(thisScene)
+        //
+        //        myLabel2.text = "Топовая сцена = "+String(topScene)
+        //        myLabel3.text = "Текущая сцена = "+String(thisScene)
         //myLabel4.text = "NowScene = "+String(nowScene)
         //myLabel5.text = "ГГ dy = "+String(describing: dy)
         
     }
-
+    
     //При вызове этой функции, показывается меню проигрыша.
     func showLMenu(){
         onPause = true
         let articleParams = ["Loose lvl": thisScene];
         
-        Flurry.logEvent("Loose", withParameters: articleParams)
-        Flurry.logEvent("Loose");
-        
         let blurEffect =  SKSpriteNode(imageNamed: "blur.png")
         blurEffect.name = "blurEffect"
         blurEffect.zPosition = 10
@@ -424,38 +418,32 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         menuButton.colorBlendFactor = CGFloat(1.0)
         self.addChild(menuButton)
         
-//        let button3 = SKSpriteNode(imageNamed: "Button3.png")
-//        button3.position = CGPoint(x: self.frame.midX+(self.frame.midX/2), y: self.frame.midY)
-//        button3.name = "button3"
-//        button3.xScale = 0.5
-//        button3.yScale = 0.5
-//        button3.zPosition = 999
-//        button3.color = colorPicker(level: thisScene)
-//        button3.colorBlendFactor = CGFloat(1.0)
-//        self.addChild(button3)
+        //        let button3 = SKSpriteNode(imageNamed: "Button3.png")
+        //        button3.position = CGPoint(x: self.frame.midX+(self.frame.midX/2), y: self.frame.midY)
+        //        button3.name = "button3"
+        //        button3.xScale = 0.5
+        //        button3.yScale = 0.5
+        //        button3.zPosition = 999
+        //        button3.color = colorPicker(level: thisScene)
+        //        button3.colorBlendFactor = CGFloat(1.0)
+        //        self.addChild(button3)
         
-        var myLabel:SKLabelNode!
-        myLabel = SKLabelNode(fontNamed: "Arial")
-        myLabel.name = "label"
-        myLabel.text = "Lose"
-        myLabel.fontSize = 100
-        myLabel.zPosition = 999
-        myLabel.position = CGPoint(x: self.frame.midX, y: self.frame.midY + 190)
-        self.addChild(myLabel)
-        
+        let losePos = CGPoint(x: frame.midX, y: frame.midY + 190)
+        let loseLabel = createLabel(text: "Lose", fontSize: 100, position: losePos)
+        addChild(loseLabel)
     }
- 
+    
     
     //При вызове этой функции, показывается меню перезапуска.
     func showRMenu(){
-
-
-//        let blurEffect = UIBlurEffect(style: UIBlurEffectStyle.dark)
-//        let blurEffectView = UIVisualEffectView(effect: blurEffect)
-//        blurEffectView.frame = (view?.bounds)!
-//        blurEffectView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
-//        view?.addSubview(blurEffectView)
-
+        
+        
+        //        let blurEffect = UIBlurEffect(style: UIBlurEffectStyle.dark)
+        //        let blurEffectView = UIVisualEffectView(effect: blurEffect)
+        //        blurEffectView.frame = (view?.bounds)!
+        //        blurEffectView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        //        view?.addSubview(blurEffectView)
+        
         
         
         let blurEffect =  SKSpriteNode(imageNamed: "blur.png")
@@ -475,7 +463,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         menuBoard.color = colorPicker(level: thisScene)
         menuBoard.colorBlendFactor = CGFloat(0.7)
         self.addChild(menuBoard)
-//        self.view?.insertSubview(menuBoard, at: 100)
+        //        self.view?.insertSubview(menuBoard, at: 100)
         
         let retryButton = SKSpriteNode(imageNamed: "retryButton.png")
         retryButton.position = CGPoint(x: self.frame.midX/2, y: self.frame.midY)
@@ -499,48 +487,50 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         self.addChild(menuButton)
         
         
-//        //Для отладки
-//        let prevButton = SKSpriteNode(imageNamed: "prevButton.png")
-//        prevButton.position = CGPoint(x: self.frame.midX - 200, y: self.frame.midY-(self.frame.midY/2))
-//        prevButton.name = "prev"
-//        prevButton.xScale = 0.5
-//        prevButton.yScale = 0.5
-//        prevButton.zPosition = 999
-//        prevButton.color = colorPicker(level: thisScene)
-//        prevButton.colorBlendFactor = CGFloat(1.0)
-//        self.addChild(prevButton)
-//        let nextButton = SKSpriteNode(imageNamed: "nextButton.png")
-//        nextButton.position = CGPoint(x: self.frame.midX + 200, y: self.frame.midY-(self.frame.midY/2))
-//        nextButton.name = "next"
-//        nextButton.xScale = 0.5
-//        nextButton.yScale = 0.5
-//        nextButton.zPosition = 999
-//        nextButton.color = colorPicker(level: thisScene)
-//        nextButton.colorBlendFactor = CGFloat(1.0)
-//        self.addChild(nextButton)
-//        var myLabel1:SKLabelNode!
-//        myLabel1 = SKLabelNode(fontNamed: "Arial")
-//        myLabel1.name = "label"
-//        myLabel1.text = "Developer buttons"
-//        myLabel1.fontSize = 50
-//        myLabel1.zPosition = 1000
-//        myLabel1.position = CGPoint(x: self.frame.midX, y: self.frame.midY-(self.frame.midY/2) + 140)
-//        self.addChild(myLabel1)
-//        
+        //        //Для отладки
+        //        let prevButton = SKSpriteNode(imageNamed: "prevButton.png")
+        //        prevButton.position = CGPoint(x: self.frame.midX - 200, y: self.frame.midY-(self.frame.midY/2))
+        //        prevButton.name = "prev"
+        //        prevButton.xScale = 0.5
+        //        prevButton.yScale = 0.5
+        //        prevButton.zPosition = 999
+        //        prevButton.color = colorPicker(level: thisScene)
+        //        prevButton.colorBlendFactor = CGFloat(1.0)
+        //        self.addChild(prevButton)
+        //        let nextButton = SKSpriteNode(imageNamed: "nextButton.png")
+        //        nextButton.position = CGPoint(x: self.frame.midX + 200, y: self.frame.midY-(self.frame.midY/2))
+        //        nextButton.name = "next"
+        //        nextButton.xScale = 0.5
+        //        nextButton.yScale = 0.5
+        //        nextButton.zPosition = 999
+        //        nextButton.color = colorPicker(level: thisScene)
+        //        nextButton.colorBlendFactor = CGFloat(1.0)
+        //        self.addChild(nextButton)
+        //        var myLabel1:SKLabelNode!
+        //        myLabel1 = SKLabelNode(fontNamed: "Arial")
+        //        myLabel1.name = "label"
+        //        myLabel1.text = "Developer buttons"
+        //        myLabel1.fontSize = 50
+        //        myLabel1.zPosition = 1000
+        //        myLabel1.position = CGPoint(x: self.frame.midX, y: self.frame.midY-(self.frame.midY/2) + 140)
+        //        self.addChild(myLabel1)
+        //
         
+        let retryPos = CGPoint(x: frame.midX, y: frame.midY + 190)
+        let retryLabel = createLabel(text: "Retry", fontSize: 100, position: retryPos)
+        addChild(retryLabel)
+    }
+    
+    func createLabel(text: String, fontSize: CGFloat, position: CGPoint) -> SKLabelNode {
+        let labelNode = SKLabelNode(text: "Retry")
+        labelNode.name = UUID().uuidString
+        labelNode.text = text
+        labelNode.fontName  = "AvenirNext-Bold"
+        labelNode.fontSize = fontSize
+        labelNode.zPosition = 999
+        labelNode.position = position
         
-        var myLabel:SKLabelNode!
-        myLabel = SKLabelNode(fontNamed: "Arial")
-        myLabel.name = "label"
-        myLabel.text = "Retry"
-        myLabel.fontSize = 100
-        myLabel.zPosition = 999
-        myLabel.position = CGPoint(x: self.frame.midX, y: self.frame.midY + 190)
-        self.addChild(myLabel)
-        
-        
-        
-
+        return labelNode
     }
     
     
@@ -556,20 +546,21 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         interstitial.load(request)
     }
     
-//    func alertView(_ alertView: UIAlertView, willDismissWithButtonIndex buttonIndex: Int) {
-//        print("Alert ADs")
-//        if interstitial.isReady {
-//            interstitial.present(fromRootViewController: self.viewController)
-//        } else {
-//            print("Ad wasn't ready :(")
-//        }
-//        //playAgainButton.isHidden = false
-//    }
+    //    func alertView(_ alertView: UIAlertView, willDismissWithButtonIndex buttonIndex: Int) {
+    //        print("Alert ADs")
+    //        if interstitial.isReady {
+    //            interstitial.present(fromRootViewController: self.viewController)
+    //        } else {
+    //            print("Ad wasn't ready :(")
+    //        }
+    //        //playAgainButton.isHidden = false
+    //    }
     
     func ads() {
         print("Alert ADs")
         if interstitial.isReady {
-            interstitial.present(fromRootViewController: self.viewController)
+            viewController.modalPresentationStyle = .fullScreen
+            interstitial.present(fromRootViewController: viewController)
         } else {
             print("Ad wasn't ready :(")
         }
@@ -599,13 +590,6 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                 }
             }
         }
-        
-
-        
-        let articleParams = ["Win lvl": thisScene];
-        
-        Flurry.logEvent("Win", withParameters: articleParams)
-        Flurry.logEvent("Win");
         
         let menuBoard = SKSpriteNode(imageNamed: "MenuBoard.png")
         menuBoard.position = CGPoint(x: self.frame.midX, y: self.frame.midY)
@@ -650,27 +634,22 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         
         
         //Для отладки
-//        let prevButton = SKSpriteNode(imageNamed: "prevButton.png")
-//        prevButton.position = CGPoint(x: self.frame.midX, y: self.frame.midY-(self.frame.midY/2))
-//        prevButton.name = "prev"
-//        prevButton.xScale = 0.5
-//        prevButton.yScale = 0.5
-//        prevButton.zPosition = 999
-//        prevButton.color = colorPicker(level: thisScene)
-//        prevButton.colorBlendFactor = CGFloat(1.0)
-//        self.addChild(prevButton)
-//        
-        var myLabel:SKLabelNode!
-        myLabel = SKLabelNode(fontNamed: "Arial")
-        myLabel.name = "label"
-        myLabel.text = "Win"
-        myLabel.fontSize = 100
-        myLabel.zPosition = 999
-        myLabel.position = CGPoint(x: self.frame.midX, y: self.frame.midY + 190)
-        self.addChild(myLabel)
-
+        //        let prevButton = SKSpriteNode(imageNamed: "prevButton.png")
+        //        prevButton.position = CGPoint(x: self.frame.midX, y: self.frame.midY-(self.frame.midY/2))
+        //        prevButton.name = "prev"
+        //        prevButton.xScale = 0.5
+        //        prevButton.yScale = 0.5
+        //        prevButton.zPosition = 999
+        //        prevButton.color = colorPicker(level: thisScene)
+        //        prevButton.colorBlendFactor = CGFloat(1.0)
+        //        self.addChild(prevButton)
+        
+        let winPos = CGPoint(x: frame.midX, y: frame.midY + 190)
+        let winLabel = createLabel(text: "Win", fontSize: 100, position: winPos)
+        addChild(winLabel)
+        
         initMedal()
-
+        
     }
     
     func initMedal() {
@@ -713,9 +692,9 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                     if MedalOnLvl[thisScene] > index {
                         MedalOnLvl[thisScene] = index
                     }
-
-
-
+                    
+                    
+                    
                     flag = true
                     break
                 case 1:
@@ -732,7 +711,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                     if MedalOnLvl[thisScene] > index {
                         MedalOnLvl[thisScene] = index
                     }
-
+                    
                     flag = true
                     break
                 case 2:
@@ -749,14 +728,14 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                     if MedalOnLvl[thisScene] > index {
                         MedalOnLvl[thisScene] = index
                     }
-
+                    
                     flag = true
                     break
                 default: break
-
+                    
                 }
-
-
+                
+                
             }
         }
         if(MedalOnLvl[1] == 0 && MedalOnLvl[2] == 0 && MedalOnLvl[3] == 0 && MedalOnLvl[4] == 0 && skinBoolArr[1] == false){
@@ -776,12 +755,12 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         UserDefaults.standard.set(MedalOnLvl, forKey: "MedalOnLvl")
         UserDefaults.standard.synchronize()
     }
-
+    
     
     
     //При вызове этой функции, удаляется меню в игре.
     func removeMenu(){
-
+        
         onPause = false
         print("Удаляю МЕНЮ")
         
@@ -848,64 +827,64 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                 }
             }
         }
-       //self.view!.isPaused = false
+        //self.view!.isPaused = false
     }
-
+    
     
     
     
     //Ициализация свойств игровых объектов
     func initGameObject(groundInit: Bool){
-
+        
         
         
         if groundInit == true {
-        for main in self.children {
-            if main.name == "MainCharacter" {
-                if let main = main as? SKSpriteNode {
-                    
-                    //Маска коллизии для ГГ
-                    let offsetX: CGFloat = main.frame.size.width * (main.anchorPoint.x - 0.05)
-                    let offsetY: CGFloat = main.frame.size.height * (main.anchorPoint.y - 0.05)
-                    let path = CGMutablePath()
-                    path.move(to: CGPoint(x: 48 - offsetX, y: 35 - offsetY))
-                    path.addLine(to: CGPoint(x: 110 - offsetX, y: 35 - offsetY))
-                    path.addLine(to: CGPoint(x: 123 - offsetX, y: 52 - offsetY))
-                    path.addLine(to: CGPoint(x: 127 - offsetX, y: 82 - offsetY))
-                    path.addLine(to: CGPoint(x: 123 - offsetX, y: 202 - offsetY))
-                    path.addLine(to: CGPoint(x: 104 - offsetX, y: 214 - offsetY))
-                    path.addLine(to: CGPoint(x: 68 - offsetX, y: 218 - offsetY))
-                    path.addLine(to: CGPoint(x: 36 - offsetX, y: 209 - offsetY))
-                    path.addLine(to: CGPoint(x: 25 - offsetX, y: 199 - offsetY))
-                    path.addLine(to: CGPoint(x: 27 - offsetX, y: 67 - offsetY))
-                    path.addLine(to: CGPoint(x: 33 - offsetX, y: 47 - offsetY))
-                    path.closeSubpath()
-                    
-                    
-                    main.physicsBody! = SKPhysicsBody(polygonFrom: path)
-                    main.physicsBody?.friction = 0.2
-                    main.physicsBody?.restitution = 0.3
-                    main.physicsBody?.restitution = 0.4
-                    main.physicsBody?.linearDamping = 0.2
-                    main.physicsBody?.angularDamping = 0.2
-                    main.physicsBody?.mass = 2.0
-                    main.physicsBody?.categoryBitMask = 1
-                    main.physicsBody?.contactTestBitMask = 2
-                    main.physicsBody?.collisionBitMask =  2
-                    main.physicsBody?.fieldBitMask = 4
-
+            for main in self.children {
+                if main.name == "MainCharacter" {
+                    if let main = main as? SKSpriteNode {
+                        
+                        //Маска коллизии для ГГ
+                        let offsetX: CGFloat = main.frame.size.width * (main.anchorPoint.x - 0.05)
+                        let offsetY: CGFloat = main.frame.size.height * (main.anchorPoint.y - 0.05)
+                        let path = CGMutablePath()
+                        path.move(to: CGPoint(x: 48 - offsetX, y: 35 - offsetY))
+                        path.addLine(to: CGPoint(x: 110 - offsetX, y: 35 - offsetY))
+                        path.addLine(to: CGPoint(x: 123 - offsetX, y: 52 - offsetY))
+                        path.addLine(to: CGPoint(x: 127 - offsetX, y: 82 - offsetY))
+                        path.addLine(to: CGPoint(x: 123 - offsetX, y: 202 - offsetY))
+                        path.addLine(to: CGPoint(x: 104 - offsetX, y: 214 - offsetY))
+                        path.addLine(to: CGPoint(x: 68 - offsetX, y: 218 - offsetY))
+                        path.addLine(to: CGPoint(x: 36 - offsetX, y: 209 - offsetY))
+                        path.addLine(to: CGPoint(x: 25 - offsetX, y: 199 - offsetY))
+                        path.addLine(to: CGPoint(x: 27 - offsetX, y: 67 - offsetY))
+                        path.addLine(to: CGPoint(x: 33 - offsetX, y: 47 - offsetY))
+                        path.closeSubpath()
+                        
+                        
+                        main.physicsBody! = SKPhysicsBody(polygonFrom: path)
+                        main.physicsBody?.friction = 0.2
+                        main.physicsBody?.restitution = 0.3
+                        main.physicsBody?.restitution = 0.4
+                        main.physicsBody?.linearDamping = 0.2
+                        main.physicsBody?.angularDamping = 0.2
+                        main.physicsBody?.mass = 2.0
+                        main.physicsBody?.categoryBitMask = 1
+                        main.physicsBody?.contactTestBitMask = 2
+                        main.physicsBody?.collisionBitMask =  2
+                        main.physicsBody?.fieldBitMask = 4
+                        
+                    }
                 }
             }
-        }
-
-
-        
-        
+            
+            
+            
+            
             //Цвет Ground
             let groundColor = #colorLiteral(red:Float(randomBetweenNumbers(firstNum: 0.0, secondNum:1.0)), green: Float(randomBetweenNumbers(firstNum: 0.0, secondNum:1.0)), blue: Float(randomBetweenNumbers(firstNum: 0.0, secondNum:1.0)), alpha: 1)
-        
+            
             groundColorPub = groundColor
-
+            
             //Инициализация Ground
             for ground in self.children {
                 if ground.name == "Ground" {
@@ -922,22 +901,21 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                         ground.physicsBody?.contactTestBitMask = 1;
                         ground.physicsBody?.collisionBitMask =  1;
                         ground.color = groundColor
-                    
+                        
                     }
                 }
             }
-        
-        }
             
+        }
+        
         //  Инициализация SpearBlock
         for spearBlock in self.children {
             if spearBlock.name == "SpearBlock" {
                 if let spearBlock = spearBlock as? SKSpriteNode {
                     
-//    ground.physicsBody = SKPhysicsBody(rectangleOf: CGSize(width: ground.size.width, height: ground.size.height))
+                    //    ground.physicsBody = SKPhysicsBody(rectangleOf: CGSize(width: ground.size.width, height: ground.size.height))
                     
-                    let spearBlockTexture = SKTexture(imageNamed: "SpearBlock.png")
-                    spearBlock.physicsBody  = SKPhysicsBody(texture: spearBlockTexture, size: CGSize(width: spearBlock.size.width, height: spearBlock.size.height))
+                    spearBlock.physicsBody = SKPhysicsBody(rectangleOf: spearBlock.size)
                     
                     spearBlock.physicsBody?.friction = 0.1
                     spearBlock.physicsBody?.restitution = 0.1
@@ -985,7 +963,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                 }
             }
         }
-
+        
         
         //  Инициализация WoodenBox
         for woodenBox in self.children {
@@ -1143,14 +1121,14 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         
         
         if groundInit == true {
-        
+            
             //  Инициализация RotationBlock
             for activeBlock in self.children {
                 if activeBlock.name == "RotationBlock" {
                     if let activeBlock = activeBlock as? SKSpriteNode {
-
-
-                    
+                        
+                        
+                        
                         activeBlock.physicsBody?.friction = 0.3
                         activeBlock.physicsBody?.restitution = 0.3
                         activeBlock.physicsBody?.linearDamping = 0.4
@@ -1160,20 +1138,20 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                         activeBlock.zRotation = 1.57079637050629
                         activeBlock.physicsBody?.pinned = true
                         activeBlock.physicsBody?.isDynamic = false
-                    
+                        
                         //activeBlock.physicsBody?.allowsRotation = false
                     }
                 }
             }
-        
+            
         }
-
         
         
         
         
         
-    
+        
+        
     }
     
     
@@ -1184,19 +1162,19 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         
         //for index in 0...300 {
         //    print(index)
-            timeForMedal[0] = [10,13,16]
+        timeForMedal[0] = [10,13,16]
         //}
-                    timeForMedal[1] = [10,13,16]
+        timeForMedal[1] = [10,13,16]
         
         
         
         //Инициализация игровых объектов
         initGameObject(groundInit: true)
-
+        
         //Инициализация статус бара
         statusBarInit()
-
-
+        
+        
         
         
         //Определение макс уровня, до которого дошел игрок
@@ -1208,7 +1186,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         //Если текущая сцена больше либо равна актуальной, то в меню
         if (topActualScene + 1) <= thisScene {
             thisScene = 1
-
+            
             let currentScene = GameScene(fileNamed: "Level 1")
             let transition = SKTransition.doorway(withDuration: 0.5)
             currentScene!.scaleMode = SKSceneScaleMode.aspectFill
@@ -1218,12 +1196,12 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         
         self.physicsWorld.contactDelegate = self
         
-
+        
         
         //Инициализация Экрана нового блока
         initNewBlockScreen()
         
-
+        
         
         let node = self.childNode(withName: "MainCharacter")! as SKNode
         timer = 0
@@ -1234,7 +1212,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             if thisScene > 0 {
                 self.statusBar()
             }
-
+            
         }
         node.run(SKAction.repeatForever(SKAction.sequence([wait, run])))
         
@@ -1245,9 +1223,9 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         }
         
         skinArrSync()
-
-
-
+        
+        
+        
     }
     
     
@@ -1255,11 +1233,11 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         let alertView = UIAlertView(title: "New skin unlock", message: "Go to skin manager", delegate: self, cancelButtonTitle: "Ок")
         
         //IMAGE
-//        let imvImage = UIImageView(frame: CGRect(x: 0, y: 0, width: 10, height: 10))
-//        imvImage.contentMode = UIViewContentMode.center
-//        imvImage.image = UIImage(named: "skinButton")
+        //        let imvImage = UIImageView(frame: CGRect(x: 0, y: 0, width: 10, height: 10))
+        //        imvImage.contentMode = UIViewContentMode.center
+        //        imvImage.image = UIImage(named: "skinButton")
         
-//        alertView.setValue(imvImage, forKey: "accessoryView")
+        //        alertView.setValue(imvImage, forKey: "accessoryView")
         alertView.show()
         
         
@@ -1283,7 +1261,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             let location = touch.first!.location(in: self)
             let node = self.atPoint(location)
             
-
+            
             
             
             
@@ -1301,17 +1279,17 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             
             if  (
                 touchedNode.name == "WoodenBox"
-                || touchedNode.name == "WoodenPlank"
-                || touchedNode.name == "SlimeBlock"
-                || touchedNode.name == "GlassBlock"
+                    || touchedNode.name == "WoodenPlank"
+                    || touchedNode.name == "SlimeBlock"
+                    || touchedNode.name == "GlassBlock"
                 )
             {
                 
-
+                
                 //Удаление
                 touchedNode.removeFromParent()
-
-
+                
+                
                 
                 skinCondArr[2] = skinCondArr[2] + 1
                 if skinCondArr[2] == 500 {
@@ -1328,7 +1306,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                 }
                 
                 print(skinCondArr)
-
+                
             }
             
             if let spriteNode = touchedNode as? SKSpriteNode {
@@ -1362,7 +1340,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                     }
                 }
             }
-
+            
             
             if let spriteNode = touchedNode as? SKSpriteNode {
                 if spriteNode.name == "RandomBlock2"{
@@ -1394,8 +1372,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                     }
                 }
             }
-    
-
+            
+            
             //Механика Волл блока
             if let spriteNode = touchedNode as? SKSpriteNode {
                 if spriteNode.name == "WallBlock"{
@@ -1447,14 +1425,14 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                         
                         spriteNode.run(SKAction.repeatForever(animation))
                         spriteNode.texture = SKTexture(imageNamed: "GravityBlock_Off")
-
+                        
                         gravity?.isEnabled = false
                     }
                     else{
                         
                         spriteNode.physicsBody?.mass = 3.0
                         print("START")
-
+                        
                         let m1 = SKTexture(imageNamed: "GravityBlock_On1")
                         let m2 = SKTexture(imageNamed: "GravityBlock_On2")
                         let m3 = SKTexture(imageNamed: "GravityBlock_On3")
@@ -1464,7 +1442,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                         let animation = SKAction.animate(with: textures, timePerFrame: 0.1)
                         
                         spriteNode.run(SKAction.repeatForever(animation))
-
+                        
                         gravity?.isEnabled = true
                     }
                 }
@@ -1491,7 +1469,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                 }
             }
             
-
+            
             //Механика Каменного блока
             if let spriteNode = touchedNode as? SKSpriteNode {
                 if spriteNode.name == "StoneBlock"{
@@ -1523,41 +1501,29 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                 
                 let articleParams = ["Retry lvl": thisScene];
                 
-                Flurry.logEvent("Retry level", withParameters: articleParams)
-
-
-
                 if AdCounter >= 6 {
-
+                    
                     //UIAlertView(title: "Реклама", message: "Сейчас должен быть баннер Admob", delegate: self, cancelButtonTitle: "Ок").show()
                     ads()
                     AdCounter = 0
                 }
                 else {
                     print("Время еще не пришло")
-
+                    
                     AdCounter += 1
                     let currentScene = GameScene(fileNamed: "Level "+String(thisScene))
                     let transition = SKTransition.doorsCloseHorizontal(withDuration: 0.5)
                     currentScene!.scaleMode = SKSceneScaleMode.aspectFill
                     currentScene?.viewController = self.viewController
                     self.scene!.view?.presentScene(currentScene!, transition: transition)
-
+                    
                 }
-
-
-
+                
+                
+                
             }
             
             if node.name == "next" {
-                
-                
-                let articleParams = ["This lvl": thisScene, "Next lvl": thisScene+1];
-                Flurry.logEvent("Next Level", withParameters: articleParams)
-                
-                let articleParams2 = ["Top lvl": topScene];
-                Flurry.logEvent("Top lvl", withParameters: articleParams2)
-
                 AdCounter += 1
                 
                 thisScene += 1
@@ -1659,23 +1625,23 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                 }
             }
             sleep(UInt32(0.5))
-
+            
             showMenu = true
             showLMenu()
         }
-
+        
     }
-
+    
     var showMenu = false
     public var dy = CGFloat(0.0)
     
-
+    
     override func didSimulatePhysics() {
         
         
-
         
-
+        
+        
         let mainChrctr = self.childNode(withName: "MainCharacter") as? SKSpriteNode
         if mainChrctr?.position.y < 0 {
             onGround = false
@@ -1690,7 +1656,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                 }
             }
         }
-
+        
         
         /* Меню в конце сцены */
         if showMenu == false {
@@ -1718,9 +1684,9 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                         }
                     }
                 }
-            
-            
-
+                
+                
+                
                 //Если свинья на земле и время которое она пролежала на земле равно 100, то победа
                 if onGroundTime > 200 && showMenu == false {
                     showMenu = true //если показывали меню, то true
@@ -1728,18 +1694,18 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                     if (getTopScene() < (thisScene+1)){
                         setTopScene(topStage: (thisScene+1))
                     }
-
+                    
                     showWMenu() //Показать меню выигрыша
                     mainChrctr?.physicsBody?.pinned = true
                     mainChrctr?.physicsBody?.allowsRotation = false
                 }
-            
+                
             }
         }
         
         
         
-
+        
         
         if showMenu == false {
             
@@ -1747,8 +1713,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             //dy = (mainChrctr?.physicsBody?.velocity.dy)!
             
             //velocity > 0 - перс отлетает от поверхности, velocity < 0 персонаж летит вниз. Состояние покоя около 5.5
-
-
+            
+            
             if ((mainChrctr?.physicsBody?.velocity.dy)! > CGFloat(400.0) || (mainChrctr?.physicsBody?.velocity.dy)! < CGFloat(-400.0)) {
                 mainChrctr?.texture = SKTexture(imageNamed:"MainCharacter_scare" + String(indexCharacterTexture))
             }
@@ -1762,8 +1728,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                 }
             }
         }
-    
-
+        
+        
         //если ГГ улетел за сцену, показываем меню
         if mainChrctr?.position.y < 0 && showMenu == false {
             //saveStat(info: "lose")
@@ -1774,9 +1740,9 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         
         //statusBar()
     }
-
     
     
-
+    
+    
     
 }

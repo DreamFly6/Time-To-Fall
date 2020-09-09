@@ -46,8 +46,8 @@ class SwipePageViewController: UIPageViewController {
      */
     func scrollToViewController(index newIndex: Int) {
         if let firstViewController = viewControllers?.first,
-            let currentIndex = orderedViewControllers.index(of: firstViewController) {
-            let direction: UIPageViewControllerNavigationDirection = newIndex >= currentIndex ? .forward : .reverse
+            let currentIndex = orderedViewControllers.firstIndex(of: firstViewController) {
+            let direction: UIPageViewController.NavigationDirection = newIndex >= currentIndex ? .forward : .reverse
             let nextViewController = orderedViewControllers[newIndex]
             scrollToViewController(nextViewController, direction: direction)
         }
@@ -64,7 +64,7 @@ class SwipePageViewController: UIPageViewController {
      - parameter viewController: the view controller to show.
      */
     fileprivate func scrollToViewController(_ viewController: UIViewController,
-                                            direction: UIPageViewControllerNavigationDirection = .forward) {
+                                            direction: UIPageViewController.NavigationDirection = .forward) {
         setViewControllers([viewController],
                            direction: direction,
                            animated: true,
@@ -81,7 +81,7 @@ class SwipePageViewController: UIPageViewController {
      */
     fileprivate func notifySwipeDelegateOfNewIndex() {
         if let firstViewController = viewControllers?.first,
-            let index = orderedViewControllers.index(of: firstViewController) {
+            let index = orderedViewControllers.firstIndex(of: firstViewController) {
             swipeDelegate?.swipePageViewController(self,
                                                          didUpdatePageIndex: index)
         }
@@ -95,7 +95,7 @@ extension SwipePageViewController: UIPageViewControllerDataSource {
     
     func pageViewController(_ pageViewController: UIPageViewController,
                             viewControllerBefore viewController: UIViewController) -> UIViewController? {
-        guard let viewControllerIndex = orderedViewControllers.index(of: viewController) else {
+        guard let viewControllerIndex = orderedViewControllers.firstIndex(of: viewController) else {
             return nil
         }
         
@@ -116,7 +116,7 @@ extension SwipePageViewController: UIPageViewControllerDataSource {
     
     func pageViewController(_ pageViewController: UIPageViewController,
                             viewControllerAfter viewController: UIViewController) -> UIViewController? {
-        guard let viewControllerIndex = orderedViewControllers.index(of: viewController) else {
+        guard let viewControllerIndex = orderedViewControllers.firstIndex(of: viewController) else {
             return nil
         }
         

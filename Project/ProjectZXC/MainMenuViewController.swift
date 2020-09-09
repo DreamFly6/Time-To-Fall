@@ -63,7 +63,7 @@ class MainMenuViewController: UIViewController {
         
         for case let button as UIButton in self.view.subviews {
             if button.restorationIdentifier == "goTo" {
-                button.setTitle(" "+String(topScene), for: UIControlState.normal)
+                button.setTitle(" "+String(topScene), for: UIControl.State.normal)
             }
         }
     }
