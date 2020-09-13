@@ -1,21 +1,23 @@
 {
   "images" : [
     {
+      "filename" : "WoodenBlock + SlimeBlock + SlimeBlock + SpearBlock + SpearBlock + WoodenBlock + WoodenBlock + WoodenBlock + StoneBlock + Group + Char Mask.png",
       "idiom" : "universal",
-      "filename" : "PreLoader.png",
       "scale" : "1x"
     },
     {
+      "filename" : "WoodenBlock + SlimeBlock + SlimeBlock + SpearBlock + SpearBlock + WoodenBlock + WoodenBlock + WoodenBlock + StoneBlock + Group + Char Mask@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
+      "filename" : "WoodenBlock + SlimeBlock + SlimeBlock + SpearBlock + SpearBlock + WoodenBlock + WoodenBlock + WoodenBlock + StoneBlock + Group + Char Mask@3x.png",
       "idiom" : "universal",
       "scale" : "3x"
     }
   ],
   "info" : {
-    "version" : 1,
-    "author" : "xcode"
+    "author" : "xcode",
+    "version" : 1
   }
 }

@@ -63,7 +63,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             let currentScene = GameScene(fileNamed: "Level 0")
             thisScene = 0
             let transition = SKTransition.doorway(withDuration: 0.5)
-            currentScene!.scaleMode = SKSceneScaleMode.aspectFill
+            currentScene!.scaleMode = SKSceneScaleMode.aspectFit
             currentScene?.viewController = self.viewController
             self.scene!.view?.presentScene(currentScene!, transition: transition)
         }
@@ -100,56 +100,40 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                         case 21:
                             ground.texture = SKTexture(imageNamed: "GlassBlock")
                             text?.text = "Glass"
-                            disc?.text = "Tap to destroy.\n" + "No effect gravity."
+                            disc?.text = "Tap to destroy.\n" + "No affected by gravity."
                         case 25:
                             ground.texture = SKTexture(imageNamed: "SpearBlock")
                             text?.text = "Spiked block"
-                            disc?.text = "Kill character"
+                            disc?.text = "Kills character"
                         case 33:
                             ground.texture = SKTexture(imageNamed: "ActivaBlock_Off")
                             text?.text = "Non-gravity block"
-                            disc?.text = "Tap to stop affect gravity.\n" + "Tap again to start gravity."
+                            disc?.text = "Tap to stop gravity effect.\n" + "Tap again to start gravity effect."
                         case 37:
                             ground.texture = SKTexture(imageNamed: "RotationBlock")
                             text?.text = "Rotating block"
-                            disc?.text = "Tap to change degree rotation"
+                            disc?.text = "Tap to change rotate"
                         case 41:
                             ground.texture = SKTexture(imageNamed: "Magnit_Off")
                             text?.text = "Magnet"
-                            disc?.text = "Tap to start magnetize"
+                            disc?.text = "Tap to switch magnetizing"
                         case 49:
                             ground.texture = SKTexture(imageNamed: "RandomBlockGreen")
                             text?.text = "Random Block"
-                            disc?.text = "Tap to spawn random block"
+                            disc?.text = "Tap to spawn a random block"
                         default:
-                            print("SHIT NEW BLOCK CONDITION")
-                            print("SHIT NEW BLOCK CONDITION")
-                            print("SHIT NEW BLOCK CONDITION")
-                            print("SHIT NEW BLOCK CONDITION")
-                            print("SHIT NEW BLOCK CONDITION")
-                            print("SHIT NEW BLOCK CONDITION")
-                            print("SHIT NEW BLOCK CONDITION")
-                            print("SHIT NEW BLOCK CONDITION")
                             print("SHIT NEW BLOCK CONDITION")
                         }
                     }
                 }
             }
             
-            
             backgroundColor = #colorLiteral(red:Float(randomBetweenNumbers(firstNum: 0.2, secondNum:0.6)), green: Float(randomBetweenNumbers(firstNum: 0.2, secondNum:0.6)), blue: Float(randomBetweenNumbers(firstNum: 0.2, secondNum:0.6)), alpha: 1)
-            
-            
         }
         else {
             //Инициализация и установка кнопки pause
             stopButtonInit()
         }
-        
-        
-        
-        
-        
     }
     
     var viewController = UIStoryboard(name: "Main", bundle: nil)
@@ -1189,7 +1173,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             
             let currentScene = GameScene(fileNamed: "Level 1")
             let transition = SKTransition.doorway(withDuration: 0.5)
-            currentScene!.scaleMode = SKSceneScaleMode.aspectFill
+            currentScene!.scaleMode = SKSceneScaleMode.aspectFit
             currentScene?.viewController = self.viewController
             self.scene!.view?.presentScene(currentScene!, transition: transition)
         }
@@ -1513,7 +1497,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                     AdCounter += 1
                     let currentScene = GameScene(fileNamed: "Level "+String(thisScene))
                     let transition = SKTransition.doorsCloseHorizontal(withDuration: 0.5)
-                    currentScene!.scaleMode = SKSceneScaleMode.aspectFill
+                    currentScene!.scaleMode = SKSceneScaleMode.aspectFit
                     currentScene?.viewController = self.viewController
                     self.scene!.view?.presentScene(currentScene!, transition: transition)
                     
@@ -1529,7 +1513,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                 thisScene += 1
                 let currentScene = GameScene(fileNamed: "Level "+String(thisScene))
                 let transition = SKTransition.doorway(withDuration: 0.5)
-                currentScene!.scaleMode = SKSceneScaleMode.aspectFill
+                currentScene!.scaleMode = SKSceneScaleMode.aspectFit
                 currentScene?.viewController = self.viewController
                 self.scene!.view?.presentScene(currentScene!, transition: transition)
             }
@@ -1540,14 +1524,14 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                     thisScene = topActualScene
                     let currentScene = GameScene(fileNamed: "Level "+String(topActualScene))
                     let transition = SKTransition.doorway(withDuration: 0.5)
-                    currentScene!.scaleMode = SKSceneScaleMode.aspectFill
+                    currentScene!.scaleMode = SKSceneScaleMode.aspectFit
                     currentScene?.viewController = self.viewController
                     self.scene!.view?.presentScene(currentScene!, transition: transition)
                 }
                 else {
                     let currentScene = GameScene(fileNamed: "Level "+String(thisScene))
                     let transition = SKTransition.doorway(withDuration: 0.5)
-                    currentScene!.scaleMode = SKSceneScaleMode.aspectFill
+                    currentScene!.scaleMode = SKSceneScaleMode.aspectFit
                     currentScene?.viewController = self.viewController
                     self.scene!.view?.presentScene(currentScene!, transition: transition)
                 }
@@ -1585,7 +1569,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                 thisScene = topScene
                 let currentScene = GameScene(fileNamed: "Level "+String(topScene))
                 let transition = SKTransition.doorway(withDuration: 0.5)
-                currentScene!.scaleMode = SKSceneScaleMode.aspectFill
+                currentScene!.scaleMode = SKSceneScaleMode.aspectFit
                 currentScene?.viewController = self.viewController
                 self.scene!.view?.presentScene(currentScene!, transition: transition)
             }

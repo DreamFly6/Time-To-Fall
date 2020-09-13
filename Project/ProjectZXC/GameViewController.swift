@@ -43,7 +43,7 @@ class GameViewController: UIViewController {
 //        skView.showsDrawCount = true
 //        skView.showsFields = true
 //        
-        sceneView!.scaleMode = .aspectFill
+        sceneView!.scaleMode = .aspectFit
         skView.presentScene(sceneView)
         
     }

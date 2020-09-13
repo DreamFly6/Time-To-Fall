@@ -1,15 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "GravityBlock_On3.png",
+      "filename" : "StoneBlock.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
+      "filename" : "StoneBlock@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
+      "filename" : "StoneBlock@3x.png",
       "idiom" : "universal",
       "scale" : "3x"
     }
