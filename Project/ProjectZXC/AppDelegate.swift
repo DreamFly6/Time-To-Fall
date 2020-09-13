@@ -16,7 +16,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication,
                      didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Use Firebase library to configure APIs
-        FIRApp.configure()
+        FirebaseApp.configure()
         // Initialize Google Mobile Ads SDK
         GADMobileAds.configure(withApplicationID: "ca-app-pub-2270286479492772~7533326047")
         

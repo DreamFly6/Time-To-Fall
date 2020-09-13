@@ -22,8 +22,6 @@ class SwipeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-//        pageControl.addTarget(self, action: #selector(TutorialViewController.didChangePageControlValue), for: .valueChanged)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -31,8 +29,6 @@ class SwipeViewController: UIViewController {
             self.swipePageViewController = swipePageViewController
         }
     }
-
-
 }
 
 extension SwipeViewController: SwipePageViewControllerDelegate {
@@ -40,7 +36,6 @@ extension SwipeViewController: SwipePageViewControllerDelegate {
     func swipePageViewController(_ swipePageViewController: SwipePageViewController,
         didUpdatePageCount count: Int) {
         pageControl.numberOfPages = count
-        //MenuButton.setBackgroundImage(UIImage(named: "MenuSelect"+String(count)+".png"), for: UIControlState.normal)
     }
     
     func swipePageViewController(_ swipePageViewController: SwipePageViewController,
@@ -50,5 +45,4 @@ extension SwipeViewController: SwipePageViewControllerDelegate {
         //print(selector)
         MenuButton.setBackgroundImage(UIImage(named: selector), for: UIControl.State.normal)
     }
-    
 }

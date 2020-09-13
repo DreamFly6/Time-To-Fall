@@ -37,16 +37,8 @@ class GameViewController: UIViewController {
             skView.showsNodeCount = false
             skView.ignoresSiblingOrder = false
         }
-
-        
-//        skView.showsPhysics = true
-//        skView.showsDrawCount = true
-//        skView.showsFields = true
-//        
+  
         sceneView!.scaleMode = .aspectFit
         skView.presentScene(sceneView)
-        
     }
-
-    
 }

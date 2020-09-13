@@ -13,17 +13,11 @@ public var MainBGPub = 0
 
 class MainMenuViewController: UIViewController {
     
-    
-
     @IBOutlet weak var MainChar: UIImageView!
-  
     @IBOutlet weak var MainBG: UIImageView!
-    
     @IBOutlet weak var shadowMainChar: UIImageView!
     
     override func viewDidLoad() {
-        
-
         
         shadowMainChar.image =  UIImage(named: "shadow")
         
@@ -46,18 +40,15 @@ class MainMenuViewController: UIViewController {
             topScene = 1
         }
         
-        topScene = 64
+//        topScene = 64
         
         MainChar.image = UIImage(named: "MainCharacter" + String(indexCharacterTexture))
         
         if MainBGPub == 0 {
             MainBG.image = UIImage(named: "ConBG1")
-        }
-        else {
+        } else {
             MainBG.image = UIImage(named: "MenuBg" + String(MainBGPub))
         }
-
-
         
         self.navigationController?.isNavigationBarHidden = true
         
@@ -68,15 +59,9 @@ class MainMenuViewController: UIViewController {
         }
     }
 
-    
     @IBAction func topScenButton(_ sender: AnyObject) {
         buttonTitle = String(topScene)
         thisScene = topScene
         self.performSegue(withIdentifier: "GoToGameViewController", sender: self)
     }
-
-    
-    
-   
-    
 }

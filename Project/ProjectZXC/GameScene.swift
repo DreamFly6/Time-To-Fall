@@ -36,6 +36,15 @@ public var onPause = false
 
 class GameScene: SKScene, SKPhysicsContactDelegate {
     
+    enum ObjectId: String {
+        
+        case medalTimer
+        
+        var id: String {
+            return rawValue
+        }
+    }
+    
     func skinArrSync() {
         UserDefaults.standard.set(MainBGPub,forKey: "MainBGPub")
         UserDefaults.standard.set(skinCondArr,forKey: "skinCondArr")
@@ -56,8 +65,6 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             }
         }
         
-        
-        
         if (ok == true && itsNewBlock == true && thisScene > 0){
             itsNewBlock = false
             let currentScene = GameScene(fileNamed: "Level 0")
@@ -67,8 +74,6 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             currentScene?.viewController = self.viewController
             self.scene!.view?.presentScene(currentScene!, transition: transition)
         }
-        
-        
         
         if(thisScene == 0){
             for ground in self.children {
@@ -241,37 +246,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     
     //Инициализация текста для разработчиков
     func statusBarInit() {
-        
-        medalLabel = createLabel(text: "-", fontSize: 40, position: CGPoint(x: 70, y: 70))
+        medalLabel = GameLabel.create(text: "-", color: .white, fontSize: 40, position: CGPoint(x: 70, y: 70), id: ObjectId.medalTimer.id)
         addChild(medalLabel)
-        
-        //        myLabel2 = SKLabelNode(fontNamed: "Arial")
-        //        myLabel2.fontSize = 40
-        //        myLabel2.zPosition = 999
-        //        myLabel2.position = CGPoint(x: 300, y: 1760)
-        //        self.addChild(myLabel2)
-        //
-        //
-        //        myLabel3 = SKLabelNode(fontNamed: "Arial")
-        //        myLabel3.fontSize = 40
-        //        myLabel3.zPosition = 999
-        //        myLabel3.position = CGPoint(x: 300, y: 1720)
-        //        self.addChild(myLabel3)
-        //
-        //
-        //        myLabel4 = SKLabelNode(fontNamed: "Arial")
-        //        myLabel4.fontSize = 40
-        //        myLabel4.zPosition = 999
-        //        myLabel4.position = CGPoint(x: 300, y: 1680)
-        //        self.addChild(myLabel4)
-        //
-        //
-        //        myLabel5 = SKLabelNode(fontNamed: "Arial")
-        //        myLabel5.fontSize = 30
-        //        myLabel5.zPosition = 999
-        //        myLabel5.position = CGPoint(x: 300, y: 1640)
-        //        self.addChild(myLabel5)
-        
     }
     
     //    //Изменение текста для разработчиков
@@ -347,293 +323,10 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                 self.addChild(menuBoard)
             }
             
-        }
-        else {
+        } else {
             timer = timer - 1
             medalLabel.text = ""
         }
-        //
-        //        myLabel2.text = "Топовая сцена = "+String(topScene)
-        //        myLabel3.text = "Текущая сцена = "+String(thisScene)
-        //myLabel4.text = "NowScene = "+String(nowScene)
-        //myLabel5.text = "ГГ dy = "+String(describing: dy)
-        
-    }
-    
-    //При вызове этой функции, показывается меню проигрыша.
-    func showLMenu(){
-        onPause = true
-        let articleParams = ["Loose lvl": thisScene];
-        
-        let blurEffect =  SKSpriteNode(imageNamed: "blur.png")
-        blurEffect.name = "blurEffect"
-        blurEffect.zPosition = 10
-        blurEffect.size.height = 10000
-        blurEffect.size.width = 10000
-        self.addChild(blurEffect)
-        
-        let menuBoard = SKSpriteNode(imageNamed: "MenuBoard.png")
-        menuBoard.position = CGPoint(x: self.frame.midX, y: self.frame.midY)
-        menuBoard.name = "menuBoard"
-        menuBoard.xScale = 1.4
-        menuBoard.yScale = 1.4
-        menuBoard.zPosition = 998
-        menuBoard.color = colorPicker(level: thisScene)
-        menuBoard.colorBlendFactor = CGFloat(0.7)
-        self.addChild(menuBoard)
-        
-        let retryButton = SKSpriteNode(imageNamed: "retryButton.png")
-        retryButton.position = CGPoint(x: self.frame.midX/2, y: self.frame.midY)
-        retryButton.name = "retry"
-        retryButton.xScale = 0.5
-        retryButton.yScale = 0.5
-        retryButton.zPosition = 999
-        retryButton.color = colorPicker(level: thisScene)
-        retryButton.colorBlendFactor = CGFloat(1.0)
-        self.addChild(retryButton)
-        
-        let menuButton = SKSpriteNode(imageNamed: "menuButton.png")
-        menuButton.position = CGPoint(x: self.frame.midX+(self.frame.midX/2), y: self.frame.midY)
-        menuButton.name = "menu"
-        menuButton.xScale = 0.5
-        menuButton.yScale = 0.5
-        menuButton.zPosition = 999
-        menuButton.color = colorPicker(level: thisScene)
-        menuButton.colorBlendFactor = CGFloat(1.0)
-        self.addChild(menuButton)
-        
-        //        let button3 = SKSpriteNode(imageNamed: "Button3.png")
-        //        button3.position = CGPoint(x: self.frame.midX+(self.frame.midX/2), y: self.frame.midY)
-        //        button3.name = "button3"
-        //        button3.xScale = 0.5
-        //        button3.yScale = 0.5
-        //        button3.zPosition = 999
-        //        button3.color = colorPicker(level: thisScene)
-        //        button3.colorBlendFactor = CGFloat(1.0)
-        //        self.addChild(button3)
-        
-        let losePos = CGPoint(x: frame.midX, y: frame.midY + 190)
-        let loseLabel = createLabel(text: "Lose", fontSize: 100, position: losePos)
-        addChild(loseLabel)
-    }
-    
-    
-    //При вызове этой функции, показывается меню перезапуска.
-    func showRMenu(){
-        
-        
-        //        let blurEffect = UIBlurEffect(style: UIBlurEffectStyle.dark)
-        //        let blurEffectView = UIVisualEffectView(effect: blurEffect)
-        //        blurEffectView.frame = (view?.bounds)!
-        //        blurEffectView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
-        //        view?.addSubview(blurEffectView)
-        
-        
-        
-        let blurEffect =  SKSpriteNode(imageNamed: "blur.png")
-        blurEffect.name = "blurEffect"
-        blurEffect.zPosition = 10
-        blurEffect.size.height = 10000
-        blurEffect.size.width = 10000
-        self.addChild(blurEffect)
-        
-        onPause = true
-        let menuBoard = SKSpriteNode(imageNamed: "MenuBoard.png")
-        menuBoard.position = CGPoint(x: self.frame.midX, y: self.frame.midY)
-        menuBoard.name = "menuBoard"
-        menuBoard.xScale = 1.4
-        menuBoard.yScale = 1.4
-        menuBoard.zPosition = 998
-        menuBoard.color = colorPicker(level: thisScene)
-        menuBoard.colorBlendFactor = CGFloat(0.7)
-        self.addChild(menuBoard)
-        //        self.view?.insertSubview(menuBoard, at: 100)
-        
-        let retryButton = SKSpriteNode(imageNamed: "retryButton.png")
-        retryButton.position = CGPoint(x: self.frame.midX/2, y: self.frame.midY)
-        retryButton.name = "retry"
-        retryButton.xScale = 0.5
-        retryButton.yScale = 0.5
-        retryButton.zPosition = 999
-        retryButton.color = colorPicker(level: thisScene)
-        retryButton.colorBlendFactor = CGFloat(1.0)
-        self.addChild(retryButton)
-        
-        
-        let menuButton = SKSpriteNode(imageNamed: "menuButton.png")
-        menuButton.position = CGPoint(x: self.frame.midX+(self.frame.midX/2), y: self.frame.midY)
-        menuButton.name = "menu"
-        menuButton.xScale = 0.5
-        menuButton.yScale = 0.5
-        menuButton.zPosition = 999
-        menuButton.color = colorPicker(level: thisScene)
-        menuButton.colorBlendFactor = CGFloat(1.0)
-        self.addChild(menuButton)
-        
-        
-        //        //Для отладки
-        //        let prevButton = SKSpriteNode(imageNamed: "prevButton.png")
-        //        prevButton.position = CGPoint(x: self.frame.midX - 200, y: self.frame.midY-(self.frame.midY/2))
-        //        prevButton.name = "prev"
-        //        prevButton.xScale = 0.5
-        //        prevButton.yScale = 0.5
-        //        prevButton.zPosition = 999
-        //        prevButton.color = colorPicker(level: thisScene)
-        //        prevButton.colorBlendFactor = CGFloat(1.0)
-        //        self.addChild(prevButton)
-        //        let nextButton = SKSpriteNode(imageNamed: "nextButton.png")
-        //        nextButton.position = CGPoint(x: self.frame.midX + 200, y: self.frame.midY-(self.frame.midY/2))
-        //        nextButton.name = "next"
-        //        nextButton.xScale = 0.5
-        //        nextButton.yScale = 0.5
-        //        nextButton.zPosition = 999
-        //        nextButton.color = colorPicker(level: thisScene)
-        //        nextButton.colorBlendFactor = CGFloat(1.0)
-        //        self.addChild(nextButton)
-        //        var myLabel1:SKLabelNode!
-        //        myLabel1 = SKLabelNode(fontNamed: "Arial")
-        //        myLabel1.name = "label"
-        //        myLabel1.text = "Developer buttons"
-        //        myLabel1.fontSize = 50
-        //        myLabel1.zPosition = 1000
-        //        myLabel1.position = CGPoint(x: self.frame.midX, y: self.frame.midY-(self.frame.midY/2) + 140)
-        //        self.addChild(myLabel1)
-        //
-        
-        let retryPos = CGPoint(x: frame.midX, y: frame.midY + 190)
-        let retryLabel = createLabel(text: "Retry", fontSize: 100, position: retryPos)
-        addChild(retryLabel)
-    }
-    
-    func createLabel(text: String, fontSize: CGFloat, position: CGPoint) -> SKLabelNode {
-        let labelNode = SKLabelNode(text: "Retry")
-        labelNode.name = UUID().uuidString
-        labelNode.text = text
-        labelNode.fontName  = "AvenirNext-Bold"
-        labelNode.fontSize = fontSize
-        labelNode.zPosition = 999
-        labelNode.position = position
-        
-        return labelNode
-    }
-    
-    
-    /// The interstitial ad.
-    var interstitial: GADInterstitial!
-    
-    fileprivate func createAndLoadInterstitial() {
-        interstitial = GADInterstitial(adUnitID: "ca-app-pub-2270286479492772/1486792443")
-        let request = GADRequest()
-        // Request test ads on devices you specify. Your test device ID is printed to the console when
-        // an ad request is made.
-        request.testDevices = [ kGADSimulatorID, "2077ef9a63d2b398840261c8221a0c9a" ]
-        interstitial.load(request)
-    }
-    
-    //    func alertView(_ alertView: UIAlertView, willDismissWithButtonIndex buttonIndex: Int) {
-    //        print("Alert ADs")
-    //        if interstitial.isReady {
-    //            interstitial.present(fromRootViewController: self.viewController)
-    //        } else {
-    //            print("Ad wasn't ready :(")
-    //        }
-    //        //playAgainButton.isHidden = false
-    //    }
-    
-    func ads() {
-        print("Alert ADs")
-        if interstitial.isReady {
-            viewController.modalPresentationStyle = .fullScreen
-            interstitial.present(fromRootViewController: viewController)
-        } else {
-            print("Ad wasn't ready :(")
-        }
-        //playAgainButton.isHidden = false
-    }
-    //При вызове этой функции, показывается меню выигрыша.
-    func showWMenu(){
-        onPause = true
-        if thisScene == topScene {
-            topScene+=1
-        }
-        
-        for menuBoard in self.children {
-            if menuBoard.name == "Medal" {
-                if let menuBoard = menuBoard as? SKSpriteNode {
-                    menuBoard.removeAllChildren()
-                    menuBoard.removeFromParent()
-                }
-            }
-        }
-        
-        for menuBoard in self.children {
-            if menuBoard.name == "MedalLabel" {
-                if let menuBoard = menuBoard as? SKSpriteNode {
-                    menuBoard.removeAllChildren()
-                    menuBoard.removeFromParent()
-                }
-            }
-        }
-        
-        let menuBoard = SKSpriteNode(imageNamed: "MenuBoard.png")
-        menuBoard.position = CGPoint(x: self.frame.midX, y: self.frame.midY)
-        menuBoard.name = "menuBoard"
-        menuBoard.xScale = 1.4
-        menuBoard.yScale = 1.4
-        menuBoard.zPosition = 998
-        menuBoard.color = colorPicker(level: thisScene)
-        menuBoard.colorBlendFactor = CGFloat(0.7)
-        self.addChild(menuBoard)
-        
-        let nextButton = SKSpriteNode(imageNamed: "nextButton.png")
-        nextButton.position = CGPoint(x: self.frame.midX/2, y: self.frame.midY)
-        nextButton.name = "next"
-        nextButton.xScale = 0.5
-        nextButton.yScale = 0.5
-        nextButton.zPosition = 999
-        nextButton.color = colorPicker(level: thisScene)
-        nextButton.colorBlendFactor = CGFloat(1.0)
-        self.addChild(nextButton)
-        
-        let retryButton = SKSpriteNode(imageNamed: "retryButton.png")
-        retryButton.position = CGPoint(x: self.frame.midX, y: self.frame.midY)
-        retryButton.name = "retry"
-        retryButton.xScale = 0.5
-        retryButton.yScale = 0.5
-        retryButton.zPosition = 999
-        retryButton.color = colorPicker(level: thisScene)
-        retryButton.colorBlendFactor = CGFloat(1.0)
-        self.addChild(retryButton)
-        
-        let menuButton = SKSpriteNode(imageNamed: "menuButton.png")
-        menuButton.position = CGPoint(x: self.frame.midX+(self.frame.midX/2), y: self.frame.midY)
-        menuButton.name = "menu"
-        menuButton.xScale = 0.5
-        menuButton.yScale = 0.5
-        menuButton.zPosition = 999
-        menuButton.color = colorPicker(level: thisScene)
-        menuButton.colorBlendFactor = CGFloat(1.0)
-        self.addChild(menuButton)
-        
-        
-        
-        //Для отладки
-        //        let prevButton = SKSpriteNode(imageNamed: "prevButton.png")
-        //        prevButton.position = CGPoint(x: self.frame.midX, y: self.frame.midY-(self.frame.midY/2))
-        //        prevButton.name = "prev"
-        //        prevButton.xScale = 0.5
-        //        prevButton.yScale = 0.5
-        //        prevButton.zPosition = 999
-        //        prevButton.color = colorPicker(level: thisScene)
-        //        prevButton.colorBlendFactor = CGFloat(1.0)
-        //        self.addChild(prevButton)
-        
-        let winPos = CGPoint(x: frame.midX, y: frame.midY + 190)
-        let winLabel = createLabel(text: "Win", fontSize: 100, position: winPos)
-        addChild(winLabel)
-        
-        initMedal()
-        
     }
     
     func initMedal() {
@@ -767,40 +460,11 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             }
         }
         
-        for nextButton in self.children {
-            if nextButton.name == "next" {
-                if let nextButton = nextButton as? SKSpriteNode {
-                    nextButton.removeAllChildren()
-                    nextButton.removeFromParent()
-                }
-            }
-        }
-        
-        for retryButton in self.children {
-            if retryButton.name == "retry" {
-                if let retryButton = retryButton as? SKSpriteNode {
-                    retryButton.removeAllChildren()
-                    retryButton.removeFromParent()
-                }
-            }
-        }
-        
-        for menuButton in self.children {
-            if menuButton.name == "menu" {
-                if let menuButton = menuButton as? SKSpriteNode {
-                    menuButton.removeAllChildren()
-                    menuButton.removeFromParent()
-                }
-            }
-        }
-        
-        for prevButton in self.children {
-            if prevButton.name == "prev" {
-                if let prevButton = prevButton as? SKSpriteNode {
-                    prevButton.removeAllChildren()
-                    prevButton.removeFromParent()
-                }
-            }
+        for sprite in children {
+            let uiNames = GameButton.ButtonAsset.allCases.map { $0.name }
+            guard let spriteNode = sprite as? SKSpriteNode, uiNames.contains(spriteNode.name ?? "") else { continue }
+            spriteNode.removeAllChildren()
+            spriteNode.removeFromParent()
         }
         
         for myLabel in self.children {
@@ -811,17 +475,10 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                 }
             }
         }
-        //self.view!.isPaused = false
     }
-    
-    
-    
     
     //Ициализация свойств игровых объектов
     func initGameObject(groundInit: Bool){
-        
-        
-        
         if groundInit == true {
             for main in self.children {
                 if main.name == "MainCharacter" {
@@ -884,7 +541,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                         ground.physicsBody?.categoryBitMask = 2;
                         ground.physicsBody?.contactTestBitMask = 1;
                         ground.physicsBody?.collisionBitMask =  1;
-                        ground.color = groundColor
+                        ground.color = .darkText
                         
                     }
                 }
@@ -1129,16 +786,16 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             }
             
         }
-        
-        
-        
-        
-        
-        
-        
     }
     
+    /// The interstitial ad.
+    var interstitial: GADInterstitial!
     
+    fileprivate func createAndLoadInterstitial() {
+        interstitial = GADInterstitial(adUnitID: "ca-app-pub-2270286479492772/1486792443")
+        let request = GADRequest()
+        interstitial.load(request)
+    }
     
     //Функция выполняемая до открытия сцены
     override func didMove(to view: SKView) {
@@ -1157,9 +814,6 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         
         //Инициализация статус бара
         statusBarInit()
-        
-        
-        
         
         //Определение макс уровня, до которого дошел игрок
         if thisScene >= topScene {
@@ -1180,12 +834,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         
         self.physicsWorld.contactDelegate = self
         
-        
-        
         //Инициализация Экрана нового блока
         initNewBlockScreen()
-        
-        
         
         let node = self.childNode(withName: "MainCharacter")! as SKNode
         timer = 0
@@ -1207,27 +857,12 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         }
         
         skinArrSync()
-        
-        
-        
     }
-    
     
     func newSkinAlert() {
         let alertView = UIAlertView(title: "New skin unlock", message: "Go to skin manager", delegate: self, cancelButtonTitle: "Ок")
-        
-        //IMAGE
-        //        let imvImage = UIImageView(frame: CGRect(x: 0, y: 0, width: 10, height: 10))
-        //        imvImage.contentMode = UIViewContentMode.center
-        //        imvImage.image = UIImage(named: "skinButton")
-        
-        //        alertView.setValue(imvImage, forKey: "accessoryView")
         alertView.show()
-        
-        
     }
-    
-    
     
     //Вызывается когда просиходит нажатие
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -1244,9 +879,6 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             let touch = touches
             let location = touch.first!.location(in: self)
             let node = self.atPoint(location)
-            
-            
-            
             
             
             if touchedNode.name == "SlimeBlock" {
@@ -1480,64 +1112,37 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             }
             
             //Блок кода для обработки кнопок меню
-            if node.name == "retry" {
-                
-                
-                let articleParams = ["Retry lvl": thisScene];
-                
+            if node.name == GameButton.ButtonAsset.retryButton.name {
                 if AdCounter >= 6 {
-                    
-                    //UIAlertView(title: "Реклама", message: "Сейчас должен быть баннер Admob", delegate: self, cancelButtonTitle: "Ок").show()
-                    ads()
+                    showAD()
                     AdCounter = 0
-                }
-                else {
+                } else {
                     print("Время еще не пришло")
                     
                     AdCounter += 1
-                    let currentScene = GameScene(fileNamed: "Level "+String(thisScene))
-                    let transition = SKTransition.doorsCloseHorizontal(withDuration: 0.5)
-                    currentScene!.scaleMode = SKSceneScaleMode.aspectFit
-                    currentScene?.viewController = self.viewController
-                    self.scene!.view?.presentScene(currentScene!, transition: transition)
-                    
+                    presentScene(fileName: .this)
                 }
-                
-                
-                
             }
             
-            if node.name == "next" {
+            if node.name == GameButton.ButtonAsset.nextButton.name {
                 AdCounter += 1
                 
                 thisScene += 1
-                let currentScene = GameScene(fileNamed: "Level "+String(thisScene))
-                let transition = SKTransition.doorway(withDuration: 0.5)
-                currentScene!.scaleMode = SKSceneScaleMode.aspectFit
-                currentScene?.viewController = self.viewController
-                self.scene!.view?.presentScene(currentScene!, transition: transition)
+                presentScene(fileName: .this)
             }
             
-            if node.name == "prev" {
-                thisScene-=1
+            if node.name == GameButton.ButtonAsset.prevButton.name {
+                thisScene -= 1
                 if thisScene == 0 {
                     thisScene = topActualScene
-                    let currentScene = GameScene(fileNamed: "Level "+String(topActualScene))
-                    let transition = SKTransition.doorway(withDuration: 0.5)
-                    currentScene!.scaleMode = SKSceneScaleMode.aspectFit
-                    currentScene?.viewController = self.viewController
-                    self.scene!.view?.presentScene(currentScene!, transition: transition)
+                    presentScene(fileName: .top)
                 }
                 else {
-                    let currentScene = GameScene(fileNamed: "Level "+String(thisScene))
-                    let transition = SKTransition.doorway(withDuration: 0.5)
-                    currentScene!.scaleMode = SKSceneScaleMode.aspectFit
-                    currentScene?.viewController = self.viewController
-                    self.scene!.view?.presentScene(currentScene!, transition: transition)
+                    presentScene(fileName: .this)
                 }
             }
             
-            if node.name == "menu" {
+            if node.name == GameButton.ButtonAsset.menyButton.name {
                 //Просто создал Segue и задал ей имя, с помощью имени ищем Segue и переходим
                 self.viewController.performSegue(withIdentifier: "GoToMainMenu", sender: self)
                 
@@ -1560,18 +1165,14 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                 }
                 else {
                     showMenu = true
-                    showRMenu()
+                    openRestartMenu()
                 }
             }
             
             if node.name == "button" {
                 itsNewBlock = true
                 thisScene = topScene
-                let currentScene = GameScene(fileNamed: "Level "+String(topScene))
-                let transition = SKTransition.doorway(withDuration: 0.5)
-                currentScene!.scaleMode = SKSceneScaleMode.aspectFit
-                currentScene?.viewController = self.viewController
-                self.scene!.view?.presentScene(currentScene!, transition: transition)
+                presentScene(fileName: .top)
             }
         }
     }
@@ -1611,7 +1212,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             sleep(UInt32(0.5))
             
             showMenu = true
-            showLMenu()
+            showLoseMenu()
         }
         
     }
@@ -1621,10 +1222,6 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     
     
     override func didSimulatePhysics() {
-        
-        
-        
-        
         
         let mainChrctr = self.childNode(withName: "MainCharacter") as? SKSpriteNode
         if mainChrctr?.position.y < 0 {
@@ -1654,8 +1251,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                         }
                     }
                 }
-            }
-            else{
+            } else {
                 //Время которое персонаж лежит на земле
                 onGroundTime+=1
                 print(onGroundTime)
@@ -1679,7 +1275,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                         setTopScene(topStage: (thisScene+1))
                     }
                     
-                    showWMenu() //Показать меню выигрыша
+                    showWinMenu() //Показать меню выигрыша
                     mainChrctr?.physicsBody?.pinned = true
                     mainChrctr?.physicsBody?.allowsRotation = false
                 }
@@ -1718,15 +1314,143 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         if mainChrctr?.position.y < 0 && showMenu == false {
             //saveStat(info: "lose")
             showMenu = true //если показывали меню, то true
-            showLMenu() //Показать меню проигрыша
+            showLoseMenu() //Показать меню проигрыша
             onGround = false //Свинья не на земле(за экраном она не может определить это)
         }
         
         //statusBar()
     }
+}
+
+// MARK: Routes
+
+extension GameScene {
+    
+    enum SceneFileName: String {
+        
+        case this
+        
+        case top
+        
+        var name: String {
+            switch self {
+            case .this:
+                return "Level " + String(thisScene) + ".sks"
+            case .top:
+                return "Level " + String(topActualScene) + ".sks"
+            }
+        }
+    }
+    
+    func presentScene(fileName: SceneFileName) {
+        guard let currentScene = GameScene(fileNamed: fileName.name) else {
+            fatalError("Now found level with name \(fileName.rawValue) \(fileName.name)")
+        }
+        let transition = SKTransition.doorway(withDuration: 0.5)
+        currentScene.scaleMode = SKSceneScaleMode.aspectFit
+        currentScene.viewController = viewController
+        scene?.view?.presentScene(currentScene, transition: transition)
+    }
+    
+    func showAD() {
+        guard interstitial.isReady else { return }
+        viewController.modalPresentationStyle = .fullScreen
+        interstitial.present(fromRootViewController: viewController)
+    }
+}
+
+// MARK: Menus
+
+extension GameScene {
     
     
+    //При вызове этой функции, показывается меню проигрыша.
+    func showLoseMenu(){
+        onPause = true
+        
+        let blurEffect =  SKSpriteNode(imageNamed: "blur.png")
+        blurEffect.name = "blurEffect"
+        blurEffect.zPosition = 10
+        blurEffect.size.height = 10000
+        blurEffect.size.width = 10000
+        self.addChild(blurEffect)
+        
+        let uiColor = colorPicker(level: thisScene)
+        addChild(GameBoard.create(frame: frame, color: uiColor))
+        
+        if interstitial.isReady {
+            addChild(GameButton.create(asset: .nextButton, position: .right, frame: frame, color: uiColor))
+            addChild(GameButton.create(asset: .retryButton, position: .middle, frame: frame, color: uiColor))
+            addChild(GameButton.create(asset: .menyButton, position: .left, frame: frame, color: uiColor))
+        } else {
+            addChild(GameButton.create(asset: .menyButton, position: .left, frame: frame, color: uiColor))
+            addChild(GameButton.create(asset: .retryButton, position: .right, frame: frame, color: uiColor))
+        }
+        
+        let losePos = CGPoint(x: frame.midX, y: frame.midY + 190)
+        addChild(GameLabel.create(text: "Lose", color: .black, fontSize: 100, position: losePos))
+    }
     
     
+    //При вызове этой функции, показывается меню перезапуска.
+    func openRestartMenu() {
+        
+        let blurEffect =  SKSpriteNode(imageNamed: "blur.png")
+        blurEffect.name = "blurEffect"
+        blurEffect.zPosition = 10
+        blurEffect.size.height = 10000
+        blurEffect.size.width = 10000
+        self.addChild(blurEffect)
+        
+        let uiColor = colorPicker(level: thisScene)
+        
+        onPause = true
+        
+        addChild(GameBoard.create(frame: frame, color: uiColor))
+        addChild(GameButton.create(asset: .menyButton, position: .left, frame: frame, color: uiColor))
+        addChild(GameButton.create(asset: .retryButton, position: .right, frame: frame, color: uiColor))
+        
+        let retryPos = CGPoint(x: frame.midX, y: frame.midY + 190)
+        addChild(GameLabel.create(text: "Retry", color: .black, fontSize: 100, position: retryPos))
+    }
     
+    //При вызове этой функции, показывается меню выигрыша.
+    func showWinMenu() {
+        onPause = true
+        if thisScene == topScene {
+            topScene+=1
+        }
+        
+        for menuBoard in self.children {
+            if menuBoard.name == "Medal" {
+                if let menuBoard = menuBoard as? SKSpriteNode {
+                    menuBoard.removeAllChildren()
+                    menuBoard.removeFromParent()
+                }
+            }
+        }
+        
+        for menuBoard in self.children {
+            if menuBoard.name == "MedalLabel" {
+                if let menuBoard = menuBoard as? SKLabelNode {
+                    menuBoard.removeAllChildren()
+                    menuBoard.removeFromParent()
+                }
+            }
+        }
+        
+        let uiColor = colorPicker(level: thisScene)
+        
+        addChild(GameBoard.create(frame: frame, color: uiColor))
+        addChild(GameButton.create(asset: .nextButton, position: .right, frame: frame, color: uiColor))
+        addChild(GameButton.create(asset: .retryButton, position: .middle, frame: frame, color: uiColor))
+        addChild(GameButton.create(asset: .menyButton, position: .left, frame: frame, color: uiColor))
+        
+        let winPos = CGPoint(x: frame.midX, y: frame.midY + 190)
+        let winLabel = GameLabel.create(text: "Win", color: .black, fontSize: 100, position: winPos)
+        addChild(winLabel)
+        
+        initMedal()
+        
+    }
 }

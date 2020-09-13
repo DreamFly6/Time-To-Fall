@@ -101,6 +101,7 @@
 		32D80D421DCDE7AC00BF6274 /* PageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32D80D411DCDE7AC00BF6274 /* PageViewController.swift */; };
 		32F5A42B1D3CA47E00631FE0 /* Level 4.sks in Resources */ = {isa = PBXBuildFile; fileRef = 32F5A42A1D3CA47E00631FE0 /* Level 4.sks */; };
 		32F5A42D1D3CA49100631FE0 /* Level 5.sks in Resources */ = {isa = PBXBuildFile; fileRef = 32F5A42C1D3CA49100631FE0 /* Level 5.sks */; };
+		A074D684250DE59500EC917D /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = A074D683250DE59500EC917D /* Utils.swift */; };
 		B8EE48476D4814ACEA676511 /* Pods_ProjectZXC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8ED99CC74990D07033EF8C57 /* Pods_ProjectZXC.framework */; };
 /* End PBXBuildFile section */
 
@@ -222,6 +223,7 @@
 		32F5A42A1D3CA47E00631FE0 /* Level 4.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = "Level 4.sks"; sourceTree = "<group>"; };
 		32F5A42C1D3CA49100631FE0 /* Level 5.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = "Level 5.sks"; sourceTree = "<group>"; };
 		8ED99CC74990D07033EF8C57 /* Pods_ProjectZXC.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ProjectZXC.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A074D683250DE59500EC917D /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -480,6 +482,7 @@
 				329649211DCA21100078720A /* GameViewController.swift */,
 				3262F13B1D49B7E90056D72B /* ViewController.swift */,
 				1F4C246D1CD5E55600D3B0DB /* GameScene.swift */,
+				A074D683250DE59500EC917D /* Utils.swift */,
 			);
 			name = Scene;
 			sourceTree = "<group>";
@@ -768,11 +771,15 @@
 			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-ProjectZXC/Pods-ProjectZXC-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/PromisesObjC/FBLPromises.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBLPromises.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -811,6 +818,7 @@
 				32D80D421DCDE7AC00BF6274 /* PageViewController.swift in Sources */,
 				32C496EF1DB7CF4100DFDAF9 /* GameScene.swift in Sources */,
 				328125E91DE6913100E81EB4 /* SwipePageViewController.swift in Sources */,
+				A074D684250DE59500EC917D /* Utils.swift in Sources */,
 				3262F13C1D49B7E90056D72B /* ViewController.swift in Sources */,
 				32290C781DD08282002CBBF5 /* SettingViewController.swift in Sources */,
 				1F4C246A1CD5E55600D3B0DB /* AppDelegate.swift in Sources */,
