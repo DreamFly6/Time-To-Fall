@@ -102,6 +102,7 @@
 		32F5A42B1D3CA47E00631FE0 /* Level 4.sks in Resources */ = {isa = PBXBuildFile; fileRef = 32F5A42A1D3CA47E00631FE0 /* Level 4.sks */; };
 		32F5A42D1D3CA49100631FE0 /* Level 5.sks in Resources */ = {isa = PBXBuildFile; fileRef = 32F5A42C1D3CA49100631FE0 /* Level 5.sks */; };
 		A074D684250DE59500EC917D /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = A074D683250DE59500EC917D /* Utils.swift */; };
+		A0B03504250E130D001865E9 /* BNDesignable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0B03503250E130D001865E9 /* BNDesignable.swift */; };
 		B8EE48476D4814ACEA676511 /* Pods_ProjectZXC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8ED99CC74990D07033EF8C57 /* Pods_ProjectZXC.framework */; };
 /* End PBXBuildFile section */
 
@@ -224,6 +225,7 @@
 		32F5A42C1D3CA49100631FE0 /* Level 5.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = "Level 5.sks"; sourceTree = "<group>"; };
 		8ED99CC74990D07033EF8C57 /* Pods_ProjectZXC.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ProjectZXC.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A074D683250DE59500EC917D /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		A0B03503250E130D001865E9 /* BNDesignable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BNDesignable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -319,6 +321,7 @@
 			isa = PBXGroup;
 			children = (
 				1FAF8EC11E3E1D1E008388AE /* GoogleService-Info.plist */,
+				A0B03503250E130D001865E9 /* BNDesignable.swift */,
 				1F4C24681CD5E55600D3B0DB /* ProjectZXC */,
 				1F4C24811CD5E55600D3B0DB /* ProjectZXCTests */,
 				1F4C248C1CD5E55600D3B0DB /* ProjectZXCUITests */,
@@ -814,6 +817,7 @@
 				32B848621DD03D23004247DA /* MainMenuViewController.swift in Sources */,
 				329649221DCA21100078720A /* GameViewController.swift in Sources */,
 				328125E71DE6912200E81EB4 /* SwipeViewController.swift in Sources */,
+				A0B03504250E130D001865E9 /* BNDesignable.swift in Sources */,
 				32155F781E5DD915000238C8 /* SkinViewController.swift in Sources */,
 				32D80D421DCDE7AC00BF6274 /* PageViewController.swift in Sources */,
 				32C496EF1DB7CF4100DFDAF9 /* GameScene.swift in Sources */,
