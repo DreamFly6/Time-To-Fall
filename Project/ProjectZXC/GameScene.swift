@@ -1131,6 +1131,13 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                 presentScene(fileName: .this)
             }
             
+            if node.name == GameButton.ButtonAsset.nextAdButton.name {
+                AdCounter -= 2
+                thisScene += 1
+                presentScene(fileName: .this)
+                showAD()
+            }
+            
             if node.name == GameButton.ButtonAsset.prevButton.name {
                 thisScene -= 1
                 if thisScene == 0 {
@@ -1155,7 +1162,6 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                 self.removeFromParent()
                 self.removeAllActions()
                 self.removeAllChildren()
-                
             }
             
             if touchedNode.name == "stop" {
@@ -1220,14 +1226,12 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     var showMenu = false
     public var dy = CGFloat(0.0)
     
-    
     override func didSimulatePhysics() {
         
         let mainChrctr = self.childNode(withName: "MainCharacter") as? SKSpriteNode
         if mainChrctr?.position.y < 0 {
             onGround = false
         }
-        
         
         //Удаляет спрайт, когда он улетел за экран
         for allObject in self.children {
@@ -1237,7 +1241,6 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                 }
             }
         }
-        
         
         /* Меню в конце сцены */
         if showMenu == false {
@@ -1265,8 +1268,6 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                     }
                 }
                 
-                
-                
                 //Если свинья на земле и время которое она пролежала на земле равно 100, то победа
                 if onGroundTime > 200 && showMenu == false {
                     showMenu = true //если показывали меню, то true
@@ -1279,13 +1280,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                     mainChrctr?.physicsBody?.pinned = true
                     mainChrctr?.physicsBody?.allowsRotation = false
                 }
-                
             }
         }
-        
-        
-        
-        
         
         if showMenu == false {
             
@@ -1294,21 +1290,16 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             
             //velocity > 0 - перс отлетает от поверхности, velocity < 0 персонаж летит вниз. Состояние покоя около 5.5
             
-            
             if ((mainChrctr?.physicsBody?.velocity.dy)! > CGFloat(400.0) || (mainChrctr?.physicsBody?.velocity.dy)! < CGFloat(-400.0)) {
                 mainChrctr?.texture = SKTexture(imageNamed:"MainCharacter_scare" + String(indexCharacterTexture))
-            }
-            else {
-                if((mainChrctr?.physicsBody?.velocity.dy)! >= CGFloat(10.0)) {
+            } else {
+                if ((mainChrctr?.physicsBody?.velocity.dy)! >= CGFloat(10.0)) {
                     mainChrctr?.texture = SKTexture(imageNamed: "MainCharacter_pain" + String(indexCharacterTexture))
-                }
-                else{
+                } else {
                     mainChrctr?.texture = SKTexture(imageNamed:"MainCharacter" + String(indexCharacterTexture))
-                    
                 }
             }
         }
-        
         
         //если ГГ улетел за сцену, показываем меню
         if mainChrctr?.position.y < 0 && showMenu == false {
@@ -1337,7 +1328,7 @@ extension GameScene {
             case .this:
                 return "Level " + String(thisScene) + ".sks"
             case .top:
-                return "Level " + String(topActualScene) + ".sks"
+                return "Level " + String(topScene) + ".sks"
             }
         }
     }
@@ -1379,7 +1370,7 @@ extension GameScene {
         addChild(GameBoard.create(frame: frame, color: uiColor))
         
         if interstitial.isReady {
-            addChild(GameButton.create(asset: .nextButton, position: .right, frame: frame, color: uiColor))
+            addChild(GameButton.create(asset: .nextAdButton, position: .right, frame: frame, color: uiColor))
             addChild(GameButton.create(asset: .retryButton, position: .middle, frame: frame, color: uiColor))
             addChild(GameButton.create(asset: .menyButton, position: .left, frame: frame, color: uiColor))
         } else {

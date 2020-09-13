@@ -42,6 +42,8 @@ class GameButton {
         
         case prevButton = "prevButton.png"
         
+        case nextAdButton = "nextAdButton.png"
+        
         var name: String {
             return self.rawValue
         }
