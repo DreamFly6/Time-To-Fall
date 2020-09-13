@@ -32,11 +32,9 @@ class SettingViewController: UIViewController {
     @IBAction func test(_ sender: UISwitch) {
         if(switchShowFPS.isOn) {
             showFPS = true
-        }
-        else {
+        } else {
             showFPS = false
         }
-
     }
 
     //Сохранение топовой сцены

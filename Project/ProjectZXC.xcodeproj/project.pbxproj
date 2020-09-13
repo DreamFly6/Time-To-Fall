@@ -1015,7 +1015,7 @@
 					"$(PROJECT_DIR)/Pods/Flurry-iOS-SDK/Flurry",
 					"$(PROJECT_DIR)/Pods/FirebaseAnalytics/Frameworks/FirebaseAnalytics.framework",
 				);
-				MARKETING_VERSION = 2.0;
+				MARKETING_VERSION = 2.0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.theklasterstorm.projectzxc;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
@@ -1048,7 +1048,7 @@
 					"$(PROJECT_DIR)/Pods/Flurry-iOS-SDK/Flurry",
 					"$(PROJECT_DIR)/Pods/FirebaseAnalytics/Frameworks/FirebaseAnalytics.framework",
 				);
-				MARKETING_VERSION = 2.0;
+				MARKETING_VERSION = 2.0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.theklasterstorm.projectzxc;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";

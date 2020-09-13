@@ -45,6 +45,9 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         }
     }
     
+    var characterNode: SKSpriteNode?
+    var finishProgressBar: SKSpriteNode?
+    
     func skinArrSync() {
         UserDefaults.standard.set(MainBGPub,forKey: "MainBGPub")
         UserDefaults.standard.set(skinCondArr,forKey: "skinCondArr")
@@ -55,8 +58,6 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     
     func initNewBlockScreen() {
         var ok = false
-        
-        
         
         for index in 0...(n.count - 1) {
             if (thisScene == topScene && topScene == n[index]){
@@ -808,6 +809,11 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         timeForMedal[1] = [10,13,16]
         
         
+        characterNode = childNode(withName: "MainCharacter") as? SKSpriteNode
+        finishProgressBar = childNode(withName: "ProgressBar") as? SKSpriteNode
+        finishProgressBar?.size.width = 0
+        finishProgressBar?.color = UIColor.green
+        
         
         //Инициализация игровых объектов
         initGameObject(groundInit: true)
@@ -1186,41 +1192,28 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     public var onGroundTime = 0;
     public var onGround = false
     public var spearKill = false
+    
     func didBegin(_ contact: SKPhysicsContact) {
-        var firstBody: SKPhysicsBody?
-        var secondBody: SKPhysicsBody?
-        firstBody = contact.bodyA
-        secondBody = contact.bodyB
-        
+        let firstBody: SKPhysicsBody = contact.bodyA
+        let secondBody: SKPhysicsBody = contact.bodyB
         
         //Столкновение ГГ с Землей
-        if firstBody!.categoryBitMask == 1 && secondBody!.categoryBitMask == 2 {
+        if firstBody.categoryBitMask == 1 && secondBody.categoryBitMask == 2 {
             onGround = true
-            //print("On Ground(true)")
         }
-        else {
-            //onGround = false
-            //print("On Ground(false)")
-        }
-        
+
         //Столкновение ГГ с Шипами
-        if firstBody!.categoryBitMask == 1 && secondBody!.categoryBitMask == 3 && showMenu == false {
-            self.scene!.isPaused = true;
+        if firstBody.categoryBitMask == 1 && secondBody.categoryBitMask == 3 && showMenu == false {
+            self.scene?.isPaused = true;
             //Прогресс бар становится красным
-            for progressBar in self.children {
-                if progressBar.name == "ProgressBar" {
-                    if let progressBar = progressBar as? SKSpriteNode {
-                        progressBar.size.width = 4000
-                        progressBar.color = UIColor.red
-                    }
-                }
-            }
+            finishProgressBar?.size.width = 4000
+            finishProgressBar?.color = .red
+
             sleep(UInt32(0.5))
             
             showMenu = true
             showLoseMenu()
         }
-        
     }
     
     var showMenu = false
@@ -1228,45 +1221,24 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     
     override func didSimulatePhysics() {
         
-        let mainChrctr = self.childNode(withName: "MainCharacter") as? SKSpriteNode
-        if mainChrctr?.position.y < 0 {
+        guard let charNode = characterNode else { return }
+        if charNode.position.y < 0 {
             onGround = false
-        }
-        
-        //Удаляет спрайт, когда он улетел за экран
-        for allObject in self.children {
-            if let allObject = allObject as? SKSpriteNode {
-                if ((allObject.position.y < 0 || allObject.position.x < -100 || allObject.position.x > 1380) && allObject.name != "MainCharacter") {
-                    allObject.removeFromParent()
-                }
-            }
         }
         
         /* Меню в конце сцены */
         if showMenu == false {
             if onGround == false {
                 onGroundTime = 0
-                for progressBar in self.children {
-                    if progressBar.name == "ProgressBar" {
-                        if let progressBar = progressBar as? SKSpriteNode {
-                            progressBar.size.width = 0
-                            progressBar.color = UIColor.green
-                        }
-                    }
-                }
+                finishProgressBar?.size.width = 0
+                finishProgressBar?.color = .green
             } else {
                 //Время которое персонаж лежит на земле
                 onGroundTime+=1
                 print(onGroundTime)
                 //Прогресс бар
-                for progressBar in self.children {
-                    if progressBar.name == "ProgressBar" {
-                        if let progressBar = progressBar as? SKSpriteNode {
-                            progressBar.size.width = CGFloat(onGroundTime) * (39 / 2)
-                            progressBar.color = UIColor.green
-                        }
-                    }
-                }
+                finishProgressBar?.size.width = CGFloat(onGroundTime) * (39 / 2)
+                finishProgressBar?.color = .green
                 
                 //Если свинья на земле и время которое она пролежала на земле равно 100, то победа
                 if onGroundTime > 200 && showMenu == false {
@@ -1277,32 +1249,30 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                     }
                     
                     showWinMenu() //Показать меню выигрыша
-                    mainChrctr?.physicsBody?.pinned = true
-                    mainChrctr?.physicsBody?.allowsRotation = false
+                    charNode.physicsBody?.pinned = true
+                    charNode.physicsBody?.allowsRotation = false
                 }
             }
         }
         
         if showMenu == false {
-            
-            //ПЕРЕМЕННАЯ ДЛЯ ОТЛАДКИ
-            //dy = (mainChrctr?.physicsBody?.velocity.dy)!
-            
+            print("gay work 1")
+
             //velocity > 0 - перс отлетает от поверхности, velocity < 0 персонаж летит вниз. Состояние покоя около 5.5
             
-            if ((mainChrctr?.physicsBody?.velocity.dy)! > CGFloat(400.0) || (mainChrctr?.physicsBody?.velocity.dy)! < CGFloat(-400.0)) {
-                mainChrctr?.texture = SKTexture(imageNamed:"MainCharacter_scare" + String(indexCharacterTexture))
+            if ((charNode.physicsBody?.velocity.dy)! > CGFloat(400.0) || (charNode.physicsBody?.velocity.dy)! < CGFloat(-400.0)) {
+                charNode.texture = SKTexture(imageNamed:"MainCharacter_scare" + String(indexCharacterTexture))
             } else {
-                if ((mainChrctr?.physicsBody?.velocity.dy)! >= CGFloat(10.0)) {
-                    mainChrctr?.texture = SKTexture(imageNamed: "MainCharacter_pain" + String(indexCharacterTexture))
+                if ((charNode.physicsBody?.velocity.dy)! >= CGFloat(10.0)) {
+                    charNode.texture = SKTexture(imageNamed: "MainCharacter_pain" + String(indexCharacterTexture))
                 } else {
-                    mainChrctr?.texture = SKTexture(imageNamed:"MainCharacter" + String(indexCharacterTexture))
+                    charNode.texture = SKTexture(imageNamed:"MainCharacter" + String(indexCharacterTexture))
                 }
             }
         }
         
         //если ГГ улетел за сцену, показываем меню
-        if mainChrctr?.position.y < 0 && showMenu == false {
+        if charNode.position.y < 0 && showMenu == false {
             //saveStat(info: "lose")
             showMenu = true //если показывали меню, то true
             showLoseMenu() //Показать меню проигрыша
@@ -1370,12 +1340,12 @@ extension GameScene {
         addChild(GameBoard.create(frame: frame, color: uiColor))
         
         if interstitial.isReady {
-            addChild(GameButton.create(asset: .nextAdButton, position: .right, frame: frame, color: uiColor))
-            addChild(GameButton.create(asset: .retryButton, position: .middle, frame: frame, color: uiColor))
             addChild(GameButton.create(asset: .menyButton, position: .left, frame: frame, color: uiColor))
+            addChild(GameButton.create(asset: .retryButton, position: .middle, frame: frame, color: uiColor))
+            addChild(GameButton.create(asset: .nextAdButton, position: .right, frame: frame, color: uiColor))
         } else {
             addChild(GameButton.create(asset: .menyButton, position: .left, frame: frame, color: uiColor))
-            addChild(GameButton.create(asset: .retryButton, position: .right, frame: frame, color: uiColor))
+            addChild(GameButton.create(asset: .retryButton, position: .middle, frame: frame, color: uiColor))
         }
         
         let losePos = CGPoint(x: frame.midX, y: frame.midY + 190)
@@ -1399,7 +1369,7 @@ extension GameScene {
         
         addChild(GameBoard.create(frame: frame, color: uiColor))
         addChild(GameButton.create(asset: .menyButton, position: .left, frame: frame, color: uiColor))
-        addChild(GameButton.create(asset: .retryButton, position: .right, frame: frame, color: uiColor))
+        addChild(GameButton.create(asset: .retryButton, position: .middle, frame: frame, color: uiColor))
         
         let retryPos = CGPoint(x: frame.midX, y: frame.midY + 190)
         addChild(GameLabel.create(text: "Retry", color: .black, fontSize: 100, position: retryPos))
@@ -1433,9 +1403,9 @@ extension GameScene {
         let uiColor = colorPicker(level: thisScene)
         
         addChild(GameBoard.create(frame: frame, color: uiColor))
-        addChild(GameButton.create(asset: .nextButton, position: .right, frame: frame, color: uiColor))
-        addChild(GameButton.create(asset: .retryButton, position: .middle, frame: frame, color: uiColor))
         addChild(GameButton.create(asset: .menyButton, position: .left, frame: frame, color: uiColor))
+        addChild(GameButton.create(asset: .retryButton, position: .middle, frame: frame, color: uiColor))
+        addChild(GameButton.create(asset: .nextButton, position: .right, frame: frame, color: uiColor))
         
         let winPos = CGPoint(x: frame.midX, y: frame.midY + 190)
         let winLabel = GameLabel.create(text: "Win", color: .black, fontSize: 100, position: winPos)
